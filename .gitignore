@@ -1,0 +1,89 @@
+# =====================
+# Python
+# =====================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# =====================
+# Virtual Environment
+# =====================
+venv/
+env/
+.venv/
+.sixth/
+
+# =====================
+# Environment Variables
+# =====================
+.env
+.env.*
+!.env.example
+
+# =====================
+# Django stuff
+# =====================
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Media & Static
+media/
+staticfiles/
+
+# Collected static (optional)
+static/
+
+# =====================
+# Migrations (optional)
+# =====================
+# Uncomment if you want to ignore migrations
+# **/migrations/
+# !**/migrations/__init__.py
+
+# =====================
+# Test / Coverage
+# =====================
+htmlcov/
+.coverage
+.coverage.*
+.tox/
+.pytest_cache/
+
+# =====================
+# IDE / Editors
+# =====================
+.idea/
+*.iml
+
+# =====================
+# OS files
+# =====================
+.DS_Store
+Thumbs.db
+
+# =====================
+# Celery / Redis
+# =====================
+celerybeat-schedule
+celerybeat.pid
+
+# =====================
+# Cache
+# =====================
+.cache/
+
+# =====================
+# Documentation
+# =====================
+Documentation/
+
+# =====================
+# Firebase Credentials
+# =====================
+firebase-key.json
+serviceAccountKey.json
+*firebase*.json
+.zencoder/
+.zenflow/
