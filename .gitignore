@@ -80,6 +80,11 @@ celerybeat.pid
 Documentation/
 
 # =====================
+# SSL Certificates
+# =====================
+nginx/certs/
+
+# =====================
 # Firebase Credentials
 # =====================
 firebase-key.json

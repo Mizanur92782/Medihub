@@ -31,6 +31,5 @@ htmlcov/
 node_modules/
 docker-compose*.yml
 Dockerfile*
-Docker/
 README.md
 *.md

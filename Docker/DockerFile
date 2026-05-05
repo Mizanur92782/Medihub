@@ -5,14 +5,16 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
+RUN addgroup --system app && adduser --system --ingroup app app
+
 COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
-
 COPY . .
 
+RUN chmod +x /app/Docker/entrypoint.sh && \
+    chown -R app:app /app
 
+USER app
 
-RUN chmod /app/Docker/entrypoint.sh
-
-ENTRYPOINT [ "/app/Docker/Entrypoint.sh" ]
+ENTRYPOINT [ "/app/Docker/entrypoint.sh" ]
