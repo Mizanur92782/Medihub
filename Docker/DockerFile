@@ -5,6 +5,8 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
+
 RUN addgroup --system app && adduser --system --ingroup app app
 
 COPY requirements.txt .
@@ -13,8 +15,9 @@ RUN pip install --no-cache-dir --upgrade pip && pip install --no-cache-dir -r re
 COPY . .
 
 RUN chmod +x /app/Docker/entrypoint.sh && \
+    mkdir -p /app/staticfiles /app/media && \
     chown -R app:app /app
 
 USER app
 
-ENTRYPOINT [ "/app/Docker/entrypoint.sh" ]
+ENTRYPOINT [ "sh", "/app/Docker/entrypoint.sh" ]

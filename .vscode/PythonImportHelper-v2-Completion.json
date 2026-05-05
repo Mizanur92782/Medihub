@@ -1,0 +1,662 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCommand",
+        "importPath": "django.core.management.base",
+        "description": "django.core.management.base",
+        "isExtraImport": true,
+        "detail": "django.core.management.base",
+        "documentation": {}
+    },
+    {
+        "label": "CommandError",
+        "importPath": "django.core.management.base",
+        "description": "django.core.management.base",
+        "isExtraImport": true,
+        "detail": "django.core.management.base",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCommand",
+        "importPath": "django.core.management.base",
+        "description": "django.core.management.base",
+        "isExtraImport": true,
+        "detail": "django.core.management.base",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "medihub",
+        "description": "medihub",
+        "isExtraImport": true,
+        "detail": "medihub",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "medihub",
+        "description": "medihub",
+        "isExtraImport": true,
+        "detail": "medihub",
+        "documentation": {}
+    },
+    {
+        "label": "delete",
+        "importPath": "httpx",
+        "description": "httpx",
+        "isExtraImport": true,
+        "detail": "httpx",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "importPath": "atexit",
+        "description": "atexit",
+        "isExtraImport": true,
+        "detail": "atexit",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "socket",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "socket",
+        "description": "socket",
+        "detail": "socket",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "HealthCheck",
+        "importPath": "medihub.health_check",
+        "description": "medihub.health_check",
+        "isExtraImport": true,
+        "detail": "medihub.health_check",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "pformat",
+        "importPath": "pprint",
+        "description": "pprint",
+        "isExtraImport": true,
+        "detail": "pprint",
+        "documentation": {}
+    },
+    {
+        "label": "jmespath",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jmespath",
+        "description": "jmespath",
+        "detail": "jmespath",
+        "documentation": {}
+    },
+    {
+        "label": "exceptions",
+        "importPath": "jmespath",
+        "description": "jmespath",
+        "isExtraImport": true,
+        "detail": "jmespath",
+        "documentation": {}
+    },
+    {
+        "label": "Command",
+        "kind": 6,
+        "importPath": "location.management.commands.populated_district",
+        "description": "location.management.commands.populated_district",
+        "peekOfCode": "class Command(BaseCommand):\n  help = \"Populate districts from dataset/district.json\"\n  def handle(self, *args: Any, **options: Any):\n    file_path = settings.BASE_DIR / \"dataset\" / \"district.json\"\n    if not file_path.exists():\n      raise CommandError(f\"District dataset not found: {file_path}\")\n    divisions = {\n      division.division_id: division\n      for division in Division.objects.all()\n    }",
+        "detail": "location.management.commands.populated_district",
+        "documentation": {}
+    },
+    {
+        "label": "Command",
+        "kind": 6,
+        "importPath": "location.management.commands.populated_division",
+        "description": "location.management.commands.populated_division",
+        "peekOfCode": "class Command(BaseCommand):\n  help = '''\n  ====================================================================\\n\n  --------------- Pupulated Division In Database\\n -------------------\\n\n  =====================================================================\\n\n  '''\n  def handle(self, *args: Any, **options: Any):\n    '''file path'''\n    if Division.objects.exists():\n      Division.objects.all().delete()",
+        "detail": "location.management.commands.populated_division",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "location.migrations.0001_initial",
+        "description": "location.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Division',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('division_id', models.IntegerField()),",
+        "detail": "location.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "DivisonAdmin",
+        "kind": 6,
+        "importPath": "location.admin",
+        "description": "location.admin",
+        "peekOfCode": "class DivisonAdmin(admin.ModelAdmin):\n  list_display=['id','division_id','division_name_bn','division_name_eng']\n  ordering=['division_id']\n@admin.register(District)\nclass DistrictAdmin(admin.ModelAdmin):\n  list_display=[\n    'id',\n    'district_id',\n    'district_name_bn',\n    'district_name_eng',",
+        "detail": "location.admin",
+        "documentation": {}
+    },
+    {
+        "label": "DistrictAdmin",
+        "kind": 6,
+        "importPath": "location.admin",
+        "description": "location.admin",
+        "peekOfCode": "class DistrictAdmin(admin.ModelAdmin):\n  list_display=[\n    'id',\n    'district_id',\n    'district_name_bn',\n    'district_name_eng',\n    'division',\n    'lattitude',\n    'logitude',\n  ]",
+        "detail": "location.admin",
+        "documentation": {}
+    },
+    {
+        "label": "LocationConfig",
+        "kind": 6,
+        "importPath": "location.apps",
+        "description": "location.apps",
+        "peekOfCode": "class LocationConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'location'",
+        "detail": "location.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "kind": 6,
+        "importPath": "location.models",
+        "description": "location.models",
+        "peekOfCode": "class Division(models.Model):\n  division_id = models.IntegerField(unique=True,blank=False,null=False)\n  division_name_bn = models.CharField(max_length=100,blank=False,null=False)\n  division_name_eng = models.CharField(max_length=100,blank=False,null=False)\n  def __str__(self) -> str:\n    return self.division_name_bn\n\"\"\"District Model\"\"\"\nclass District(models.Model):\n  division = models.ForeignKey(Division, on_delete=models.CASCADE)\n  district_id = models.IntegerField(unique=True,blank=False,null=False)",
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "kind": 6,
+        "importPath": "location.models",
+        "description": "location.models",
+        "peekOfCode": "class District(models.Model):\n  division = models.ForeignKey(Division, on_delete=models.CASCADE)\n  district_id = models.IntegerField(unique=True,blank=False,null=False)\n  district_name_bn = models.CharField(max_length=100,blank=False,null=False)\n  district_name_eng = models.CharField(max_length=100,blank=False,null=False)\n  lattitude  = models.DecimalField(decimal_places=10,max_digits=12)\n  logitude = models.DecimalField(decimal_places=10,max_digits=12) \n  def __str__(self) -> str:\n    return self.district_name_bn\n\"\"\"Upzila Model\"\"\"",
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "kind": 6,
+        "importPath": "location.models",
+        "description": "location.models",
+        "peekOfCode": "class Upozila(models.Model):\n  upozila_id = models.IntegerField(unique=True,blank=False,null=False)\n  upoila_name_bn = models.CharField(max_length=100)\n  upozila_name_eng = models.CharField(max_length=100)\n  def __str__(self) -> str:\n    return self.upoila_name_bn",
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "medihub.asgi",
+        "description": "medihub.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "medihub.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "HealthCheck",
+        "kind": 2,
+        "importPath": "medihub.health_check",
+        "description": "medihub.health_check",
+        "peekOfCode": "def HealthCheck(request):\n  now = datetime.now()\n  return render(request, 'health.html', {\n    \"host\": request.get_host(),\n    \"container\": socket.gethostname(),\n    \"fullpath\": request.build_absolute_uri(),\n    \"server_time\": now.strftime('%H:%M:%S'),\n    \"server_date\": now.strftime('%A, %d %B %Y'),\n    \"last_updated\": now.strftime('%d %b %Y — %H:%M:%S'),\n  })",
+        "detail": "medihub.health_check",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nimport os\nSECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-k%ebt*!xp%%$w!mjy60*u%9tci^4-9tx4y9_(a*v0njop*d^ic')\nDEBUG = os.environ.get('DEBUG', 'True') == 'True'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-k%ebt*!xp%%$w!mjy60*u%9tci^4-9tx4y9_(a*v0njop*d^ic')\nDEBUG = os.environ.get('DEBUG', 'True') == 'True'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "DEBUG = os.environ.get('DEBUG', 'True') == 'True'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CSRF_TRUSTED_ORIGINS",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "CSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    #installed app\n    'location'\n]",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'medihub.urls'",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "ROOT_URLCONF = 'medihub.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates'],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates'],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'medihub.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': os.environ.get('POSTGRES_DB', 'medihub'),\n        'USER': os.environ.get('POSTGRES_USER', 'medihub_user'),\n        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'medihub_pass'),\n        'HOST': os.environ.get('POSTGRES_HOST', 'db'),",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': os.environ.get('POSTGRES_DB', 'medihub'),\n        'USER': os.environ.get('POSTGRES_USER', 'medihub_user'),\n        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'medihub_pass'),\n        'HOST': os.environ.get('POSTGRES_HOST', 'db'),\n        'PORT': os.environ.get('POSTGRES_PORT', '5432'),\n    }\n}",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "STATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "medihub.urls",
+        "description": "medihub.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('health/', HealthCheck),\n    path('', HealthCheck),\n]",
+        "detail": "medihub.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "medihub.wsgi",
+        "description": "medihub.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "medihub.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "venv.bin.jp",
+        "description": "venv.bin.jp",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser()\n    parser.add_argument('expression')\n    parser.add_argument('-f', '--filename',\n                        help=('The filename containing the input data.  '\n                              'If a filename is not given then data is '\n                              'read from stdin.'))\n    parser.add_argument('--ast', action='store_true',\n                        help=('Pretty print the AST, do not search the data.'))\n    args = parser.parse_args()",
+        "detail": "venv.bin.jp",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'medihub.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "manage",
+        "documentation": {}
+    }
+]

@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from medihub.health_check import HealthCheck
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('health/', HealthCheck),
+    path('', HealthCheck),
 ]

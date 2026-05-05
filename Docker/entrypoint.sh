@@ -1,16 +1,16 @@
 #!/bin/sh
 
-# Only run migrate and collectstatic on first replica
-if [ "$REPLICA_ID" = "1" ] || [ -z "$REPLICA_ID" ]; then
-  python manage.py migrate --noinput
-  python manage.py collectstatic --noinput
+if [ "$#" -gt 0 ]; then
+  exec "$@"
 fi
 
-if [ "$DJANGO_DEV" = "true" ]; then
-  exec python manage.py runserver 0.0.0.0:8011
+PORT=${PORT:-8011}
+
+if [ "$(echo $DJANGO_DEV | tr '[:upper:]' '[:lower:]')" = "true" ]; then
+  exec python manage.py runserver 0.0.0.0:$PORT
 else
   exec gunicorn medihub.wsgi:application \
-    --bind 0.0.0.0:8011 \
+    --bind 0.0.0.0:$PORT \
     --workers 4 \
     --threads 2 \
     --timeout 60 \
