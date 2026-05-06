@@ -15,13 +15,7 @@ class Command(BaseCommand):
         if District.objects.exists():
             self.stdout.write(self.style.SUCCESS('District table is already populated'))
         else:
-            message = '''
-              ====================================================================\n
-              --------------- Populated District In Database -------------------\n
-              =====================================================================\n
-              '''
-            self.stdout.write(self.style.SUCCESS(message))
-            subprocess.run(['sleep', '10'])
+          
 
             filepath = settings.BASE_DIR / 'dataset' / 'district.json'
 
@@ -43,4 +37,4 @@ class Command(BaseCommand):
                 ]
 
                 District.objects.bulk_create(districts)
-                self.stdout.write(self.style.SUCCESS('District Created Successfully'))
+                self.stdout.write(self.style.SUCCESS('District populated Successfully'))

@@ -729,55 +729,15 @@
         "documentation": {}
     },
     {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
         "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
+        "detail": "django.conf",
         "documentation": {}
     },
     {
         "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -802,6 +762,70 @@
     },
     {
         "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -2252,7 +2276,7 @@
         "kind": 6,
         "importPath": "location.management.commands.populated_district",
         "description": "location.management.commands.populated_district",
-        "peekOfCode": "class Command(BaseCommand):\n    help = 'Populate District table'\n    def handle(self, *args: Any, **options: Any):\n        if District.objects.exists():\n            self.stdout.write(self.style.SUCCESS('District table is already populated'))\n        else:\n            message = '''\n              ====================================================================\\n\n              --------------- Populated District In Database -------------------\\n\n              =====================================================================\\n",
+        "peekOfCode": "class Command(BaseCommand):\n    help = 'Populate District table'\n    def handle(self, *args: Any, **options: Any):\n        if District.objects.exists():\n            self.stdout.write(self.style.SUCCESS('District table is already populated'))\n        else:\n            filepath = settings.BASE_DIR / 'dataset' / 'district.json'\n            with open(filepath, 'r') as file:\n                data = json.load(file)\n                divisions = {d.division_id: d for d in Division.objects.all()}",
         "detail": "location.management.commands.populated_district",
         "documentation": {}
     },
@@ -2261,7 +2285,7 @@
         "kind": 6,
         "importPath": "location.management.commands.populated_division",
         "description": "location.management.commands.populated_division",
-        "peekOfCode": "class Command(BaseCommand):\n  help = ''' Divison Populated'''\n  def handle(self, *args: Any, **options: Any):\n    '''file path'''\n    if Division.objects.exists():\n      self.stdout.write(self.style.SUCCESS(\"Division Alreadhy exists\"))\n      pass\n    else:\n      message = '''\n              ====================================================================\\n",
+        "peekOfCode": "class Command(BaseCommand):\n  help = ''' Divison Populated'''\n  def handle(self, *args: Any, **options: Any):\n    '''file path'''\n    if Division.objects.exists():\n      self.stdout.write(self.style.SUCCESS(\"Division Alreadhy exists\"))\n      pass\n    else:\n      filePath = settings.BASE_DIR / \"dataset\" / \"division.json\"\n      with open(filePath, \"r\") as file:",
         "detail": "location.management.commands.populated_division",
         "documentation": {}
     },
@@ -2270,7 +2294,7 @@
         "kind": 6,
         "importPath": "location.management.commands.populated_union",
         "description": "location.management.commands.populated_union",
-        "peekOfCode": "class Command(BaseCommand):\n    help = 'Populate Union table'\n    def handle(self, *args: Any, **options: Any):\n        if Union.objects.exists():\n            self.stdout.write(self.style.SUCCESS('Union table is already populated'))\n        else:\n            message = '''\n              ====================================================================\\n\n              --------------- Populated Union In Database -------------------\\n\n              =====================================================================\\n",
+        "peekOfCode": "class Command(BaseCommand):\n    help = 'Populate Union table'\n    def handle(self, *args: Any, **options: Any):\n        if Union.objects.exists():\n            self.stdout.write(self.style.SUCCESS('Union table is already populated'))\n        else:\n            filepath = settings.BASE_DIR / 'dataset' / 'union.json'\n            with open(filepath, 'r') as file:\n                data = json.load(file)\n                upozillas = {u.upozila: u for u in Upozila.objects.all()}",
         "detail": "location.management.commands.populated_union",
         "documentation": {}
     },
@@ -2279,7 +2303,7 @@
         "kind": 6,
         "importPath": "location.management.commands.populated_upozila",
         "description": "location.management.commands.populated_upozila",
-        "peekOfCode": "class Command(BaseCommand):\n    help = 'Populate Upazila table'\n    def handle(self, *args, **kwargs):\n      if Upozila.objects.exists():\n        self.stdout.write(self.style.SUCCESS('Upazila table is already populated'))\n      else:\n        message ='''\n              ====================================================================\\n\n              --------------- Pupulated Upzila In Database -------------------\\n\n              =====================================================================\\n",
+        "peekOfCode": "class Command(BaseCommand):\n    help = 'Populate Upazila table'\n    def handle(self, *args, **kwargs):\n      if Upozila.objects.exists():\n        self.stdout.write(self.style.SUCCESS('Upazila table is already populated'))\n      else:\n        filepath =settings.BASE_DIR/'dataset'/'upazila.json'\n        '''read file'''\n        with open(filepath,'r') as file:\n           data = json.load(file)",
         "detail": "location.management.commands.populated_upozila",
         "documentation": {}
     },
@@ -2626,6 +2650,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "post.migrations.0001_initial",
+        "description": "post.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('location', '0001_initial'),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='BloodNeedPost',\n            fields=[",
+        "detail": "post.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
         "label": "BloodNeedPost",
         "kind": 6,
         "importPath": "post.models.blood_need_mod",
@@ -2765,7 +2798,7 @@
         "kind": 6,
         "importPath": "profiles.management.commands.populated_specialization",
         "description": "profiles.management.commands.populated_specialization",
-        "peekOfCode": "class Command(BaseCommand):\n    help = 'Populate Specialization table'\n    def handle(self, *args: Any, **options: Any):\n        if Specialization.objects.exists():\n            self.stdout.write(self.style.SUCCESS('Specialization table is already populated'))\n        else:\n            message = '''\n              ====================================================================\\n\n              --------------- Populated Specialization In Database -------------------\\n\n              =====================================================================\\n",
+        "peekOfCode": "class Command(BaseCommand):\n    help = 'Populate Specialization table'\n    def handle(self, *args: Any, **options: Any):\n        if Specialization.objects.exists():\n            self.stdout.write(self.style.SUCCESS('Specialization table is already populated'))\n        else:\n            filepath = settings.BASE_DIR / 'dataset' / 'specialization.json'\n            with open(filepath, 'r') as file:\n                data = json.load(file)\n                for item in data:",
         "detail": "profiles.management.commands.populated_specialization",
         "documentation": {}
     },

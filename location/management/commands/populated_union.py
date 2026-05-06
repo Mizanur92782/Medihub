@@ -15,13 +15,7 @@ class Command(BaseCommand):
         if Union.objects.exists():
             self.stdout.write(self.style.SUCCESS('Union table is already populated'))
         else:
-            message = '''
-              ====================================================================\n
-              --------------- Populated Union In Database -------------------\n
-              =====================================================================\n
-              '''
-            self.stdout.write(self.style.SUCCESS(message))
-            subprocess.run(['sleep', '10'])
+          
 
             filepath = settings.BASE_DIR / 'dataset' / 'union.json'
             
@@ -41,4 +35,4 @@ class Command(BaseCommand):
                 ]
 
                 Union.objects.bulk_create(unions)
-                self.stdout.write(self.style.SUCCESS('Union Created Successfully'))
+                self.stdout.write(self.style.SUCCESS('Union populated Successfully'))

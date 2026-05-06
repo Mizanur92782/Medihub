@@ -19,13 +19,8 @@ class Command(BaseCommand):
       pass
     else:
     
-      message = '''
-              ====================================================================\n
-              --------------- Pupulated Division In Database -------------------\n
-              =====================================================================\n
-              '''
-      self.stdout.write(self.style.SUCCESS(message))
-      subprocess.run(['sleep','10'])
+      
+     
       
       
       filePath = settings.BASE_DIR / "dataset" / "division.json"
@@ -44,4 +39,4 @@ class Command(BaseCommand):
         
         Division.objects.bulk_create(divisions)
         
-        self.stdout.write(self.style.SUCCESS('                        Successfully Populated Division'))
+        self.stdout.write(self.style.SUCCESS('Successfully Populated Division'))

@@ -23,3 +23,4 @@ class Command(BaseCommand):
         call_command('populated_ambulance')
         call_command('populated_blog')
         call_command('populated_post')
+        
