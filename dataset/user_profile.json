@@ -1,0 +1,67 @@
+[
+  {
+    "email": "user.rahim@medihub.com",
+    "password": "User@1234",
+    "first_name": "Abdur",
+    "last_name": "Rahim",
+    "date_of_birth": "1990-05-10",
+    "gender": "male",
+    "contact_number": "01811000001",
+    "division": "ঢাকা",
+    "district": "ঢাকা",
+    "upozila": "সাভার",
+    "address": "বাড়ি ৫, রোড ৩, সাভার, ঢাকা"
+  },
+  {
+    "email": "user.sumaiya@medihub.com",
+    "password": "User@1234",
+    "first_name": "Sumaiya",
+    "last_name": "Islam",
+    "date_of_birth": "1995-08-25",
+    "gender": "female",
+    "contact_number": "01811000002",
+    "division": "চট্টগ্রাম",
+    "district": "চট্টগ্রাম",
+    "upozila": "পটিয়া",
+    "address": "বাড়ি ১২, পটিয়া, চট্টগ্রাম"
+  },
+  {
+    "email": "user.kamal@medihub.com",
+    "password": "User@1234",
+    "first_name": "Kamal",
+    "last_name": "Uddin",
+    "date_of_birth": "1988-12-01",
+    "gender": "male",
+    "contact_number": "01811000003",
+    "division": "রাজশাহী",
+    "district": "রাজশাহী",
+    "upozila": "বোয়ালিয়া",
+    "address": "বাড়ি ৭, বোয়ালিয়া, রাজশাহী"
+  },
+  {
+    "email": "user.roksana@medihub.com",
+    "password": "User@1234",
+    "first_name": "Roksana",
+    "last_name": "Khatun",
+    "date_of_birth": "1993-03-17",
+    "gender": "female",
+    "contact_number": "01811000004",
+    "division": "খুলনা",
+    "district": "খুলনা",
+    "upozila": "খুলনা সদর",
+    "address": "বাড়ি ৩, খুলনা সদর, খুলনা"
+  },
+  {
+    "email": "user.jamal@medihub.com",
+    "password": "User@1234",
+    "first_name": "Jamal",
+    "last_name": "Hossain",
+    "date_of_birth": "1985-06-20",
+    "gender": "male",
+    "contact_number": "01811000005",
+    "division": "সিলেট",
+    "district": "সিলেট",
+    "upozila": "সিলেট সদর",
+    "address": "বাড়ি ৯, সিলেট সদর, সিলেট"
+  }
+]

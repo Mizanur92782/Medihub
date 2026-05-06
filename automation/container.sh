@@ -73,18 +73,49 @@ if [[ "$answer" == "yes" ]]; then
     docker logs -f medihub_migrate
 fi
 
+echo ""
+
+# ===== STEP 3.5 =====
+echo -e "${BLUE}Make Migrations Section${NC}"
+read -p "Do you want to run makemigrations? (yes/no): " answer
+
+if [[ "$answer" == "yes" ]]; then
+    echo -e "${YELLOW}Running makemigrations...${NC}"
+    loading "Detecting changes"
+    docker exec medihub_web1 python manage.py makemigrations
+    echo -e "${GREEN}✔ Makemigrations completed${NC}"
+
+    echo -e "${YELLOW}Running migrate...${NC}"
+    loading "Applying migrations"
+    docker exec medihub_web1 python manage.py migrate
+    echo -e "${GREEN}✔ Migrate completed${NC}"
+fi
+
+echo ""
 
 # ===== STEP 4 =====
-echo -e "${BLUE}Seed Section Management ${NC}"
-read -p "Do you want to run root seet management commands? (yes/no): " answer
+echo -e "${BLUE}Seed Section Management${NC}"
+read -p "Do you want to run root seed management commands? (yes/no): " answer
 
 if [[ "$answer" == "yes" ]]; then
     echo -e "${YELLOW}Running root seed...${NC}"
     sleep 1
     docker exec medihub_web1 python manage.py root_seed
+    echo -e "${GREEN}✔ Root seed completed${NC}"
 fi
 
+echo ""
 
+# ===== STEP 5 =====
+echo -e "${BLUE}Superuser Creation Section${NC}"
+read -p "Do you want to create a Django superuser? (yes/no): " answer
+
+if [[ "$answer" == "yes" ]]; then
+    echo -e "${YELLOW}Opening Django superuser creation...${NC}"
+    sleep 1
+    docker exec -it medihub_web1 python manage.py createsuperuser
+    echo -e "${GREEN}✔ Superuser creation process finished${NC}"
+fi
 
 echo ""
 echo -e "${GREEN}======================================"
@@ -92,6 +123,3 @@ echo "May Allah give you Strength, Knowledge,"
 echo "Patience and Success. Thanks 🤲"
 echo "======================================"
 echo -e "${NC}"
-
-
-

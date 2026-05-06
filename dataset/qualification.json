@@ -1,0 +1,20 @@
+[
+  { "name_eng": "MBBS", "name_bn": "এমবিবিএস" },
+  { "name_eng": "BDS", "name_bn": "বিডিএস" },
+  { "name_eng": "FCPS (Medicine)", "name_bn": "এফসিপিএস (মেডিসিন)" },
+  { "name_eng": "FCPS (Surgery)", "name_bn": "এফসিপিএস (সার্জারি)" },
+  { "name_eng": "FCPS (Gynecology)", "name_bn": "এফসিপিএস (স্ত্রীরোগ)" },
+  { "name_eng": "FCPS (Pediatrics)", "name_bn": "এফসিপিএস (শিশুরোগ)" },
+  { "name_eng": "FCPS (Cardiology)", "name_bn": "এফসিপিএস (হৃদরোগ)" },
+  { "name_eng": "FCPS (Neurology)", "name_bn": "এফসিপিএস (স্নায়ুরোগ)" },
+  { "name_eng": "MD (Medicine)", "name_bn": "এমডি (মেডিসিন)" },
+  { "name_eng": "MS (Orthopedics)", "name_bn": "এমএস (অস্থিরোগ)" },
+  { "name_eng": "MS (General Surgery)", "name_bn": "এমএস (সাধারণ সার্জারি)" },
+  { "name_eng": "MS (Ophthalmology)", "name_bn": "এমএস (চক্ষু)" },
+  { "name_eng": "MS (ENT)", "name_bn": "এমএস (নাক কান গলা)" },
+  { "name_eng": "DCH (Child Health)", "name_bn": "ডিসিএইচ (শিশু স্বাস্থ্য)" },
+  { "name_eng": "DGO (Gynecology)", "name_bn": "ডিজিও (স্ত্রীরোগ)" },
+  { "name_eng": "D.Card (Cardiology)", "name_bn": "ডি.কার্ড (হৃদরোগ)" },
+  { "name_eng": "MPH (Public Health)", "name_bn": "এমপিএইচ (জনস্বাস্থ্য)" },
+  { "name_eng": "PhD (Medical Science)", "name_bn": "পিএইচডি (চিকিৎসা বিজ্ঞান)" }
+]

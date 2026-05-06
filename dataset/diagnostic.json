@@ -1,0 +1,72 @@
+[
+  {
+    "email": "diagnostic.popular@medihub.com",
+    "password": "Diagnostic@1234",
+    "diagnostic_name": "পপুলার ডায়াগনস্টিক সেন্টার",
+    "owner_name": "Dr. Mostafa Kamal",
+    "contact_number": "01511000001",
+    "license_number": "DGDA-DG-2014-001",
+    "license_validity": "2027-12-31",
+    "is_open": true,
+    "division": "ঢাকা",
+    "district": "ঢাকা",
+    "upozila": "ধানমন্ডি",
+    "address": "বাড়ি ১৬, রোড ২, ধানমন্ডি, ঢাকা"
+  },
+  {
+    "email": "diagnostic.labaid@medihub.com",
+    "password": "Diagnostic@1234",
+    "diagnostic_name": "ল্যাবএইড ডায়াগনস্টিক",
+    "owner_name": "Dr. Aminul Islam",
+    "contact_number": "01511000002",
+    "license_number": "DGDA-DG-2015-002",
+    "license_validity": "2027-12-31",
+    "is_open": true,
+    "division": "ঢাকা",
+    "district": "ঢাকা",
+    "upozila": "গুলশান",
+    "address": "বাড়ি ৫, গুলশান-১, ঢাকা"
+  },
+  {
+    "email": "diagnostic.ctg@medihub.com",
+    "password": "Diagnostic@1234",
+    "diagnostic_name": "চট্টগ্রাম ডায়াগনস্টিক সেন্টার",
+    "owner_name": "Dr. Rezaul Karim",
+    "contact_number": "01511000003",
+    "license_number": "DGDA-DG-2016-003",
+    "license_validity": "2027-12-31",
+    "is_open": true,
+    "division": "চট্টগ্রাম",
+    "district": "চট্টগ্রাম",
+    "upozila": "পাঁচলাইশ",
+    "address": "বাড়ি ৩, পাঁচলাইশ, চট্টগ্রাম"
+  },
+  {
+    "email": "diagnostic.rajshahi@medihub.com",
+    "password": "Diagnostic@1234",
+    "diagnostic_name": "রাজশাহী মেডিকেল ডায়াগনস্টিক",
+    "owner_name": "Dr. Shafiqul Islam",
+    "contact_number": "01511000004",
+    "license_number": "DGDA-DG-2017-004",
+    "license_validity": "2027-12-31",
+    "is_open": true,
+    "division": "রাজশাহী",
+    "district": "রাজশাহী",
+    "upozila": "বোয়ালিয়া",
+    "address": "বাড়ি ১০, সাহেব বাজার, রাজশাহী"
+  },
+  {
+    "email": "diagnostic.sylhet@medihub.com",
+    "password": "Diagnostic@1234",
+    "diagnostic_name": "সিলেট ডায়াগনস্টিক সেন্টার",
+    "owner_name": "Dr. Habibur Rahman",
+    "contact_number": "01511000005",
+    "license_number": "DGDA-DG-2018-005",
+    "license_validity": "2027-12-31",
+    "is_open": false,
+    "division": "সিলেট",
+    "district": "সিলেট",
+    "upozila": "সিলেট সদর",
+    "address": "বাড়ি ৬, জিন্দাবাজার, সিলেট"
+  }
+]

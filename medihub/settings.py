@@ -37,7 +37,12 @@ INSTALLED_APPS = [
     #installed app
     'location',
     'medihub',
+    'profiles',
+    'blog',
+    'post',
 ]
+
+AUTH_USER_MODEL = 'profiles.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

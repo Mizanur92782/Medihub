@@ -1,0 +1,57 @@
+[
+  {
+    "user": "user.rahim@medihub.com",
+    "title": "বিনামূল্যে স্বাস্থ্য সেবা ক্যাম্প - সাভার",
+    "content": "আগামী শুক্রবার সাভার উপজেলা স্বাস্থ্য কমপ্লেক্সে বিনামূল্যে স্বাস্থ্য সেবা ক্যাম্প অনুষ্ঠিত হবে। সকাল ৯টা থেকে বিকাল ৪টা পর্যন্ত। সবাইকে আমন্ত্রণ জানানো হচ্ছে।",
+    "image": "post/general/health_camp.jpg",
+    "division": "ঢাকা",
+    "district": "ঢাকা",
+    "upozila": "সাভার",
+    "contact_number": "01811000001",
+    "status": "open"
+  },
+  {
+    "user": "user.sumaiya@medihub.com",
+    "title": "ডেঙ্গু সচেতনতা - চট্টগ্রাম",
+    "content": "চট্টগ্রামে ডেঙ্গুর প্রকোপ বাড়ছে। বাড়ির আশেপাশে পানি জমতে দেবেন না। জ্বর হলে দ্রুত ডাক্তার দেখান। সবাই সচেতন থাকুন।",
+    "image": "post/general/dengue_awareness.jpg",
+    "division": "চট্টগ্রাম",
+    "district": "চট্টগ্রাম",
+    "upozila": "পটিয়া",
+    "contact_number": "01811000002",
+    "status": "open"
+  },
+  {
+    "user": "user.kamal@medihub.com",
+    "title": "রক্তদান কর্মসূচি - রাজশাহী",
+    "content": "রাজশাহী মেডিকেল কলেজ হাসপাতালে আগামী সপ্তাহে রক্তদান কর্মসূচি অনুষ্ঠিত হবে। স্বেচ্ছায় রক্তদান করুন, জীবন বাঁচান।",
+    "image": "post/general/blood_donation.jpg",
+    "division": "রাজশাহী",
+    "district": "রাজশাহী",
+    "upozila": "বোয়ালিয়া",
+    "contact_number": "01811000003",
+    "status": "open"
+  },
+  {
+    "user": "user.roksana@medihub.com",
+    "title": "মা ও শিশু স্বাস্থ্য সেবা - খুলনা",
+    "content": "খুলনায় মা ও শিশু স্বাস্থ্য সেবা কেন্দ্র চালু হয়েছে। গর্ভবতী মায়েরা বিনামূল্যে চেকআপ করাতে পারবেন। যোগাযোগ করুন।",
+    "image": "post/general/mother_child_health.jpg",
+    "division": "খুলনা",
+    "district": "খুলনা",
+    "upozila": "খুলনা সদর",
+    "contact_number": "01811000004",
+    "status": "open"
+  },
+  {
+    "user": "user.jamal@medihub.com",
+    "title": "বন্যায় আক্রান্তদের জন্য ওষুধ সংগ্রহ - সিলেট",
+    "content": "সিলেটে বন্যায় আক্রান্ত মানুষদের জন্য ওষুধ ও স্বাস্থ্য সামগ্রী সংগ্রহ করা হচ্ছে। যে কেউ সাহায্য করতে চাইলে যোগাযোগ করুন।",
+    "image": "post/general/flood_relief.jpg",
+    "division": "সিলেট",
+    "district": "সিলেট",
+    "upozila": "সিলেট সদর",
+    "contact_number": "01811000005",
+    "status": "open"
+  }
+]

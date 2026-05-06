@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name_eng": "Cardiology",
+    "name_bn": "হৃদরোগ বিশেষজ্ঞ",
+    "sub": [
+      { "id": 1, "name_eng": "Interventional Cardiology", "name_bn": "ইন্টারভেনশনাল কার্ডিওলজি" },
+      { "id": 2, "name_eng": "Electrophysiology", "name_bn": "ইলেক্ট্রোফিজিওলজি" },
+      { "id": 3, "name_eng": "Heart Failure", "name_bn": "হার্ট ফেইলিউর" }
+    ]
+  },
+  {
+    "id": 2,
+    "name_eng": "Neurology",
+    "name_bn": "স্নায়ুরোগ বিশেষজ্ঞ",
+    "sub": [
+      { "id": 4, "name_eng": "Stroke", "name_bn": "স্ট্রোক" },
+      { "id": 5, "name_eng": "Epilepsy", "name_bn": "মৃগীরোগ" },
+      { "id": 6, "name_eng": "Headache & Migraine", "name_bn": "মাথাব্যথা ও মাইগ্রেন" }
+    ]
+  },
+  {
+    "id": 3,
+    "name_eng": "Orthopedics",
+    "name_bn": "অস্থিরোগ বিশেষজ্ঞ",
+    "sub": [
+      { "id": 7, "name_eng": "Spine Surgery", "name_bn": "মেরুদণ্ড সার্জারি" },
+      { "id": 8, "name_eng": "Joint Replacement", "name_bn": "জয়েন্ট প্রতিস্থাপন" },
+      { "id": 9, "name_eng": "Sports Medicine", "name_bn": "স্পোর্টস মেডিসিন" }
+    ]
+  },
+  {
+    "id": 4,
+    "name_eng": "Dermatology",
+    "name_bn": "চর্মরোগ বিশেষজ্ঞ",
+    "sub": [
+      { "id": 10, "name_eng": "Cosmetic Dermatology", "name_bn": "কসমেটিক ডার্মাটোলজি" },
+      { "id": 11, "name_eng": "Pediatric Dermatology", "name_bn": "শিশু চর্মরোগ" },
+      { "id": 12, "name_eng": "Skin Allergy", "name_bn": "ত্বকের অ্যালার্জি" }
+    ]
+  },
+  {
+    "id": 5,
+    "name_eng": "Gynecology & Obstetrics",
+    "name_bn": "স্ত্রীরোগ ও প্রসূতি বিশেষজ্ঞ",
+    "sub": [
+      { "id": 13, "name_eng": "Maternal-Fetal Medicine", "name_bn": "মাতৃ-ভ্রূণ চিকিৎসা" },
+      { "id": 14, "name_eng": "Infertility", "name_bn": "বন্ধ্যাত্ব চিকিৎসা" },
+      { "id": 15, "name_eng": "Gynecologic Oncology", "name_bn": "স্ত্রীরোগ অনকোলজি" }
+    ]
+  },
+  {
+    "id": 6,
+    "name_eng": "Pediatrics",
+    "name_bn": "শিশুরোগ বিশেষজ্ঞ",
+    "sub": [
+      { "id": 16, "name_eng": "Neonatology", "name_bn": "নবজাতক বিশেষজ্ঞ" },
+      { "id": 17, "name_eng": "Pediatric Cardiology", "name_bn": "শিশু হৃদরোগ" },
+      { "id": 18, "name_eng": "Pediatric Neurology", "name_bn": "শিশু স্নায়ুরোগ" }
+    ]
+  },
+  {
+    "id": 7,
+    "name_eng": "Psychiatry",
+    "name_bn": "মানসিক রোগ বিশেষজ্ঞ",
+    "sub": [
+      { "id": 19, "name_eng": "Child Psychiatry", "name_bn": "শিশু মানসিক রোগ" },
+      { "id": 20, "name_eng": "Addiction Psychiatry", "name_bn": "আসক্তি মানসিক রোগ" },
+      { "id": 21, "name_eng": "Geriatric Psychiatry", "name_bn": "বৃদ্ধ মানসিক রোগ" }
+    ]
+  },
+  {
+    "id": 8,
+    "name_eng": "Ophthalmology",
+    "name_bn": "চক্ষু বিশেষজ্ঞ",
+    "sub": [
+      { "id": 22, "name_eng": "Retina", "name_bn": "রেটিনা" },
+      { "id": 23, "name_eng": "Glaucoma", "name_bn": "গ্লুকোমা" },
+      { "id": 24, "name_eng": "Cornea", "name_bn": "কর্নিয়া" }
+    ]
+  },
+  {
+    "id": 9,
+    "name_eng": "ENT",
+    "name_bn": "নাক কান গলা বিশেষজ্ঞ",
+    "sub": [
+      { "id": 25, "name_eng": "Otology", "name_bn": "কান বিশেষজ্ঞ" },
+      { "id": 26, "name_eng": "Rhinology", "name_bn": "নাক বিশেষজ্ঞ" },
+      { "id": 27, "name_eng": "Laryngology", "name_bn": "গলা বিশেষজ্ঞ" }
+    ]
+  },
+  {
+    "id": 10,
+    "name_eng": "Gastroenterology",
+    "name_bn": "পাকস্থলী ও অন্ত্র বিশেষজ্ঞ",
+    "sub": [
+      { "id": 28, "name_eng": "Hepatology", "name_bn": "যকৃত বিশেষজ্ঞ" },
+      { "id": 29, "name_eng": "Endoscopy", "name_bn": "এন্ডোস্কোপি" },
+      { "id": 30, "name_eng": "Colorectal", "name_bn": "কোলোরেক্টাল" }
+    ]
+  },
+  {
+    "id": 11,
+    "name_eng": "Urology",
+    "name_bn": "মূত্ররোগ বিশেষজ্ঞ",
+    "sub": [
+      { "id": 31, "name_eng": "Kidney Stone", "name_bn": "কিডনি পাথর" },
+      { "id": 32, "name_eng": "Urologic Oncology", "name_bn": "মূত্ররোগ অনকোলজি" },
+      { "id": 33, "name_eng": "Male Infertility", "name_bn": "পুরুষ বন্ধ্যাত্ব" }
+    ]
+  },
+  {
+    "id": 12,
+    "name_eng": "Endocrinology",
+    "name_bn": "হরমোন বিশেষজ্ঞ",
+    "sub": [
+      { "id": 34, "name_eng": "Diabetes", "name_bn": "ডায়াবেটিস" },
+      { "id": 35, "name_eng": "Thyroid", "name_bn": "থাইরয়েড" },
+      { "id": 36, "name_eng": "Obesity", "name_bn": "স্থূলতা" }
+    ]
+  },
+  {
+    "id": 13,
+    "name_eng": "Oncology",
+    "name_bn": "ক্যান্সার বিশেষজ্ঞ",
+    "sub": [
+      { "id": 37, "name_eng": "Medical Oncology", "name_bn": "মেডিকেল অনকোলজি" },
+      { "id": 38, "name_eng": "Radiation Oncology", "name_bn": "রেডিয়েশন অনকোলজি" },
+      { "id": 39, "name_eng": "Surgical Oncology", "name_bn": "সার্জিক্যাল অনকোলজি" }
+    ]
+  },
+  {
+    "id": 14,
+    "name_eng": "Nephrology",
+    "name_bn": "কিডনি বিশেষজ্ঞ",
+    "sub": [
+      { "id": 40, "name_eng": "Dialysis", "name_bn": "ডায়ালাইসিস" },
+      { "id": 41, "name_eng": "Kidney Transplant", "name_bn": "কিডনি প্রতিস্থাপন" },
+      { "id": 42, "name_eng": "Glomerulonephritis", "name_bn": "গ্লোমেরুলোনেফ্রাইটিস" }
+    ]
+  },
+  {
+    "id": 15,
+    "name_eng": "General Surgery",
+    "name_bn": "সাধারণ সার্জারি বিশেষজ্ঞ",
+    "sub": [
+      { "id": 43, "name_eng": "Laparoscopic Surgery", "name_bn": "ল্যাপারোস্কোপিক সার্জারি" },
+      { "id": 44, "name_eng": "Hernia Surgery", "name_bn": "হার্নিয়া সার্জারি" },
+      { "id": 45, "name_eng": "Appendix Surgery", "name_bn": "অ্যাপেন্ডিক্স সার্জারি" }
+    ]
+  }
+]

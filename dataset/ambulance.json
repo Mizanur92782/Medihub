@@ -1,0 +1,67 @@
+[
+  {
+    "email": "ambulance.dhaka1@medihub.com",
+    "password": "Ambulance@1234",
+    "owner_name": "Md. Faruk Hossain",
+    "contact_number": "01411000001",
+    "ambulance_type": "basic",
+    "vehicle_number": "ঢাকা-মেট্রো-গ-১১-০০০১",
+    "is_available": true,
+    "division": "ঢাকা",
+    "district": "ঢাকা",
+    "upozila": "মিরপুর",
+    "address": "মিরপুর-১২, ঢাকা"
+  },
+  {
+    "email": "ambulance.dhaka2@medihub.com",
+    "password": "Ambulance@1234",
+    "owner_name": "Rahim Uddin",
+    "contact_number": "01411000002",
+    "ambulance_type": "advanced",
+    "vehicle_number": "ঢাকা-মেট্রো-গ-১১-০০০২",
+    "is_available": true,
+    "division": "ঢাকা",
+    "district": "ঢাকা",
+    "upozila": "উত্তরা",
+    "address": "উত্তরা সেক্টর ৭, ঢাকা"
+  },
+  {
+    "email": "ambulance.ctg@medihub.com",
+    "password": "Ambulance@1234",
+    "owner_name": "Jamal Uddin",
+    "contact_number": "01411000003",
+    "ambulance_type": "icu",
+    "vehicle_number": "চট্টগ্রাম-ব-১১-০০০৩",
+    "is_available": true,
+    "division": "চট্টগ্রাম",
+    "district": "চট্টগ্রাম",
+    "upozila": "পাঁচলাইশ",
+    "address": "পাঁচলাইশ, চট্টগ্রাম"
+  },
+  {
+    "email": "ambulance.rajshahi@medihub.com",
+    "password": "Ambulance@1234",
+    "owner_name": "Selim Khan",
+    "contact_number": "01411000004",
+    "ambulance_type": "basic",
+    "vehicle_number": "রাজশাহী-ব-১১-০০০৪",
+    "is_available": false,
+    "division": "রাজশাহী",
+    "district": "রাজশাহী",
+    "upozila": "বোয়ালিয়া",
+    "address": "বোয়ালিয়া, রাজশাহী"
+  },
+  {
+    "email": "ambulance.sylhet@medihub.com",
+    "password": "Ambulance@1234",
+    "owner_name": "Nurul Islam",
+    "contact_number": "01411000005",
+    "ambulance_type": "advanced",
+    "vehicle_number": "সিলেট-ব-১১-০০০৫",
+    "is_available": true,
+    "division": "সিলেট",
+    "district": "সিলেট",
+    "upozila": "সিলেট সদর",
+    "address": "সিলেট সদর, সিলেট"
+  }
+]

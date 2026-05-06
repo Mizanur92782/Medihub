@@ -1,0 +1,161 @@
+[
+  {
+    "email": "dr.karim@medihub.com",
+    "password": "Doctor@1234",
+    "first_name": "Abdul",
+    "last_name": "Karim",
+    "date_of_birth": "1975-03-15",
+    "gender": "male",
+    "contact_number": "01711000001",
+    "division": "ঢাকা",
+    "district": "ঢাকা",
+    "specialization": "Cardiology",
+    "sub_specialization": "Interventional Cardiology",
+    "qualifications": ["MBBS", "FCPS (Cardiology)", "D.Card (Cardiology)"],
+    "hospital_affiliations": ["National Heart Foundation Hospital", "Square Hospital"],
+    "years_of_experience": 20,
+    "license_number": "BMDC-2003-001",
+    "license_validity": "2027-12-31",
+    "bio": "Senior cardiologist with 20 years of experience in interventional cardiology.",
+    "language": "বাংলা, English",
+    "educations": [
+      { "institution": "Dhaka Medical College", "degree": "MBBS", "start_at": "1993-01-01", "end_at": "1999-12-31" },
+      { "institution": "BCPS Bangladesh", "degree": "FCPS (Cardiology)", "start_at": "2001-01-01", "end_at": "2003-12-31" }
+    ],
+    "experiences": [
+      { "institution": "National Heart Foundation Hospital", "position": "Senior Consultant", "starting_at": "2004-01-01", "end_at": null }
+    ],
+    "schedules": [
+      { "day": "saturday", "start": "09:00", "end": "13:00" },
+      { "day": "monday", "start": "09:00", "end": "13:00" },
+      { "day": "wednesday", "start": "09:00", "end": "13:00" }
+    ]
+  },
+  {
+    "email": "dr.fatema@medihub.com",
+    "password": "Doctor@1234",
+    "first_name": "Fatema",
+    "last_name": "Begum",
+    "date_of_birth": "1980-07-22",
+    "gender": "female",
+    "contact_number": "01711000002",
+    "division": "ঢাকা",
+    "district": "ঢাকা",
+    "specialization": "Gynecology & Obstetrics",
+    "sub_specialization": "Maternal-Fetal Medicine",
+    "qualifications": ["MBBS", "FCPS (Gynecology)", "DGO (Gynecology)"],
+    "hospital_affiliations": ["Dhaka Medical College Hospital", "Popular Medical Centre"],
+    "years_of_experience": 15,
+    "license_number": "BMDC-2008-002",
+    "license_validity": "2027-12-31",
+    "bio": "Experienced gynecologist specializing in high-risk pregnancies.",
+    "language": "বাংলা, English",
+    "educations": [
+      { "institution": "Sir Salimullah Medical College", "degree": "MBBS", "start_at": "1998-01-01", "end_at": "2004-12-31" },
+      { "institution": "BCPS Bangladesh", "degree": "FCPS (Gynecology)", "start_at": "2005-01-01", "end_at": "2008-12-31" }
+    ],
+    "experiences": [
+      { "institution": "Dhaka Medical College Hospital", "position": "Associate Professor", "starting_at": "2009-01-01", "end_at": null }
+    ],
+    "schedules": [
+      { "day": "sunday", "start": "10:00", "end": "14:00" },
+      { "day": "tuesday", "start": "10:00", "end": "14:00" },
+      { "day": "thursday", "start": "10:00", "end": "14:00" }
+    ]
+  },
+  {
+    "email": "dr.hossain@medihub.com",
+    "password": "Doctor@1234",
+    "first_name": "Md. Rafiqul",
+    "last_name": "Hossain",
+    "date_of_birth": "1972-11-05",
+    "gender": "male",
+    "contact_number": "01711000003",
+    "division": "চট্টগ্রাম",
+    "district": "চট্টগ্রাম",
+    "specialization": "Neurology",
+    "sub_specialization": "Stroke",
+    "qualifications": ["MBBS", "MD (Medicine)", "FCPS (Neurology)"],
+    "hospital_affiliations": ["Chittagong Medical College Hospital", "National Institute of Neurosciences & Hospital"],
+    "years_of_experience": 25,
+    "license_number": "BMDC-1999-003",
+    "license_validity": "2027-12-31",
+    "bio": "Leading neurologist with expertise in stroke management.",
+    "language": "বাংলা, English, চাটগাঁইয়া",
+    "educations": [
+      { "institution": "Chittagong Medical College", "degree": "MBBS", "start_at": "1990-01-01", "end_at": "1996-12-31" },
+      { "institution": "BCPS Bangladesh", "degree": "FCPS (Neurology)", "start_at": "1997-01-01", "end_at": "1999-12-31" }
+    ],
+    "experiences": [
+      { "institution": "Chittagong Medical College Hospital", "position": "Professor", "starting_at": "2000-01-01", "end_at": null }
+    ],
+    "schedules": [
+      { "day": "saturday", "start": "08:00", "end": "12:00" },
+      { "day": "tuesday", "start": "08:00", "end": "12:00" }
+    ]
+  },
+  {
+    "email": "dr.rahman@medihub.com",
+    "password": "Doctor@1234",
+    "first_name": "Mizanur",
+    "last_name": "Rahman",
+    "date_of_birth": "1983-04-18",
+    "gender": "male",
+    "contact_number": "01711000004",
+    "division": "রাজশাহী",
+    "district": "রাজশাহী",
+    "specialization": "Pediatrics",
+    "sub_specialization": "Neonatology",
+    "qualifications": ["MBBS", "FCPS (Pediatrics)", "DCH (Child Health)"],
+    "hospital_affiliations": ["Rajshahi Medical College Hospital"],
+    "years_of_experience": 12,
+    "license_number": "BMDC-2011-004",
+    "license_validity": "2027-12-31",
+    "bio": "Dedicated pediatrician focusing on newborn care and child health.",
+    "language": "বাংলা, English",
+    "educations": [
+      { "institution": "Rajshahi Medical College", "degree": "MBBS", "start_at": "2001-01-01", "end_at": "2007-12-31" },
+      { "institution": "BCPS Bangladesh", "degree": "FCPS (Pediatrics)", "start_at": "2008-01-01", "end_at": "2011-12-31" }
+    ],
+    "experiences": [
+      { "institution": "Rajshahi Medical College Hospital", "position": "Assistant Professor", "starting_at": "2012-01-01", "end_at": null }
+    ],
+    "schedules": [
+      { "day": "sunday", "start": "09:00", "end": "13:00" },
+      { "day": "wednesday", "start": "09:00", "end": "13:00" },
+      { "day": "thursday", "start": "09:00", "end": "13:00" }
+    ]
+  },
+  {
+    "email": "dr.akter@medihub.com",
+    "password": "Doctor@1234",
+    "first_name": "Nasrin",
+    "last_name": "Akter",
+    "date_of_birth": "1985-09-30",
+    "gender": "female",
+    "contact_number": "01711000005",
+    "division": "সিলেট",
+    "district": "সিলেট",
+    "specialization": "Dermatology",
+    "sub_specialization": "Skin Allergy",
+    "qualifications": ["MBBS", "FCPS (Medicine)"],
+    "hospital_affiliations": ["Sylhet MAG Osmani Medical College Hospital", "Ibn Sina Hospital"],
+    "years_of_experience": 10,
+    "license_number": "BMDC-2013-005",
+    "license_validity": "2027-12-31",
+    "bio": "Dermatologist with special interest in skin allergy and cosmetic treatments.",
+    "language": "বাংলা, English, সিলেটি",
+    "educations": [
+      { "institution": "Sylhet MAG Osmani Medical College", "degree": "MBBS", "start_at": "2003-01-01", "end_at": "2009-12-31" },
+      { "institution": "BCPS Bangladesh", "degree": "FCPS (Medicine)", "start_at": "2010-01-01", "end_at": "2013-12-31" }
+    ],
+    "experiences": [
+      { "institution": "Sylhet MAG Osmani Medical College Hospital", "position": "Medical Officer", "starting_at": "2014-01-01", "end_at": null }
+    ],
+    "schedules": [
+      { "day": "monday", "start": "16:00", "end": "20:00" },
+      { "day": "wednesday", "start": "16:00", "end": "20:00" },
+      { "day": "friday", "start": "10:00", "end": "14:00" }
+    ]
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "email": "pharmacy.arogya@medihub.com",
+    "password": "Pharmacy@1234",
+    "pharmacy_name": "আরোগ্য ফার্মেসি",
+    "owner_name": "Md. Selim Reza",
+    "contact_number": "01611000001",
+    "license_number": "DGDA-PH-2015-001",
+    "license_validity": "2027-12-31",
+    "is_open": true,
+    "division": "ঢাকা",
+    "district": "ঢাকা",
+    "upozila": "মিরপুর",
+    "address": "দোকান ৫, মিরপুর-১, ঢাকা"
+  },
+  {
+    "email": "pharmacy.shifa@medihub.com",
+    "password": "Pharmacy@1234",
+    "pharmacy_name": "শিফা ড্রাগ হাউস",
+    "owner_name": "Karim Mia",
+    "contact_number": "01611000002",
+    "license_number": "DGDA-PH-2016-002",
+    "license_validity": "2027-12-31",
+    "is_open": true,
+    "division": "চট্টগ্রাম",
+    "district": "চট্টগ্রাম",
+    "upozila": "পটিয়া",
+    "address": "দোকান ১২, পটিয়া বাজার, চট্টগ্রাম"
+  },
+  {
+    "email": "pharmacy.noor@medihub.com",
+    "password": "Pharmacy@1234",
+    "pharmacy_name": "নূর মেডিকেল হল",
+    "owner_name": "Noor Islam",
+    "contact_number": "01611000003",
+    "license_number": "DGDA-PH-2017-003",
+    "license_validity": "2027-12-31",
+    "is_open": true,
+    "division": "রাজশাহী",
+    "district": "রাজশাহী",
+    "upozila": "বোয়ালিয়া",
+    "address": "দোকান ৩, সাহেব বাজার, রাজশাহী"
+  },
+  {
+    "email": "pharmacy.bismillah@medihub.com",
+    "password": "Pharmacy@1234",
+    "pharmacy_name": "বিসমিল্লাহ ফার্মেসি",
+    "owner_name": "Alam Hossain",
+    "contact_number": "01611000004",
+    "license_number": "DGDA-PH-2018-004",
+    "license_validity": "2027-12-31",
+    "is_open": false,
+    "division": "সিলেট",
+    "district": "সিলেট",
+    "upozila": "সিলেট সদর",
+    "address": "দোকান ৭, জিন্দাবাজার, সিলেট"
+  },
+  {
+    "email": "pharmacy.popular@medihub.com",
+    "password": "Pharmacy@1234",
+    "pharmacy_name": "পপুলার ফার্মেসি",
+    "owner_name": "Jahangir Alam",
+    "contact_number": "01611000005",
+    "license_number": "DGDA-PH-2019-005",
+    "license_validity": "2027-12-31",
+    "is_open": true,
+    "division": "খুলনা",
+    "district": "খুলনা",
+    "upozila": "খুলনা সদর",
+    "address": "দোকান ২, খুলনা সদর বাজার, খুলনা"
+  }
+]

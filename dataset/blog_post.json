@@ -1,0 +1,317 @@
+[
+  {
+    "doctor_email": "dr.karim@medihub.com",
+    "title": "হৃদরোগ প্রতিরোধে করণীয়",
+    "slug": "heart-disease-prevention",
+    "content": "হৃদরোগ বাংলাদেশে মৃত্যুর অন্যতম প্রধান কারণ। সঠিক খাদ্যাভ্যাস, নিয়মিত ব্যায়াম এবং ধূমপান পরিহার করলে হৃদরোগের ঝুঁকি অনেকটাই কমানো সম্ভব।",
+    "category": "cardiology",
+    "tags": "হৃদরোগ,প্রতিরোধ,স্বাস্থ্য,ব্যায়াম",
+    "status": "published",
+    "media": [
+      { "media_type": "image", "file": "blog/media/heart_health.jpg", "caption": "হৃদয় সুস্থ রাখুন", "order": 1 }
+    ],
+    "likes": ["user.rahim@medihub.com", "user.sumaiya@medihub.com", "user.kamal@medihub.com"],
+    "comments": [
+      {
+        "user": "user.rahim@medihub.com",
+        "content": "অনেক উপকারী পোস্ট। ধন্যবাদ ডাক্তার সাহেব।",
+        "replies": [
+          { "user": "user.sumaiya@medihub.com", "content": "আমিও একমত, খুব ভালো তথ্য।" },
+          { "user": "user.kamal@medihub.com", "content": "ডাক্তার সাহেব, প্রতিদিন কতটুকু হাঁটা উচিত?" }
+        ]
+      },
+      {
+        "user": "user.roksana@medihub.com",
+        "content": "আমার বাবার হৃদরোগ আছে, এই পোস্টটি শেয়ার করলাম।",
+        "replies": [
+          { "user": "user.jamal@medihub.com", "content": "আল্লাহ আপনার বাবাকে সুস্থ রাখুন।" },
+          { "user": "user.rahim@medihub.com", "content": "নিয়মিত চেকআপ করান, ভালো থাকবেন।" }
+        ]
+      },
+      {
+        "user": "user.jamal@medihub.com",
+        "content": "হৃদরোগের জন্য কোন খাবারগুলো সবচেয়ে ক্ষতিকর?",
+        "replies": [
+          { "user": "user.sumaiya@medihub.com", "content": "তেলে ভাজা খাবার এবং ফাস্টফুড এড়িয়ে চলুন।" }
+        ]
+      }
+    ]
+  },
+  {
+    "doctor_email": "dr.karim@medihub.com",
+    "title": "উচ্চ রক্তচাপ নিয়ন্ত্রণের উপায়",
+    "slug": "high-blood-pressure-control",
+    "content": "উচ্চ রক্তচাপ বা হাইপারটেনশন একটি নীরব ঘাতক। লবণ কম খাওয়া, ওজন নিয়ন্ত্রণ এবং নিয়মিত ওষুধ সেবন করলে রক্তচাপ নিয়ন্ত্রণে রাখা সম্ভব।",
+    "category": "cardiology",
+    "tags": "রক্তচাপ,হাইপারটেনশন,স্বাস্থ্য",
+    "status": "published",
+    "media": [
+      { "media_type": "image", "file": "blog/media/blood_pressure.jpg", "caption": "রক্তচাপ পরিমাপ করুন নিয়মিত", "order": 1 }
+    ],
+    "likes": ["user.kamal@medihub.com", "user.jamal@medihub.com"],
+    "comments": [
+      {
+        "user": "user.kamal@medihub.com",
+        "content": "আমার রক্তচাপ প্রায়ই বেশি থাকে, এই পরামর্শ মেনে চলব।",
+        "replies": [
+          { "user": "user.roksana@medihub.com", "content": "নিয়মিত ব্যায়াম করুন, অনেক উপকার হবে।" },
+          { "user": "user.jamal@medihub.com", "content": "লবণ কমানো সত্যিই অনেক কার্যকর।" }
+        ]
+      },
+      {
+        "user": "user.sumaiya@medihub.com",
+        "content": "ডাক্তার সাহেব, কোন ওষুধ ছাড়া কি রক্তচাপ নিয়ন্ত্রণ সম্ভব?",
+        "replies": [
+          { "user": "user.rahim@medihub.com", "content": "প্রাথমিক পর্যায়ে জীবনযাত্রার পরিবর্তনেই নিয়ন্ত্রণ সম্ভব।" }
+        ]
+      }
+    ]
+  },
+  {
+    "doctor_email": "dr.fatema@medihub.com",
+    "title": "গর্ভাবস্থায় সঠিক পুষ্টি",
+    "slug": "nutrition-during-pregnancy",
+    "content": "গর্ভাবস্থায় মায়ের সঠিক পুষ্টি শিশুর সুস্বাস্থ্যের জন্য অপরিহার্য। প্রতিদিন আয়রন, ফলিক এসিড, ক্যালসিয়াম এবং প্রোটিন সমৃদ্ধ খাবার খাওয়া উচিত।",
+    "category": "gynecology",
+    "tags": "গর্ভাবস্থা,পুষ্টি,মাতৃস্বাস্থ্য",
+    "status": "published",
+    "media": [
+      { "media_type": "image", "file": "blog/media/pregnancy_nutrition.jpg", "caption": "গর্ভাবস্থায় সুষম খাদ্য", "order": 1 }
+    ],
+    "likes": ["user.rahim@medihub.com", "user.sumaiya@medihub.com", "user.roksana@medihub.com", "user.jamal@medihub.com"],
+    "comments": [
+      {
+        "user": "user.sumaiya@medihub.com",
+        "content": "আমার বোন গর্ভবতী, এই পোস্টটি তাকে পাঠালাম।",
+        "replies": [
+          { "user": "user.roksana@medihub.com", "content": "আপনার বোনের জন্য শুভকামনা।" },
+          { "user": "user.kamal@medihub.com", "content": "ডাক্তার ম্যাডামের পরামর্শ মেনে চলুন।" },
+          { "user": "user.jamal@medihub.com", "content": "ফলিক এসিড খুবই গুরুত্বপূর্ণ প্রথম তিন মাসে।" }
+        ]
+      },
+      {
+        "user": "user.roksana@medihub.com",
+        "content": "গর্ভাবস্থায় কি সব ধরনের মাছ খাওয়া যাবে?",
+        "replies": [
+          { "user": "user.sumaiya@medihub.com", "content": "ছোট মাছ বেশি উপকারী, বড় সামুদ্রিক মাছ কম খাওয়া ভালো।" }
+        ]
+      }
+    ]
+  },
+  {
+    "doctor_email": "dr.fatema@medihub.com",
+    "title": "মাসিকের সমস্যা ও সমাধান",
+    "slug": "menstrual-problems-and-solutions",
+    "content": "অনেক নারী মাসিকের সময় তীব্র ব্যথা বা অনিয়মিত মাসিকে ভোগেন। সঠিক সময়ে চিকিৎসা নিলে এই সমস্যাগুলো সম্পূর্ণ নিরাময় সম্ভব।",
+    "category": "gynecology",
+    "tags": "মাসিক,নারীস্বাস্থ্য,হরমোন",
+    "status": "published",
+    "media": [
+      { "media_type": "image", "file": "blog/media/womens_health.jpg", "caption": "নারী স্বাস্থ্য সচেতনতা", "order": 1 }
+    ],
+    "likes": ["user.sumaiya@medihub.com", "user.roksana@medihub.com"],
+    "comments": [
+      {
+        "user": "user.roksana@medihub.com",
+        "content": "এই বিষয়ে সচেতনতা বাড়ানো খুবই দরকার।",
+        "replies": [
+          { "user": "user.sumaiya@medihub.com", "content": "একদম ঠিক বলেছেন।" },
+          { "user": "user.kamal@medihub.com", "content": "পরিবারের সবাইকে সচেতন করা উচিত।" }
+        ]
+      },
+      {
+        "user": "user.jamal@medihub.com",
+        "content": "আমার স্ত্রী এই সমস্যায় ভুগছেন, ডাক্তার দেখাব।",
+        "replies": [
+          { "user": "user.rahim@medihub.com", "content": "দেরি না করে দ্রুত বিশেষজ্ঞ দেখান।" }
+        ]
+      }
+    ]
+  },
+  {
+    "doctor_email": "dr.hossain@medihub.com",
+    "title": "স্ট্রোক চেনার উপায় ও প্রাথমিক করণীয়",
+    "slug": "stroke-recognition-and-first-aid",
+    "content": "স্ট্রোক একটি মেডিকেল ইমার্জেন্সি। FAST পদ্ধতিতে স্ট্রোক চেনা যায়। স্ট্রোকের লক্ষণ দেখা দিলে ৪.৫ ঘণ্টার মধ্যে হাসপাতালে নিলে চিকিৎসা সম্ভব।",
+    "category": "neurology",
+    "tags": "স্ট্রোক,নিউরোলজি,প্রাথমিক চিকিৎসা",
+    "status": "published",
+    "media": [
+      { "media_type": "image", "file": "blog/media/stroke_awareness.jpg", "caption": "স্ট্রোকের লক্ষণ চিনুন", "order": 1 }
+    ],
+    "likes": ["user.rahim@medihub.com", "user.kamal@medihub.com", "user.jamal@medihub.com", "user.roksana@medihub.com", "user.sumaiya@medihub.com"],
+    "comments": [
+      {
+        "user": "user.rahim@medihub.com",
+        "content": "FAST পদ্ধতিটি মনে রাখা খুবই সহজ এবং কার্যকর।",
+        "replies": [
+          { "user": "user.kamal@medihub.com", "content": "হ্যাঁ, এটা সবার জানা উচিত।" },
+          { "user": "user.sumaiya@medihub.com", "content": "আমি আমার পরিবারকে শিখিয়েছি।" },
+          { "user": "user.jamal@medihub.com", "content": "স্কুলেও এটা শেখানো উচিত।" }
+        ]
+      },
+      {
+        "user": "user.kamal@medihub.com",
+        "content": "আমার চাচা স্ট্রোকে আক্রান্ত হয়েছিলেন, সময়মতো হাসপাতালে নেওয়ায় বেঁচে গেছেন।",
+        "replies": [
+          { "user": "user.rahim@medihub.com", "content": "আলহামদুলিল্লাহ, আল্লাহর রহমত।" },
+          { "user": "user.roksana@medihub.com", "content": "সময়মতো পদক্ষেপ নেওয়াই সবচেয়ে গুরুত্বপূর্ণ।" }
+        ]
+      }
+    ]
+  },
+  {
+    "doctor_email": "dr.hossain@medihub.com",
+    "title": "মাথাব্যথা কখন বিপজ্জনক?",
+    "slug": "when-is-headache-dangerous",
+    "content": "সাধারণ মাথাব্যথা এবং বিপজ্জনক মাথাব্যথার মধ্যে পার্থক্য জানা জরুরি। মাইগ্রেনের ক্ষেত্রে নিয়মিত ঘুম ও পর্যাপ্ত পানি পান উপকারী।",
+    "category": "neurology",
+    "tags": "মাথাব্যথা,মাইগ্রেন,নিউরোলজি",
+    "status": "published",
+    "media": [
+      { "media_type": "image", "file": "blog/media/headache.jpg", "caption": "মাথাব্যথার কারণ ও প্রতিকার", "order": 1 }
+    ],
+    "likes": ["user.sumaiya@medihub.com", "user.roksana@medihub.com"],
+    "comments": [
+      {
+        "user": "user.jamal@medihub.com",
+        "content": "আমি প্রায়ই মাথাব্যথায় ভুগি, কখন ডাক্তার দেখাব?",
+        "replies": [
+          { "user": "user.rahim@medihub.com", "content": "সপ্তাহে দুইবারের বেশি হলে অবশ্যই দেখান।" },
+          { "user": "user.sumaiya@medihub.com", "content": "পানি কম খেলেও মাথাব্যথা হয়, পানি বেশি পান করুন।" }
+        ]
+      },
+      {
+        "user": "user.roksana@medihub.com",
+        "content": "মাইগ্রেনের জন্য কি কোনো স্থায়ী চিকিৎসা আছে?",
+        "replies": [
+          { "user": "user.kamal@medihub.com", "content": "ট্রিগার এড়িয়ে চললে অনেকটা নিয়ন্ত্রণ করা যায়।" }
+        ]
+      }
+    ]
+  },
+  {
+    "doctor_email": "dr.rahman@medihub.com",
+    "title": "শিশুর টিকা সময়সূচি",
+    "slug": "child-vaccination-schedule",
+    "content": "বাংলাদেশে সরকারি টিকা কার্যক্রমের আওতায় শিশুদের বিভিন্ন রোগ থেকে সুরক্ষা দেওয়া হয়। সময়মতো টিকা দিলে শিশু সুস্থ থাকবে।",
+    "category": "pediatrics",
+    "tags": "শিশু,টিকা,স্বাস্থ্য,পেডিয়াট্রিক্স",
+    "status": "published",
+    "media": [
+      { "media_type": "image", "file": "blog/media/child_vaccine.jpg", "caption": "শিশুর টিকা সময়মতো দিন", "order": 1 }
+    ],
+    "likes": ["user.rahim@medihub.com", "user.sumaiya@medihub.com", "user.roksana@medihub.com"],
+    "comments": [
+      {
+        "user": "user.sumaiya@medihub.com",
+        "content": "আমার বাচ্চার টিকার সময়সূচি মিস হয়ে গেছে, এখন কি করব?",
+        "replies": [
+          { "user": "user.rahim@medihub.com", "content": "নিকটস্থ স্বাস্থ্যকেন্দ্রে যান, ক্যাচ-আপ টিকা দেওয়া যায়।" },
+          { "user": "user.roksana@medihub.com", "content": "দেরি না করে যত তাড়াতাড়ি সম্ভব দিয়ে নিন।" },
+          { "user": "user.jamal@medihub.com", "content": "সরকারি হাসপাতালে বিনামূল্যে টিকা পাওয়া যায়।" }
+        ]
+      },
+      {
+        "user": "user.kamal@medihub.com",
+        "content": "টিকার পর জ্বর হলে কি করব?",
+        "replies": [
+          { "user": "user.sumaiya@medihub.com", "content": "প্যারাসিটামল দিন এবং বেশি পানি খাওয়ান।" },
+          { "user": "user.rahim@medihub.com", "content": "সাধারণত ১-২ দিনের মধ্যে ঠিক হয়ে যায়।" }
+        ]
+      }
+    ]
+  },
+  {
+    "doctor_email": "dr.rahman@medihub.com",
+    "title": "শিশুর ডায়রিয়া প্রতিরোধ ও চিকিৎসা",
+    "slug": "child-diarrhea-prevention-treatment",
+    "content": "ডায়রিয়া বাংলাদেশে শিশুমৃত্যুর অন্যতম কারণ। ডায়রিয়া হলে ওরস্যালাইন খাওয়ান এবং বুকের দুধ চালিয়ে যান।",
+    "category": "pediatrics",
+    "tags": "শিশু,ডায়রিয়া,ওরস্যালাইন",
+    "status": "published",
+    "media": [
+      { "media_type": "image", "file": "blog/media/child_diarrhea.jpg", "caption": "শিশুর ডায়রিয়া প্রতিরোধ করুন", "order": 1 }
+    ],
+    "likes": ["user.kamal@medihub.com", "user.jamal@medihub.com", "user.rahim@medihub.com"],
+    "comments": [
+      {
+        "user": "user.rahim@medihub.com",
+        "content": "ওরস্যালাইন বাড়িতে বানানো যায় কি?",
+        "replies": [
+          { "user": "user.kamal@medihub.com", "content": "হ্যাঁ, আধা লিটার পানিতে এক চিমটি লবণ ও এক চামচ চিনি।" },
+          { "user": "user.jamal@medihub.com", "content": "তবে প্যাকেটের ওরস্যালাইনই বেশি নিরাপদ।" }
+        ]
+      },
+      {
+        "user": "user.roksana@medihub.com",
+        "content": "হাত ধোয়ার অভ্যাস শিশুদের মধ্যে তৈরি করা খুবই জরুরি।",
+        "replies": [
+          { "user": "user.sumaiya@medihub.com", "content": "একদম ঠিক, ছোটবেলা থেকেই শেখাতে হবে।" }
+        ]
+      }
+    ]
+  },
+  {
+    "doctor_email": "dr.akter@medihub.com",
+    "title": "ত্বকের যত্নে প্রাকৃতিক উপায়",
+    "slug": "natural-skin-care-tips",
+    "content": "বাংলাদেশের আবহাওয়ায় ত্বকের সমস্যা খুবই সাধারণ। অ্যালোভেরা জেল ত্বকের আর্দ্রতা বজায় রাখতে সাহায্য করে।",
+    "category": "dermatology",
+    "tags": "ত্বক,চর্মরোগ,সৌন্দর্য,প্রাকৃতিক",
+    "status": "published",
+    "media": [
+      { "media_type": "image", "file": "blog/media/skin_care.jpg", "caption": "প্রাকৃতিক উপায়ে ত্বকের যত্ন", "order": 1 }
+    ],
+    "likes": ["user.sumaiya@medihub.com", "user.roksana@medihub.com", "user.rahim@medihub.com"],
+    "comments": [
+      {
+        "user": "user.sumaiya@medihub.com",
+        "content": "অ্যালোভেরা সত্যিই অনেক উপকারী, আমি ব্যবহার করি।",
+        "replies": [
+          { "user": "user.roksana@medihub.com", "content": "আমিও ব্যবহার করি, ত্বক অনেক ভালো থাকে।" },
+          { "user": "user.kamal@medihub.com", "content": "বাড়িতে গাছ লাগিয়ে নিন, সহজেই পাবেন।" }
+        ]
+      },
+      {
+        "user": "user.jamal@medihub.com",
+        "content": "রোদে পোড়া ত্বকের জন্য কি ব্যবহার করব?",
+        "replies": [
+          { "user": "user.sumaiya@medihub.com", "content": "অ্যালোভেরা জেল লাগান, দ্রুত আরাম পাবেন।" },
+          { "user": "user.rahim@medihub.com", "content": "বাইরে যাওয়ার আগে সানস্ক্রিন ব্যবহার করুন।" }
+        ]
+      }
+    ]
+  },
+  {
+    "doctor_email": "dr.akter@medihub.com",
+    "title": "ডায়াবেটিস রোগীর ত্বকের সমস্যা",
+    "slug": "skin-problems-in-diabetes",
+    "content": "ডায়াবেটিস রোগীদের ত্বকের সমস্যা বেশি হয়। রক্তের শর্করা নিয়ন্ত্রণে রাখলে এই সমস্যাগুলো কমে আসে।",
+    "category": "diabetes",
+    "tags": "ডায়াবেটিস,ত্বক,চর্মরোগ",
+    "status": "published",
+    "media": [
+      { "media_type": "image", "file": "blog/media/diabetes_skin.jpg", "caption": "ডায়াবেটিস ও ত্বকের সমস্যা", "order": 1 }
+    ],
+    "likes": ["user.rahim@medihub.com", "user.kamal@medihub.com"],
+    "comments": [
+      {
+        "user": "user.kamal@medihub.com",
+        "content": "আমার ডায়াবেটিস আছে, পায়ের যত্ন কিভাবে নেব?",
+        "replies": [
+          { "user": "user.rahim@medihub.com", "content": "প্রতিদিন পা পরিষ্কার রাখুন এবং ময়েশ্চারাইজার লাগান।" },
+          { "user": "user.jamal@medihub.com", "content": "খালি পায়ে হাঁটবেন না, সবসময় জুতা পরুন।" },
+          { "user": "user.sumaiya@medihub.com", "content": "ছোট কাটা বা ঘাও অবহেলা করবেন না।" }
+        ]
+      },
+      {
+        "user": "user.roksana@medihub.com",
+        "content": "ডায়াবেটিসে কি ধরনের ত্বকের সমস্যা বেশি হয়?",
+        "replies": [
+          { "user": "user.kamal@medihub.com", "content": "ছত্রাক সংক্রমণ এবং ত্বক শুষ্ক হয়ে যাওয়া সবচেয়ে বেশি।" }
+        ]
+      }
+    ]
+  }
+]
