@@ -35,7 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     #installed app
-    'location'
+    'location',
+    'medihub',
 ]
 
 MIDDLEWARE = [

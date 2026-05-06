@@ -9,11 +9,20 @@
         "documentation": {}
     },
     {
-        "label": "Decimal",
-        "importPath": "decimal",
-        "description": "decimal",
+        "label": "subprocess",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "decimal",
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -41,7 +50,7 @@
         "documentation": {}
     },
     {
-        "label": "CommandError",
+        "label": "BaseCommand",
         "importPath": "django.core.management.base",
         "description": "django.core.management.base",
         "isExtraImport": true,
@@ -57,35 +66,19 @@
         "documentation": {}
     },
     {
-        "label": "transaction",
-        "importPath": "django.db",
-        "description": "django.db",
+        "label": "BaseCommand",
+        "importPath": "django.core.management.base",
+        "description": "django.core.management.base",
         "isExtraImport": true,
-        "detail": "django.db",
+        "detail": "django.core.management.base",
         "documentation": {}
     },
     {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
+        "label": "BaseCommand",
+        "importPath": "django.core.management.base",
+        "description": "django.core.management.base",
         "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
+        "detail": "django.core.management.base",
         "documentation": {}
     },
     {
@@ -113,6 +106,38 @@
         "documentation": {}
     },
     {
+        "label": "Union",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
         "label": "District",
         "importPath": "location.models",
         "description": "location.models",
@@ -126,6 +151,38 @@
         "description": "location.models",
         "isExtraImport": true,
         "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "medihub",
+        "description": "medihub",
+        "isExtraImport": true,
+        "detail": "medihub",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "medihub",
+        "description": "medihub",
+        "isExtraImport": true,
+        "detail": "medihub",
         "documentation": {}
     },
     {
@@ -153,12 +210,27 @@
         "documentation": {}
     },
     {
-        "label": "subprocess",
-        "kind": 6,
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
         "isExtraImport": true,
-        "importPath": "subprocess",
-        "description": "subprocess",
-        "detail": "subprocess",
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
         "documentation": {}
     },
     {
@@ -168,14 +240,6 @@
         "importPath": "django.db.models.deletion",
         "description": "django.db.models.deletion",
         "detail": "django.db.models.deletion",
-        "documentation": {}
-    },
-    {
-        "label": "register",
-        "importPath": "atexit",
-        "description": "atexit",
-        "isExtraImport": true,
-        "detail": "atexit",
         "documentation": {}
     },
     {
@@ -224,6 +288,14 @@
         "description": "django.shortcuts",
         "isExtraImport": true,
         "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "call_command",
+        "importPath": "django.core.management",
+        "description": "django.core.management",
+        "isExtraImport": true,
+        "detail": "django.core.management",
         "documentation": {}
     },
     {
@@ -340,7 +412,7 @@
         "kind": 6,
         "importPath": "location.management.commands.populated_district",
         "description": "location.management.commands.populated_district",
-        "peekOfCode": "class Command(BaseCommand):\n  help = \"Populate districts from dataset/district.json\"\n  def handle(self, *args: Any, **options: Any):\n    file_path = settings.BASE_DIR / \"dataset\" / \"district.json\"\n    if not file_path.exists():\n      raise CommandError(f\"District dataset not found: {file_path}\")\n    divisions = {\n      division.division_id: division\n      for division in Division.objects.all()\n    }",
+        "peekOfCode": "class Command(BaseCommand):\n    help = 'Populate District table'\n    def handle(self, *args: Any, **options: Any):\n        if District.objects.exists():\n            self.stdout.write(self.style.SUCCESS('District table is already populated'))\n        else:\n            message = '''\n              ====================================================================\\n\n              --------------- Populated District In Database -------------------\\n\n              =====================================================================\\n",
         "detail": "location.management.commands.populated_district",
         "documentation": {}
     },
@@ -349,8 +421,26 @@
         "kind": 6,
         "importPath": "location.management.commands.populated_division",
         "description": "location.management.commands.populated_division",
-        "peekOfCode": "class Command(BaseCommand):\n  help = '''\n  ====================================================================\\n\n  --------------- Pupulated Division In Database\\n -------------------\\n\n  =====================================================================\\n\n  '''\n  def handle(self, *args: Any, **options: Any):\n    '''file path'''\n    if Division.objects.exists():\n      Division.objects.all().delete()",
+        "peekOfCode": "class Command(BaseCommand):\n  help = ''' Divison Populated'''\n  def handle(self, *args: Any, **options: Any):\n    '''file path'''\n    if Division.objects.exists():\n      self.stdout.write(self.style.SUCCESS(\"Division Alreadhy exists\"))\n      pass\n    else:\n      message = '''\n              ====================================================================\\n",
         "detail": "location.management.commands.populated_division",
+        "documentation": {}
+    },
+    {
+        "label": "Command",
+        "kind": 6,
+        "importPath": "location.management.commands.populated_union",
+        "description": "location.management.commands.populated_union",
+        "peekOfCode": "class Command(BaseCommand):\n    help = 'Populate Union table'\n    def handle(self, *args: Any, **options: Any):\n        if Union.objects.exists():\n            self.stdout.write(self.style.SUCCESS('Union table is already populated'))\n        else:\n            message = '''\n              ====================================================================\\n\n              --------------- Populated Union In Database -------------------\\n\n              =====================================================================\\n",
+        "detail": "location.management.commands.populated_union",
+        "documentation": {}
+    },
+    {
+        "label": "Command",
+        "kind": 6,
+        "importPath": "location.management.commands.populated_upozila",
+        "description": "location.management.commands.populated_upozila",
+        "peekOfCode": "class Command(BaseCommand):\n    help = 'Populate Upazila table'\n    def handle(self, *args, **kwargs):\n      if Upozila.objects.exists():\n        self.stdout.write(self.style.SUCCESS('Upazila table is already populated'))\n      else:\n        message ='''\n              ====================================================================\\n\n              --------------- Pupulated Upzila In Database -------------------\\n\n              =====================================================================\\n",
+        "detail": "location.management.commands.populated_upozila",
         "documentation": {}
     },
     {
@@ -358,7 +448,7 @@
         "kind": 6,
         "importPath": "location.migrations.0001_initial",
         "description": "location.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Division',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('division_id', models.IntegerField()),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = []\n    operations = [\n        migrations.CreateModel(\n            name='Division',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('division_id', models.IntegerField(unique=True)),\n                ('division_name_bn', models.CharField(max_length=100)),",
         "detail": "location.migrations.0001_initial",
         "documentation": {}
     },
@@ -367,7 +457,7 @@
         "kind": 6,
         "importPath": "location.admin",
         "description": "location.admin",
-        "peekOfCode": "class DivisonAdmin(admin.ModelAdmin):\n  list_display=['id','division_id','division_name_bn','division_name_eng']\n  ordering=['division_id']\n@admin.register(District)\nclass DistrictAdmin(admin.ModelAdmin):\n  list_display=[\n    'id',\n    'district_id',\n    'district_name_bn',\n    'district_name_eng',",
+        "peekOfCode": "class DivisonAdmin(admin.ModelAdmin):\n  list_display=['id','division_id','division_name_bn','division_name_eng']\n  ordering=['division_id']\n  search_fields=['division_name_eng', 'division_name_bn']\n@admin.register(District)\nclass DistrictAdmin(admin.ModelAdmin):\n  list_display=[\n    'id',\n    'district_id',\n    'district_name_bn',",
         "detail": "location.admin",
         "documentation": {}
     },
@@ -377,6 +467,24 @@
         "importPath": "location.admin",
         "description": "location.admin",
         "peekOfCode": "class DistrictAdmin(admin.ModelAdmin):\n  list_display=[\n    'id',\n    'district_id',\n    'district_name_bn',\n    'district_name_eng',\n    'division',\n    'lattitude',\n    'logitude',\n  ]",
+        "detail": "location.admin",
+        "documentation": {}
+    },
+    {
+        "label": "UpozilaAdmin",
+        "kind": 6,
+        "importPath": "location.admin",
+        "description": "location.admin",
+        "peekOfCode": "class UpozilaAdmin(admin.ModelAdmin):\n  list_display=['id', 'upozila', 'upozila_name_eng', 'upoila_name_bn', 'district']\n  list_filter=['district']\n  ordering=['upozila']\n  search_fields=['upozila_name_eng', 'upoila_name_bn']\n@admin.register(Union)\nclass UnionAdmin(admin.ModelAdmin):\n  list_display=['id', 'union', 'union_name_eng', 'union_name_bn', 'upozila']\n  list_filter=['upozila']\n  ordering=['union']",
+        "detail": "location.admin",
+        "documentation": {}
+    },
+    {
+        "label": "UnionAdmin",
+        "kind": 6,
+        "importPath": "location.admin",
+        "description": "location.admin",
+        "peekOfCode": "class UnionAdmin(admin.ModelAdmin):\n  list_display=['id', 'union', 'union_name_eng', 'union_name_bn', 'upozila']\n  list_filter=['upozila']\n  ordering=['union']\n  search_fields=['union_name_eng', 'union_name_bn']",
         "detail": "location.admin",
         "documentation": {}
     },
@@ -412,8 +520,26 @@
         "kind": 6,
         "importPath": "location.models",
         "description": "location.models",
-        "peekOfCode": "class Upozila(models.Model):\n  upozila_id = models.IntegerField(unique=True,blank=False,null=False)\n  upoila_name_bn = models.CharField(max_length=100)\n  upozila_name_eng = models.CharField(max_length=100)\n  def __str__(self) -> str:\n    return self.upoila_name_bn",
+        "peekOfCode": "class Upozila(models.Model):\n  upozila = models.IntegerField(unique=True,blank=False,null=False)\n  district = models.ForeignKey(District,on_delete=models.CASCADE)\n  upoila_name_bn = models.CharField(max_length=100)\n  upozila_name_eng = models.CharField(max_length=100)\n  def __str__(self) -> str:\n    return self.upoila_name_bn\n\"\"\"Union Model\"\"\"\nclass Union(models.Model):\n  union = models.IntegerField(unique=True, blank=False, null=False)",
         "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "kind": 6,
+        "importPath": "location.models",
+        "description": "location.models",
+        "peekOfCode": "class Union(models.Model):\n  union = models.IntegerField(unique=True, blank=False, null=False)\n  upozila = models.ForeignKey(Upozila, on_delete=models.CASCADE)\n  union_name_bn = models.CharField(max_length=100)\n  union_name_eng = models.CharField(max_length=100)\n  def __str__(self) -> str:\n    return self.union_name_bn",
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Command",
+        "kind": 6,
+        "importPath": "medihub.management.commands.root_seed",
+        "description": "medihub.management.commands.root_seed",
+        "peekOfCode": "class Command(BaseCommand):\n    help = 'Root management command of system'\n    def handle(self, *args, **kwargs):\n        self.stdout.write('Running Root Seed for System Database Population\\n')\n        call_command('populated_division')\n        call_command('populated_district')\n        call_command('populated_upozila')\n        call_command('populated_union')",
+        "detail": "medihub.management.commands.root_seed",
         "documentation": {}
     },
     {
@@ -484,7 +610,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    #installed app\n    'location'\n]",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    #installed app\n    'location',\n    'medihub',",
         "detail": "medihub.settings",
         "documentation": {}
     },

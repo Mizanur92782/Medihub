@@ -28,12 +28,25 @@ class District(models.Model):
     return self.district_name_bn
     
 
-
+    
 """Upzila Model"""
 class Upozila(models.Model):
-  upozila_id = models.IntegerField(unique=True,blank=False,null=False)
+  upozila = models.IntegerField(unique=True,blank=False,null=False)
+  district = models.ForeignKey(District,on_delete=models.CASCADE)
   upoila_name_bn = models.CharField(max_length=100)
   upozila_name_eng = models.CharField(max_length=100)
   
   def __str__(self) -> str:
     return self.upoila_name_bn
+    
+
+
+"""Union Model"""
+class Union(models.Model):
+  union = models.IntegerField(unique=True, blank=False, null=False)
+  upozila = models.ForeignKey(Upozila, on_delete=models.CASCADE)
+  union_name_bn = models.CharField(max_length=100)
+  union_name_eng = models.CharField(max_length=100)
+
+  def __str__(self) -> str:
+    return self.union_name_bn

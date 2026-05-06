@@ -35,7 +35,7 @@ services:
     image: medihub_web
     container_name: medihub_migrate
     working_dir: /app
-    user: "${APP_UID:-1001}:${APP_GID:-1001}"
+    user: root
     env_file:
       - ../.env
     volumes:
@@ -45,7 +45,7 @@ services:
       [
         "sh",
         "-c",
-        "python manage.py makemigrations --noinput && python manage.py migrate --noinput && python manage.py collectstatic --noinput",
+        "chown -R app:app /app/staticfiles && python manage.py makemigrations --noinput && python manage.py migrate --noinput && python manage.py collectstatic --noinput",
       ]
     depends_on:
       db:
