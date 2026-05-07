@@ -53,7 +53,8 @@ echo ""
 if [[ "$build_up" == "build" ]]; then
     echo -e "${YELLOW}Building and starting containers...${NC}"
     loading "Building"
-    docker compose -f Docker/docker-compose.yml up -d --build
+    docker compose -f Docker/docker-compose.yml --profile build build web_base
+    docker compose -f Docker/docker-compose.yml up -d
 else
     echo -e "${YELLOW}Starting containers...${NC}"
     loading "Starting"

@@ -21,3 +21,6 @@ firebase-admin
 pandas
 openpyxl
 gunicorn
+python-json-logger
+django-request-id
+django-prometheus

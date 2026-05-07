@@ -1877,6 +1877,23 @@
         "documentation": {}
     },
     {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
         "label": "Path",
         "importPath": "pathlib",
         "description": "pathlib",
@@ -1886,6 +1903,14 @@
     },
     {
         "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -2420,7 +2445,16 @@
         "kind": 2,
         "importPath": "medihub.health_check",
         "description": "medihub.health_check",
-        "peekOfCode": "def HealthCheck(request):\n  now = datetime.now()\n  return render(request, 'health.html', {\n    \"host\": request.get_host(),\n    \"container\": socket.gethostname(),\n    \"fullpath\": request.build_absolute_uri(),\n    \"server_time\": now.strftime('%H:%M:%S'),\n    \"server_date\": now.strftime('%A, %d %B %Y'),\n    \"last_updated\": now.strftime('%d %b %Y — %H:%M:%S'),\n  })",
+        "peekOfCode": "def HealthCheck(request):\n  now = datetime.now()\n  logger.info(f\"Health check called at {socket.gethostname()}\")\n  return render(request, 'health.html', {\n    \"host\": request.get_host(),\n    \"container\": socket.gethostname(),\n    \"fullpath\": request.build_absolute_uri(),\n    \"server_time\": now.strftime('%H:%M:%S'),\n    \"server_date\": now.strftime('%A, %d %B %Y'),\n    \"last_updated\": now.strftime('%d %b %Y — %H:%M:%S'),",
+        "detail": "medihub.health_check",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "medihub.health_check",
+        "description": "medihub.health_check",
+        "peekOfCode": "logger = logging.getLogger(__name__)\ndef HealthCheck(request):\n  now = datetime.now()\n  logger.info(f\"Health check called at {socket.gethostname()}\")\n  return render(request, 'health.html', {\n    \"host\": request.get_host(),\n    \"container\": socket.gethostname(),\n    \"fullpath\": request.build_absolute_uri(),\n    \"server_time\": now.strftime('%H:%M:%S'),\n    \"server_date\": now.strftime('%A, %d %B %Y'),",
         "detail": "medihub.health_check",
         "documentation": {}
     },
@@ -2438,7 +2472,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-k%ebt*!xp%%$w!mjy60*u%9tci^4-9tx4y9_(a*v0njop*d^ic')\nDEBUG = os.environ.get('DEBUG', 'True') == 'True'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',",
+        "peekOfCode": "SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-k%ebt*!xp%%$w!mjy60*u%9tci^4-9tx4y9_(a*v0njop*d^ic')\nDEBUG = os.environ.get('DEBUG', 'True') == 'True'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django_prometheus',",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -2447,7 +2481,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "DEBUG = os.environ.get('DEBUG', 'True') == 'True'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',",
+        "peekOfCode": "DEBUG = os.environ.get('DEBUG', 'True') == 'True'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django_prometheus',\n    'django.contrib.admin',",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -2456,7 +2490,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "peekOfCode": "ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django_prometheus',\n    'django.contrib.admin',\n    'django.contrib.auth',",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -2465,7 +2499,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "CSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "CSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django_prometheus',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -2474,7 +2508,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    #installed app\n    'location',\n    'medihub',",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django_prometheus',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    #installed app\n    'location',",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -2483,7 +2517,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "AUTH_USER_MODEL = 'profiles.User'\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
+        "peekOfCode": "AUTH_USER_MODEL = 'profiles.User'\nMIDDLEWARE = [\n    \"django_prometheus.middleware.PrometheusBeforeMiddleware\",\n    \"request_id.middleware.RequestIdMiddleware\",\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -2492,7 +2526,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'medihub.urls'",
+        "peekOfCode": "MIDDLEWARE = [\n    \"django_prometheus.middleware.PrometheusBeforeMiddleware\",\n    \"request_id.middleware.RequestIdMiddleware\",\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -2582,7 +2616,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n''' ================================ LOGS ============================= '''\nimport os\nLOGGING = {",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -2591,7 +2625,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "STATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n''' ================================ LOGS ============================= '''\nimport os\nLOGGING = {\n    \"version\": 1,",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -2600,7 +2634,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n''' ================================ LOGS ============================= '''\nimport os\nLOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -2609,7 +2643,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n''' ================================ LOGS ============================= '''\nimport os\nLOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,\n    \"formatters\": {",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -2618,7 +2652,16 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n''' ================================ LOGS ============================= '''\nimport os\nLOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,\n    \"formatters\": {\n        \"json\": {\n            \"()\": \"pythonjsonlogger.jsonlogger.JsonFormatter\",\n            \"format\": (",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGGING",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "LOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,\n    \"formatters\": {\n        \"json\": {\n            \"()\": \"pythonjsonlogger.jsonlogger.JsonFormatter\",\n            \"format\": (\n                \"%(asctime)s \"\n                \"%(levelname)s \"\n                \"%(name)s \"",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -2627,7 +2670,7 @@
         "kind": 5,
         "importPath": "medihub.urls",
         "description": "medihub.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('health/', HealthCheck),\n    path('', HealthCheck),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('health/', HealthCheck),\n    path('', HealthCheck),\n    path('metrics/', include('django_prometheus.urls')),\n]",
         "detail": "medihub.urls",
         "documentation": {}
     },

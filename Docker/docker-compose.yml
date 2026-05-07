@@ -203,11 +203,171 @@ services:
           cpus: "0.5"
           memory: 256M
 
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: medihub_rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=medihub
+      - RABBITMQ_DEFAULT_PASS=medihub
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    restart: always
+    networks:
+      - app_network
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  celery_worker:
+    image: medihub_web
+    container_name: medihub_celery_worker
+    command: celery -A medihub worker --loglevel=info
+    env_file:
+      - ../.env
+    volumes:
+      - ..:/app
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    restart: always
+    networks:
+      - app_network
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: 512M
+
+  celery_beat:
+    image: medihub_web
+    container_name: medihub_celery_beat
+    command: celery -A medihub beat --loglevel=info
+    env_file:
+      - ../.env
+    volumes:
+      - ..:/app
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    restart: always
+    networks:
+      - app_network
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: medihub_pgadmin
+    ports:
+      - "5050:80"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@medihub.com
+      - PGADMIN_DEFAULT_PASSWORD=medihub_pgadmin
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - db
+    restart: always
+    networks:
+      - app_network
+
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    container_name: medihub_jaeger
+    ports:
+      - "16686:16686"
+      - "6831:6831/udp"
+    environment:
+      - COLLECTOR_ZIPKIN_HOST_PORT=9411
+    restart: always
+    networks:
+      - app_network
+
+  alertmanager:
+    image: prom/alertmanager:latest
+    container_name: medihub_alertmanager
+    ports:
+      - "9093:9093"
+    volumes:
+      - ../monitoring/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+    command: --config.file=/etc/alertmanager/alertmanager.yml
+    restart: always
+    networks:
+      - app_network
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: medihub_prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ../monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ../monitoring/alerts.yml:/etc/prometheus/alerts.yml:ro
+      - prometheus_data:/prometheus
+    command: --config.file=/etc/prometheus/prometheus.yml
+    restart: always
+    networks:
+      - app_network
+
+  loki:
+    image: grafana/loki:2.9.0
+    container_name: medihub_loki
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+    restart: always
+    networks:
+      - app_network
+
+  promtail:
+    image: grafana/promtail:2.9.0
+    container_name: medihub_promtail
+    volumes:
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ../monitoring/promtail.yml:/etc/promtail/config.yml
+    command: -config.file=/etc/promtail/config.yml
+    depends_on:
+      - loki
+    restart: always
+    networks:
+      - app_network
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: medihub_grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=medihub_grafana
+    volumes:
+      - grafana_data:/var/lib/grafana
+    depends_on:
+      - loki
+    restart: always
+    networks:
+      - app_network
+
 volumes:
   db_data:
   static_volume:
   media_volume:
+  grafana_data:
+  prometheus_data:
+  rabbitmq_data:
+  pgadmin_data:
 
 networks:
   app_network:
     driver: bridge
+    

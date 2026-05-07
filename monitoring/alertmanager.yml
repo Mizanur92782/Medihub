@@ -1,0 +1,15 @@
+global:
+  smtp_smarthost: "smtp.gmail.com:587"
+  smtp_from: "medihub@gmail.com"
+  smtp_auth_username: "medihub@gmail.com"
+  smtp_auth_password: "your-app-password"
+
+route:
+  receiver: email_alert
+
+receivers:
+  - name: email_alert
+    email_configs:
+      - to: "nightliver000@gmail.com"
+        send_resolved: true
+        

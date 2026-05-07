@@ -1,0 +1,26 @@
+global:
+  scrape_interval: 15s
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: ["alertmanager:9093"]
+
+rule_files:
+  - /etc/prometheus/alerts.yml
+
+scrape_configs:
+  - job_name: medihub_web1
+    static_configs:
+      - targets: ["medihub_web1:8011"]
+    metrics_path: /metrics/
+
+  - job_name: medihub_web2
+    static_configs:
+      - targets: ["medihub_web2:8012"]
+    metrics_path: /metrics/
+
+  - job_name: medihub_web3
+    static_configs:
+      - targets: ["medihub_web3:8013"]
+    metrics_path: /metrics/
