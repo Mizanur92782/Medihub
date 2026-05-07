@@ -1,11 +1,11 @@
 from django.db import models
-from profiles.models.user_mod import User
+from django.conf import settings
 from blog.models.blog_post_mod import BlogPost
 
 
 class BlogComment(models.Model):
     post = models.ForeignKey(BlogPost, on_delete=models.CASCADE, related_name='comments')
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_comments')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='blog_comments')
     parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='replies')
     content = models.TextField()
     like_count = models.PositiveIntegerField(default=0)
@@ -51,7 +51,7 @@ class BlogComment(models.Model):
 
 class BlogCommentLike(models.Model):
     comment = models.ForeignKey(BlogComment, on_delete=models.CASCADE, related_name='likes')
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_comment_likes')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='blog_comment_likes')
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:

@@ -1,6 +1,6 @@
 from django.db import models
-from profiles.models.user_mod import User
-from location.models import District, Division, Upozila
+from django.conf import settings
+from location.models import District, Division, Union, Upozila
 from utilities.enum import GenderChoices, DayChoices
 
 
@@ -39,7 +39,7 @@ class Hospital(models.Model):
 
 class Doctor(models.Model):
 
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='doctor')
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='doctor')
     first_name = models.CharField(max_length=100)
     middle_name = models.CharField(max_length=100, blank=True, null=True)
     last_name = models.CharField(max_length=100)
@@ -50,7 +50,9 @@ class Doctor(models.Model):
 
     division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True)
     district = models.ForeignKey(District, on_delete=models.SET_NULL, null=True)
-
+    upozila = models.ForeignKey(Upozila, on_delete=models.SET_NULL, null=True)
+    union = models.ForeignKey(Union, on_delete=models.SET_NULL, null=True)
+    
     specialization = models.ForeignKey(Specialization, on_delete=models.SET_NULL, null=True)
     sub_specialization = models.ForeignKey(SubSpecialization, on_delete=models.SET_NULL, null=True, blank=True)
     qualifications = models.ManyToManyField(Qualification, related_name='doctors', blank=True)
@@ -113,7 +115,7 @@ class DoctorScheduling(models.Model):
 
 class DoctorRating(models.Model):
     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, related_name='ratings')
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='given_ratings')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='given_ratings')
     rating = models.PositiveSmallIntegerField(default=1)
     created = models.DateTimeField(auto_now_add=True)
 

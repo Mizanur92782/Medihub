@@ -1,12 +1,12 @@
 from django.db import models
-from profiles.models.user_mod import User
+from django.conf import settings
 from location.models import Division, District, Upozila
 from utilities.enum import PostStatusChoices, UrgencyChoices, EquipmentConditionChoices
 
 
 class EquipmentNeedPost(models.Model):
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='equipment_need_posts')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='equipment_need_posts')
 
     equipment_name = models.CharField(max_length=300)
     quantity = models.CharField(max_length=100)

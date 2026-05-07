@@ -35,7 +35,6 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
-    role = models.CharField(max_length=20, choices=RoleChoices.choices, default=RoleChoices.USER)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_blood_donor = models.BooleanField(default=False)

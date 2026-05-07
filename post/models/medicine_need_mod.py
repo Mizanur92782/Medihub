@@ -1,12 +1,12 @@
 from django.db import models
-from profiles.models.user_mod import User
+from django.conf import settings
 from location.models import Division, District, Upozila
 from utilities.enum import PostStatusChoices, UrgencyChoices
 
 
 class MedicineNeedPost(models.Model):
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='medicine_need_posts')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='medicine_need_posts')
 
     medicine_name = models.CharField(max_length=300)
     quantity = models.CharField(max_length=100)

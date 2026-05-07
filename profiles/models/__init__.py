@@ -1,5 +1,4 @@
-from .user_mod import User
-from .user_prof_mod import UserProfile
+from .user_prof_mod import RegularUserProfile
 from .doctor_prof_mod import (
     Specialization,
     SubSpecialization,

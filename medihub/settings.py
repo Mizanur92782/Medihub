@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     #installed app
+    'drf_yasg',
+    'authentication',
     'location',
     'medihub',
     'profiles',
@@ -43,7 +45,7 @@ INSTALLED_APPS = [
     'post',
 ]
 
-AUTH_USER_MODEL = 'profiles.User'
+AUTH_USER_MODEL = 'authentication.User'
 
 MIDDLEWARE = [
     "django_prometheus.middleware.PrometheusBeforeMiddleware",

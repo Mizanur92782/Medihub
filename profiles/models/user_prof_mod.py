@@ -1,11 +1,11 @@
 from django.db import models
-from profiles.models.user_mod import User
+from django.conf import settings
 from location.models import District, Division, Upozila
 from utilities.enum import GenderChoices
 
 
-class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+class RegularUserProfile(models.Model):
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='profile')
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     date_of_birth = models.DateField(blank=True, null=True)

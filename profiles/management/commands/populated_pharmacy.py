@@ -1,6 +1,6 @@
 import json
 from django.core.management.base import BaseCommand
-from profiles.models.user_mod import User
+from authentication.models import User
 from profiles.models.pharmacy_prof_mod import PharmacyProfile
 from location.models import Division, District, Upozila
 from utilities.enum import RoleChoices
@@ -20,10 +20,7 @@ class Command(BaseCommand):
             data = json.load(f)
 
         for item in data:
-            user, _ = User.objects.get_or_create(
-                email=item['email'],
-                defaults={'role': RoleChoices.PHARMACY}
-            )
+            user, _ = User.objects.get_or_create(email=item['email'])
             user.set_password(item['password'])
             user.save()
 

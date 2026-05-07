@@ -1,6 +1,6 @@
 import json
 from django.core.management.base import BaseCommand
-from profiles.models.user_mod import User
+from authentication.models import User
 from profiles.models.doctor_prof_mod import (
     Doctor, DoctorDetails, DoctorEducation,
     DoctorWorkingExperience, DoctorScheduling,
@@ -24,10 +24,7 @@ class Command(BaseCommand):
             data = json.load(f)
 
         for item in data:
-            user, _ = User.objects.get_or_create(
-                email=item['email'],
-                defaults={'role': RoleChoices.DOCTOR}
-            )
+            user, _ = User.objects.get_or_create(email=item['email'])
             user.set_password(item['password'])
             user.save()
 

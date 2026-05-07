@@ -4,7 +4,7 @@ from blog.models.blog_post_mod import BlogPost
 from blog.models.blog_media_mod import BlogMedia
 from blog.models.blog_like_mod import BlogLike
 from blog.models.blog_comment_mod import BlogComment, BlogCommentLike
-from profiles.models.user_mod import User
+from authentication.models import User
 from profiles.models.doctor_prof_mod import Doctor
 from medihub import settings
 

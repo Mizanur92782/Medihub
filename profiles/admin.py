@@ -1,8 +1,8 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
-from profiles.models.user_mod import User
-from profiles.models.user_prof_mod import UserProfile
+from authentication.models import User
+from profiles.models.user_prof_mod import RegularUserProfile
 from profiles.models.doctor_prof_mod import (
     Specialization,
     SubSpecialization,
@@ -23,21 +23,20 @@ from profiles.models.blood_donor_mod import BloodDonor
 
 @admin.register(User)
 class UserAdmin(BaseUserAdmin):
-    list_display = ['id', 'email', 'role', 'is_blood_donor', 'is_active', 'is_staff', 'is_superuser', 'created']
+    list_display = ['id', 'email', 'is_blood_donor', 'is_active', 'is_staff', 'is_superuser', 'created']
     ordering = ['email']
     search_fields = ['email']
-    list_filter = ['role', 'is_blood_donor', 'is_active', 'is_staff', 'is_superuser']
+    list_filter = ['is_blood_donor', 'is_active', 'is_staff', 'is_superuser']
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        ('Role', {'fields': ('role', 'is_blood_donor')}),
         ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser')}),
     )
     add_fieldsets = (
-        (None, {'fields': ('email', 'password1', 'password2', 'role')}),
+        (None, {'fields': ('email', 'password1', 'password2')}),
     )
 
 
-@admin.register(UserProfile)
+@admin.register(RegularUserProfile)
 class UserProfileAdmin(admin.ModelAdmin):
     list_display = ['id', 'user', 'first_name', 'last_name', 'gender', 'contact_number', 'district']
     search_fields = ['first_name', 'last_name', 'user__email']

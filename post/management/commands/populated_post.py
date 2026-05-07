@@ -4,7 +4,7 @@ from post.models.blood_need_mod import BloodNeedPost
 from post.models.medicine_need_mod import MedicineNeedPost
 from post.models.equipment_need_mod import EquipmentNeedPost
 from post.models.general_post_mod import GeneralPost
-from profiles.models.user_mod import User
+from authentication.models import User
 from location.models import Division, District, Upozila
 from medihub import settings
 

@@ -1,10 +1,10 @@
 from django.db import models
-from profiles.models.user_mod import User
+from django.conf import settings
 from location.models import District, Division, Upozila
 
 
 class PharmacyProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='pharmacy')
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='pharmacy')
     pharmacy_name = models.CharField(max_length=200)
     owner_name = models.CharField(max_length=200)
     contact_number = models.CharField(max_length=15)

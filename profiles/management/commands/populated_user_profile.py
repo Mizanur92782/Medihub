@@ -1,7 +1,7 @@
 import json
 from django.core.management.base import BaseCommand
-from profiles.models.user_mod import User
-from profiles.models.user_prof_mod import UserProfile
+from authentication.models import User
+from profiles.models.user_prof_mod import RegularUserProfile
 from location.models import Division, District, Upozila
 from utilities.enum import RoleChoices
 from medihub import settings
@@ -11,7 +11,7 @@ class Command(BaseCommand):
     help = 'Populate User profiles'
 
     def handle(self, *args, **kwargs):
-        if UserProfile.objects.exists():
+        if RegularUserProfile.objects.exists():
             self.stdout.write(self.style.SUCCESS('User profiles already populated'))
             return
 
@@ -20,14 +20,11 @@ class Command(BaseCommand):
             data = json.load(f)
 
         for item in data:
-            user, _ = User.objects.get_or_create(
-                email=item['email'],
-                defaults={'role': RoleChoices.USER}
-            )
+            user, _ = User.objects.get_or_create(email=item['email'])
             user.set_password(item['password'])
             user.save()
 
-            UserProfile.objects.create(
+            RegularUserProfile.objects.create(
                 user=user,
                 first_name=item['first_name'],
                 last_name=item['last_name'],

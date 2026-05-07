@@ -1,12 +1,12 @@
 from django.db import models
-from profiles.models.user_mod import User
+from django.conf import settings
 from location.models import Division, District, Upozila
 from utilities.enum import BloodGroupChoices, GenderChoices, PostStatusChoices, UrgencyChoices
 
 
 class BloodNeedPost(models.Model):
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blood_need_posts')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='blood_need_posts')
 
     # Patient info
     patient_name = models.CharField(max_length=200)

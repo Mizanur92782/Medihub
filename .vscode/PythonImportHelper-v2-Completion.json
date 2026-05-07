@@ -1,5 +1,1688 @@
 [
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "DatabaseError",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "DatabaseError",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractBaseUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "BaseUserManager",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "PermissionsMixin",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "GenderChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "BlogMediaTypeChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "BlogStatusChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "BlogCategoryChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "BloodGroupChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "GenderChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "PostStatusChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "UrgencyChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "PostStatusChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "UrgencyChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "EquipmentConditionChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "PostStatusChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "PostStatusChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "UrgencyChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "AmbulanceTypeChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "BloodGroupChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "AvailabilityChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "GenderChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "GenderChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "DayChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "GenderChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "permissions",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "isExtraImport": true,
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "isExtraImport": true,
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "isExtraImport": true,
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "isExtraImport": true,
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "isExtraImport": true,
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "isExtraImport": true,
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "isExtraImport": true,
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "isExtraImport": true,
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "isExtraImport": true,
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "isExtraImport": true,
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "isExtraImport": true,
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "cache",
+        "importPath": "django.core.cache",
+        "description": "django.core.cache",
+        "isExtraImport": true,
+        "detail": "django.core.cache",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "Doctor",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "Doctor",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "Doctor",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "Doctor",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "DoctorDetails",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "DoctorEducation",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "DoctorWorkingExperience",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "DoctorScheduling",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "Specialization",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "SubSpecialization",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "Qualification",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "Hospital",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "Qualification",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "Hospital",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "Specialization",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "SubSpecialization",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "Specialization",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "SubSpecialization",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "Qualification",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "Hospital",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "Doctor",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "DoctorDetails",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "DoctorEducation",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "DoctorWorkingExperience",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "DoctorScheduling",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "DoctorRating",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "shared_task",
+        "importPath": "celery",
+        "description": "celery",
+        "isExtraImport": true,
+        "detail": "celery",
+        "documentation": {}
+    },
+    {
+        "label": "send_mail",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "DefaultRouter",
+        "importPath": "rest_framework.routers",
+        "description": "rest_framework.routers",
+        "isExtraImport": true,
+        "detail": "rest_framework.routers",
+        "documentation": {}
+    },
+    {
+        "label": "SignupViewSet",
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "isExtraImport": true,
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "GenericViewSet",
+        "importPath": "rest_framework.viewsets",
+        "description": "rest_framework.viewsets",
+        "isExtraImport": true,
+        "detail": "rest_framework.viewsets",
+        "documentation": {}
+    },
+    {
+        "label": "action",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "AllowAny",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "swagger_auto_schema",
+        "importPath": "drf_yasg.utils",
+        "description": "drf_yasg.utils",
+        "isExtraImport": true,
+        "detail": "drf_yasg.utils",
+        "documentation": {}
+    },
+    {
+        "label": "openapi",
+        "importPath": "drf_yasg",
+        "description": "drf_yasg",
+        "isExtraImport": true,
+        "detail": "drf_yasg",
+        "documentation": {}
+    },
+    {
+        "label": "openapi",
+        "importPath": "drf_yasg",
+        "description": "drf_yasg",
+        "isExtraImport": true,
+        "detail": "drf_yasg",
+        "documentation": {}
+    },
+    {
+        "label": "DoctorSignUPSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "AuthEmailService",
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "isExtraImport": true,
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "ProfileCreationService",
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "isExtraImport": true,
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
         "label": "json",
         "kind": 6,
         "isExtraImport": true,
@@ -233,374 +1916,6 @@
         "documentation": {}
     },
     {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "Doctor",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "Doctor",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "Doctor",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "DoctorDetails",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "DoctorEducation",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "DoctorWorkingExperience",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "DoctorScheduling",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "Specialization",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "SubSpecialization",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "Qualification",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "Hospital",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "Qualification",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "Hospital",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "Specialization",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "SubSpecialization",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "Specialization",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "SubSpecialization",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "Qualification",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "Hospital",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "Doctor",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "DoctorDetails",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "DoctorEducation",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "DoctorWorkingExperience",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "DoctorScheduling",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "DoctorRating",
-        "importPath": "profiles.models.doctor_prof_mod",
-        "description": "profiles.models.doctor_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.doctor_prof_mod",
-        "documentation": {}
-    },
-    {
         "label": "settings",
         "importPath": "medihub",
         "description": "medihub",
@@ -710,262 +2025,6 @@
         "description": "medihub",
         "isExtraImport": true,
         "detail": "medihub",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
         "documentation": {}
     },
     {
@@ -978,222 +2037,6 @@
         "documentation": {}
     },
     {
-        "label": "BlogMediaTypeChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "BlogStatusChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "BlogCategoryChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "BloodGroupChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "GenderChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "PostStatusChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "UrgencyChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "PostStatusChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "UrgencyChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "EquipmentConditionChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "PostStatusChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "PostStatusChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "UrgencyChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "RoleChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "RoleChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "RoleChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "RoleChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "RoleChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "RoleChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "AmbulanceTypeChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "BloodGroupChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "AvailabilityChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "GenderChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "GenderChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "DayChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "RoleChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "GenderChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
         "label": "admin",
         "importPath": "django.contrib",
         "description": "django.contrib",
@@ -1231,38 +2074,6 @@
         "description": "django.contrib",
         "isExtraImport": true,
         "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
         "documentation": {}
     },
     {
@@ -1307,515 +2118,11 @@
         "documentation": {}
     },
     {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "District",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Division",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
-        "label": "Upozila",
-        "importPath": "location.models",
-        "description": "location.models",
-        "isExtraImport": true,
-        "detail": "location.models",
-        "documentation": {}
-    },
-    {
         "label": "delete",
         "importPath": "httpx",
         "description": "httpx",
         "isExtraImport": true,
         "detail": "httpx",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
         "documentation": {}
     },
     {
@@ -1877,15 +2184,6 @@
         "documentation": {}
     },
     {
-        "label": "logging",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "logging",
-        "description": "logging",
-        "detail": "logging",
-        "documentation": {}
-    },
-    {
         "label": "JsonResponse",
         "importPath": "django.http",
         "description": "django.http",
@@ -1923,6 +2221,14 @@
         "description": "medihub.health_check",
         "isExtraImport": true,
         "detail": "medihub.health_check",
+        "documentation": {}
+    },
+    {
+        "label": "get_schema_view",
+        "importPath": "drf_yasg.views",
+        "description": "drf_yasg.views",
+        "isExtraImport": true,
+        "detail": "drf_yasg.views",
         "documentation": {}
     },
     {
@@ -2062,7 +2368,7 @@
         "documentation": {}
     },
     {
-        "label": "UserProfile",
+        "label": "RegularUserProfile",
         "importPath": "profiles.models.user_prof_mod",
         "description": "profiles.models.user_prof_mod",
         "isExtraImport": true,
@@ -2070,35 +2376,11 @@
         "documentation": {}
     },
     {
-        "label": "UserProfile",
+        "label": "RegularUserProfile",
         "importPath": "profiles.models.user_prof_mod",
         "description": "profiles.models.user_prof_mod",
         "isExtraImport": true,
         "detail": "profiles.models.user_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "AbstractBaseUser",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "BaseUserManager",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "PermissionsMixin",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
         "documentation": {}
     },
     {
@@ -2153,6 +2435,132 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "authentication.migrations.0001_initial",
+        "description": "authentication.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='User',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "authentication.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "AuthenticationConfig",
+        "kind": 6,
+        "importPath": "authentication.apps",
+        "description": "authentication.apps",
+        "peekOfCode": "class AuthenticationConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'authentication'",
+        "detail": "authentication.apps",
+        "documentation": {}
+    },
+    {
+        "label": "UserManager",
+        "kind": 6,
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "peekOfCode": "class UserManager(BaseUserManager):\n    def create_user(self, email, password):\n        if not email:\n            raise ValueError('Email is required')\n        user = self.model(email=self.normalize_email(email))\n        if password is None:\n          raise ValueError(\"Password required\")\n        user.set_password(password)\n        user.save(using=self._db)\n        return user",
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "peekOfCode": "class User(AbstractBaseUser, PermissionsMixin):\n    email = models.EmailField(unique=True)\n    is_active = models.BooleanField(default=True)\n    is_staff = models.BooleanField(default=False)\n    is_blood_donor = models.BooleanField(default=False)\n    created = models.DateTimeField(auto_now_add=True)\n    updated = models.DateTimeField(auto_now=True)\n    objects = UserManager()\n    USERNAME_FIELD = 'email'\n    REQUIRED_FIELDS = []",
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "DoctorSignUPSerializer",
+        "kind": 6,
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "peekOfCode": "class DoctorSignUPSerializer(serializers.Serializer):\n  email          = serializers.EmailField()\n  password       = serializers.CharField(write_only=True)\n  password2      = serializers.CharField(write_only=True)\n  first_name     = serializers.CharField(max_length=100)\n  middle_name    = serializers.CharField(max_length=100, required=False, allow_blank=True)\n  last_name      = serializers.CharField(max_length=100)\n  gender         = serializers.ChoiceField(choices=GenderChoices.choices)\n  contact_number = serializers.CharField(max_length=15)\n  division = serializers.PrimaryKeyRelatedField(queryset=Division.objects.all())",
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "AuthEmailService",
+        "kind": 6,
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "peekOfCode": "class AuthEmailService:\n    CACHE_PREFIX       = 'auth:otp'\n    SIGNUP_DATA_PREFIX = 'auth:signup_data'\n    # ---------------------------\n    # 1. KEY GENERATOR\n    # ---------------------------\n    @classmethod\n    def make_auth_cache_key(cls, *args):\n        raw = ':'.join(map(str, args))\n        return hashlib.sha256(raw.encode()).hexdigest()",
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "ProfileCreationService",
+        "kind": 6,
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "peekOfCode": "class ProfileCreationService:\n    @staticmethod\n    def create_doctor_profile(signup_data: dict) -> User:\n        \"\"\"\n        Creates User + Doctor atomically from cached signup data.\n        Must only be called after OTP is verified.\n        Raises on failure — caller handles and returns HTTP response.\n        \"\"\"\n        email    = signup_data.pop('email')\n        password = signup_data.pop('password')",
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass AuthEmailService:\n    CACHE_PREFIX       = 'auth:otp'\n    SIGNUP_DATA_PREFIX = 'auth:signup_data'\n    # ---------------------------\n    # 1. KEY GENERATOR\n    # ---------------------------\n    @classmethod\n    def make_auth_cache_key(cls, *args):\n        raw = ':'.join(map(str, args))",
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "send_otp_email_task",
+        "kind": 2,
+        "importPath": "authentication.tasks",
+        "description": "authentication.tasks",
+        "peekOfCode": "def send_otp_email_task(email, otp):\n    subject = \"Your OTP Code\"\n    message = f\"Your OTP is: {otp}. It will expire in 5 minutes.\"\n    send_mail(\n        subject,\n        message,\n        settings.DEFAULT_FROM_EMAIL,\n        [email],\n        fail_silently=False,\n    )",
+        "detail": "authentication.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "authentication.urls",
+        "description": "authentication.urls",
+        "peekOfCode": "router = DefaultRouter()\nrouter.register('signup', SignupViewSet, basename='signup')\nurlpatterns = router.urls",
+        "detail": "authentication.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "authentication.urls",
+        "description": "authentication.urls",
+        "peekOfCode": "urlpatterns = router.urls",
+        "detail": "authentication.urls",
+        "documentation": {}
+    },
+    {
+        "label": "SignupViewSet",
+        "kind": 6,
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "peekOfCode": "class SignupViewSet(GenericViewSet):\n  permission_classes = [AllowAny]\n  # --------------------------------------------------\n  # STEP 1 — POST /api/auth/signup/doctor/register/\n  # --------------------------------------------------\n  @swagger_auto_schema(\n    tags=['Doctor Signup'],\n    operation_id='doctor_register',\n    operation_summary='Step 1 — Submit signup data & receive OTP',\n    operation_description=(",
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n_verify_body = openapi.Schema(\n  type=openapi.TYPE_OBJECT,\n  required=['email', 'otp'],\n  properties={\n    'email': openapi.Schema(type=openapi.TYPE_STRING, format='email', example='doctor@example.com'),\n    'otp':   openapi.Schema(type=openapi.TYPE_STRING, example='123456', description='6-digit OTP sent to email'),\n  },\n)\nclass SignupViewSet(GenericViewSet):",
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "_verify_body",
+        "kind": 5,
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "peekOfCode": "_verify_body = openapi.Schema(\n  type=openapi.TYPE_OBJECT,\n  required=['email', 'otp'],\n  properties={\n    'email': openapi.Schema(type=openapi.TYPE_STRING, format='email', example='doctor@example.com'),\n    'otp':   openapi.Schema(type=openapi.TYPE_STRING, example='123456', description='6-digit OTP sent to email'),\n  },\n)\nclass SignupViewSet(GenericViewSet):\n  permission_classes = [AllowAny]",
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
         "label": "Command",
         "kind": 6,
         "importPath": "blog.management.commands.populated_blog",
@@ -2166,17 +2574,8 @@
         "kind": 6,
         "importPath": "blog.migrations.0001_initial",
         "description": "blog.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('profiles', '0002_hospital_qualification_and_more'),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='BlogPost',\n            fields=[",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('authentication', '0001_initial'),\n        ('profiles', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='BlogPost',\n            fields=[",
         "detail": "blog.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "blog.migrations.0002_blogcomment_like_count_blogpost_comment_count_and_more",
-        "description": "blog.migrations.0002_blogcomment_like_count_blogpost_comment_count_and_more",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('blog', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='blogpost',\n            name='like_count',\n            field=models.PositiveIntegerField(default=0),\n        ),",
-        "detail": "blog.migrations.0002_blogcomment_like_count_blogpost_comment_count_and_more",
         "documentation": {}
     },
     {
@@ -2184,7 +2583,7 @@
         "kind": 6,
         "importPath": "blog.models.blog_comment_mod",
         "description": "blog.models.blog_comment_mod",
-        "peekOfCode": "class BlogComment(models.Model):\n    post = models.ForeignKey(BlogPost, on_delete=models.CASCADE, related_name='comments')\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_comments')\n    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='replies')\n    content = models.TextField()\n    like_count = models.PositiveIntegerField(default=0)\n    created = models.DateTimeField(auto_now_add=True)\n    updated = models.DateTimeField(auto_now=True)\n    class Meta:\n        ordering = ['created']",
+        "peekOfCode": "class BlogComment(models.Model):\n    post = models.ForeignKey(BlogPost, on_delete=models.CASCADE, related_name='comments')\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='blog_comments')\n    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='replies')\n    content = models.TextField()\n    like_count = models.PositiveIntegerField(default=0)\n    created = models.DateTimeField(auto_now_add=True)\n    updated = models.DateTimeField(auto_now=True)\n    class Meta:\n        ordering = ['created']",
         "detail": "blog.models.blog_comment_mod",
         "documentation": {}
     },
@@ -2193,7 +2592,7 @@
         "kind": 6,
         "importPath": "blog.models.blog_comment_mod",
         "description": "blog.models.blog_comment_mod",
-        "peekOfCode": "class BlogCommentLike(models.Model):\n    comment = models.ForeignKey(BlogComment, on_delete=models.CASCADE, related_name='likes')\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_comment_likes')\n    created = models.DateTimeField(auto_now_add=True)\n    class Meta:\n        unique_together = ('comment', 'user')\n    def __str__(self):\n        return f'{self.user} liked comment {self.comment.id}'\n    def increase_like_count(self):\n        self.comment.increase_like_count()",
+        "peekOfCode": "class BlogCommentLike(models.Model):\n    comment = models.ForeignKey(BlogComment, on_delete=models.CASCADE, related_name='likes')\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='blog_comment_likes')\n    created = models.DateTimeField(auto_now_add=True)\n    class Meta:\n        unique_together = ('comment', 'user')\n    def __str__(self):\n        return f'{self.user} liked comment {self.comment.id}'\n    def increase_like_count(self):\n        self.comment.increase_like_count()",
         "detail": "blog.models.blog_comment_mod",
         "documentation": {}
     },
@@ -2202,7 +2601,7 @@
         "kind": 6,
         "importPath": "blog.models.blog_like_mod",
         "description": "blog.models.blog_like_mod",
-        "peekOfCode": "class BlogLike(models.Model):\n    post = models.ForeignKey(BlogPost, on_delete=models.CASCADE, related_name='likes')\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_likes')\n    created = models.DateTimeField(auto_now_add=True)\n    class Meta:\n        unique_together = ('post', 'user')\n    def __str__(self):\n        return f'{self.user} liked {self.post}'\n    def increase_like_count(self):\n        BlogPost.objects.filter(pk=self.post_id).update(like_count=models.F('like_count') + 1)",
+        "peekOfCode": "class BlogLike(models.Model):\n    post = models.ForeignKey(BlogPost, on_delete=models.CASCADE, related_name='likes')\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='blog_likes')\n    created = models.DateTimeField(auto_now_add=True)\n    class Meta:\n        unique_together = ('post', 'user')\n    def __str__(self):\n        return f'{self.user} liked {self.post}'\n    def increase_like_count(self):\n        BlogPost.objects.filter(pk=self.post_id).update(like_count=models.F('like_count') + 1)",
         "detail": "blog.models.blog_like_mod",
         "documentation": {}
     },
@@ -2508,7 +2907,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django_prometheus',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    #installed app\n    'location',",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django_prometheus',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    #installed app\n    'drf_yasg',",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -2517,7 +2916,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "AUTH_USER_MODEL = 'profiles.User'\nMIDDLEWARE = [\n    \"django_prometheus.middleware.PrometheusBeforeMiddleware\",\n    \"request_id.middleware.RequestIdMiddleware\",\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',",
+        "peekOfCode": "AUTH_USER_MODEL = 'authentication.User'\nMIDDLEWARE = [\n    \"django_prometheus.middleware.PrometheusBeforeMiddleware\",\n    \"request_id.middleware.RequestIdMiddleware\",\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -2666,11 +3065,20 @@
         "documentation": {}
     },
     {
+        "label": "schema_view",
+        "kind": 5,
+        "importPath": "medihub.urls",
+        "description": "medihub.urls",
+        "peekOfCode": "schema_view = get_schema_view(\n    openapi.Info(\n        title='Medihub API',\n        default_version='v1',\n        description='Medihub platform API documentation',\n        contact=openapi.Contact(email='admin@medihub.com'),\n    ),\n    public=True,\n    permission_classes=[permissions.AllowAny],\n)",
+        "detail": "medihub.urls",
+        "documentation": {}
+    },
+    {
         "label": "urlpatterns",
         "kind": 5,
         "importPath": "medihub.urls",
         "description": "medihub.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('health/', HealthCheck),\n    path('', HealthCheck),\n    path('metrics/', include('django_prometheus.urls')),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', HealthCheck),\n    path('metrics/', include('django_prometheus.urls')),\n    path('api/auth/', include('authentication.urls')),\n    # Swagger\n    path('api/docs/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-ui'),\n    path('api/redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='redoc-ui'),\n    path('api/schema.json', schema_view.without_ui(cache_timeout=0), name='schema-json'),\n]",
         "detail": "medihub.urls",
         "documentation": {}
     },
@@ -2697,7 +3105,7 @@
         "kind": 6,
         "importPath": "post.migrations.0001_initial",
         "description": "post.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('location', '0001_initial'),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='BloodNeedPost',\n            fields=[",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('authentication', '0001_initial'),\n        ('location', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='BloodNeedPost',\n            fields=[",
         "detail": "post.migrations.0001_initial",
         "documentation": {}
     },
@@ -2706,7 +3114,7 @@
         "kind": 6,
         "importPath": "post.models.blood_need_mod",
         "description": "post.models.blood_need_mod",
-        "peekOfCode": "class BloodNeedPost(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blood_need_posts')\n    # Patient info\n    patient_name = models.CharField(max_length=200)\n    patient_age = models.PositiveSmallIntegerField()\n    patient_gender = models.CharField(max_length=10, choices=GenderChoices.choices)\n    blood_group = models.CharField(max_length=5, choices=BloodGroupChoices.choices)\n    bags_needed = models.PositiveSmallIntegerField(default=1)\n    # Location\n    division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True)",
+        "peekOfCode": "class BloodNeedPost(models.Model):\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='blood_need_posts')\n    # Patient info\n    patient_name = models.CharField(max_length=200)\n    patient_age = models.PositiveSmallIntegerField()\n    patient_gender = models.CharField(max_length=10, choices=GenderChoices.choices)\n    blood_group = models.CharField(max_length=5, choices=BloodGroupChoices.choices)\n    bags_needed = models.PositiveSmallIntegerField(default=1)\n    # Location\n    division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True)",
         "detail": "post.models.blood_need_mod",
         "documentation": {}
     },
@@ -2715,7 +3123,7 @@
         "kind": 6,
         "importPath": "post.models.equipment_need_mod",
         "description": "post.models.equipment_need_mod",
-        "peekOfCode": "class EquipmentNeedPost(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='equipment_need_posts')\n    equipment_name = models.CharField(max_length=300)\n    quantity = models.CharField(max_length=100)\n    condition = models.CharField(max_length=10, choices=EquipmentConditionChoices.choices, default=EquipmentConditionChoices.GOOD)\n    image = models.ImageField(upload_to='post/equipment/', blank=True, null=True)\n    description = models.TextField(blank=True, null=True)\n    # User location\n    division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True)\n    district = models.ForeignKey(District, on_delete=models.SET_NULL, null=True)",
+        "peekOfCode": "class EquipmentNeedPost(models.Model):\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='equipment_need_posts')\n    equipment_name = models.CharField(max_length=300)\n    quantity = models.CharField(max_length=100)\n    condition = models.CharField(max_length=10, choices=EquipmentConditionChoices.choices, default=EquipmentConditionChoices.GOOD)\n    image = models.ImageField(upload_to='post/equipment/', blank=True, null=True)\n    description = models.TextField(blank=True, null=True)\n    # User location\n    division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True)\n    district = models.ForeignKey(District, on_delete=models.SET_NULL, null=True)",
         "detail": "post.models.equipment_need_mod",
         "documentation": {}
     },
@@ -2724,7 +3132,7 @@
         "kind": 6,
         "importPath": "post.models.general_post_mod",
         "description": "post.models.general_post_mod",
-        "peekOfCode": "class GeneralPost(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='general_posts')\n    title = models.CharField(max_length=300)\n    content = models.TextField()\n    image = models.ImageField(upload_to='post/general/', blank=True, null=True)\n    division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True, blank=True)\n    district = models.ForeignKey(District, on_delete=models.SET_NULL, null=True, blank=True)\n    upozila = models.ForeignKey(Upozila, on_delete=models.SET_NULL, null=True, blank=True)\n    contact_number = models.CharField(max_length=15, blank=True, null=True)\n    status = models.CharField(max_length=15, choices=PostStatusChoices.choices, default=PostStatusChoices.OPEN)",
+        "peekOfCode": "class GeneralPost(models.Model):\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='general_posts')\n    title = models.CharField(max_length=300)\n    content = models.TextField()\n    image = models.ImageField(upload_to='post/general/', blank=True, null=True)\n    division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True, blank=True)\n    district = models.ForeignKey(District, on_delete=models.SET_NULL, null=True, blank=True)\n    upozila = models.ForeignKey(Upozila, on_delete=models.SET_NULL, null=True, blank=True)\n    contact_number = models.CharField(max_length=15, blank=True, null=True)\n    status = models.CharField(max_length=15, choices=PostStatusChoices.choices, default=PostStatusChoices.OPEN)",
         "detail": "post.models.general_post_mod",
         "documentation": {}
     },
@@ -2733,7 +3141,7 @@
         "kind": 6,
         "importPath": "post.models.medicine_need_mod",
         "description": "post.models.medicine_need_mod",
-        "peekOfCode": "class MedicineNeedPost(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='medicine_need_posts')\n    medicine_name = models.CharField(max_length=300)\n    quantity = models.CharField(max_length=100)\n    description = models.TextField(blank=True, null=True)\n    # User location\n    division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True)\n    district = models.ForeignKey(District, on_delete=models.SET_NULL, null=True)\n    upozila = models.ForeignKey(Upozila, on_delete=models.SET_NULL, null=True, blank=True)\n    address = models.TextField(blank=True, null=True)",
+        "peekOfCode": "class MedicineNeedPost(models.Model):\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='medicine_need_posts')\n    medicine_name = models.CharField(max_length=300)\n    quantity = models.CharField(max_length=100)\n    description = models.TextField(blank=True, null=True)\n    # User location\n    division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True)\n    district = models.ForeignKey(District, on_delete=models.SET_NULL, null=True)\n    upozila = models.ForeignKey(Upozila, on_delete=models.SET_NULL, null=True, blank=True)\n    address = models.TextField(blank=True, null=True)",
         "detail": "post.models.medicine_need_mod",
         "documentation": {}
     },
@@ -2850,7 +3258,7 @@
         "kind": 6,
         "importPath": "profiles.management.commands.populated_user_profile",
         "description": "profiles.management.commands.populated_user_profile",
-        "peekOfCode": "class Command(BaseCommand):\n    help = 'Populate User profiles'\n    def handle(self, *args, **kwargs):\n        if UserProfile.objects.exists():\n            self.stdout.write(self.style.SUCCESS('User profiles already populated'))\n            return\n        filepath = settings.BASE_DIR / 'dataset' / 'user_profile.json'\n        with open(filepath, 'r', encoding='utf-8') as f:\n            data = json.load(f)\n        for item in data:",
+        "peekOfCode": "class Command(BaseCommand):\n    help = 'Populate User profiles'\n    def handle(self, *args, **kwargs):\n        if RegularUserProfile.objects.exists():\n            self.stdout.write(self.style.SUCCESS('User profiles already populated'))\n            return\n        filepath = settings.BASE_DIR / 'dataset' / 'user_profile.json'\n        with open(filepath, 'r', encoding='utf-8') as f:\n            data = json.load(f)\n        for item in data:",
         "detail": "profiles.management.commands.populated_user_profile",
         "documentation": {}
     },
@@ -2859,17 +3267,8 @@
         "kind": 6,
         "importPath": "profiles.migrations.0001_initial",
         "description": "profiles.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('location', '0001_initial'),\n        ('auth', '0012_alter_user_first_name_max_length'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='User',\n            fields=[",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('authentication', '0001_initial'),\n        ('location', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Specialization',\n            fields=[",
         "detail": "profiles.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "profiles.migrations.0002_hospital_qualification_and_more",
-        "description": "profiles.migrations.0002_hospital_qualification_and_more",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('profiles', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Hospital',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name_eng', models.CharField(max_length=200, unique=True)),",
-        "detail": "profiles.migrations.0002_hospital_qualification_and_more",
         "documentation": {}
     },
     {
@@ -2877,7 +3276,7 @@
         "kind": 6,
         "importPath": "profiles.models.ambulance_prof_mod",
         "description": "profiles.models.ambulance_prof_mod",
-        "peekOfCode": "class AmbulanceProfile(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='ambulance')\n    owner_name = models.CharField(max_length=200)\n    contact_number = models.CharField(max_length=15)\n    ambulance_type = models.CharField(max_length=20, choices=AmbulanceTypeChoices.choices)\n    vehicle_number = models.CharField(max_length=50, unique=True)\n    is_available = models.BooleanField(default=True)\n    division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True)\n    district = models.ForeignKey(District, on_delete=models.SET_NULL, null=True)\n    upozila = models.ForeignKey(Upozila, on_delete=models.SET_NULL, null=True)",
+        "peekOfCode": "class AmbulanceProfile(models.Model):\n    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='ambulance')\n    owner_name = models.CharField(max_length=200)\n    contact_number = models.CharField(max_length=15)\n    ambulance_type = models.CharField(max_length=20, choices=AmbulanceTypeChoices.choices)\n    vehicle_number = models.CharField(max_length=50, unique=True)\n    is_available = models.BooleanField(default=True)\n    division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True)\n    district = models.ForeignKey(District, on_delete=models.SET_NULL, null=True)\n    upozila = models.ForeignKey(Upozila, on_delete=models.SET_NULL, null=True)",
         "detail": "profiles.models.ambulance_prof_mod",
         "documentation": {}
     },
@@ -2886,7 +3285,7 @@
         "kind": 6,
         "importPath": "profiles.models.blood_donor_mod",
         "description": "profiles.models.blood_donor_mod",
-        "peekOfCode": "class BloodDonor(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='blood_donor')\n    first_name = models.CharField(max_length=100)\n    last_name = models.CharField(max_length=100)\n    date_of_birth = models.DateField()\n    gender = models.CharField(max_length=10, choices=GenderChoices.choices)\n    contact_number = models.CharField(max_length=15)\n    blood_group = models.CharField(max_length=5, choices=BloodGroupChoices.choices)\n    availability = models.CharField(max_length=15, choices=AvailabilityChoices.choices, default=AvailabilityChoices.AVAILABLE)\n    last_donated = models.DateField(blank=True, null=True)",
+        "peekOfCode": "class BloodDonor(models.Model):\n    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='blood_donor')\n    first_name = models.CharField(max_length=100)\n    last_name = models.CharField(max_length=100)\n    date_of_birth = models.DateField()\n    gender = models.CharField(max_length=10, choices=GenderChoices.choices)\n    contact_number = models.CharField(max_length=15)\n    blood_group = models.CharField(max_length=5, choices=BloodGroupChoices.choices)\n    availability = models.CharField(max_length=15, choices=AvailabilityChoices.choices, default=AvailabilityChoices.AVAILABLE)\n    last_donated = models.DateField(blank=True, null=True)",
         "detail": "profiles.models.blood_donor_mod",
         "documentation": {}
     },
@@ -2895,7 +3294,7 @@
         "kind": 6,
         "importPath": "profiles.models.diagnostic_prof_mod",
         "description": "profiles.models.diagnostic_prof_mod",
-        "peekOfCode": "class DiagnosticProfile(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='diagnostic')\n    diagnostic_name = models.CharField(max_length=200)\n    owner_name = models.CharField(max_length=200)\n    contact_number = models.CharField(max_length=15)\n    license_number = models.CharField(max_length=100, unique=True)\n    license_validity = models.DateField()\n    is_open = models.BooleanField(default=True)\n    division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True)\n    district = models.ForeignKey(District, on_delete=models.SET_NULL, null=True)",
+        "peekOfCode": "class DiagnosticProfile(models.Model):\n    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='diagnostic')\n    diagnostic_name = models.CharField(max_length=200)\n    owner_name = models.CharField(max_length=200)\n    contact_number = models.CharField(max_length=15)\n    license_number = models.CharField(max_length=100, unique=True)\n    license_validity = models.DateField()\n    is_open = models.BooleanField(default=True)\n    division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True)\n    district = models.ForeignKey(District, on_delete=models.SET_NULL, null=True)",
         "detail": "profiles.models.diagnostic_prof_mod",
         "documentation": {}
     },
@@ -2931,7 +3330,7 @@
         "kind": 6,
         "importPath": "profiles.models.doctor_prof_mod",
         "description": "profiles.models.doctor_prof_mod",
-        "peekOfCode": "class Hospital(models.Model):\n    name_eng = models.CharField(max_length=200, unique=True)\n    name_bn = models.CharField(max_length=200, unique=True)\n    def __str__(self):\n        return self.name_eng\nclass Doctor(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='doctor')\n    first_name = models.CharField(max_length=100)\n    middle_name = models.CharField(max_length=100, blank=True, null=True)\n    last_name = models.CharField(max_length=100)",
+        "peekOfCode": "class Hospital(models.Model):\n    name_eng = models.CharField(max_length=200, unique=True)\n    name_bn = models.CharField(max_length=200, unique=True)\n    def __str__(self):\n        return self.name_eng\nclass Doctor(models.Model):\n    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='doctor')\n    first_name = models.CharField(max_length=100)\n    middle_name = models.CharField(max_length=100, blank=True, null=True)\n    last_name = models.CharField(max_length=100)",
         "detail": "profiles.models.doctor_prof_mod",
         "documentation": {}
     },
@@ -2940,7 +3339,7 @@
         "kind": 6,
         "importPath": "profiles.models.doctor_prof_mod",
         "description": "profiles.models.doctor_prof_mod",
-        "peekOfCode": "class Doctor(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='doctor')\n    first_name = models.CharField(max_length=100)\n    middle_name = models.CharField(max_length=100, blank=True, null=True)\n    last_name = models.CharField(max_length=100)\n    date_of_birth = models.DateField(blank=True, null=True)\n    gender = models.CharField(max_length=10, choices=GenderChoices.choices)\n    profile_dp = models.ImageField(upload_to='doctor/dp/', blank=True, null=True)\n    contact_number = models.CharField(max_length=15)\n    division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True)",
+        "peekOfCode": "class Doctor(models.Model):\n    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='doctor')\n    first_name = models.CharField(max_length=100)\n    middle_name = models.CharField(max_length=100, blank=True, null=True)\n    last_name = models.CharField(max_length=100)\n    date_of_birth = models.DateField(blank=True, null=True)\n    gender = models.CharField(max_length=10, choices=GenderChoices.choices)\n    profile_dp = models.ImageField(upload_to='doctor/dp/', blank=True, null=True)\n    contact_number = models.CharField(max_length=15)\n    division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True)",
         "detail": "profiles.models.doctor_prof_mod",
         "documentation": {}
     },
@@ -2976,7 +3375,7 @@
         "kind": 6,
         "importPath": "profiles.models.doctor_prof_mod",
         "description": "profiles.models.doctor_prof_mod",
-        "peekOfCode": "class DoctorScheduling(models.Model):\n    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, related_name='schedules')\n    day = models.CharField(max_length=10, choices=DayChoices.choices)\n    start = models.TimeField()\n    end = models.TimeField()\n    def __str__(self):\n        return f'{self.doctor} - {self.day}'\nclass DoctorRating(models.Model):\n    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, related_name='ratings')\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='given_ratings')",
+        "peekOfCode": "class DoctorScheduling(models.Model):\n    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, related_name='schedules')\n    day = models.CharField(max_length=10, choices=DayChoices.choices)\n    start = models.TimeField()\n    end = models.TimeField()\n    def __str__(self):\n        return f'{self.doctor} - {self.day}'\nclass DoctorRating(models.Model):\n    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, related_name='ratings')\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='given_ratings')",
         "detail": "profiles.models.doctor_prof_mod",
         "documentation": {}
     },
@@ -2985,7 +3384,7 @@
         "kind": 6,
         "importPath": "profiles.models.doctor_prof_mod",
         "description": "profiles.models.doctor_prof_mod",
-        "peekOfCode": "class DoctorRating(models.Model):\n    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, related_name='ratings')\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='given_ratings')\n    rating = models.PositiveSmallIntegerField(default=1)\n    created = models.DateTimeField(auto_now_add=True)\n    class Meta:\n        unique_together = ('doctor', 'user')\n    def __str__(self):\n        return f'{self.doctor} - {self.rating}'",
+        "peekOfCode": "class DoctorRating(models.Model):\n    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, related_name='ratings')\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='given_ratings')\n    rating = models.PositiveSmallIntegerField(default=1)\n    created = models.DateTimeField(auto_now_add=True)\n    class Meta:\n        unique_together = ('doctor', 'user')\n    def __str__(self):\n        return f'{self.doctor} - {self.rating}'",
         "detail": "profiles.models.doctor_prof_mod",
         "documentation": {}
     },
@@ -2994,34 +3393,16 @@
         "kind": 6,
         "importPath": "profiles.models.pharmacy_prof_mod",
         "description": "profiles.models.pharmacy_prof_mod",
-        "peekOfCode": "class PharmacyProfile(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='pharmacy')\n    pharmacy_name = models.CharField(max_length=200)\n    owner_name = models.CharField(max_length=200)\n    contact_number = models.CharField(max_length=15)\n    license_number = models.CharField(max_length=100, unique=True)\n    license_validity = models.DateField()\n    is_open = models.BooleanField(default=True)\n    division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True)\n    district = models.ForeignKey(District, on_delete=models.SET_NULL, null=True)",
+        "peekOfCode": "class PharmacyProfile(models.Model):\n    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='pharmacy')\n    pharmacy_name = models.CharField(max_length=200)\n    owner_name = models.CharField(max_length=200)\n    contact_number = models.CharField(max_length=15)\n    license_number = models.CharField(max_length=100, unique=True)\n    license_validity = models.DateField()\n    is_open = models.BooleanField(default=True)\n    division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True)\n    district = models.ForeignKey(District, on_delete=models.SET_NULL, null=True)",
         "detail": "profiles.models.pharmacy_prof_mod",
         "documentation": {}
     },
     {
-        "label": "UserManager",
-        "kind": 6,
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "peekOfCode": "class UserManager(BaseUserManager):\n    def create_user(self, email, password):\n        if not email:\n            raise ValueError('Email is required')\n        user = self.model(email=self.normalize_email(email))\n        if password is None:\n          raise ValueError(\"Password required\")\n        user.set_password(password)\n        user.save(using=self._db)\n        return user",
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "kind": 6,
-        "importPath": "profiles.models.user_mod",
-        "description": "profiles.models.user_mod",
-        "peekOfCode": "class User(AbstractBaseUser, PermissionsMixin):\n    email = models.EmailField(unique=True)\n    role = models.CharField(max_length=20, choices=RoleChoices.choices, default=RoleChoices.USER)\n    is_active = models.BooleanField(default=True)\n    is_staff = models.BooleanField(default=False)\n    is_blood_donor = models.BooleanField(default=False)\n    created = models.DateTimeField(auto_now_add=True)\n    updated = models.DateTimeField(auto_now=True)\n    objects = UserManager()\n    USERNAME_FIELD = 'email'",
-        "detail": "profiles.models.user_mod",
-        "documentation": {}
-    },
-    {
-        "label": "UserProfile",
+        "label": "RegularUserProfile",
         "kind": 6,
         "importPath": "profiles.models.user_prof_mod",
         "description": "profiles.models.user_prof_mod",
-        "peekOfCode": "class UserProfile(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')\n    first_name = models.CharField(max_length=100)\n    last_name = models.CharField(max_length=100)\n    date_of_birth = models.DateField(blank=True, null=True)\n    gender = models.CharField(max_length=10, choices=GenderChoices.choices)\n    profile_dp = models.ImageField(upload_to='user/dp/', blank=True, null=True)\n    contact_number = models.CharField(max_length=15, blank=True, null=True)\n    division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True, blank=True)\n    district = models.ForeignKey(District, on_delete=models.SET_NULL, null=True, blank=True)",
+        "peekOfCode": "class RegularUserProfile(models.Model):\n    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='profile')\n    first_name = models.CharField(max_length=100)\n    last_name = models.CharField(max_length=100)\n    date_of_birth = models.DateField(blank=True, null=True)\n    gender = models.CharField(max_length=10, choices=GenderChoices.choices)\n    profile_dp = models.ImageField(upload_to='user/dp/', blank=True, null=True)\n    contact_number = models.CharField(max_length=15, blank=True, null=True)\n    division = models.ForeignKey(Division, on_delete=models.SET_NULL, null=True, blank=True)\n    district = models.ForeignKey(District, on_delete=models.SET_NULL, null=True, blank=True)",
         "detail": "profiles.models.user_prof_mod",
         "documentation": {}
     },
@@ -3030,7 +3411,7 @@
         "kind": 6,
         "importPath": "profiles.admin",
         "description": "profiles.admin",
-        "peekOfCode": "class UserAdmin(BaseUserAdmin):\n    list_display = ['id', 'email', 'role', 'is_blood_donor', 'is_active', 'is_staff', 'is_superuser', 'created']\n    ordering = ['email']\n    search_fields = ['email']\n    list_filter = ['role', 'is_blood_donor', 'is_active', 'is_staff', 'is_superuser']\n    fieldsets = (\n        (None, {'fields': ('email', 'password')}),\n        ('Role', {'fields': ('role', 'is_blood_donor')}),\n        ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser')}),\n    )",
+        "peekOfCode": "class UserAdmin(BaseUserAdmin):\n    list_display = ['id', 'email', 'is_blood_donor', 'is_active', 'is_staff', 'is_superuser', 'created']\n    ordering = ['email']\n    search_fields = ['email']\n    list_filter = ['is_blood_donor', 'is_active', 'is_staff', 'is_superuser']\n    fieldsets = (\n        (None, {'fields': ('email', 'password')}),\n        ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser')}),\n    )\n    add_fieldsets = (",
         "detail": "profiles.admin",
         "documentation": {}
     },
