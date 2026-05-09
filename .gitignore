@@ -88,6 +88,11 @@ Documentation/
 nginx/certs/
 
 # =====================
+# Monitoring credentials
+# =====================
+monitoring/alertmanager.yml
+
+# =====================
 # Firebase Credentials
 # =====================
 firebase-key.json

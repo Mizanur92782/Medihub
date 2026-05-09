@@ -1,0 +1,29 @@
+global:
+  smtp_smarthost: "smtp.gmail.com:587"
+  smtp_from: "${EMAIL_HOST_USER}"
+  smtp_auth_username: "${EMAIL_HOST_USER}"
+  smtp_auth_password: "${EMAIL_HOST_PASSWORD}"
+  smtp_require_tls: true
+
+route:
+  receiver: email_alert
+  group_by: ['alertname']
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 1h
+
+receivers:
+  - name: email_alert
+    email_configs:
+      - to: "${EMAIL_HOST_USER}"
+        send_resolved: true
+    telegram_configs:
+      - bot_token: "${TELEGRAM_BOT_TOKEN}"
+        chat_id: ${TELEGRAM_CHAT_ID}
+        send_resolved: true
+        parse_mode: HTML
+        message: |
+          <b>{{ .Status | toUpper }}</b>
+          <b>Alert:</b> {{ range .Alerts }}{{ .Labels.alertname }}{{ end }}
+          <b>Severity:</b> {{ range .Alerts }}{{ .Labels.severity }}{{ end }}
+          <b>Summary:</b> {{ range .Alerts }}{{ .Annotations.summary }}{{ end }}

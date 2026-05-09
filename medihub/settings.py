@@ -17,6 +17,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-k%ebt*!xp%%$w!mjy60*u
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
+ALLOWED_HOSTS += ['web1', 'web2', 'web3', 'localhost', '127.0.0.1', 'localhost:8080']
+
 
 CSRF_TRUSTED_ORIGINS = os.environ.get(
     'CSRF_TRUSTED_ORIGINS',

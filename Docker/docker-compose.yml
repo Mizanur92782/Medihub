@@ -45,7 +45,7 @@ services:
       [
         "sh",
         "-c",
-        "chown -R app:app /app/staticfiles && python manage.py migrate --fake-initial --noinput && python manage.py collectstatic --noinput",
+        "chown -R app:app /app/staticfiles && python manage.py makemigrations --noinput && python manage.py migrate --noinput && python manage.py collectstatic --noinput",
       ]
     depends_on:
       db:
@@ -57,7 +57,7 @@ services:
   web1:
     image: medihub_web
     container_name: medihub_web1
-    hostname: medihub_web1
+    hostname: web1
     env_file:
       - ../.env
     environment:
@@ -79,7 +79,7 @@ services:
     networks:
       - app_network
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8011/health/"]
+      test: ["CMD", "curl", "-f", "-H", "Host: localhost", "http://localhost:8011/health/"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -93,7 +93,7 @@ services:
   web2:
     image: medihub_web
     container_name: medihub_web2
-    hostname: medihub_web2
+    hostname: web2
     env_file:
       - ../.env
     environment:
@@ -115,7 +115,7 @@ services:
     networks:
       - app_network
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8012/health/"]
+      test: ["CMD", "curl", "-f", "-H", "Host: localhost", "http://localhost:8012/health/"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -129,7 +129,7 @@ services:
   web3:
     image: medihub_web
     container_name: medihub_web3
-    hostname: medihub_web3
+    hostname: web3
     env_file:
       - ../.env
     environment:
@@ -151,7 +151,7 @@ services:
     networks:
       - app_network
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8013/health/"]
+      test: ["CMD", "curl", "-f", "-H", "Host: localhost", "http://localhost:8013/health/"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -264,6 +264,37 @@ services:
     networks:
       - app_network
 
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:latest
+    container_name: medihub_cadvisor
+    ports:
+      - "8081:8080"
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+    restart: always
+    networks:
+      - app_network
+
+  node_exporter:
+    image: prom/node-exporter:latest
+    container_name: medihub_node_exporter
+    ports:
+      - "9100:9100"
+    command:
+      - --path.procfs=/host/proc
+      - --path.sysfs=/host/sys
+      - --path.rootfs=/rootfs
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    restart: always
+    networks:
+      - app_network
+
   pgadmin:
     image: dpage/pgadmin4:latest
     container_name: medihub_pgadmin
@@ -299,7 +330,9 @@ services:
       - "9093:9093"
     volumes:
       - ../monitoring/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
-    command: --config.file=/etc/alertmanager/alertmanager.yml
+    env_file:
+      - ../.env
+    command: --config.file=/etc/alertmanager/alertmanager.yml --log.level=debug
     restart: always
     networks:
       - app_network
@@ -370,4 +403,6 @@ volumes:
 networks:
   app_network:
     driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "false"
     

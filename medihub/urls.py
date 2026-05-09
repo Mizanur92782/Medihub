@@ -35,8 +35,10 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HealthCheck),
-    path('metrics/', include('django_prometheus.urls')),
+    path('health/', HealthCheck),
+    path('', include('django_prometheus.urls')),
     path('api/auth/', include('authentication.urls')),
+    path('api/location/', include('location.urls')),
 
     # Swagger
     path('api/docs/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-ui'),

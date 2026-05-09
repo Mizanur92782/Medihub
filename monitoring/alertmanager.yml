@@ -1,15 +1,39 @@
 global:
   smtp_smarthost: "smtp.gmail.com:587"
-  smtp_from: "medihub@gmail.com"
-  smtp_auth_username: "medihub@gmail.com"
-  smtp_auth_password: "your-app-password"
+  smtp_from: "mizanmd92782@gmail.com"
+  smtp_auth_username: "mizanmd92782@gmail.com"
+  smtp_auth_password: "mpjl ogoq pczx ywps"
+  smtp_require_tls: true
 
 route:
   receiver: email_alert
+  group_by: ['alertname']
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 1h
 
 receivers:
   - name: email_alert
     email_configs:
-      - to: "nightliver000@gmail.com"
+      - to: "mizanmd92782@gmail.com"
         send_resolved: true
-        
+    telegram_configs:
+      - bot_token: "8210066963:AAFc1nqYlqoAm13YDKyIX7ML4TtdMPhLY4U"
+        chat_id: 7412860162
+        send_resolved: true
+        parse_mode: HTML
+        message: |
+          <b>{{ .Status | toUpper }}</b>
+          <b>Alert:</b> {{ range .Alerts }}{{ .Labels.alertname }}{{ end }}
+          <b>Severity:</b> {{ range .Alerts }}{{ .Labels.severity }}{{ end }}
+          <b>Summary:</b> {{ range .Alerts }}{{ .Annotations.summary }}{{ end }}
+    telegram_configs:
+      - bot_token: "8210066963:AAFc1nqYlqoAm13YDKyIX7ML4TtdMPhLY4U"
+        chat_id: 7412860162
+        send_resolved: true
+        parse_mode: HTML
+        message: |
+          <b>{{ .Status | toUpper }}</b>
+          <b>Alert:</b> {{ range .Alerts }}{{ .Labels.alertname }}{{ end }}
+          <b>Severity:</b> {{ range .Alerts }}{{ .Labels.severity }}{{ end }}
+          <b>Summary:</b> {{ range .Alerts }}{{ .Annotations.summary }}{{ end }}

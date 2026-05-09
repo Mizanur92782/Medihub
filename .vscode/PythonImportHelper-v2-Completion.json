@@ -16,6 +16,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -41,6 +57,22 @@
     },
     {
         "label": "DatabaseError",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -313,6 +345,30 @@
     },
     {
         "label": "GenderChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "BloodGroupChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "AvailabilityChoices",
+        "importPath": "utilities.enum",
+        "description": "utilities.enum",
+        "isExtraImport": true,
+        "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "AmbulanceTypeChoices",
         "importPath": "utilities.enum",
         "description": "utilities.enum",
         "isExtraImport": true,
@@ -745,6 +801,14 @@
     },
     {
         "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
         "importPath": "location.models",
         "description": "location.models",
         "isExtraImport": true,
@@ -1547,6 +1611,126 @@
         "documentation": {}
     },
     {
+        "label": "RegularUserProfile",
+        "importPath": "profiles.models.user_prof_mod",
+        "description": "profiles.models.user_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.user_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "RegularUserProfile",
+        "importPath": "profiles.models.user_prof_mod",
+        "description": "profiles.models.user_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.user_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "RegularUserProfile",
+        "importPath": "profiles.models.user_prof_mod",
+        "description": "profiles.models.user_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.user_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "BloodDonor",
+        "importPath": "profiles.models.blood_donor_mod",
+        "description": "profiles.models.blood_donor_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.blood_donor_mod",
+        "documentation": {}
+    },
+    {
+        "label": "BloodDonor",
+        "importPath": "profiles.models.blood_donor_mod",
+        "description": "profiles.models.blood_donor_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.blood_donor_mod",
+        "documentation": {}
+    },
+    {
+        "label": "BloodDonor",
+        "importPath": "profiles.models.blood_donor_mod",
+        "description": "profiles.models.blood_donor_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.blood_donor_mod",
+        "documentation": {}
+    },
+    {
+        "label": "AmbulanceProfile",
+        "importPath": "profiles.models.ambulance_prof_mod",
+        "description": "profiles.models.ambulance_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.ambulance_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "AmbulanceProfile",
+        "importPath": "profiles.models.ambulance_prof_mod",
+        "description": "profiles.models.ambulance_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.ambulance_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "AmbulanceProfile",
+        "importPath": "profiles.models.ambulance_prof_mod",
+        "description": "profiles.models.ambulance_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.ambulance_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "PharmacyProfile",
+        "importPath": "profiles.models.pharmacy_prof_mod",
+        "description": "profiles.models.pharmacy_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.pharmacy_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "PharmacyProfile",
+        "importPath": "profiles.models.pharmacy_prof_mod",
+        "description": "profiles.models.pharmacy_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.pharmacy_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "PharmacyProfile",
+        "importPath": "profiles.models.pharmacy_prof_mod",
+        "description": "profiles.models.pharmacy_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.pharmacy_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "DiagnosticProfile",
+        "importPath": "profiles.models.diagnostic_prof_mod",
+        "description": "profiles.models.diagnostic_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.diagnostic_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "DiagnosticProfile",
+        "importPath": "profiles.models.diagnostic_prof_mod",
+        "description": "profiles.models.diagnostic_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.diagnostic_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "DiagnosticProfile",
+        "importPath": "profiles.models.diagnostic_prof_mod",
+        "description": "profiles.models.diagnostic_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.diagnostic_prof_mod",
+        "documentation": {}
+    },
+    {
         "label": "shared_task",
         "importPath": "celery",
         "description": "celery",
@@ -1660,6 +1844,46 @@
     },
     {
         "label": "DoctorSignUPSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "UserSignUpSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "BloodDonorSignUpSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "AmbulanceSignUpSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "PharmacySignUpSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "DiagnosticSignUpSerializer",
         "importPath": "authentication.serializer",
         "description": "authentication.serializer",
         "isExtraImport": true,
@@ -2126,19 +2350,51 @@
         "documentation": {}
     },
     {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
         "isExtraImport": true,
-        "detail": "django.shortcuts",
+        "detail": "django.urls",
         "documentation": {}
     },
     {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
         "isExtraImport": true,
-        "detail": "django.shortcuts",
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "union_list",
+        "importPath": "location.views",
+        "description": "location.views",
+        "isExtraImport": true,
+        "detail": "location.views",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
         "documentation": {}
     },
     {
@@ -2176,6 +2432,14 @@
         "documentation": {}
     },
     {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
@@ -2184,35 +2448,11 @@
         "documentation": {}
     },
     {
-        "label": "JsonResponse",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
         "label": "Path",
         "importPath": "pathlib",
         "description": "pathlib",
         "isExtraImport": true,
         "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "include",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
         "documentation": {}
     },
     {
@@ -2304,86 +2544,6 @@
         "documentation": {}
     },
     {
-        "label": "AmbulanceProfile",
-        "importPath": "profiles.models.ambulance_prof_mod",
-        "description": "profiles.models.ambulance_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.ambulance_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "AmbulanceProfile",
-        "importPath": "profiles.models.ambulance_prof_mod",
-        "description": "profiles.models.ambulance_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.ambulance_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "BloodDonor",
-        "importPath": "profiles.models.blood_donor_mod",
-        "description": "profiles.models.blood_donor_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.blood_donor_mod",
-        "documentation": {}
-    },
-    {
-        "label": "BloodDonor",
-        "importPath": "profiles.models.blood_donor_mod",
-        "description": "profiles.models.blood_donor_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.blood_donor_mod",
-        "documentation": {}
-    },
-    {
-        "label": "DiagnosticProfile",
-        "importPath": "profiles.models.diagnostic_prof_mod",
-        "description": "profiles.models.diagnostic_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.diagnostic_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "DiagnosticProfile",
-        "importPath": "profiles.models.diagnostic_prof_mod",
-        "description": "profiles.models.diagnostic_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.diagnostic_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "PharmacyProfile",
-        "importPath": "profiles.models.pharmacy_prof_mod",
-        "description": "profiles.models.pharmacy_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.pharmacy_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "PharmacyProfile",
-        "importPath": "profiles.models.pharmacy_prof_mod",
-        "description": "profiles.models.pharmacy_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.pharmacy_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "RegularUserProfile",
-        "importPath": "profiles.models.user_prof_mod",
-        "description": "profiles.models.user_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_prof_mod",
-        "documentation": {}
-    },
-    {
-        "label": "RegularUserProfile",
-        "importPath": "profiles.models.user_prof_mod",
-        "description": "profiles.models.user_prof_mod",
-        "isExtraImport": true,
-        "detail": "profiles.models.user_prof_mod",
-        "documentation": {}
-    },
-    {
         "label": "UserAdmin",
         "importPath": "django.contrib.auth.admin",
         "description": "django.contrib.auth.admin",
@@ -2444,6 +2604,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "authentication.migrations.0002_alter_user_groups_alter_user_is_superuser_and_more",
+        "description": "authentication.migrations.0002_alter_user_groups_alter_user_is_superuser_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n        ('authentication', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='groups',\n            field=models.ManyToManyField(blank=True, help_text='The groups this user belongs to. A user will get all permissions granted to each of their groups.', related_name='user_set', related_query_name='user', to='auth.group', verbose_name='groups'),",
+        "detail": "authentication.migrations.0002_alter_user_groups_alter_user_is_superuser_and_more",
+        "documentation": {}
+    },
+    {
         "label": "AuthenticationConfig",
         "kind": 6,
         "importPath": "authentication.apps",
@@ -2471,11 +2640,65 @@
         "documentation": {}
     },
     {
+        "label": "_BaseSignUpSerializer",
+        "kind": 6,
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "peekOfCode": "class _BaseSignUpSerializer(serializers.Serializer):\n    email     = serializers.EmailField()\n    password  = serializers.CharField(write_only=True)\n    password2 = serializers.CharField(write_only=True)\n    division = serializers.PrimaryKeyRelatedField(queryset=Division.objects.all())\n    district = serializers.PrimaryKeyRelatedField(queryset=District.objects.none())\n    upozila  = serializers.PrimaryKeyRelatedField(queryset=Upozila.objects.none())\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        data = kwargs.get('data', {})",
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
         "label": "DoctorSignUPSerializer",
         "kind": 6,
         "importPath": "authentication.serializer",
         "description": "authentication.serializer",
-        "peekOfCode": "class DoctorSignUPSerializer(serializers.Serializer):\n  email          = serializers.EmailField()\n  password       = serializers.CharField(write_only=True)\n  password2      = serializers.CharField(write_only=True)\n  first_name     = serializers.CharField(max_length=100)\n  middle_name    = serializers.CharField(max_length=100, required=False, allow_blank=True)\n  last_name      = serializers.CharField(max_length=100)\n  gender         = serializers.ChoiceField(choices=GenderChoices.choices)\n  contact_number = serializers.CharField(max_length=15)\n  division = serializers.PrimaryKeyRelatedField(queryset=Division.objects.all())",
+        "peekOfCode": "class DoctorSignUPSerializer(_BaseSignUpSerializer):\n    first_name     = serializers.CharField(max_length=100)\n    middle_name    = serializers.CharField(max_length=100, required=False, allow_blank=True)\n    last_name      = serializers.CharField(max_length=100)\n    gender         = serializers.ChoiceField(choices=GenderChoices.choices)\n    contact_number = serializers.CharField(max_length=15)\n    union          = serializers.PrimaryKeyRelatedField(queryset=Union.objects.none())\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        data = kwargs.get('data', {})",
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "UserSignUpSerializer",
+        "kind": 6,
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "peekOfCode": "class UserSignUpSerializer(_BaseSignUpSerializer):\n    first_name     = serializers.CharField(max_length=100)\n    last_name      = serializers.CharField(max_length=100)\n    gender         = serializers.ChoiceField(choices=GenderChoices.choices)\n    contact_number = serializers.CharField(max_length=15, required=False, allow_blank=True)\n    date_of_birth  = serializers.DateField(required=False)\n    address        = serializers.CharField(required=False, allow_blank=True)\n# --------------------------------------------------\n# BLOOD DONOR\n# --------------------------------------------------",
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "BloodDonorSignUpSerializer",
+        "kind": 6,
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "peekOfCode": "class BloodDonorSignUpSerializer(_BaseSignUpSerializer):\n    first_name     = serializers.CharField(max_length=100)\n    last_name      = serializers.CharField(max_length=100)\n    gender         = serializers.ChoiceField(choices=GenderChoices.choices)\n    date_of_birth  = serializers.DateField()\n    contact_number = serializers.CharField(max_length=15)\n    blood_group    = serializers.ChoiceField(choices=BloodGroupChoices.choices)\n    availability   = serializers.ChoiceField(choices=AvailabilityChoices.choices, required=False)\n    last_donated   = serializers.DateField(required=False)\n    address        = serializers.CharField(required=False, allow_blank=True)",
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "AmbulanceSignUpSerializer",
+        "kind": 6,
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "peekOfCode": "class AmbulanceSignUpSerializer(_BaseSignUpSerializer):\n    owner_name      = serializers.CharField(max_length=200)\n    contact_number  = serializers.CharField(max_length=15)\n    ambulance_type  = serializers.ChoiceField(choices=AmbulanceTypeChoices.choices)\n    vehicle_number  = serializers.CharField(max_length=50)\n    address         = serializers.CharField(required=False, allow_blank=True)\n# --------------------------------------------------\n# PHARMACY\n# --------------------------------------------------\nclass PharmacySignUpSerializer(_BaseSignUpSerializer):",
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "PharmacySignUpSerializer",
+        "kind": 6,
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "peekOfCode": "class PharmacySignUpSerializer(_BaseSignUpSerializer):\n    pharmacy_name    = serializers.CharField(max_length=200)\n    owner_name       = serializers.CharField(max_length=200)\n    contact_number   = serializers.CharField(max_length=15)\n    license_number   = serializers.CharField(max_length=100)\n    license_validity = serializers.DateField()\n    address          = serializers.CharField(required=False, allow_blank=True)\n# --------------------------------------------------\n# DIAGNOSTIC\n# --------------------------------------------------",
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "DiagnosticSignUpSerializer",
+        "kind": 6,
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "peekOfCode": "class DiagnosticSignUpSerializer(_BaseSignUpSerializer):\n    diagnostic_name  = serializers.CharField(max_length=200)\n    owner_name       = serializers.CharField(max_length=200)\n    contact_number   = serializers.CharField(max_length=15)\n    license_number   = serializers.CharField(max_length=100)\n    license_validity = serializers.DateField()\n    address          = serializers.CharField(required=False, allow_blank=True)",
         "detail": "authentication.serializer",
         "documentation": {}
     },
@@ -2493,7 +2716,7 @@
         "kind": 6,
         "importPath": "authentication.services",
         "description": "authentication.services",
-        "peekOfCode": "class ProfileCreationService:\n    @staticmethod\n    def create_doctor_profile(signup_data: dict) -> User:\n        \"\"\"\n        Creates User + Doctor atomically from cached signup data.\n        Must only be called after OTP is verified.\n        Raises on failure — caller handles and returns HTTP response.\n        \"\"\"\n        email    = signup_data.pop('email')\n        password = signup_data.pop('password')",
+        "peekOfCode": "class ProfileCreationService:\n    @staticmethod\n    def _base_create(email, password, signup_data, profile_model, log_key):\n        try:\n            with transaction.atomic():\n                user    = User.objects.create_user(email=email, password=password)\n                profile = profile_model.objects.create(user=user, **signup_data)\n            logger.info(f'{log_key}_success', extra={'email': email, 'user_id': user.id, 'profile_id': profile.id})\n            return user\n        except DatabaseError:",
         "detail": "authentication.services",
         "documentation": {}
     },
@@ -2538,7 +2761,7 @@
         "kind": 6,
         "importPath": "authentication.views",
         "description": "authentication.views",
-        "peekOfCode": "class SignupViewSet(GenericViewSet):\n  permission_classes = [AllowAny]\n  # --------------------------------------------------\n  # STEP 1 — POST /api/auth/signup/doctor/register/\n  # --------------------------------------------------\n  @swagger_auto_schema(\n    tags=['Doctor Signup'],\n    operation_id='doctor_register',\n    operation_summary='Step 1 — Submit signup data & receive OTP',\n    operation_description=(",
+        "peekOfCode": "class SignupViewSet(GenericViewSet):\n    permission_classes = [AllowAny]\n    _PROFILE_CREATORS = {\n        'doctor':      ProfileCreationService.create_doctor_profile,\n        'user':        ProfileCreationService.create_user_profile,\n        'blood_donor': ProfileCreationService.create_blood_donor_profile,\n        'ambulance':   ProfileCreationService.create_ambulance_profile,\n        'pharmacy':    ProfileCreationService.create_pharmacy_profile,\n        'diagnostic':  ProfileCreationService.create_diagnostic_profile,\n    }",
         "detail": "authentication.views",
         "documentation": {}
     },
@@ -2547,7 +2770,7 @@
         "kind": 5,
         "importPath": "authentication.views",
         "description": "authentication.views",
-        "peekOfCode": "logger = logging.getLogger(__name__)\n_verify_body = openapi.Schema(\n  type=openapi.TYPE_OBJECT,\n  required=['email', 'otp'],\n  properties={\n    'email': openapi.Schema(type=openapi.TYPE_STRING, format='email', example='doctor@example.com'),\n    'otp':   openapi.Schema(type=openapi.TYPE_STRING, example='123456', description='6-digit OTP sent to email'),\n  },\n)\nclass SignupViewSet(GenericViewSet):",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n_verify_body = openapi.Schema(\n    type=openapi.TYPE_OBJECT,\n    required=['email', 'otp'],\n    properties={\n        'email': openapi.Schema(type=openapi.TYPE_STRING, format='email'),\n        'otp':   openapi.Schema(type=openapi.TYPE_STRING, description='6-digit OTP'),\n    },\n)\nclass SignupViewSet(GenericViewSet):",
         "detail": "authentication.views",
         "documentation": {}
     },
@@ -2556,7 +2779,7 @@
         "kind": 5,
         "importPath": "authentication.views",
         "description": "authentication.views",
-        "peekOfCode": "_verify_body = openapi.Schema(\n  type=openapi.TYPE_OBJECT,\n  required=['email', 'otp'],\n  properties={\n    'email': openapi.Schema(type=openapi.TYPE_STRING, format='email', example='doctor@example.com'),\n    'otp':   openapi.Schema(type=openapi.TYPE_STRING, example='123456', description='6-digit OTP sent to email'),\n  },\n)\nclass SignupViewSet(GenericViewSet):\n  permission_classes = [AllowAny]",
+        "peekOfCode": "_verify_body = openapi.Schema(\n    type=openapi.TYPE_OBJECT,\n    required=['email', 'otp'],\n    properties={\n        'email': openapi.Schema(type=openapi.TYPE_STRING, format='email'),\n        'otp':   openapi.Schema(type=openapi.TYPE_STRING, description='6-digit OTP'),\n    },\n)\nclass SignupViewSet(GenericViewSet):\n    permission_classes = [AllowAny]",
         "detail": "authentication.views",
         "documentation": {}
     },
@@ -2576,6 +2799,15 @@
         "description": "blog.migrations.0001_initial",
         "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('authentication', '0001_initial'),\n        ('profiles', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='BlogPost',\n            fields=[",
         "detail": "blog.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "blog.migrations.0002_alter_blogpost_tags",
+        "description": "blog.migrations.0002_alter_blogpost_tags",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('blog', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='blogpost',\n            name='tags',\n            field=models.CharField(blank=True, help_text='Comma separated tags', max_length=500, null=True),\n        ),",
+        "detail": "blog.migrations.0002_alter_blogpost_tags",
         "documentation": {}
     },
     {
@@ -2822,6 +3054,24 @@
         "documentation": {}
     },
     {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "location.urls",
+        "description": "location.urls",
+        "peekOfCode": "urlpatterns = [\n    path('unions/', union_list, name='union-list'),\n]",
+        "detail": "location.urls",
+        "documentation": {}
+    },
+    {
+        "label": "union_list",
+        "kind": 2,
+        "importPath": "location.views",
+        "description": "location.views",
+        "peekOfCode": "def union_list(request):\n    unions = Union.objects.values('union', 'union_name_bn', 'union_name_eng')\n    return JsonResponse({'count': unions.count(), 'unions': list(unions)})",
+        "detail": "location.views",
+        "documentation": {}
+    },
+    {
         "label": "Command",
         "kind": 6,
         "importPath": "medihub.management.commands.root_seed",
@@ -2862,7 +3112,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nimport os\nSECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-k%ebt*!xp%%$w!mjy60*u%9tci^4-9tx4y9_(a*v0njop*d^ic')\nDEBUG = os.environ.get('DEBUG', 'True') == 'True'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nimport os\nSECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-k%ebt*!xp%%$w!mjy60*u%9tci^4-9tx4y9_(a*v0njop*d^ic')\nDEBUG = os.environ.get('DEBUG', 'True') == 'True'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nALLOWED_HOSTS += ['web1', 'web2', 'web3', 'localhost', '127.0.0.1', 'localhost:8080']\nCSRF_TRUSTED_ORIGINS = os.environ.get(",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -2871,7 +3121,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-k%ebt*!xp%%$w!mjy60*u%9tci^4-9tx4y9_(a*v0njop*d^ic')\nDEBUG = os.environ.get('DEBUG', 'True') == 'True'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django_prometheus',",
+        "peekOfCode": "SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-k%ebt*!xp%%$w!mjy60*u%9tci^4-9tx4y9_(a*v0njop*d^ic')\nDEBUG = os.environ.get('DEBUG', 'True') == 'True'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nALLOWED_HOSTS += ['web1', 'web2', 'web3', 'localhost', '127.0.0.1', 'localhost:8080']\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -2880,7 +3130,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "DEBUG = os.environ.get('DEBUG', 'True') == 'True'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django_prometheus',\n    'django.contrib.admin',",
+        "peekOfCode": "DEBUG = os.environ.get('DEBUG', 'True') == 'True'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nALLOWED_HOSTS += ['web1', 'web2', 'web3', 'localhost', '127.0.0.1', 'localhost:8080']\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django_prometheus',",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -2889,7 +3139,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django_prometheus',\n    'django.contrib.admin',\n    'django.contrib.auth',",
+        "peekOfCode": "ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nALLOWED_HOSTS += ['web1', 'web2', 'web3', 'localhost', '127.0.0.1', 'localhost:8080']\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django_prometheus',\n    'django.contrib.admin',",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3078,7 +3328,7 @@
         "kind": 5,
         "importPath": "medihub.urls",
         "description": "medihub.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', HealthCheck),\n    path('metrics/', include('django_prometheus.urls')),\n    path('api/auth/', include('authentication.urls')),\n    # Swagger\n    path('api/docs/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-ui'),\n    path('api/redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='redoc-ui'),\n    path('api/schema.json', schema_view.without_ui(cache_timeout=0), name='schema-json'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', HealthCheck),\n    path('health/', HealthCheck),\n    path('', include('django_prometheus.urls')),\n    path('api/auth/', include('authentication.urls')),\n    path('api/location/', include('location.urls')),\n    # Swagger\n    path('api/docs/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-ui'),\n    path('api/redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='redoc-ui'),",
         "detail": "medihub.urls",
         "documentation": {}
     },

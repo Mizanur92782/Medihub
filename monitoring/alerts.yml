@@ -16,3 +16,4 @@ groups:
           severity: warning
         annotations:
           summary: "High response time on {{ $labels.view }}"
+          

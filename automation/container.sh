@@ -27,6 +27,17 @@ loading() {
 # ===== STEP 1 =====
 echo -e "${YELLOW}Step 1: Stop Docker containers${NC}"
 
+# ===== GENERATE ALERTMANAGER CONFIG =====
+if [ -f ".env" ]; then
+    source .env
+    envsubst < monitoring/alertmanager.yml.template > monitoring/alertmanager.yml
+    echo -e "${GREEN}✔ alertmanager.yml generated from template${NC}"
+else
+    echo -e "${RED}✘ .env file not found! alertmanager.yml not generated${NC}"
+fi
+
+echo ""
+
 read -p "Do you want to remove volumes too? (yes/no): " vol_choice
 
 loading "Stopping containers"
@@ -51,9 +62,16 @@ read -p "Build Container or Up? (build/up): " build_up
 echo ""
 
 if [[ "$build_up" == "build" ]]; then
-    echo -e "${YELLOW}Building and starting containers...${NC}"
+    echo -e "${YELLOW}Removing old image...${NC}"
+    docker rmi medihub_web 2>/dev/null && echo -e "${GREEN}✔ Old image removed${NC}" || echo -e "${YELLOW}No old image found, skipping...${NC}"
+    echo ""
+    echo -e "${YELLOW}Building new image...${NC}"
     loading "Building"
     docker compose -f Docker/docker-compose.yml --profile build build web_base
+    echo -e "${GREEN}✔ Image built${NC}"
+    echo ""
+    echo -e "${YELLOW}Starting containers...${NC}"
+    loading "Starting"
     docker compose -f Docker/docker-compose.yml up -d
 else
     echo -e "${YELLOW}Starting containers...${NC}"
@@ -62,6 +80,17 @@ else
 fi
 
 echo -e "${GREEN}✔ Containers are running${NC}"
+echo ""
+
+# ===== WEB1 LOGS =====
+echo -e "${BLUE}Web1 Logs Section${NC}"
+read -p "Do you want to see web1 logs? (yes/no): " web1_logs
+
+if [[ "$web1_logs" == "yes" ]]; then
+    echo -e "${YELLOW}Showing web1 logs (last 50 lines)...${NC}"
+    docker logs --tail=50 medihub_web1
+fi
+
 echo ""
 
 # ===== STEP 3 =====
@@ -117,6 +146,18 @@ if [[ "$answer" == "yes" ]]; then
     docker exec -it medihub_web1 python manage.py createsuperuser
     echo -e "${GREEN}✔ Superuser creation process finished${NC}"
 fi
+
+echo ""
+echo -e "${BLUE}======================================"
+echo "       DEPLOYMENT STATUS 📊"
+echo -e "======================================${NC}"
+echo ""
+
+docker compose -f Docker/docker-compose.yml ps
+
+echo ""
+echo -e "${BLUE}Container Health:${NC}"
+docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}" | grep medihub
 
 echo ""
 echo -e "${GREEN}======================================"
