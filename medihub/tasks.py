@@ -1,7 +1,8 @@
 from celery import shared_task
 import time
 from datetime import datetime
-
+from django.core.mail import send_mail
+from django.conf import settings
 
 @shared_task(bind=True)
 def rabbitMQ_tester(self):
@@ -39,3 +40,18 @@ def beat_system_ping(self):
     now = datetime.now().strftime("%H:%M:%S")
     print(f"[BEAT] System ping at {now}")
     return f"pong at {now}"
+
+@shared_task(bind=True)
+def send_me_email_everyminute(self):
+    email = "nightliver000@gmail.com"
+    subject = "Your OTP Code"
+    message = f"Your OTP is: {49349}. It will expire in 5 minutes."
+    send_mail(
+        subject,
+        message,
+        settings.DEFAULT_FROM_EMAIL,
+        [email],
+        fail_silently=False,
+    )
+    print(f"[BEAT] Email sent to {email}")
+    return f"OTP sent to {email}"

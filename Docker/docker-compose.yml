@@ -226,7 +226,7 @@ services:
         limits:
           cpus: "0.5"
           memory: 256M
-
+          
   rabbitmq:
     image: rabbitmq:3-management-alpine
     container_name: medihub_rabbitmq
@@ -429,3 +429,4 @@ networks:
     driver: bridge
     driver_opts:
       com.docker.network.enable_ipv6: "false"
+      

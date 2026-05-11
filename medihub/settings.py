@@ -698,6 +698,12 @@ CELERY_BEAT_SCHEDULE = {
         "task": "medihub.tasks.beat_system_ping",
         "schedule": 10.0,
     },
+    # "beat-system-email-send-me": {
+    #     "task": "medihub.tasks.send_me_email_everyminute",
+    #     "schedule": 60.0,
+    # },
+    
+    
 }
 print(f"🐇 CELERY: Broker=RabbitMQ@{RABBITMQ_HOST}, Backend=Redis")
 

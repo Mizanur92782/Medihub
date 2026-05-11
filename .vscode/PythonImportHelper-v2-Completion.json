@@ -1403,6 +1403,14 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
         "label": "Doctor",
         "importPath": "profiles.models.doctor_prof_mod",
         "description": "profiles.models.doctor_prof_mod",
@@ -1769,6 +1777,14 @@
         "description": "celery",
         "isExtraImport": true,
         "detail": "celery",
+        "documentation": {}
+    },
+    {
+        "label": "send_mail",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
         "documentation": {}
     },
     {
@@ -3835,7 +3851,7 @@
         "kind": 2,
         "importPath": "medihub.tasks",
         "description": "medihub.tasks",
-        "peekOfCode": "def beat_cleanup_expired_otps(self):\n    from django.core.cache import cache\n    print(f\"[BEAT] OTP cleanup triggered at {datetime.now().strftime('%H:%M:%S')}\")\n    return \"otp cleanup done\"\n@shared_task(bind=True)\ndef beat_system_ping(self):\n    now = datetime.now().strftime(\"%H:%M:%S\")\n    print(f\"[BEAT] System ping at {now}\")\n    return f\"pong at {now}\"",
+        "peekOfCode": "def beat_cleanup_expired_otps(self):\n    from django.core.cache import cache\n    print(f\"[BEAT] OTP cleanup triggered at {datetime.now().strftime('%H:%M:%S')}\")\n    return \"otp cleanup done\"\n@shared_task(bind=True)\ndef beat_system_ping(self):\n    now = datetime.now().strftime(\"%H:%M:%S\")\n    print(f\"[BEAT] System ping at {now}\")\n    return f\"pong at {now}\"\n@shared_task(bind=True)",
         "detail": "medihub.tasks",
         "documentation": {}
     },
@@ -3844,7 +3860,16 @@
         "kind": 2,
         "importPath": "medihub.tasks",
         "description": "medihub.tasks",
-        "peekOfCode": "def beat_system_ping(self):\n    now = datetime.now().strftime(\"%H:%M:%S\")\n    print(f\"[BEAT] System ping at {now}\")\n    return f\"pong at {now}\"",
+        "peekOfCode": "def beat_system_ping(self):\n    now = datetime.now().strftime(\"%H:%M:%S\")\n    print(f\"[BEAT] System ping at {now}\")\n    return f\"pong at {now}\"\n@shared_task(bind=True)\ndef send_me_email_everyminute(self):\n    email = \"nightliver000@gmail.com\"\n    subject = \"Your OTP Code\"\n    message = f\"Your OTP is: {49349}. It will expire in 5 minutes.\"\n    send_mail(",
+        "detail": "medihub.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "send_me_email_everyminute",
+        "kind": 2,
+        "importPath": "medihub.tasks",
+        "description": "medihub.tasks",
+        "peekOfCode": "def send_me_email_everyminute(self):\n    email = \"nightliver000@gmail.com\"\n    subject = \"Your OTP Code\"\n    message = f\"Your OTP is: {49349}. It will expire in 5 minutes.\"\n    send_mail(\n        subject,\n        message,\n        settings.DEFAULT_FROM_EMAIL,\n        [email],\n        fail_silently=False,",
         "detail": "medihub.tasks",
         "documentation": {}
     },
