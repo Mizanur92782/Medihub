@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="10">
+    <title>Medihub — Queue Dashboard</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: #e2e8f0; padding: 24px; }
+        h1 { font-size: 1.6rem; margin-bottom: 4px; color: #38bdf8; }
+        .subtitle { color: #64748b; font-size: 0.85rem; margin-bottom: 24px; }
+        .subtitle span { color: #22c55e; }
+
+        .stats { display: flex; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+        .stat-card { background: #1e293b; border-radius: 10px; padding: 16px 24px; min-width: 160px; border-left: 4px solid; }
+        .stat-card.blue { border-color: #38bdf8; }
+        .stat-card.green { border-color: #22c55e; }
+        .stat-card.yellow { border-color: #facc15; }
+        .stat-card.red { border-color: #f87171; }
+        .stat-card .num { font-size: 2rem; font-weight: 700; }
+        .stat-card .label { font-size: 0.8rem; color: #94a3b8; margin-top: 2px; }
+
+        h2 { font-size: 1rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; margin-top: 28px; }
+
+        table { width: 100%; border-collapse: collapse; background: #1e293b; border-radius: 10px; overflow: hidden; margin-bottom: 8px; }
+        th { background: #0f172a; color: #64748b; font-size: 0.75rem; text-transform: uppercase; padding: 10px 14px; text-align: left; }
+        td { padding: 10px 14px; font-size: 0.85rem; border-top: 1px solid #0f172a; word-break: break-all; }
+        tr:hover td { background: #263348; }
+
+        .badge { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+        .badge.active { background: #14532d; color: #4ade80; }
+        .badge.queued { background: #713f12; color: #fbbf24; }
+        .badge.online { background: #1e3a5f; color: #38bdf8; }
+        .badge.offline { background: #3b1f1f; color: #f87171; }
+
+        .empty { color: #475569; font-size: 0.85rem; padding: 14px; background: #1e293b; border-radius: 10px; }
+        .task-name { color: #818cf8; font-family: monospace; }
+        .worker-name { color: #38bdf8; font-family: monospace; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+<h1>🐇 Medihub Queue Dashboard</h1>
+<p class="subtitle">Auto-refreshes every 10 seconds &nbsp;|&nbsp; Broker: <span>RabbitMQ</span> &nbsp;|&nbsp; Backend: <span>Redis</span></p>
+
+<div class="stats">
+    <div class="stat-card blue">
+        <div class="num">{{ worker_count }}</div>
+        <div class="label">Workers Online</div>
+    </div>
+    <div class="stat-card green">
+        <div class="num">{{ active_count }}</div>
+        <div class="label">Active Tasks</div>
+    </div>
+    <div class="stat-card yellow">
+        <div class="num">{{ queued_count }}</div>
+        <div class="label">Reserved by Workers</div>
+    </div>
+    <div class="stat-card red">
+        <div class="num">{{ rabbitmq_queue_count }}</div>
+        <div class="label">In RabbitMQ Queue</div>
+    </div>
+</div>
+
+
+<h2>⚙️ Workers</h2>
+{% if workers %}
+<table>
+    <thead><tr><th>Worker</th><th>Status</th><th>Concurrency</th><th>PIDs</th><th>Tasks Completed</th></tr></thead>
+    <tbody>
+    {% for w in workers %}
+    <tr>
+        <td class="worker-name">{{ w.name }}</td>
+        <td><span class="badge {% if w.status == 'Online' %}online{% else %}offline{% endif %}">{{ w.status }}</span></td>
+        <td>{{ w.concurrency }}</td>
+        <td>{{ w.processes|join:", " }}</td>
+        <td>{{ w.completed }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p class="empty">No workers found. Is celery_worker container running?</p>
+{% endif %}
+
+
+<h2>🔥 Active Tasks (being processed right now)</h2>
+{% if active_tasks %}
+<table>
+    <thead><tr><th>Task ID</th><th>Task Name</th><th>Args</th><th>Worker</th><th>Status</th></tr></thead>
+    <tbody>
+    {% for t in active_tasks %}
+    <tr>
+        <td style="font-family:monospace;font-size:0.75rem;color:#64748b">{{ t.id }}</td>
+        <td class="task-name">{{ t.name }}</td>
+        <td style="color:#94a3b8">{{ t.args }}</td>
+        <td class="worker-name">{{ t.worker }}</td>
+        <td><span class="badge active">ACTIVE</span></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p class="empty">No tasks currently being processed.</p>
+{% endif %}
+
+
+<h2>⏳ Queued Tasks (waiting for a worker)</h2>
+{% if queued_tasks %}
+<table>
+    <thead><tr><th>Task ID</th><th>Task Name</th><th>Args</th><th>Assigned Worker</th><th>Status</th></tr></thead>
+    <tbody>
+    {% for t in queued_tasks %}
+    <tr>
+        <td style="font-family:monospace;font-size:0.75rem;color:#64748b">{{ t.id }}</td>
+        <td class="task-name">{{ t.name }}</td>
+        <td style="color:#94a3b8">{{ t.args }}</td>
+        <td class="worker-name">{{ t.worker }}</td>
+        <td><span class="badge queued">QUEUED</span></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p class="empty">No tasks waiting in queue.</p>
+{% endif %}
+
+
+<h2>📋 Registered Tasks (all tasks workers know about)</h2>
+{% for r in registered %}
+<p style="color:#64748b;font-size:0.8rem;margin-bottom:6px;">Worker: <span class="worker-name">{{ r.worker }}</span></p>
+<table>
+    <thead><tr><th>Task Name</th></tr></thead>
+    <tbody>
+    {% for task in r.tasks %}
+    <tr><td class="task-name">{{ task }}</td></tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% empty %}
+<p class="empty">No registered tasks found.</p>
+{% endfor %}
+
+</body>
+</html>

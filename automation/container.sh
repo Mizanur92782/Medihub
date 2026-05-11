@@ -14,6 +14,9 @@ echo "     DOCKER MANAGEMENT TOOL 🚀"
 echo "======================================"
 echo -e "${NC}"
 
+
+
+
 # ===== ANIMATION FUNCTION =====
 loading() {
     echo -n "$1"
@@ -38,14 +41,23 @@ fi
 
 echo ""
 
-read -p "Do you want to remove volumes too? (yes/no): " vol_choice
+
+
+
+
+read -p "Do you want to remove volumes too? (down -v/down/exit/ignore): " vol_choice
 
 loading "Stopping containers"
 
-if [[ "$vol_choice" == "yes" ]]; then
+if [[ "$vol_choice" == "down -v" ]]; then
     echo -e "${RED}Stopping containers + removing volumes...${NC}"
     docker compose -f Docker/docker-compose.yml down -v
     echo -e "${RED}✔ Containers + volumes removed${NC}"
+elif [[ "$vol_choice" == "exit" ]]; then
+    echo -e "${YELLOW}Exit from Shell${NC}"
+    exit
+elif [[ "$vol_choice" == "ignore" ]]; then
+    echo -e "${YELLOW}Ignoring this action${NC}"
 else
     echo -e "${YELLOW}Stopping containers only...${NC}"
     docker compose -f Docker/docker-compose.yml down
@@ -56,8 +68,11 @@ echo ""
 
 sleep 2
 
+
+
+
 # ===== STEP 2 =====
-read -p "Build Container or Up? (build/up): " build_up
+read -p "Build Container or Up? (build/up/exit/ignore): " build_up
 
 echo ""
 
@@ -73,41 +88,66 @@ if [[ "$build_up" == "build" ]]; then
     echo -e "${YELLOW}Starting containers...${NC}"
     loading "Starting"
     docker compose -f Docker/docker-compose.yml up -d
+elif [[ "$build_up" == "exit" ]]; then
+    echo -e "${YELLOW}Exit from Shell${NC}"
+    exit
+elif [[ "$build_up" == "ignore" ]]; then
+    echo -e "${YELLOW}Ignoring this action${NC}"
 else
     echo -e "${YELLOW}Starting containers...${NC}"
     loading "Starting"
     docker compose -f Docker/docker-compose.yml up -d
+    echo -e "${GREEN}✔ Containers are running${NC}"
 fi
-
-echo -e "${GREEN}✔ Containers are running${NC}"
 echo ""
+
+
+
+
 
 # ===== WEB1 LOGS =====
 echo -e "${BLUE}Web1 Logs Section${NC}"
-read -p "Do you want to see web1 logs? (yes/no): " web1_logs
+read -p "Do you want to see web1 logs? (yes/no/exit/ignore): " web1_logs
 
 if [[ "$web1_logs" == "yes" ]]; then
     echo -e "${YELLOW}Showing web1 logs (last 50 lines)...${NC}"
     docker logs --tail=50 medihub_web1
+elif [[ "$web1_logs" == "exit" ]]; then
+    echo -e "${YELLOW}Exit from Shell${NC}"
+    exit
+elif [[ "$web1_logs" == "ignore" ]]; then
+    echo -e "${YELLOW}Ignoring this action${NC}"
 fi
 
 echo ""
 
+
+
+
 # ===== STEP 3 =====
 echo -e "${BLUE}Migration Logs Section${NC}"
-read -p "Do you want to see logs of migration? (yes/no): " answer
+read -p "Do you want to see logs of migration? (yes/no/exit/ignore): " answer
 
 if [[ "$answer" == "yes" ]]; then
     echo -e "${YELLOW}Showing migration logs...${NC}"
     sleep 1
     docker logs -f medihub_migrate
+elif [[ "$answer" == "exit" ]]; then
+    echo -e "${YELLOW}Exit from Shell${NC}"
+    exit
+elif [[ "$answer" == "ignore" ]]; then
+    echo -e "${YELLOW}Ignoring this action${NC}"
 fi
 
 echo ""
 
+
+
+
+
 # ===== STEP 3.5 =====
 echo -e "${BLUE}Make Migrations Section${NC}"
-read -p "Do you want to run makemigrations? (yes/no): " answer
+read -p "Do you want to run makemigrations? (yes/no/exit/ignore): " answer
 
 if [[ "$answer" == "yes" ]]; then
     echo -e "${YELLOW}Running makemigrations...${NC}"
@@ -119,33 +159,71 @@ if [[ "$answer" == "yes" ]]; then
     loading "Applying migrations"
     docker exec medihub_web1 python manage.py migrate
     echo -e "${GREEN}✔ Migrate completed${NC}"
+elif [[ "$answer" == "exit" ]]; then
+    echo -e "${YELLOW}Exit from Shell${NC}"
+    exit
+elif [[ "$answer" == "ignore" ]]; then
+    echo -e "${YELLOW}Ignoring this action${NC}"
 fi
 
 echo ""
 
+
+
+
+
+
+
+
+
 # ===== STEP 4 =====
 echo -e "${BLUE}Seed Section Management${NC}"
-read -p "Do you want to run root seed management commands? (yes/no): " answer
+read -p "Do you want to run root seed management commands? (yes/no/exit/ignore): " answer
 
 if [[ "$answer" == "yes" ]]; then
     echo -e "${YELLOW}Running root seed...${NC}"
     sleep 1
     docker exec medihub_web1 python manage.py root_seed
     echo -e "${GREEN}✔ Root seed completed${NC}"
+elif [[ "$answer" == "exit" ]]; then
+    echo -e "${YELLOW}Exit from Shell${NC}"
+    exit
+elif [[ "$answer" == "ignore" ]]; then
+    echo -e "${YELLOW}Ignoring this action${NC}"
 fi
 
 echo ""
 
+
+
+
+
+
+
+
+
 # ===== STEP 5 =====
 echo -e "${BLUE}Superuser Creation Section${NC}"
-read -p "Do you want to create a Django superuser? (yes/no): " answer
+read -p "Do you want to create a Django superuser? (yes/no/exit/ignore): " answer
 
 if [[ "$answer" == "yes" ]]; then
     echo -e "${YELLOW}Opening Django superuser creation...${NC}"
     sleep 1
     docker exec -it medihub_web1 python manage.py createsuperuser
     echo -e "${GREEN}✔ Superuser creation process finished${NC}"
+elif [[ "$answer" == "exit" ]]; then
+    echo -e "${YELLOW}Exit from Shell${NC}"
+    exit
+elif [[ "$answer" == "ignore" ]]; then
+    echo -e "${YELLOW}Ignoring this action${NC}"
 fi
+
+
+
+
+
+
+
 
 echo ""
 echo -e "${BLUE}======================================"
@@ -155,9 +233,36 @@ echo ""
 
 docker compose -f Docker/docker-compose.yml ps
 
+
+
+
+
+
+
+
+
 echo ""
 echo -e "${BLUE}Container Health:${NC}"
 docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}" | grep medihub
+
+echo ""
+echo -e "${BLUE}====================================="
+echo -e "       SERVICE URLs 🌐"
+echo -e "=====================================${NC}"
+echo -e "${GREEN}App (Nginx):${NC}        http://localhost:8080"
+echo -e "${GREEN}Web1:${NC}               http://localhost:8011"
+echo -e "${GREEN}Web2:${NC}               http://localhost:8012"
+echo -e "${GREEN}Web3:${NC}               http://localhost:8013"
+echo -e "${GREEN}RabbitMQ UI:${NC}        http://localhost:15672"
+echo -e "${GREEN}pgAdmin:${NC}            http://localhost:5050"
+echo -e "${GREEN}Grafana:${NC}            http://localhost:3000"
+echo -e "${GREEN}Prometheus:${NC}         http://localhost:9090"
+echo -e "${GREEN}Alertmanager:${NC}       http://localhost:9093"
+echo -e "${GREEN}Jaeger UI:${NC}          http://localhost:16686"
+echo -e "${GREEN}cAdvisor:${NC}           http://localhost:8081"
+echo -e "${GREEN}Node Exporter:${NC}      http://localhost:9100"
+echo -e "${GREEN}Loki:${NC}               http://localhost:3100"
+
 
 echo ""
 echo -e "${GREEN}======================================"

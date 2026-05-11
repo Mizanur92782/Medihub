@@ -1731,6 +1731,39 @@
         "documentation": {}
     },
     {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "shared_task",
+        "importPath": "celery",
+        "description": "celery",
+        "isExtraImport": true,
+        "detail": "celery",
+        "documentation": {}
+    },
+    {
+        "label": "Celery",
+        "importPath": "celery",
+        "description": "celery",
+        "isExtraImport": true,
+        "detail": "celery",
+        "documentation": {}
+    },
+    {
         "label": "shared_task",
         "importPath": "celery",
         "description": "celery",
@@ -1744,6 +1777,15 @@
         "description": "django.core.mail",
         "isExtraImport": true,
         "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
         "documentation": {}
     },
     {
@@ -2317,15 +2359,6 @@
         "documentation": {}
     },
     {
-        "label": "subprocess",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "subprocess",
-        "description": "subprocess",
-        "detail": "subprocess",
-        "documentation": {}
-    },
-    {
         "label": "Any",
         "importPath": "typing",
         "description": "typing",
@@ -2414,6 +2447,14 @@
         "documentation": {}
     },
     {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
         "label": "call_command",
         "importPath": "django.core.management",
         "description": "django.core.management",
@@ -2456,6 +2497,14 @@
         "documentation": {}
     },
     {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
@@ -2469,6 +2518,38 @@
         "description": "datetime",
         "isExtraImport": true,
         "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Control",
+        "importPath": "celery.app.control",
+        "description": "celery.app.control",
+        "isExtraImport": true,
+        "detail": "celery.app.control",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "medihub.celery",
+        "description": "medihub.celery",
+        "isExtraImport": true,
+        "detail": "medihub.celery",
+        "documentation": {}
+    },
+    {
+        "label": "rabbitMQ_tester",
+        "importPath": "medihub.tasks",
+        "description": "medihub.tasks",
+        "isExtraImport": true,
+        "detail": "medihub.tasks",
         "documentation": {}
     },
     {
@@ -2493,6 +2574,22 @@
         "description": "medihub.health_check",
         "isExtraImport": true,
         "detail": "medihub.health_check",
+        "documentation": {}
+    },
+    {
+        "label": "queue_dashboard",
+        "importPath": "medihub.queue_dashboard",
+        "description": "medihub.queue_dashboard",
+        "isExtraImport": true,
+        "detail": "medihub.queue_dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "TeshMessageQuee",
+        "importPath": "medihub.queue_dashboard",
+        "description": "medihub.queue_dashboard",
+        "isExtraImport": true,
+        "detail": "medihub.queue_dashboard",
         "documentation": {}
     },
     {
@@ -3122,6 +3219,15 @@
         "documentation": {}
     },
     {
+        "label": "app",
+        "kind": 5,
+        "importPath": "medihub.celery",
+        "description": "medihub.celery",
+        "peekOfCode": "app = Celery(\"medihub\")\napp.config_from_object(\"django.conf:settings\", namespace=\"CELERY\")\napp.autodiscover_tasks()",
+        "detail": "medihub.celery",
+        "documentation": {}
+    },
+    {
         "label": "HealthCheck",
         "kind": 2,
         "importPath": "medihub.health_check",
@@ -3137,6 +3243,24 @@
         "description": "medihub.health_check",
         "peekOfCode": "logger = logging.getLogger(__name__)\ndef HealthCheck(request):\n  now = datetime.now()\n  logger.info(f\"Health check called at {socket.gethostname()}\")\n  return render(request, 'health.html', {\n    \"host\": request.get_host(),\n    \"container\": socket.gethostname(),\n    \"fullpath\": request.build_absolute_uri(),\n    \"server_time\": now.strftime('%H:%M:%S'),\n    \"server_date\": now.strftime('%A, %d %B %Y'),",
         "detail": "medihub.health_check",
+        "documentation": {}
+    },
+    {
+        "label": "TeshMessageQuee",
+        "kind": 2,
+        "importPath": "medihub.queue_dashboard",
+        "description": "medihub.queue_dashboard",
+        "peekOfCode": "def TeshMessageQuee(request):\n    rabbitMQ_tester.delay()\n    return HttpResponse(\"Task added to RabbitMQ message queue\")\ndef _get_rabbitmq_queue_count():\n    try:\n        with celery_app.connection_or_acquire() as conn:\n            with conn.channel() as channel:\n                name, count, _ = channel.queue_declare(queue=\"celery\", passive=True)\n                return count\n    except Exception:",
+        "detail": "medihub.queue_dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "queue_dashboard",
+        "kind": 2,
+        "importPath": "medihub.queue_dashboard",
+        "description": "medihub.queue_dashboard",
+        "peekOfCode": "def queue_dashboard(request):\n    control = Control(celery_app)\n    inspect = control.inspect(timeout=2)\n    # Active tasks (being processed right now)\n    active_raw = inspect.active() or {}\n    active_tasks = []\n    for worker, tasks in active_raw.items():\n        for task in tasks:\n            active_tasks.append({\n                \"worker\": worker,",
+        "detail": "medihub.queue_dashboard",
         "documentation": {}
     },
     {
@@ -3563,6 +3687,168 @@
         "documentation": {}
     },
     {
+        "label": "RABBITMQ_USER",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "RABBITMQ_USER = config(\"RABBITMQ_DEFAULT_USER\", default=\"medihub\")\nRABBITMQ_PASS = config(\"RABBITMQ_DEFAULT_PASS\", default=\"medihub\")\nRABBITMQ_HOST = config(\"RABBITMQ_HOST\", default=\"rabbitmq\")\nRABBITMQ_PORT = config(\"RABBITMQ_PORT\", default=\"5672\")\nCELERY_BROKER_URL = f\"amqp://{RABBITMQ_USER}:{RABBITMQ_PASS}@{RABBITMQ_HOST}:{RABBITMQ_PORT}//\"\nCELERY_RESULT_BACKEND = REDIS_URL\nCELERY_ACCEPT_CONTENT = [\"json\"]\nCELERY_TASK_SERIALIZER = \"json\"\nCELERY_RESULT_SERIALIZER = \"json\"\nCELERY_TIMEZONE = TIME_ZONE",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "RABBITMQ_PASS",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "RABBITMQ_PASS = config(\"RABBITMQ_DEFAULT_PASS\", default=\"medihub\")\nRABBITMQ_HOST = config(\"RABBITMQ_HOST\", default=\"rabbitmq\")\nRABBITMQ_PORT = config(\"RABBITMQ_PORT\", default=\"5672\")\nCELERY_BROKER_URL = f\"amqp://{RABBITMQ_USER}:{RABBITMQ_PASS}@{RABBITMQ_HOST}:{RABBITMQ_PORT}//\"\nCELERY_RESULT_BACKEND = REDIS_URL\nCELERY_ACCEPT_CONTENT = [\"json\"]\nCELERY_TASK_SERIALIZER = \"json\"\nCELERY_RESULT_SERIALIZER = \"json\"\nCELERY_TIMEZONE = TIME_ZONE\nCELERY_TASK_TRACK_STARTED = True",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "RABBITMQ_HOST",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "RABBITMQ_HOST = config(\"RABBITMQ_HOST\", default=\"rabbitmq\")\nRABBITMQ_PORT = config(\"RABBITMQ_PORT\", default=\"5672\")\nCELERY_BROKER_URL = f\"amqp://{RABBITMQ_USER}:{RABBITMQ_PASS}@{RABBITMQ_HOST}:{RABBITMQ_PORT}//\"\nCELERY_RESULT_BACKEND = REDIS_URL\nCELERY_ACCEPT_CONTENT = [\"json\"]\nCELERY_TASK_SERIALIZER = \"json\"\nCELERY_RESULT_SERIALIZER = \"json\"\nCELERY_TIMEZONE = TIME_ZONE\nCELERY_TASK_TRACK_STARTED = True\nCELERY_RESULT_EXTENDED = True",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "RABBITMQ_PORT",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "RABBITMQ_PORT = config(\"RABBITMQ_PORT\", default=\"5672\")\nCELERY_BROKER_URL = f\"amqp://{RABBITMQ_USER}:{RABBITMQ_PASS}@{RABBITMQ_HOST}:{RABBITMQ_PORT}//\"\nCELERY_RESULT_BACKEND = REDIS_URL\nCELERY_ACCEPT_CONTENT = [\"json\"]\nCELERY_TASK_SERIALIZER = \"json\"\nCELERY_RESULT_SERIALIZER = \"json\"\nCELERY_TIMEZONE = TIME_ZONE\nCELERY_TASK_TRACK_STARTED = True\nCELERY_RESULT_EXTENDED = True\n# beat",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_BROKER_URL",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "CELERY_BROKER_URL = f\"amqp://{RABBITMQ_USER}:{RABBITMQ_PASS}@{RABBITMQ_HOST}:{RABBITMQ_PORT}//\"\nCELERY_RESULT_BACKEND = REDIS_URL\nCELERY_ACCEPT_CONTENT = [\"json\"]\nCELERY_TASK_SERIALIZER = \"json\"\nCELERY_RESULT_SERIALIZER = \"json\"\nCELERY_TIMEZONE = TIME_ZONE\nCELERY_TASK_TRACK_STARTED = True\nCELERY_RESULT_EXTENDED = True\n# beat\nCELERY_BEAT_SCHEDULE = {",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_RESULT_BACKEND",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "CELERY_RESULT_BACKEND = REDIS_URL\nCELERY_ACCEPT_CONTENT = [\"json\"]\nCELERY_TASK_SERIALIZER = \"json\"\nCELERY_RESULT_SERIALIZER = \"json\"\nCELERY_TIMEZONE = TIME_ZONE\nCELERY_TASK_TRACK_STARTED = True\nCELERY_RESULT_EXTENDED = True\n# beat\nCELERY_BEAT_SCHEDULE = {\n    \"beat-health-check-every-30s\": {",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_ACCEPT_CONTENT",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "CELERY_ACCEPT_CONTENT = [\"json\"]\nCELERY_TASK_SERIALIZER = \"json\"\nCELERY_RESULT_SERIALIZER = \"json\"\nCELERY_TIMEZONE = TIME_ZONE\nCELERY_TASK_TRACK_STARTED = True\nCELERY_RESULT_EXTENDED = True\n# beat\nCELERY_BEAT_SCHEDULE = {\n    \"beat-health-check-every-30s\": {\n        \"task\": \"medihub.tasks.beat_health_check\",",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_TASK_SERIALIZER",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "CELERY_TASK_SERIALIZER = \"json\"\nCELERY_RESULT_SERIALIZER = \"json\"\nCELERY_TIMEZONE = TIME_ZONE\nCELERY_TASK_TRACK_STARTED = True\nCELERY_RESULT_EXTENDED = True\n# beat\nCELERY_BEAT_SCHEDULE = {\n    \"beat-health-check-every-30s\": {\n        \"task\": \"medihub.tasks.beat_health_check\",\n        \"schedule\": 30.0,",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_RESULT_SERIALIZER",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "CELERY_RESULT_SERIALIZER = \"json\"\nCELERY_TIMEZONE = TIME_ZONE\nCELERY_TASK_TRACK_STARTED = True\nCELERY_RESULT_EXTENDED = True\n# beat\nCELERY_BEAT_SCHEDULE = {\n    \"beat-health-check-every-30s\": {\n        \"task\": \"medihub.tasks.beat_health_check\",\n        \"schedule\": 30.0,\n    },",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_TIMEZONE",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "CELERY_TIMEZONE = TIME_ZONE\nCELERY_TASK_TRACK_STARTED = True\nCELERY_RESULT_EXTENDED = True\n# beat\nCELERY_BEAT_SCHEDULE = {\n    \"beat-health-check-every-30s\": {\n        \"task\": \"medihub.tasks.beat_health_check\",\n        \"schedule\": 30.0,\n    },\n    \"beat-log-active-users-every-60s\": {",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_TASK_TRACK_STARTED",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "CELERY_TASK_TRACK_STARTED = True\nCELERY_RESULT_EXTENDED = True\n# beat\nCELERY_BEAT_SCHEDULE = {\n    \"beat-health-check-every-30s\": {\n        \"task\": \"medihub.tasks.beat_health_check\",\n        \"schedule\": 30.0,\n    },\n    \"beat-log-active-users-every-60s\": {\n        \"task\": \"medihub.tasks.beat_log_active_users\",",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_RESULT_EXTENDED",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "CELERY_RESULT_EXTENDED = True\n# beat\nCELERY_BEAT_SCHEDULE = {\n    \"beat-health-check-every-30s\": {\n        \"task\": \"medihub.tasks.beat_health_check\",\n        \"schedule\": 30.0,\n    },\n    \"beat-log-active-users-every-60s\": {\n        \"task\": \"medihub.tasks.beat_log_active_users\",\n        \"schedule\": 60.0,",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_BEAT_SCHEDULE",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "CELERY_BEAT_SCHEDULE = {\n    \"beat-health-check-every-30s\": {\n        \"task\": \"medihub.tasks.beat_health_check\",\n        \"schedule\": 30.0,\n    },\n    \"beat-log-active-users-every-60s\": {\n        \"task\": \"medihub.tasks.beat_log_active_users\",\n        \"schedule\": 60.0,\n    },\n    \"beat-cleanup-expired-otps-every-5m\": {",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "rabbitMQ_tester",
+        "kind": 2,
+        "importPath": "medihub.tasks",
+        "description": "medihub.tasks",
+        "peekOfCode": "def rabbitMQ_tester(self):\n    print(f\"[{self.request.id}] Task started — sleeping 20s to simulate work\")\n    time.sleep(20)\n    print(f\"[{self.request.id}] Task completed\")\n    return \"rabbitMQ_tester done\"\n@shared_task(bind=True)\ndef beat_health_check(self):\n    now = datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\")\n    print(f\"[BEAT] beat_health_check fired at {now}\")\n    return f\"beat alive at {now}\"",
+        "detail": "medihub.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "beat_health_check",
+        "kind": 2,
+        "importPath": "medihub.tasks",
+        "description": "medihub.tasks",
+        "peekOfCode": "def beat_health_check(self):\n    now = datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\")\n    print(f\"[BEAT] beat_health_check fired at {now}\")\n    return f\"beat alive at {now}\"\n@shared_task(bind=True)\ndef beat_log_active_users(self):\n    from django.contrib.auth import get_user_model\n    User = get_user_model()\n    count = User.objects.filter(is_active=True).count()\n    print(f\"[BEAT] Active users: {count}\")",
+        "detail": "medihub.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "beat_log_active_users",
+        "kind": 2,
+        "importPath": "medihub.tasks",
+        "description": "medihub.tasks",
+        "peekOfCode": "def beat_log_active_users(self):\n    from django.contrib.auth import get_user_model\n    User = get_user_model()\n    count = User.objects.filter(is_active=True).count()\n    print(f\"[BEAT] Active users: {count}\")\n    return f\"active users: {count}\"\n@shared_task(bind=True)\ndef beat_cleanup_expired_otps(self):\n    from django.core.cache import cache\n    print(f\"[BEAT] OTP cleanup triggered at {datetime.now().strftime('%H:%M:%S')}\")",
+        "detail": "medihub.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "beat_cleanup_expired_otps",
+        "kind": 2,
+        "importPath": "medihub.tasks",
+        "description": "medihub.tasks",
+        "peekOfCode": "def beat_cleanup_expired_otps(self):\n    from django.core.cache import cache\n    print(f\"[BEAT] OTP cleanup triggered at {datetime.now().strftime('%H:%M:%S')}\")\n    return \"otp cleanup done\"\n@shared_task(bind=True)\ndef beat_system_ping(self):\n    now = datetime.now().strftime(\"%H:%M:%S\")\n    print(f\"[BEAT] System ping at {now}\")\n    return f\"pong at {now}\"",
+        "detail": "medihub.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "beat_system_ping",
+        "kind": 2,
+        "importPath": "medihub.tasks",
+        "description": "medihub.tasks",
+        "peekOfCode": "def beat_system_ping(self):\n    now = datetime.now().strftime(\"%H:%M:%S\")\n    print(f\"[BEAT] System ping at {now}\")\n    return f\"pong at {now}\"",
+        "detail": "medihub.tasks",
+        "documentation": {}
+    },
+    {
         "label": "schema_view",
         "kind": 5,
         "importPath": "medihub.urls",
@@ -3576,7 +3862,7 @@
         "kind": 5,
         "importPath": "medihub.urls",
         "description": "medihub.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', HealthCheck),\n    path('health/', HealthCheck),\n    path('', include('django_prometheus.urls')),\n    path('api/auth/', include('authentication.urls')),\n    path('api/location/', include('location.urls')),\n    # Swagger\n    path('api/docs/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-ui'),\n    path('api/redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='redoc-ui'),",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', HealthCheck),\n    path('health/', HealthCheck),\n    path('queue/dashboard/', queue_dashboard, name='queue-dashboard'),\n    path('queue/test/', TeshMessageQuee, name='queue-test'),\n    path('', include('django_prometheus.urls')),\n    path('authentication/', include('authentication.urls')),\n    path('location/', include('location.urls')),\n    # Swagger",
         "detail": "medihub.urls",
         "documentation": {}
     },

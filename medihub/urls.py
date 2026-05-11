@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from medihub.health_check import HealthCheck
+from medihub.queue_dashboard import queue_dashboard, TeshMessageQuee
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
@@ -36,12 +37,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HealthCheck),
     path('health/', HealthCheck),
+    path('queue/dashboard/', queue_dashboard, name='queue-dashboard'),
+    path('queue/test/', TeshMessageQuee, name='queue-test'),
     path('', include('django_prometheus.urls')),
-    path('api/auth/', include('authentication.urls')),
-    path('api/location/', include('location.urls')),
+    path('authentication/', include('authentication.urls')),
+    path('location/', include('location.urls')),
 
     # Swagger
-    path('api/docs/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-ui'),
-    path('api/redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='redoc-ui'),
-    path('api/schema.json', schema_view.without_ui(cache_timeout=0), name='schema-json'),
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-ui'),
+    
 ]

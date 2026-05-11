@@ -1,3 +1,5 @@
+from time import sleep
+
 from celery import shared_task
 from django.core.mail import send_mail
 from django.conf import settings
@@ -17,3 +19,8 @@ def send_otp_email_task(email, otp):
     )
 
     return f"OTP sent to {email}"
+    
+    
+
+import subprocess as sub    
+

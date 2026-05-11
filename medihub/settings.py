@@ -663,6 +663,45 @@ LOGGING = {
 print("📋 LOGGING: Structured JSON logging to console at INFO level")
 
 
+# =============================================
+# CELERY & RABBITMQ
+# =============================================
+RABBITMQ_USER = config("RABBITMQ_DEFAULT_USER", default="medihub")
+RABBITMQ_PASS = config("RABBITMQ_DEFAULT_PASS", default="medihub")
+RABBITMQ_HOST = config("RABBITMQ_HOST", default="rabbitmq")
+RABBITMQ_PORT = config("RABBITMQ_PORT", default="5672")
+
+CELERY_BROKER_URL = f"amqp://{RABBITMQ_USER}:{RABBITMQ_PASS}@{RABBITMQ_HOST}:{RABBITMQ_PORT}//"
+CELERY_RESULT_BACKEND = REDIS_URL
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_TASK_SERIALIZER = "json"
+CELERY_RESULT_SERIALIZER = "json"
+CELERY_TIMEZONE = TIME_ZONE
+CELERY_TASK_TRACK_STARTED = True
+CELERY_RESULT_EXTENDED = True
+
+# beat
+CELERY_BEAT_SCHEDULE = {
+    "beat-health-check-every-30s": {
+        "task": "medihub.tasks.beat_health_check",
+        "schedule": 30.0,
+    },
+    "beat-log-active-users-every-60s": {
+        "task": "medihub.tasks.beat_log_active_users",
+        "schedule": 60.0,
+    },
+    "beat-cleanup-expired-otps-every-5m": {
+        "task": "medihub.tasks.beat_cleanup_expired_otps",
+        "schedule": 300.0,
+    },
+    "beat-system-ping-every-10s": {
+        "task": "medihub.tasks.beat_system_ping",
+        "schedule": 10.0,
+    },
+}
+print(f"🐇 CELERY: Broker=RabbitMQ@{RABBITMQ_HOST}, Backend=Redis")
+
+
 print("\n" + "=" * 60)
 print("✅ MEDIHUB SETTINGS LOADED SUCCESSFULLY")
 print("=" * 60 + "\n")
