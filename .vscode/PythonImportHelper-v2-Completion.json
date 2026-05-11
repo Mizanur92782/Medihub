@@ -1819,6 +1819,22 @@
         "documentation": {}
     },
     {
+        "label": "method_decorator",
+        "importPath": "django.utils.decorators",
+        "description": "django.utils.decorators",
+        "isExtraImport": true,
+        "detail": "django.utils.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "csrf_exempt",
+        "importPath": "django.views.decorators.csrf",
+        "description": "django.views.decorators.csrf",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.csrf",
+        "documentation": {}
+    },
+    {
         "label": "swagger_auto_schema",
         "importPath": "drf_yasg.utils",
         "description": "drf_yasg.utils",
@@ -2448,11 +2464,27 @@
         "documentation": {}
     },
     {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "Path",
         "importPath": "pathlib",
         "description": "pathlib",
         "isExtraImport": true,
         "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "importPath": "decouple",
+        "description": "decouple",
+        "isExtraImport": true,
+        "detail": "decouple",
         "documentation": {}
     },
     {
@@ -2770,7 +2802,7 @@
         "kind": 5,
         "importPath": "authentication.views",
         "description": "authentication.views",
-        "peekOfCode": "logger = logging.getLogger(__name__)\n_verify_body = openapi.Schema(\n    type=openapi.TYPE_OBJECT,\n    required=['email', 'otp'],\n    properties={\n        'email': openapi.Schema(type=openapi.TYPE_STRING, format='email'),\n        'otp':   openapi.Schema(type=openapi.TYPE_STRING, description='6-digit OTP'),\n    },\n)\nclass SignupViewSet(GenericViewSet):",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n_verify_body = openapi.Schema(\n    type=openapi.TYPE_OBJECT,\n    required=['email', 'otp'],\n    properties={\n        'email': openapi.Schema(type=openapi.TYPE_STRING, format='email'),\n        'otp':   openapi.Schema(type=openapi.TYPE_STRING, description='6-digit OTP'),\n    },\n)\n@method_decorator(csrf_exempt, name='dispatch')",
         "detail": "authentication.views",
         "documentation": {}
     },
@@ -2779,7 +2811,7 @@
         "kind": 5,
         "importPath": "authentication.views",
         "description": "authentication.views",
-        "peekOfCode": "_verify_body = openapi.Schema(\n    type=openapi.TYPE_OBJECT,\n    required=['email', 'otp'],\n    properties={\n        'email': openapi.Schema(type=openapi.TYPE_STRING, format='email'),\n        'otp':   openapi.Schema(type=openapi.TYPE_STRING, description='6-digit OTP'),\n    },\n)\nclass SignupViewSet(GenericViewSet):\n    permission_classes = [AllowAny]",
+        "peekOfCode": "_verify_body = openapi.Schema(\n    type=openapi.TYPE_OBJECT,\n    required=['email', 'otp'],\n    properties={\n        'email': openapi.Schema(type=openapi.TYPE_STRING, format='email'),\n        'otp':   openapi.Schema(type=openapi.TYPE_STRING, description='6-digit OTP'),\n    },\n)\n@method_decorator(csrf_exempt, name='dispatch')\nclass SignupViewSet(GenericViewSet):",
         "detail": "authentication.views",
         "documentation": {}
     },
@@ -3112,7 +3144,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nimport os\nSECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-k%ebt*!xp%%$w!mjy60*u%9tci^4-9tx4y9_(a*v0njop*d^ic')\nDEBUG = os.environ.get('DEBUG', 'True') == 'True'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nALLOWED_HOSTS += ['web1', 'web2', 'web3', 'localhost', '127.0.0.1', 'localhost:8080']\nCSRF_TRUSTED_ORIGINS = os.environ.get(",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# =============================================\n# CORE SETTINGS\n# =============================================\n\"\"\"\nCORE SETTINGS: Fundamental Django configurations.\n- SECRET_KEY: Used for cryptographic signing (CSRF, sessions). Must stay secret in production.\n- DEBUG: Shows detailed error pages when True. Must be False in production.\n- ALLOWED_HOSTS: Domain names/IPs Django will serve. Prevents Host header attacks.\n- PRODUCTION: Master switch — forces DEBUG=False and DJANGO_DEV=False.",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3121,7 +3153,25 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-k%ebt*!xp%%$w!mjy60*u%9tci^4-9tx4y9_(a*v0njop*d^ic')\nDEBUG = os.environ.get('DEBUG', 'True') == 'True'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nALLOWED_HOSTS += ['web1', 'web2', 'web3', 'localhost', '127.0.0.1', 'localhost:8080']\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "SECRET_KEY = config(\"SECRET_KEY\")\nPRODUCTION = config(\"PRODUCTION\", default=False, cast=bool)\nDJANGO_DEV = config(\"DJANGO_DEV\", default=False, cast=bool)\nDEBUG = config(\"DEBUG\", default=True, cast=bool)\nif PRODUCTION:\n    DEBUG = False\n    DJANGO_DEV = False\nALLOWED_HOSTS = config(\n    \"ALLOWED_HOSTS\",\n    default=\"127.0.0.1,localhost\",",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "PRODUCTION",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "PRODUCTION = config(\"PRODUCTION\", default=False, cast=bool)\nDJANGO_DEV = config(\"DJANGO_DEV\", default=False, cast=bool)\nDEBUG = config(\"DEBUG\", default=True, cast=bool)\nif PRODUCTION:\n    DEBUG = False\n    DJANGO_DEV = False\nALLOWED_HOSTS = config(\n    \"ALLOWED_HOSTS\",\n    default=\"127.0.0.1,localhost\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DJANGO_DEV",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "DJANGO_DEV = config(\"DJANGO_DEV\", default=False, cast=bool)\nDEBUG = config(\"DEBUG\", default=True, cast=bool)\nif PRODUCTION:\n    DEBUG = False\n    DJANGO_DEV = False\nALLOWED_HOSTS = config(\n    \"ALLOWED_HOSTS\",\n    default=\"127.0.0.1,localhost\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],\n)",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3130,7 +3180,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "DEBUG = os.environ.get('DEBUG', 'True') == 'True'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nALLOWED_HOSTS += ['web1', 'web2', 'web3', 'localhost', '127.0.0.1', 'localhost:8080']\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django_prometheus',",
+        "peekOfCode": "DEBUG = config(\"DEBUG\", default=True, cast=bool)\nif PRODUCTION:\n    DEBUG = False\n    DJANGO_DEV = False\nALLOWED_HOSTS = config(\n    \"ALLOWED_HOSTS\",\n    default=\"127.0.0.1,localhost\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],\n)\nprint(f\"🔧 CORE SETTINGS: PRODUCTION={PRODUCTION}, DEBUG={DEBUG}, DJANGO_DEV={DJANGO_DEV}\")",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3139,16 +3189,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')\nALLOWED_HOSTS += ['web1', 'web2', 'web3', 'localhost', '127.0.0.1', 'localhost:8080']\nCSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django_prometheus',\n    'django.contrib.admin',",
-        "detail": "medihub.settings",
-        "documentation": {}
-    },
-    {
-        "label": "CSRF_TRUSTED_ORIGINS",
-        "kind": 5,
-        "importPath": "medihub.settings",
-        "description": "medihub.settings",
-        "peekOfCode": "CSRF_TRUSTED_ORIGINS = os.environ.get(\n    'CSRF_TRUSTED_ORIGINS',\n    'http://localhost:8080,http://127.0.0.1:8080',\n).split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django_prometheus',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "peekOfCode": "ALLOWED_HOSTS = config(\n    \"ALLOWED_HOSTS\",\n    default=\"127.0.0.1,localhost\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],\n)\nprint(f\"🔧 CORE SETTINGS: PRODUCTION={PRODUCTION}, DEBUG={DEBUG}, DJANGO_DEV={DJANGO_DEV}\")\nprint(f\"🔧 ALLOWED_HOSTS: {ALLOWED_HOSTS}\")\n# =============================================\n# INSTALLED APPS\n# =============================================",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3157,7 +3198,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django_prometheus',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    #installed app\n    'drf_yasg',",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"django_prometheus\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    # Third Party\n    \"rest_framework\",",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3166,7 +3207,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "AUTH_USER_MODEL = 'authentication.User'\nMIDDLEWARE = [\n    \"django_prometheus.middleware.PrometheusBeforeMiddleware\",\n    \"request_id.middleware.RequestIdMiddleware\",\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',",
+        "peekOfCode": "AUTH_USER_MODEL = \"authentication.User\"\nprint(\"✅ INSTALLED APPS: Loaded all Django, third-party, and custom Medihub apps\")\n# =============================================\n# MIDDLEWARE\n# =============================================\n\"\"\"\nMIDDLEWARE: Request/response processors that run in order for every request.\n- PrometheusBeforeMiddleware / PrometheusAfterMiddleware: Wraps all requests for metrics.\n- RequestIdMiddleware: Attaches a unique ID to each request for tracing/logging.\n- SecurityMiddleware: Adds security headers (HSTS, X-Content-Type, etc.).",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3175,7 +3216,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    \"django_prometheus.middleware.PrometheusBeforeMiddleware\",\n    \"request_id.middleware.RequestIdMiddleware\",\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',",
+        "peekOfCode": "MIDDLEWARE = [\n    \"django_prometheus.middleware.PrometheusBeforeMiddleware\",\n    \"request_id.middleware.RequestIdMiddleware\",\n    \"django.middleware.security.SecurityMiddleware\",\n    \"corsheaders.middleware.CorsMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3184,7 +3225,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "ROOT_URLCONF = 'medihub.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates'],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "peekOfCode": "ROOT_URLCONF = \"medihub.urls\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [BASE_DIR / \"templates\"],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3193,7 +3234,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates'],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "peekOfCode": "TEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [BASE_DIR / \"templates\"],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",\n                \"django.contrib.auth.context_processors.auth\",",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3202,16 +3243,52 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'medihub.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': os.environ.get('POSTGRES_DB', 'medihub'),\n        'USER': os.environ.get('POSTGRES_USER', 'medihub_user'),\n        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'medihub_pass'),\n        'HOST': os.environ.get('POSTGRES_HOST', 'db'),",
+        "peekOfCode": "WSGI_APPLICATION = \"medihub.wsgi.application\"\nprint(\"✅ WSGI: Application gateway configured\")\n# =============================================\n# PROXY & SECURITY SETTINGS (Nginx)\n# =============================================\n\"\"\"\nPROXY & SECURITY: Configures Django to work correctly behind Nginx reverse proxy.\n- SECURE_PROXY_SSL_HEADER: Tells Django the request came over HTTPS (forwarded by Nginx).\n- USE_X_FORWARDED_HOST: Reads real hostname from X-Forwarded-Host header set by Nginx.\n- USE_X_FORWARDED_PORT: Reads real port from X-Forwarded-Port header.",
         "detail": "medihub.settings",
         "documentation": {}
     },
     {
-        "label": "DATABASES",
+        "label": "SECURE_PROXY_SSL_HEADER",
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': os.environ.get('POSTGRES_DB', 'medihub'),\n        'USER': os.environ.get('POSTGRES_USER', 'medihub_user'),\n        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'medihub_pass'),\n        'HOST': os.environ.get('POSTGRES_HOST', 'db'),\n        'PORT': os.environ.get('POSTGRES_PORT', '5432'),\n    }\n}",
+        "peekOfCode": "SECURE_PROXY_SSL_HEADER = (\"HTTP_X_FORWARDED_PROTO\", \"https\")\nUSE_X_FORWARDED_HOST = True\nUSE_X_FORWARDED_PORT = True\nCSRF_COOKIE_SAMESITE = \"Lax\"\nSESSION_COOKIE_SAMESITE = \"Lax\"\nif DJANGO_DEV:\n    SESSION_COOKIE_SECURE = False\n    CSRF_COOKIE_SECURE = False\n    SECURE_SSL_REDIRECT = False\nelse:",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_X_FORWARDED_HOST",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "USE_X_FORWARDED_HOST = True\nUSE_X_FORWARDED_PORT = True\nCSRF_COOKIE_SAMESITE = \"Lax\"\nSESSION_COOKIE_SAMESITE = \"Lax\"\nif DJANGO_DEV:\n    SESSION_COOKIE_SECURE = False\n    CSRF_COOKIE_SECURE = False\n    SECURE_SSL_REDIRECT = False\nelse:\n    SESSION_COOKIE_SECURE = True",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_X_FORWARDED_PORT",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "USE_X_FORWARDED_PORT = True\nCSRF_COOKIE_SAMESITE = \"Lax\"\nSESSION_COOKIE_SAMESITE = \"Lax\"\nif DJANGO_DEV:\n    SESSION_COOKIE_SECURE = False\n    CSRF_COOKIE_SECURE = False\n    SECURE_SSL_REDIRECT = False\nelse:\n    SESSION_COOKIE_SECURE = True\n    CSRF_COOKIE_SECURE = True",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CSRF_COOKIE_SAMESITE",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "CSRF_COOKIE_SAMESITE = \"Lax\"\nSESSION_COOKIE_SAMESITE = \"Lax\"\nif DJANGO_DEV:\n    SESSION_COOKIE_SECURE = False\n    CSRF_COOKIE_SECURE = False\n    SECURE_SSL_REDIRECT = False\nelse:\n    SESSION_COOKIE_SECURE = True\n    CSRF_COOKIE_SECURE = True\n    SECURE_SSL_REDIRECT = False  # Nginx handles SSL, not Django",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SESSION_COOKIE_SAMESITE",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "SESSION_COOKIE_SAMESITE = \"Lax\"\nif DJANGO_DEV:\n    SESSION_COOKIE_SECURE = False\n    CSRF_COOKIE_SECURE = False\n    SECURE_SSL_REDIRECT = False\nelse:\n    SESSION_COOKIE_SECURE = True\n    CSRF_COOKIE_SECURE = True\n    SECURE_SSL_REDIRECT = False  # Nginx handles SSL, not Django\nprint(\"🔒 PROXY & SECURITY: SSL handled by Nginx, cookie security configured\")",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3220,7 +3297,169 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\"},\n    {\"NAME\": \"django.contrib.auth.password_validation.MinimumLengthValidator\", \"OPTIONS\": {\"min_length\": 9}},\n    {\"NAME\": \"django.contrib.auth.password_validation.CommonPasswordValidator\"},\n    {\"NAME\": \"django.contrib.auth.password_validation.NumericPasswordValidator\"},\n]\nprint(\"✅ PASSWORD VALIDATION: Min 9 chars, no common/numeric-only passwords\")\n# =============================================\n# DATABASE CONFIGURATION\n# =============================================",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.postgresql\",\n        \"NAME\": config(\"POSTGRES_DB\", default=\"medihub\"),\n        \"USER\": config(\"POSTGRES_USER\", default=\"medihub_user\"),\n        \"PASSWORD\": config(\"POSTGRES_PASSWORD\", default=\"medihub_pass\"),\n        \"HOST\": config(\"DB_HOST\", default=\"db\"),\n        \"PORT\": config(\"DB_PORT\", default=\"5432\"),\n    }\n}",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REDIS_URL",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "REDIS_URL = _build_redis_url()\nUSE_REDIS_CACHE = False\nif redis:\n    try:\n        _r = redis.StrictRedis(\n            host=REDIS_HOST, port=REDIS_PORT, db=REDIS_DB,\n            password=REDIS_PASSWORD or None, socket_connect_timeout=2,\n        )\n        _r.ping()\n        USE_REDIS_CACHE = True",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_REDIS_CACHE",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "USE_REDIS_CACHE = False\nif redis:\n    try:\n        _r = redis.StrictRedis(\n            host=REDIS_HOST, port=REDIS_PORT, db=REDIS_DB,\n            password=REDIS_PASSWORD or None, socket_connect_timeout=2,\n        )\n        _r.ping()\n        USE_REDIS_CACHE = True\n        print(f\"✅ REDIS: Connected to {REDIS_HOST}:{REDIS_PORT}\")",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "REST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework_simplejwt.authentication.JWTAuthentication\",\n    ),\n    \"DEFAULT_PERMISSION_CLASSES\": (\n        \"rest_framework.permissions.AllowAny\",\n    ),\n    \"DEFAULT_THROTTLE_CLASSES\": (\n        \"rest_framework.throttling.AnonRateThrottle\",\n        \"rest_framework.throttling.UserRateThrottle\",",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SWAGGER_SETTINGS",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "SWAGGER_SETTINGS = {\n    \"SECURITY_DEFINITIONS\": {\n        \"Bearer\": {\n            \"type\": \"apiKey\",\n            \"name\": \"Authorization\",\n            \"in\": \"header\",\n            \"description\": 'JWT Authorization. Format: \"Bearer <token>\"',\n        }\n    },\n    \"USE_SESSION_AUTH\": False,",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOW_CREDENTIALS",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "CORS_ALLOW_CREDENTIALS = True\nCORS_ALLOW_HEADERS = [\n    \"accept\", \"accept-encoding\", \"authorization\", \"content-type\",\n    \"dnt\", \"origin\", \"user-agent\", \"x-csrftoken\", \"x-requested-with\",\n]\nif DJANGO_DEV:\n    CORS_ALLOW_ALL_ORIGINS = True\n    CSRF_TRUSTED_ORIGINS = [\n        \"http://127.0.0.1:8000\", \"http://localhost:3000\",\n        \"http://localhost:5173\", \"http://127.0.0.1:3000\",",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOW_HEADERS",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "CORS_ALLOW_HEADERS = [\n    \"accept\", \"accept-encoding\", \"authorization\", \"content-type\",\n    \"dnt\", \"origin\", \"user-agent\", \"x-csrftoken\", \"x-requested-with\",\n]\nif DJANGO_DEV:\n    CORS_ALLOW_ALL_ORIGINS = True\n    CSRF_TRUSTED_ORIGINS = [\n        \"http://127.0.0.1:8000\", \"http://localhost:3000\",\n        \"http://localhost:5173\", \"http://127.0.0.1:3000\",\n    ]",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_HEADER_TYPES",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "AUTH_HEADER_TYPES = (\"Bearer\",):\n  - Token must be sent as: Authorization: Bearer <token>\n\"\"\"\nACCESS_TOKEN_DAYS = config(\"ACCESS_TOKEN_DAYS\", default=60, cast=int)\nREFRESH_TOKEN_DAYS = config(\"REFRESH_TOKEN_DAYS\", default=60, cast=int)\nSIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(days=ACCESS_TOKEN_DAYS),\n    \"REFRESH_TOKEN_LIFETIME\": timedelta(days=REFRESH_TOKEN_DAYS),\n    \"ROTATE_REFRESH_TOKENS\": True,\n    \"BLACKLIST_AFTER_ROTATION\": True,",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ACCESS_TOKEN_DAYS",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "ACCESS_TOKEN_DAYS = config(\"ACCESS_TOKEN_DAYS\", default=60, cast=int)\nREFRESH_TOKEN_DAYS = config(\"REFRESH_TOKEN_DAYS\", default=60, cast=int)\nSIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(days=ACCESS_TOKEN_DAYS),\n    \"REFRESH_TOKEN_LIFETIME\": timedelta(days=REFRESH_TOKEN_DAYS),\n    \"ROTATE_REFRESH_TOKENS\": True,\n    \"BLACKLIST_AFTER_ROTATION\": True,\n    \"AUTH_HEADER_TYPES\": (\"Bearer\",),\n}\nprint(f\"🔑 JWT: Access={ACCESS_TOKEN_DAYS}d, Refresh={REFRESH_TOKEN_DAYS}d, rotation+blacklist enabled\")",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REFRESH_TOKEN_DAYS",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "REFRESH_TOKEN_DAYS = config(\"REFRESH_TOKEN_DAYS\", default=60, cast=int)\nSIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(days=ACCESS_TOKEN_DAYS),\n    \"REFRESH_TOKEN_LIFETIME\": timedelta(days=REFRESH_TOKEN_DAYS),\n    \"ROTATE_REFRESH_TOKENS\": True,\n    \"BLACKLIST_AFTER_ROTATION\": True,\n    \"AUTH_HEADER_TYPES\": (\"Bearer\",),\n}\nprint(f\"🔑 JWT: Access={ACCESS_TOKEN_DAYS}d, Refresh={REFRESH_TOKEN_DAYS}d, rotation+blacklist enabled\")\n# =============================================",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SIMPLE_JWT",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "SIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(days=ACCESS_TOKEN_DAYS),\n    \"REFRESH_TOKEN_LIFETIME\": timedelta(days=REFRESH_TOKEN_DAYS),\n    \"ROTATE_REFRESH_TOKENS\": True,\n    \"BLACKLIST_AFTER_ROTATION\": True,\n    \"AUTH_HEADER_TYPES\": (\"Bearer\",),\n}\nprint(f\"🔑 JWT: Access={ACCESS_TOKEN_DAYS}d, Refresh={REFRESH_TOKEN_DAYS}d, rotation+blacklist enabled\")\n# =============================================\n# EMAIL CONFIGURATION",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "EMAIL_BACKEND = config(\"EMAIL_BACKEND\", default=\"django.core.mail.backends.console.EmailBackend\")\nEMAIL_HOST = config(\"EMAIL_HOST\", default=\"smtp.gmail.com\")\nEMAIL_PORT = config(\"EMAIL_PORT\", default=587, cast=int)\nEMAIL_USE_TLS = config(\"EMAIL_USE_TLS\", default=True, cast=bool)\nEMAIL_HOST_USER = config(\"EMAIL_HOST_USER\", default=\"\")\nEMAIL_HOST_PASSWORD = config(\"EMAIL_HOST_PASSWORD\", default=\"\")\nOTP_EXPIRE_TIME = config(\"OTP_EXPIRE_TIME\", default=300, cast=int)\nprint(f\"📧 EMAIL: Backend={EMAIL_BACKEND.split('.')[-2]}, OTP expires in {OTP_EXPIRE_TIME}s\")\n# =============================================\n# INTERNATIONALIZATION",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "EMAIL_HOST = config(\"EMAIL_HOST\", default=\"smtp.gmail.com\")\nEMAIL_PORT = config(\"EMAIL_PORT\", default=587, cast=int)\nEMAIL_USE_TLS = config(\"EMAIL_USE_TLS\", default=True, cast=bool)\nEMAIL_HOST_USER = config(\"EMAIL_HOST_USER\", default=\"\")\nEMAIL_HOST_PASSWORD = config(\"EMAIL_HOST_PASSWORD\", default=\"\")\nOTP_EXPIRE_TIME = config(\"OTP_EXPIRE_TIME\", default=300, cast=int)\nprint(f\"📧 EMAIL: Backend={EMAIL_BACKEND.split('.')[-2]}, OTP expires in {OTP_EXPIRE_TIME}s\")\n# =============================================\n# INTERNATIONALIZATION\n# =============================================",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PORT",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "EMAIL_PORT = config(\"EMAIL_PORT\", default=587, cast=int)\nEMAIL_USE_TLS = config(\"EMAIL_USE_TLS\", default=True, cast=bool)\nEMAIL_HOST_USER = config(\"EMAIL_HOST_USER\", default=\"\")\nEMAIL_HOST_PASSWORD = config(\"EMAIL_HOST_PASSWORD\", default=\"\")\nOTP_EXPIRE_TIME = config(\"OTP_EXPIRE_TIME\", default=300, cast=int)\nprint(f\"📧 EMAIL: Backend={EMAIL_BACKEND.split('.')[-2]}, OTP expires in {OTP_EXPIRE_TIME}s\")\n# =============================================\n# INTERNATIONALIZATION\n# =============================================\n\"\"\"",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_USE_TLS",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "EMAIL_USE_TLS = config(\"EMAIL_USE_TLS\", default=True, cast=bool)\nEMAIL_HOST_USER = config(\"EMAIL_HOST_USER\", default=\"\")\nEMAIL_HOST_PASSWORD = config(\"EMAIL_HOST_PASSWORD\", default=\"\")\nOTP_EXPIRE_TIME = config(\"OTP_EXPIRE_TIME\", default=300, cast=int)\nprint(f\"📧 EMAIL: Backend={EMAIL_BACKEND.split('.')[-2]}, OTP expires in {OTP_EXPIRE_TIME}s\")\n# =============================================\n# INTERNATIONALIZATION\n# =============================================\n\"\"\"\nINTERNATIONALIZATION: Language and timezone support.",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_USER",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "EMAIL_HOST_USER = config(\"EMAIL_HOST_USER\", default=\"\")\nEMAIL_HOST_PASSWORD = config(\"EMAIL_HOST_PASSWORD\", default=\"\")\nOTP_EXPIRE_TIME = config(\"OTP_EXPIRE_TIME\", default=300, cast=int)\nprint(f\"📧 EMAIL: Backend={EMAIL_BACKEND.split('.')[-2]}, OTP expires in {OTP_EXPIRE_TIME}s\")\n# =============================================\n# INTERNATIONALIZATION\n# =============================================\n\"\"\"\nINTERNATIONALIZATION: Language and timezone support.\n- LANGUAGE_CODE: Default language for the app (en-us = English).",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_PASSWORD",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = config(\"EMAIL_HOST_PASSWORD\", default=\"\")\nOTP_EXPIRE_TIME = config(\"OTP_EXPIRE_TIME\", default=300, cast=int)\nprint(f\"📧 EMAIL: Backend={EMAIL_BACKEND.split('.')[-2]}, OTP expires in {OTP_EXPIRE_TIME}s\")\n# =============================================\n# INTERNATIONALIZATION\n# =============================================\n\"\"\"\nINTERNATIONALIZATION: Language and timezone support.\n- LANGUAGE_CODE: Default language for the app (en-us = English).\n- TIME_ZONE: Default timezone — Asia/Dhaka for Bangladesh.",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "OTP_EXPIRE_TIME",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "OTP_EXPIRE_TIME = config(\"OTP_EXPIRE_TIME\", default=300, cast=int)\nprint(f\"📧 EMAIL: Backend={EMAIL_BACKEND.split('.')[-2]}, OTP expires in {OTP_EXPIRE_TIME}s\")\n# =============================================\n# INTERNATIONALIZATION\n# =============================================\n\"\"\"\nINTERNATIONALIZATION: Language and timezone support.\n- LANGUAGE_CODE: Default language for the app (en-us = English).\n- TIME_ZONE: Default timezone — Asia/Dhaka for Bangladesh.\n- USE_I18N: Enables Django's translation framework (multi-language support).",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3229,7 +3468,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'",
+        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"Asia/Dhaka\"\nUSE_I18N = True\nUSE_TZ = True\nprint(f\"🌍 INTERNATIONALIZATION: Language={LANGUAGE_CODE}, Timezone={TIME_ZONE}\")\n# =============================================\n# CUSTOM USER MODEL & AUTO FIELD\n# =============================================\n\"\"\"\nCUSTOM USER MODEL:",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3238,7 +3477,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type",
+        "peekOfCode": "TIME_ZONE = \"Asia/Dhaka\"\nUSE_I18N = True\nUSE_TZ = True\nprint(f\"🌍 INTERNATIONALIZATION: Language={LANGUAGE_CODE}, Timezone={TIME_ZONE}\")\n# =============================================\n# CUSTOM USER MODEL & AUTO FIELD\n# =============================================\n\"\"\"\nCUSTOM USER MODEL:\n- AUTH_USER_MODEL = \"authentication.User\": Uses a custom User model from the",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3247,7 +3486,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\nprint(f\"🌍 INTERNATIONALIZATION: Language={LANGUAGE_CODE}, Timezone={TIME_ZONE}\")\n# =============================================\n# CUSTOM USER MODEL & AUTO FIELD\n# =============================================\n\"\"\"\nCUSTOM USER MODEL:\n- AUTH_USER_MODEL = \"authentication.User\": Uses a custom User model from the\n  authentication app instead of Django's default User.",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3256,43 +3495,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
-        "detail": "medihub.settings",
-        "documentation": {}
-    },
-    {
-        "label": "STATIC_URL",
-        "kind": 5,
-        "importPath": "medihub.settings",
-        "description": "medihub.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n''' ================================ LOGS ============================= '''\nimport os\nLOGGING = {",
-        "detail": "medihub.settings",
-        "documentation": {}
-    },
-    {
-        "label": "STATIC_ROOT",
-        "kind": 5,
-        "importPath": "medihub.settings",
-        "description": "medihub.settings",
-        "peekOfCode": "STATIC_ROOT = BASE_DIR / 'staticfiles'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n''' ================================ LOGS ============================= '''\nimport os\nLOGGING = {\n    \"version\": 1,",
-        "detail": "medihub.settings",
-        "documentation": {}
-    },
-    {
-        "label": "MEDIA_URL",
-        "kind": 5,
-        "importPath": "medihub.settings",
-        "description": "medihub.settings",
-        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n''' ================================ LOGS ============================= '''\nimport os\nLOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,",
-        "detail": "medihub.settings",
-        "documentation": {}
-    },
-    {
-        "label": "MEDIA_ROOT",
-        "kind": 5,
-        "importPath": "medihub.settings",
-        "description": "medihub.settings",
-        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n''' ================================ LOGS ============================= '''\nimport os\nLOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,\n    \"formatters\": {",
+        "peekOfCode": "USE_TZ = True\nprint(f\"🌍 INTERNATIONALIZATION: Language={LANGUAGE_CODE}, Timezone={TIME_ZONE}\")\n# =============================================\n# CUSTOM USER MODEL & AUTO FIELD\n# =============================================\n\"\"\"\nCUSTOM USER MODEL:\n- AUTH_USER_MODEL = \"authentication.User\": Uses a custom User model from the\n  authentication app instead of Django's default User.\n  Enables email-based login, custom fields, and custom methods.",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3301,7 +3504,52 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n''' ================================ LOGS ============================= '''\nimport os\nLOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,\n    \"formatters\": {\n        \"json\": {\n            \"()\": \"pythonjsonlogger.jsonlogger.JsonFormatter\",\n            \"format\": (",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nprint(\"👤 CUSTOM USER MODEL: authentication.User with BigAutoField PKs\")\n# =============================================\n# STATIC & MEDIA FILES\n# =============================================\n\"\"\"\nSTATIC FILES: CSS, JavaScript, images bundled with the app (not user-uploaded).\n- STATIC_URL: URL prefix browsers use to request static files (/static/...).\n- STATIC_ROOT: Directory where `collectstatic` gathers all static files.\n  Nginx serves this directory directly in production (bypasses Django for speed).",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "STATIC_URL = \"/static/\"\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = BASE_DIR / \"media\"\nprint(f\"📁 STATIC: {STATIC_ROOT}\")\nprint(f\"📸 MEDIA: {MEDIA_ROOT}\")\n# =============================================\n# FIREBASE PUSH NOTIFICATIONS\n# =============================================\n\"\"\"",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "STATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = BASE_DIR / \"media\"\nprint(f\"📁 STATIC: {STATIC_ROOT}\")\nprint(f\"📸 MEDIA: {MEDIA_ROOT}\")\n# =============================================\n# FIREBASE PUSH NOTIFICATIONS\n# =============================================\n\"\"\"\nFIREBASE: Push notification support for mobile apps (iOS/Android) via FCM.",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "MEDIA_URL = \"/media/\"\nMEDIA_ROOT = BASE_DIR / \"media\"\nprint(f\"📁 STATIC: {STATIC_ROOT}\")\nprint(f\"📸 MEDIA: {MEDIA_ROOT}\")\n# =============================================\n# FIREBASE PUSH NOTIFICATIONS\n# =============================================\n\"\"\"\nFIREBASE: Push notification support for mobile apps (iOS/Android) via FCM.\nFIREBASE_CREDENTIALS_PATH: Path to the Firebase service account JSON file.",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "MEDIA_ROOT = BASE_DIR / \"media\"\nprint(f\"📁 STATIC: {STATIC_ROOT}\")\nprint(f\"📸 MEDIA: {MEDIA_ROOT}\")\n# =============================================\n# FIREBASE PUSH NOTIFICATIONS\n# =============================================\n\"\"\"\nFIREBASE: Push notification support for mobile apps (iOS/Android) via FCM.\nFIREBASE_CREDENTIALS_PATH: Path to the Firebase service account JSON file.\n  - Download from: Firebase Console → Project Settings → Service Accounts.",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "FIREBASE_CREDENTIALS_PATH",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "FIREBASE_CREDENTIALS_PATH = config(\"FIREBASE_CREDENTIALS_PATH\", default=\"firebase-key.json\")\nif os.path.exists(FIREBASE_CREDENTIALS_PATH):\n    try:\n        import firebase_admin\n        from firebase_admin import credentials as fb_credentials\n        _cred = fb_credentials.Certificate(FIREBASE_CREDENTIALS_PATH)\n        firebase_admin.initialize_app(_cred)\n        print(\"🔥 FIREBASE: Push notifications initialized successfully\")\n    except Exception as e:\n        print(f\"❌ FIREBASE: Initialization failed — {str(e)[:60]}\")",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3310,7 +3558,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "LOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,\n    \"formatters\": {\n        \"json\": {\n            \"()\": \"pythonjsonlogger.jsonlogger.JsonFormatter\",\n            \"format\": (\n                \"%(asctime)s \"\n                \"%(levelname)s \"\n                \"%(name)s \"",
+        "peekOfCode": "LOGGING = {\n    \"version\": 1,\n    \"disable_existing_loggers\": False,\n    \"formatters\": {\n        \"json\": {\n            \"()\": \"pythonjsonlogger.jsonlogger.JsonFormatter\",\n            \"format\": \"%(asctime)s %(levelname)s %(name)s %(message)s\",\n        },\n    },\n    \"handlers\": {",
         "detail": "medihub.settings",
         "documentation": {}
     },

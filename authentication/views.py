@@ -5,6 +5,8 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 from django.db import DatabaseError
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
 
@@ -30,6 +32,7 @@ _verify_body = openapi.Schema(
 )
 
 
+@method_decorator(csrf_exempt, name='dispatch')
 class SignupViewSet(GenericViewSet):
     permission_classes = [AllowAny]
 
