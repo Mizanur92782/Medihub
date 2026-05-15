@@ -1,2 +1,2 @@
 from .app_notification_mod import AppNotification
-from .psuh_not_model import Device
+from .push_not_model import Device

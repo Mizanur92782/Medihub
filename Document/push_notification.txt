@@ -13,3 +13,39 @@ views/push_notf_view.py (register_device + send)
 urls.py ✅
     ↓
 post/views.py (trigger on event)
+
+
+
+
+
+
+
+FCM - FIREBASE_cloude message structure:
+    
+    messaging.send(
+    messaging.Message(
+        notification=messaging.Notification(
+            title=title,
+            body=body
+        ),
+        token=token
+    )
+)
+
+send()->message()->notification with token
+
+📄 Notification = চিঠির লেখা
+
+👉 “Hello, your order is ready”
+
+📦 Message = খাম
+
+👉 যার ভিতরে চিঠি + address থাকে
+
+📮 send() = পোস্ট অফিসে দেওয়া
+
+👉 “এখন deliver করো”
+
+📱 token = বাড়ির ঠিকানা
+
+👉 চিঠি কার কাছে যাবে

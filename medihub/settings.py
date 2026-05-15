@@ -614,9 +614,11 @@ if os.path.exists(FIREBASE_CREDENTIALS_PATH):
     try:
         import firebase_admin
         from firebase_admin import credentials as fb_credentials
+        
         _cred = fb_credentials.Certificate(FIREBASE_CREDENTIALS_PATH)
         firebase_admin.initialize_app(_cred)
         print("🔥 FIREBASE: Push notifications initialized successfully")
+        
     except Exception as e:
         print(f"❌ FIREBASE: Initialization failed — {str(e)[:60]}")
 else:

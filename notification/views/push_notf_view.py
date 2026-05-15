@@ -4,7 +4,7 @@ from django.views.decorators.http import require_POST
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 import json
-from notification.models.psuh_not_model import Device
+from notification.models.push_not_model import Device
 from notification.servcies import PushNotification
 
 

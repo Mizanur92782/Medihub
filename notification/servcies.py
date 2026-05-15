@@ -36,12 +36,16 @@ class PushNotification:
     '''send notification use all devices'''    
     @staticmethod
     def send_to_user(user, title, body):
-        from notification.models.psuh_not_model import Device
+        from notification.models.push_not_model import Device
+        '''getting all devices of  user'''
         tokens = Device.objects.filter(user=user).values_list('token', flat=True)
+        
+        
         results = []
         for token in tokens:
             try:
-                response = messaging.send(messaging.Message(
+                response = messaging.send(
+                    messaging.Message(
                     notification=messaging.Notification(title=title, body=body),
                     token=token,
                 ))
@@ -51,6 +55,8 @@ class PushNotification:
         return results
 
 
+        
+        
     "send only a devices with out user track,based on the token"
     @staticmethod
     def send_to_token(token, title, body):

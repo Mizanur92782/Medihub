@@ -100,3 +100,4 @@ serviceAccountKey.json
 *firebase*.json
 .zencoder/
 .zenflow/
+*.json
