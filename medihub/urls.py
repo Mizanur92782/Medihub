@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 from medihub.health_check import HealthCheck
 from medihub.queue_dashboard import queue_dashboard, TeshMessageQuee
+from django.http import HttpResponse
+from django.template.loader import render_to_string
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
@@ -33,8 +35,13 @@ schema_view = get_schema_view(
     permission_classes=[permissions.AllowAny],
 )
 
+def serve_sw(request):
+    content = render_to_string('firebase-messaging-sw.js')
+    return HttpResponse(content, content_type='application/javascript')
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('firebase-messaging-sw.js', serve_sw),
     path('', HealthCheck),
     path('health/', HealthCheck),
     path('queue/dashboard/', queue_dashboard, name='queue-dashboard'),
@@ -42,6 +49,7 @@ urlpatterns = [
     path('', include('django_prometheus.urls')),
     path('authentication/', include('authentication.urls')),
     path('location/', include('location.urls')),
+    path('notification/', include('notification.urls')),
 
     # Swagger
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-ui'),

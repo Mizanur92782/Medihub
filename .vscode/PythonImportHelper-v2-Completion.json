@@ -168,6 +168,54 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -269,6 +317,14 @@
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
         "documentation": {}
     },
     {
@@ -605,6 +661,46 @@
         "description": "rest_framework",
         "isExtraImport": true,
         "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "viewsets",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "isExtraImport": true,
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "isExtraImport": true,
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "isExtraImport": true,
+        "detail": "authentication.models",
         "documentation": {}
     },
     {
@@ -1411,6 +1507,22 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
         "label": "Doctor",
         "importPath": "profiles.models.doctor_prof_mod",
         "description": "profiles.models.doctor_prof_mod",
@@ -1829,6 +1941,14 @@
         "documentation": {}
     },
     {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
         "label": "DefaultRouter",
         "importPath": "rest_framework.routers",
         "description": "rest_framework.routers",
@@ -1861,6 +1981,46 @@
         "documentation": {}
     },
     {
+        "label": "action",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "api_view",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "permission_classes",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
         "label": "Response",
         "importPath": "rest_framework.response",
         "description": "rest_framework.response",
@@ -1877,11 +2037,35 @@
         "documentation": {}
     },
     {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
         "label": "method_decorator",
         "importPath": "django.utils.decorators",
         "description": "django.utils.decorators",
         "isExtraImport": true,
         "detail": "django.utils.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "csrf_exempt",
+        "importPath": "django.views.decorators.csrf",
+        "description": "django.views.decorators.csrf",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.csrf",
         "documentation": {}
     },
     {
@@ -2375,6 +2559,30 @@
         "documentation": {}
     },
     {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Any",
         "importPath": "typing",
         "description": "typing",
@@ -2399,7 +2607,7 @@
         "documentation": {}
     },
     {
-        "label": "Any",
+        "label": "Optional",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -2439,6 +2647,14 @@
         "documentation": {}
     },
     {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "union_list",
         "importPath": "location.views",
         "description": "location.views",
@@ -2464,6 +2680,22 @@
     },
     {
         "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
         "importPath": "django.http",
         "description": "django.http",
         "isExtraImport": true,
@@ -2502,6 +2734,14 @@
         "importPath": "socket",
         "description": "socket",
         "detail": "socket",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -2609,6 +2849,14 @@
         "documentation": {}
     },
     {
+        "label": "render_to_string",
+        "importPath": "django.template.loader",
+        "description": "django.template.loader",
+        "isExtraImport": true,
+        "detail": "django.template.loader",
+        "documentation": {}
+    },
+    {
         "label": "get_schema_view",
         "importPath": "drf_yasg.views",
         "description": "drf_yasg.views",
@@ -2622,6 +2870,110 @@
         "description": "django.core.wsgi",
         "isExtraImport": true,
         "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "AppNotification",
+        "importPath": "notification.models.app_notification_mod",
+        "description": "notification.models.app_notification_mod",
+        "isExtraImport": true,
+        "detail": "notification.models.app_notification_mod",
+        "documentation": {}
+    },
+    {
+        "label": "AppNotification",
+        "importPath": "notification.models.app_notification_mod",
+        "description": "notification.models.app_notification_mod",
+        "isExtraImport": true,
+        "detail": "notification.models.app_notification_mod",
+        "documentation": {}
+    },
+    {
+        "label": "AppNotification",
+        "importPath": "notification.models.app_notification_mod",
+        "description": "notification.models.app_notification_mod",
+        "isExtraImport": true,
+        "detail": "notification.models.app_notification_mod",
+        "documentation": {}
+    },
+    {
+        "label": "AppNotificationSerializer",
+        "importPath": "notification.serializers",
+        "description": "notification.serializers",
+        "isExtraImport": true,
+        "detail": "notification.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "api_exception_handler",
+        "importPath": "utilities.decorators",
+        "description": "utilities.decorators",
+        "isExtraImport": true,
+        "detail": "utilities.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "APIResponse",
+        "importPath": "utilities.api_response",
+        "description": "utilities.api_response",
+        "isExtraImport": true,
+        "detail": "utilities.api_response",
+        "documentation": {}
+    },
+    {
+        "label": "require_POST",
+        "importPath": "django.views.decorators.http",
+        "description": "django.views.decorators.http",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.http",
+        "documentation": {}
+    },
+    {
+        "label": "Device",
+        "importPath": "notification.models.psuh_not_model",
+        "description": "notification.models.psuh_not_model",
+        "isExtraImport": true,
+        "detail": "notification.models.psuh_not_model",
+        "documentation": {}
+    },
+    {
+        "label": "PushNotification",
+        "importPath": "notification.servcies",
+        "description": "notification.servcies",
+        "isExtraImport": true,
+        "detail": "notification.servcies",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceResult",
+        "importPath": "utilities.resultl",
+        "description": "utilities.resultl",
+        "isExtraImport": true,
+        "detail": "utilities.resultl",
+        "documentation": {}
+    },
+    {
+        "label": "messaging",
+        "importPath": "firebase_admin",
+        "description": "firebase_admin",
+        "isExtraImport": true,
+        "detail": "firebase_admin",
+        "documentation": {}
+    },
+    {
+        "label": "register_device",
+        "importPath": "notification.views.push_notf_view",
+        "description": "notification.views.push_notf_view",
+        "isExtraImport": true,
+        "detail": "notification.views.push_notf_view",
+        "documentation": {}
+    },
+    {
+        "label": "test_push",
+        "importPath": "notification.views.push_notf_view",
+        "description": "notification.views.push_notf_view",
+        "isExtraImport": true,
+        "detail": "notification.views.push_notf_view",
         "documentation": {}
     },
     {
@@ -2694,6 +3046,23 @@
         "description": "django.contrib.auth.admin",
         "isExtraImport": true,
         "detail": "django.contrib.auth.admin",
+        "documentation": {}
+    },
+    {
+        "label": "traceback",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "traceback",
+        "description": "traceback",
+        "detail": "traceback",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
         "documentation": {}
     },
     {
@@ -3874,6 +4243,15 @@
         "documentation": {}
     },
     {
+        "label": "serve_sw",
+        "kind": 2,
+        "importPath": "medihub.urls",
+        "description": "medihub.urls",
+        "peekOfCode": "def serve_sw(request):\n    content = render_to_string('firebase-messaging-sw.js')\n    return HttpResponse(content, content_type='application/javascript')\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('firebase-messaging-sw.js', serve_sw),\n    path('', HealthCheck),\n    path('health/', HealthCheck),\n    path('queue/dashboard/', queue_dashboard, name='queue-dashboard'),\n    path('queue/test/', TeshMessageQuee, name='queue-test'),",
+        "detail": "medihub.urls",
+        "documentation": {}
+    },
+    {
         "label": "schema_view",
         "kind": 5,
         "importPath": "medihub.urls",
@@ -3887,7 +4265,7 @@
         "kind": 5,
         "importPath": "medihub.urls",
         "description": "medihub.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', HealthCheck),\n    path('health/', HealthCheck),\n    path('queue/dashboard/', queue_dashboard, name='queue-dashboard'),\n    path('queue/test/', TeshMessageQuee, name='queue-test'),\n    path('', include('django_prometheus.urls')),\n    path('authentication/', include('authentication.urls')),\n    path('location/', include('location.urls')),\n    # Swagger",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('firebase-messaging-sw.js', serve_sw),\n    path('', HealthCheck),\n    path('health/', HealthCheck),\n    path('queue/dashboard/', queue_dashboard, name='queue-dashboard'),\n    path('queue/test/', TeshMessageQuee, name='queue-test'),\n    path('', include('django_prometheus.urls')),\n    path('authentication/', include('authentication.urls')),\n    path('location/', include('location.urls')),",
         "detail": "medihub.urls",
         "documentation": {}
     },
@@ -3898,6 +4276,123 @@
         "description": "medihub.wsgi",
         "peekOfCode": "application = get_wsgi_application()",
         "detail": "medihub.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "notification.migrations.0001_initial",
+        "description": "notification.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Device',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "notification.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "notification.migrations.0002_device_user_alter_device_token",
+        "description": "notification.migrations.0002_device_user_alter_device_token",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        ('notification', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='device',\n            name='user',\n            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='devices', to=settings.AUTH_USER_MODEL),",
+        "detail": "notification.migrations.0002_device_user_alter_device_token",
+        "documentation": {}
+    },
+    {
+        "label": "AppNotification",
+        "kind": 6,
+        "importPath": "notification.models.app_notification_mod",
+        "description": "notification.models.app_notification_mod",
+        "peekOfCode": "class AppNotification(models.Model):\n    user = models.ForeignKey(\n        User,\n        on_delete=models.CASCADE,\n        related_name='app_notification'\n    )\n    title = models.CharField(max_length=255)\n    message = models.TextField()\n    is_read = models.BooleanField(default=False)\n    created_at = models.DateTimeField(auto_now_add=True)",
+        "detail": "notification.models.app_notification_mod",
+        "documentation": {}
+    },
+    {
+        "label": "Device",
+        "kind": 6,
+        "importPath": "notification.models.psuh_not_model",
+        "description": "notification.models.psuh_not_model",
+        "peekOfCode": "class Device(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='devices', null=True, blank=True)\n    token = models.CharField(max_length=500, unique=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"{self.user} - {self.token[:30]}\"",
+        "detail": "notification.models.psuh_not_model",
+        "documentation": {}
+    },
+    {
+        "label": "NotificationViewSet",
+        "kind": 6,
+        "importPath": "notification.views.app_not_view",
+        "description": "notification.views.app_not_view",
+        "peekOfCode": "class NotificationViewSet(viewsets.ReadOnlyModelViewSet):\n    permission_classes = [IsAuthenticated]\n    serializer_class = AppNotificationSerializer\n    def get_queryset(self):\n        return AppNotification.objects.filter(user=self.request.user)\n    #  list all notifications (custom endpoint)\n    @action(detail=False, methods=['get'])\n    @api_exception_handler\n    def all_app_notification(self, request):\n        notifications = self.get_queryset()",
+        "detail": "notification.views.app_not_view",
+        "documentation": {}
+    },
+    {
+        "label": "register_device",
+        "kind": 2,
+        "importPath": "notification.views.push_notf_view",
+        "description": "notification.views.push_notf_view",
+        "peekOfCode": "def register_device(request):\n    token = request.data.get(\"token\")\n    if not token:\n        return JsonResponse({\"error\": \"token required\"}, status=400)\n    device, created = Device.objects.get_or_create(\n        token=token,\n        defaults={\"user\": request.user}\n    )\n    # if token exists but belongs to different user, reassign\n    if not created and device.user != request.user:",
+        "detail": "notification.views.push_notf_view",
+        "documentation": {}
+    },
+    {
+        "label": "test_push",
+        "kind": 2,
+        "importPath": "notification.views.push_notf_view",
+        "description": "notification.views.push_notf_view",
+        "peekOfCode": "def test_push(request):\n    token = request.data.get(\"token\")\n    if token:\n        response = PushNotification.send_to_token(\n            token, \"Test Notification\", \"Hi Brothers!\"\n        )\n        return JsonResponse({\"message_id\": response})\n    # send to all devices of the logged-in user\n    results = PushNotification.send_to_user(\n        request.user, \"Test Notification\", \"Push notification from Medihub is working!\"",
+        "detail": "notification.views.push_notf_view",
+        "documentation": {}
+    },
+    {
+        "label": "NotificationConfig",
+        "kind": 6,
+        "importPath": "notification.apps",
+        "description": "notification.apps",
+        "peekOfCode": "class NotificationConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'notification'",
+        "detail": "notification.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppNotificationSerializer",
+        "kind": 6,
+        "importPath": "notification.serializers",
+        "description": "notification.serializers",
+        "peekOfCode": "class AppNotificationSerializer(serializers.ModelSerializer):\n    user = serializers.PrimaryKeyRelatedField(queryset=User.objects.all())\n    class Meta:\n        model = AppNotification\n        fields = [\"user\", \"title\", \"message\",'is_read']",
+        "detail": "notification.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "AppNotificationService",
+        "kind": 6,
+        "importPath": "notification.servcies",
+        "description": "notification.servcies",
+        "peekOfCode": "class AppNotificationService:\n    @staticmethod\n    def create_notification(user, title=\"Undefined\", message=\"Undefined\"):\n        try:\n            notification = AppNotification.objects.create(\n                user=user,\n                title=title,\n                message=message\n            )\n            return ServiceResult(",
+        "detail": "notification.servcies",
+        "documentation": {}
+    },
+    {
+        "label": "PushNotification",
+        "kind": 6,
+        "importPath": "notification.servcies",
+        "description": "notification.servcies",
+        "peekOfCode": "class PushNotification:\n    '''send notification use all devices'''    \n    @staticmethod\n    def send_to_user(user, title, body):\n        from notification.models.psuh_not_model import Device\n        tokens = Device.objects.filter(user=user).values_list('token', flat=True)\n        results = []\n        for token in tokens:\n            try:\n                response = messaging.send(messaging.Message(",
+        "detail": "notification.servcies",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "notification.servcies",
+        "description": "notification.servcies",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n'''app notification -2 : Write services to creae notification'''\nclass AppNotificationService:\n    @staticmethod\n    def create_notification(user, title=\"Undefined\", message=\"Undefined\"):\n        try:\n            notification = AppNotification.objects.create(\n                user=user,\n                title=title,\n                message=message",
+        "detail": "notification.servcies",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "notification.urls",
+        "description": "notification.urls",
+        "peekOfCode": "urlpatterns = [\n    path('device/register/', register_device, name='register-device'),\n    path('push/test/', test_push, name='test-push'),\n    path('push/tester/', lambda req: render(req, 'push_test.html'), name='push-tester'),\n]",
+        "detail": "notification.urls",
         "documentation": {}
     },
     {
@@ -4369,6 +4864,33 @@
         "documentation": {}
     },
     {
+        "label": "APIResponse",
+        "kind": 6,
+        "importPath": "utilities.api_response",
+        "description": "utilities.api_response",
+        "peekOfCode": "class APIResponse:\n    @staticmethod\n    def success(message=\"Data retrieved successfully\", title=\"data\", data=None):\n        return {\n            \"success\": True,\n            \"message\": message,\n            title: data if data is not None else \"Data not provided in response\"\n        }\n    @staticmethod\n    def error(message=\"Error occurred in API response\"):",
+        "detail": "utilities.api_response",
+        "documentation": {}
+    },
+    {
+        "label": "api_exception_handler",
+        "kind": 2,
+        "importPath": "utilities.decorators",
+        "description": "utilities.decorators",
+        "peekOfCode": "def api_exception_handler(func):\n    def wrapper(*args, **kwargs):\n        try:\n            return func(*args, **kwargs)\n        except Exception as e:\n            #collent logg and trace\n            logger.error(\n                \"Api Error occured\",\n                extra={\n                    'error' : str(e),",
+        "detail": "utilities.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "utilities.decorators",
+        "description": "utilities.decorators",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n'''Customize decorator for api exception handling'''\ndef api_exception_handler(func):\n    def wrapper(*args, **kwargs):\n        try:\n            return func(*args, **kwargs)\n        except Exception as e:\n            #collent logg and trace\n            logger.error(\n                \"Api Error occured\",",
+        "detail": "utilities.decorators",
+        "documentation": {}
+    },
+    {
         "label": "RoleChoices",
         "kind": 6,
         "importPath": "utilities.enum",
@@ -4483,6 +5005,15 @@
         "description": "utilities.enum",
         "peekOfCode": "class EquipmentConditionChoices(models.TextChoices):\n    NEW = 'new', 'New'\n    GOOD = 'good', 'Good'\n    FAIR = 'fair', 'Fair'\n    POOR = 'poor', 'Poor'",
         "detail": "utilities.enum",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceResult",
+        "kind": 6,
+        "importPath": "utilities.resultl",
+        "description": "utilities.resultl",
+        "peekOfCode": "class ServiceResult:\n    success: bool\n    data: Optional[Any] = None\n    error: Optional[str] = None",
+        "detail": "utilities.resultl",
         "documentation": {}
     },
     {

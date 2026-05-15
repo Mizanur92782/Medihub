@@ -78,6 +78,7 @@ INSTALLED_APPS = [
     "profiles",
     "blog",
     "post",
+    "notification",
 ]
 
 AUTH_USER_MODEL = "authentication.User"

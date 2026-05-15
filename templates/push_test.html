@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Medihub Push Notification Test</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 20px; background: #f5f5f5; }
+    h2 { color: #2c3e50; }
+    button { padding: 10px 20px; margin: 8px 4px; cursor: pointer; border: none; border-radius: 6px; font-size: 14px; }
+    #getTokenBtn  { background: #3498db; color: white; }
+    #sendBtn      { background: #2ecc71; color: white; }
+    #registerBtn  { background: #9b59b6; color: white; }
+    textarea { width: 100%; height: 80px; margin-top: 8px; padding: 8px; border-radius: 6px; border: 1px solid #ccc; font-size: 13px; }
+    #log { background: #2c3e50; color: #ecf0f1; padding: 16px; border-radius: 8px; min-height: 120px; font-size: 13px; white-space: pre-wrap; margin-top: 16px; }
+    label { font-weight: bold; display: block; margin-top: 12px; }
+    .step { background: white; border-radius: 8px; padding: 16px; margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+
+<h2>🔔 Medihub Push Notification Tester</h2>
+
+<div class="step">
+  <label>Step 1 — Get FCM Token</label>
+  <p style="font-size:13px;color:#666;">Click the button below. Allow notifications when the browser asks.</p>
+  <button id="getTokenBtn">Get FCM Token</button>
+</div>
+
+<div class="step">
+  <label>JWT Token (paste your Bearer token here)</label>
+  <textarea id="jwtBox" placeholder="Paste your JWT access token here..."></textarea>
+</div>
+
+<div class="step">
+  <label>Your FCM Token (auto-filled after Step 1)</label>
+  <textarea id="tokenBox" placeholder="FCM token will appear here..."></textarea>
+  <button id="registerBtn">Register Device (Step 2)</button>
+  <button id="sendBtn">Send Test Push (Step 3)</button>
+</div>
+
+<div class="step">
+  <label>Log</label>
+  <div id="log">Waiting...</div>
+</div>
+
+<!-- Firebase SDK -->
+<script type="module">
+  import { initializeApp }        from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-messaging.js";
+
+  const firebaseConfig = {
+    apiKey:            "AIzaSyAG5hH0fVRp9cC8nFT6rpQfNgnhgk5Bt5Q",
+    authDomain:        "medihub-71ab9.firebaseapp.com",
+    projectId:         "medihub-71ab9",
+    storageBucket:     "medihub-71ab9.firebasestorage.app",
+    messagingSenderId: "531622546348",
+    appId:             "1:531622546348:web:1d4e61974244c14b7c8809",
+    measurementId:     "G-6QDVS0PE6Q"
+  };
+
+  // ⚠️  Replace this with your VAPID key from:
+  // Firebase Console → Project Settings → Cloud Messaging → Web Push certificates → Key pair
+  const VAPID_KEY = "BIuuIgqcBPM5mPHAxGpQ3Ud7WptO551kuuA5yNiYIk7SbpW7nTqtzpX3X7JqMoqZVbjXxFe2C4V9W0p2QNPJchY";
+  
+  const DJANGO_BASE = "http://localhost";
+  
+  const app       = initializeApp(firebaseConfig);
+  const messaging = getMessaging(app);
+  const log       = (msg) => { document.getElementById("log").textContent += "\n" + msg; };
+
+  // Listen for foreground messages
+  onMessage(messaging, (payload) => {
+    log("📩 Foreground message received!");
+    log("Title: " + payload.notification?.title);
+    log("Body:  " + payload.notification?.body);
+    alert(`🔔 ${payload.notification?.title}\n${payload.notification?.body}`);
+  });
+
+  // Step 1 — Get Token
+  document.getElementById("getTokenBtn").onclick = async () => {
+    try {
+      const permission = await Notification.requestPermission();
+      if (permission !== "granted") { log("❌ Notification permission denied."); return; }
+
+      const token = await getToken(messaging, { vapidKey: VAPID_KEY });
+      document.getElementById("tokenBox").value = token;
+      log("✅ FCM Token obtained:\n" + token);
+    } catch (err) {
+      log("❌ Error getting token: " + err.message);
+    }
+  };
+
+  const getHeaders = () => ({
+    "Content-Type": "application/json",
+    "Authorization": "Bearer " + document.getElementById("jwtBox").value.trim()
+  });
+
+  // Step 2 — Register device
+  document.getElementById("registerBtn").onclick = async () => {
+    const token = document.getElementById("tokenBox").value.trim();
+    if (!token) { log("⚠️  No token. Do Step 1 first."); return; }
+    if (!document.getElementById("jwtBox").value.trim()) { log("⚠️  No JWT token. Paste your JWT first."); return; }
+    try {
+      const res  = await fetch(`${DJANGO_BASE}/notification/device/register/`, {
+        method: "POST",
+        headers: getHeaders(),
+        body: JSON.stringify({ token })
+      });
+      const data = await res.json();
+      log("✅ Device registered: " + JSON.stringify(data));
+    } catch (err) {
+      log("❌ Register error: " + err.message);
+    }
+  };
+
+  // Step 3 — Send test push
+  document.getElementById("sendBtn").onclick = async () => {
+    const token = document.getElementById("tokenBox").value.trim();
+    if (!token) { log("⚠️  No token. Do Step 1 first."); return; }
+    if (!document.getElementById("jwtBox").value.trim()) { log("⚠️  No JWT token. Paste your JWT first."); return; }
+    try {
+      const res  = await fetch(`${DJANGO_BASE}/notification/push/test/`, {
+        method: "POST",
+        headers: getHeaders(),
+        body: JSON.stringify({ token })
+      });
+      const data = await res.json();
+      log("✅ Push sent! message_id: " + JSON.stringify(data));
+    } catch (err) {
+      log("❌ Send error: " + err.message);
+    }
+  };
+</script>
+
+</body>
+</html>

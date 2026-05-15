@@ -1,0 +1,15 @@
+.env (FIREBASE_CREDENTIALS_PATH)
+    ↓
+settings.py (reads credentials ✅) and strt push admin app
+    ↓
+models/psuh_not_model.py (add user FK to Device)
+    ↓
+migrations
+    ↓
+servcies.py (PushNotification.send)
+    ↓
+views/push_notf_view.py (register_device + send)
+    ↓
+urls.py ✅
+    ↓
+post/views.py (trigger on event)
