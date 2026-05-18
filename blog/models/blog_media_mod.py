@@ -1,6 +1,6 @@
 from django.db import models
 from blog.models.blog_post_mod import BlogPost
-from utilities.enum import BlogMediaTypeChoices
+from core.enum import BlogMediaTypeChoices
 
 
 class BlogMedia(models.Model):

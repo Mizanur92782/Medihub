@@ -4,7 +4,7 @@ from django.db import models
 class RoleChoices(models.TextChoices):
     ADMIN = 'admin', 'Admin'
     DOCTOR = 'doctor', 'Doctor'
-    USER = 'user', 'User'
+    REGULAR = 'regular', 'Regular'
     AMBULANCE = 'ambulance', 'Ambulance'
     PHARMACY = 'pharmacy', 'Pharmacy'
     DIAGNOSTIC = 'diagnostic', 'Diagnostic'

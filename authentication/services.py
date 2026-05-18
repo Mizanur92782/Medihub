@@ -4,6 +4,8 @@ import random
 from django.core.cache import cache
 from django.conf import settings
 from django.db import transaction, DatabaseError
+from django.contrib.auth import authenticate
+from rest_framework_simplejwt.tokens import RefreshToken
 from authentication.models import User
 from profiles.models.doctor_prof_mod import Doctor
 from profiles.models.user_prof_mod import RegularUserProfile
@@ -11,7 +13,7 @@ from profiles.models.blood_donor_mod import BloodDonor
 from profiles.models.ambulance_prof_mod import AmbulanceProfile
 from profiles.models.pharmacy_prof_mod import PharmacyProfile
 from profiles.models.diagnostic_prof_mod import DiagnosticProfile
-from .tasks import send_otp_email_task
+from .tasks import send_otp_email_task, send_password_reset_otp_task
 
 logger = logging.getLogger(__name__)
 
@@ -172,3 +174,105 @@ class ProfileCreationService:
         email, password = cls._extract_credentials(signup_data)
         logger.info('profile_creation_started', extra={'email': email, 'type': 'diagnostic'})
         return cls._base_create(email, password, signup_data, DiagnosticProfile, 'diagnostic_profile_creation')
+        
+
+class LoginService:
+
+    # ---------------------------
+    # 1. LOGIN — returns JWT tokens
+    # ---------------------------
+    @staticmethod
+    def login(email, password):
+        user = authenticate(username=email, password=password)
+
+        if user is None:
+            logger.warning('login_failed_invalid_credentials', extra={'email': email})
+            return {'status': False, 'message': 'Invalid email or password.'}
+
+        if not user.is_active:
+            logger.warning('login_failed_inactive_user', extra={'email': email})
+            return {'status': False, 'message': 'Account is inactive.'}
+
+        refresh = RefreshToken.for_user(user)
+        logger.info('login_success', extra={'email': email, 'user_id': user.id, 'user_type': user.user_type})
+
+        return {
+            'status':        True,
+            'access':        str(refresh.access_token),
+            'refresh':       str(refresh),
+            'user_type':     user.user_type,
+            'user_id':       user.id,
+        }
+
+
+class LogoutService:
+
+    # ---------------------------
+    # 1. LOGOUT — blacklists refresh token
+    # ---------------------------
+    @staticmethod
+    def logout(refresh_token: str):
+        try:
+            token = RefreshToken(refresh_token)
+            token.blacklist()
+            logger.info('logout_success')
+            return {'status': True, 'message': 'Logged out successfully.'}
+        except Exception:
+            logger.warning('logout_invalid_token', exc_info=True)
+            return {'status': False, 'message': 'Invalid or expired token.'}
+
+
+class PasswordResetService:
+
+    RESET_OTP_PREFIX  = 'auth:reset_otp'
+    RESET_EMAIL_PREFIX = 'auth:reset_email'
+
+    # ---------------------------
+    # 1. SEND RESET OTP
+    # ---------------------------
+    @classmethod
+    def send_reset_otp(cls, email):
+        if not User.objects.filter(email=email).exists():
+            # Return success to avoid email enumeration
+            logger.warning('password_reset_email_not_found', extra={'email': email})
+            return {'status': True, 'message': 'If this email exists, an OTP has been sent.'}
+
+        otp     = str(random.randint(100000, 999999))
+        timeout = getattr(settings, 'OTP_TIMEOUT', 300)
+
+        otp_key = hashlib.sha256(f'{cls.RESET_OTP_PREFIX}:{email}'.encode()).hexdigest()
+        cache.set(otp_key, hashlib.sha256(otp.encode()).hexdigest(), timeout=timeout)
+
+        send_password_reset_otp_task.delay(email, otp)
+        logger.info('password_reset_otp_sent', extra={'email': email})
+        return {'status': True, 'message': 'If this email exists, an OTP has been sent.'}
+
+    # ---------------------------
+    # 2. VERIFY OTP + SET NEW PASSWORD
+    # ---------------------------
+    @classmethod
+    def verify_otp_and_reset(cls, email, otp_input, new_password):
+        otp_key    = hashlib.sha256(f'{cls.RESET_OTP_PREFIX}:{email}'.encode()).hexdigest()
+        cached_otp = cache.get(otp_key)
+
+        if not cached_otp:
+            logger.warning('password_reset_otp_expired', extra={'email': email})
+            return {'status': False, 'message': 'OTP expired or not found.'}
+
+        if cached_otp != hashlib.sha256(otp_input.encode()).hexdigest():
+            logger.warning('password_reset_otp_invalid', extra={'email': email})
+            return {'status': False, 'message': 'Invalid OTP.'}
+
+        try:
+            user = User.objects.get(email=email)
+            user.set_password(new_password)
+            user.save(update_fields=['password'])
+            cache.delete(otp_key)
+            logger.info('password_reset_success', extra={'email': email, 'user_id': user.id})
+            return {'status': True, 'message': 'Password reset successfully.'}
+        except User.DoesNotExist:
+            logger.error('password_reset_user_not_found', extra={'email': email})
+            return {'status': False, 'message': 'User not found.'}
+        except Exception:
+            logger.critical('password_reset_unexpected_error', extra={'email': email}, exc_info=True)
+            return {'status': False, 'message': 'An unexpected error occurred.'}

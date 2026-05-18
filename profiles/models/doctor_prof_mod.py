@@ -1,7 +1,7 @@
 from django.db import models
 from django.conf import settings
 from location.models import District, Division, Union, Upozila
-from utilities.enum import GenderChoices, DayChoices
+from core.enum import GenderChoices, DayChoices
 
 
 class Specialization(models.Model):

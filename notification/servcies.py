@@ -1,6 +1,6 @@
 import logging
 from notification.models.app_notification_mod import AppNotification
-from utilities.resultl import ServiceResult
+from core.result import ServiceResult
 from firebase_admin import messaging
 logger = logging.getLogger(__name__)
 

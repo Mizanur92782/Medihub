@@ -3,7 +3,7 @@ from django.core.management.base import BaseCommand
 from authentication.models import User
 from profiles.models.ambulance_prof_mod import AmbulanceProfile
 from location.models import Division, District, Upozila
-from utilities.enum import RoleChoices
+from core.enum import RoleChoices
 from medihub import settings
 
 

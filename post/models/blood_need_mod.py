@@ -1,7 +1,7 @@
 from django.db import models
 from django.conf import settings
 from location.models import Division, District, Upozila
-from utilities.enum import BloodGroupChoices, GenderChoices, PostStatusChoices, UrgencyChoices
+from core.enum import BloodGroupChoices, GenderChoices, PostStatusChoices, UrgencyChoices
 
 
 class BloodNeedPost(models.Model):

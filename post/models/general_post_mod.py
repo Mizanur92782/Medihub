@@ -1,7 +1,7 @@
 from django.db import models
 from django.conf import settings
 from location.models import Division, District, Upozila
-from utilities.enum import PostStatusChoices
+from core.enum import PostStatusChoices
 
 
 class GeneralPost(models.Model):

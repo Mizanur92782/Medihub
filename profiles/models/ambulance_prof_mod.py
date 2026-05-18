@@ -2,7 +2,7 @@ from django.db import models
 from django.conf import settings
 from location.models import District, Division, Upozila
 
-from utilities.enum import AmbulanceTypeChoices
+from core.enum import AmbulanceTypeChoices
 
 
 class AmbulanceProfile(models.Model):

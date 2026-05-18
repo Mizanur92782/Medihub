@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
-from utilities.enum import RoleChoices
+from core.enum import RoleChoices
 
 
 class UserManager(BaseUserManager):
@@ -35,6 +35,7 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
+    user_type = models.CharField(max_length=20, choices=RoleChoices.choices, default=RoleChoices.REGULAR)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_blood_donor = models.BooleanField(default=False)

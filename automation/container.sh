@@ -152,13 +152,21 @@ read -p "Do you want to run makemigrations? (yes/no/exit/ignore): " answer
 if [[ "$answer" == "yes" ]]; then
     echo -e "${YELLOW}Running makemigrations...${NC}"
     loading "Detecting changes"
-    docker exec medihub_web1 python manage.py makemigrations
-    echo -e "${GREEN}✔ Makemigrations completed${NC}"
+    if docker compose -f Docker/docker-compose.yml run --rm migrate python manage.py makemigrations; then
+        echo -e "${GREEN}✔ Makemigrations completed${NC}"
+    else
+        echo -e "${RED}✘ Makemigrations failed${NC}"
+        exit 1
+    fi
 
     echo -e "${YELLOW}Running migrate...${NC}"
     loading "Applying migrations"
-    docker exec medihub_web1 python manage.py migrate
-    echo -e "${GREEN}✔ Migrate completed${NC}"
+    if docker compose -f Docker/docker-compose.yml run --rm migrate python manage.py migrate; then
+        echo -e "${GREEN}✔ Migrate completed${NC}"
+    else
+        echo -e "${RED}✘ Migrate failed${NC}"
+        exit 1
+    fi
 elif [[ "$answer" == "exit" ]]; then
     echo -e "${YELLOW}Exit from Shell${NC}"
     exit

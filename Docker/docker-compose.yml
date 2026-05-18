@@ -226,13 +226,13 @@ services:
         limits:
           cpus: "0.5"
           memory: 256M
-          
+
   rabbitmq:
     image: rabbitmq:3-management-alpine
     container_name: medihub_rabbitmq
     ports:
-      - "5672:5672"
-      - "15672:15672"
+      - "5671:5671"
+      - "15671:15671"
     environment:
       - RABBITMQ_DEFAULT_USER=medihub
       - RABBITMQ_DEFAULT_PASS=medihub
@@ -429,4 +429,3 @@ networks:
     driver: bridge
     driver_opts:
       com.docker.network.enable_ipv6: "false"
-      

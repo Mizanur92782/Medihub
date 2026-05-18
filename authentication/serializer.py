@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from utilities.enum import GenderChoices, BloodGroupChoices, AvailabilityChoices, AmbulanceTypeChoices
+from core.enum import GenderChoices, BloodGroupChoices, AvailabilityChoices, AmbulanceTypeChoices
 from authentication.models import User
 from location.models import Division, District, Upozila, Union
 
@@ -130,3 +130,40 @@ class DiagnosticSignUpSerializer(_BaseSignUpSerializer):
     license_number   = serializers.CharField(max_length=100)
     license_validity = serializers.DateField()
     address          = serializers.CharField(required=False, allow_blank=True)
+
+
+# --------------------------------------------------
+# LOGIN
+# --------------------------------------------------
+class LoginSerializer(serializers.Serializer):
+    email    = serializers.EmailField()
+    password = serializers.CharField(write_only=True)
+
+
+# --------------------------------------------------
+# PASSWORD RESET — step 1: request OTP
+# --------------------------------------------------
+class PasswordResetRequestSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+
+
+# --------------------------------------------------
+# PASSWORD RESET — step 2: verify OTP + new password
+# --------------------------------------------------
+class PasswordResetVerifySerializer(serializers.Serializer):
+    email        = serializers.EmailField()
+    otp          = serializers.CharField(max_length=6)
+    new_password = serializers.CharField(write_only=True, min_length=9)
+    new_password2 = serializers.CharField(write_only=True)
+
+    def validate(self, data):
+        if data['new_password'] != data['new_password2']:
+            raise serializers.ValidationError({'new_password': 'Passwords do not match.'})
+        return data
+
+
+# --------------------------------------------------
+# LOGOUT
+# --------------------------------------------------
+class LogoutSerializer(serializers.Serializer):
+    refresh = serializers.CharField()
