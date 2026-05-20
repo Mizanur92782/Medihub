@@ -5,7 +5,6 @@ from django.core.cache import cache
 from django.conf import settings
 from django.db import transaction, DatabaseError
 from django.contrib.auth import authenticate
-from authentication.cache_keys import UserSignupCacheKeys
 from cache.manager import CacheManager
 from cache.ttl import CacheTTL
 from rest_framework_simplejwt.tokens import RefreshToken
@@ -22,31 +21,56 @@ logger = logging.getLogger(__name__)
 
 
 class AuthEmailService:
+    CACHE_PREFIX = 'signup:email_verification'
+    SIGNUP_DATA_PREFIX = 'signup:data'
 
-    
-    # ---------------------------
-    # 2. OTP GENERATOR
-    # ---------------------------
     @staticmethod
     def generate_otp():
         return str(random.randint(100000, 999999))
 
-    @classmethod
-    def hash_otp(cls, otp):
-        return hashlib.sha256(otp.encode()).hexdigest()
+    @staticmethod
+    def hash_otp(value):
+        return hashlib.sha256(value.encode()).hexdigest()
 
-    # ---------------------------
-    # 3. SET OTP + CACHE SIGNUP DATA + CELERY EMAIL
-    # ---------------------------
     @classmethod
-    def set_register_otp_in_cache(cls, email, signup_data: dict):
-        otp     =cls.hash_otp(cls.generate_otp())
-        timeout = CacheTTL.MEDIUM
-        key = UserSignupCacheKeys.user_register_key(email)
-        CacheManager.SetCache(key, otp, timeout)
+    def make_auth_cache_key(cls, prefix, email):
+        return hashlib.sha256(f'{prefix}:{email}'.encode()).hexdigest()
+
+    @classmethod
+    def set_signup_data(cls, email, signup_data, user_type):
+        key = cls.make_auth_cache_key(cls.SIGNUP_DATA_PREFIX, email)
+        cache_value = {**signup_data, 'user_type': user_type}
+        CacheManager.SetCache(key, cache_value, CacheTTL.MEDIUM)
+        logger.info('signup_data_cached', extra={'email': email, 'user_type': user_type})
+        return {'success': True}
+
+    @classmethod
+    def set_otp_in_cache(cls, email):
+        otp = cls.generate_otp()
+        key = cls.make_auth_cache_key(cls.CACHE_PREFIX, email)
+        CacheManager.SetCache(key, cls.hash_otp(otp), CacheTTL.MEDIUM)
+
         send_otp_email_task.delay(email, otp)
-        logger.info('otp_set', extra={'email': email, 'expires_in': timeout})
-        return {'email': email, 'expires_in': timeout, 'message': 'OTP sent to email'}
+        logger.info('otp_set', extra={'email': email, 'expires_in': CacheTTL.MEDIUM})
+        return {'email': email, 'expires_in': CacheTTL.MEDIUM, 'message': 'OTP sent to email'}
+    
+    @classmethod
+    def verify_otp(cls, email, input_otp):
+        key = cls.make_auth_cache_key(cls.CACHE_PREFIX, email)
+        cached = CacheManager.GetCache(key)
+
+        if not cached['success']:
+            return {'success': False, 'message': 'OTP expired or not found'}
+
+        if cached['data'] == cls.hash_otp(input_otp):
+            return {'success': True, 'message': 'OTP verified successfully'}
+
+        return {'success': False, 'message': 'Invalid OTP'}
+
+
+
+
+
 
     # ---------------------------
     # 4. GET / INVALIDATE OTP
@@ -54,14 +78,15 @@ class AuthEmailService:
     @classmethod
     def get_otp(cls, email):
         key = cls.make_auth_cache_key(cls.CACHE_PREFIX, email)
-        return cache.get(key)
+        cached = CacheManager.GetCache(key)
+        return cached['data'] if cached['success'] else None
 
     @classmethod
     def invalidate_otp(cls, email):
         otp_key  = cls.make_auth_cache_key(cls.CACHE_PREFIX, email)
         data_key = cls.make_auth_cache_key(cls.SIGNUP_DATA_PREFIX, email)
-        cache.delete(otp_key)
-        cache.delete(data_key)
+        CacheManager.DeleteCache(otp_key)
+        CacheManager.DeleteCache(data_key)
 
     # ---------------------------
     # 5. GET SIGNUP DATA
@@ -69,22 +94,18 @@ class AuthEmailService:
     @classmethod
     def get_signup_data(cls, email):
         key = cls.make_auth_cache_key(cls.SIGNUP_DATA_PREFIX, email)
-        return cache.get(key)
+        cached = CacheManager.GetCache(key)
+        return cached['data'] if cached['success'] else None
 
     # ---------------------------
     # 6. VERIFY OTP
     # ---------------------------
-    @classmethod
-    def verify_otp(cls, email, input_otp):
-        cached_otp = cls.get_otp(email)
+    
 
-        if not cached_otp:
-            return {'status': False, 'message': 'OTP expired or not found'}
 
-        if cached_otp == cls.hash_otp(input_otp):
-            return {'status': True, 'message': 'OTP verified successfully'}
 
-        return {'status': False, 'message': 'Invalid OTP'}
+
+
 
 
 

@@ -1,4 +1,5 @@
 import logging
+from core.enum import GenderChoices
 from rest_framework import status
 from rest_framework.viewsets import GenericViewSet
 from rest_framework.decorators import action
@@ -26,24 +27,6 @@ from authentication.services import AuthEmailService, ProfileCreationService, Lo
 
 logger = logging.getLogger(__name__)
 
-
-def _form_params(*fields):
-    """Build openapi form parameters from (name, type, required, description) tuples."""
-    return [
-        openapi.Parameter(
-            name, openapi.IN_FORM,
-            type=t,
-            required=req,
-            description=desc,
-        )
-        for name, t, req, desc in fields
-    ]
-
-
-_verify_params = _form_params(
-    ('email', openapi.TYPE_STRING, True,  'Registered email address'),
-    ('otp',   openapi.TYPE_STRING, True,  '6-digit OTP sent to email'),
-)
 
 
 @method_decorator(csrf_exempt, name='dispatch')
@@ -82,24 +65,242 @@ class SignupViewSet(GenericViewSet):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         try:
-            AuthEmailService.set_otp(email, serializer.to_cache(user_type))
+            AuthEmailService.set_register_otp_in_cache(email)
             logger.info(f'{user_type}_register_otp_sent', extra={'email': email})
             return Response({'message': 'OTP sent to email. Verify to complete registration.'}, status=status.HTTP_200_OK)
         except Exception:
             logger.error(f'{user_type}_register_otp_send_failed', extra={'email': email}, exc_info=True)
             return Response({'error': 'Failed to send OTP.'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+
+
+
+
+
+    # --------------------------------------------------
+    # REGISTER ACTIONS — one per user type
+    # --------------------------------------------------
+    @swagger_auto_schema(
+        tags=['Signup'], 
+        operation_summary='Step 1 — Doctor: submit data & send OTP',
+        consumes=['multipart/form-data'],
+        manual_parameters=[
+            openapi.Parameter('email', openapi.IN_FORM, description='Email address', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('password', openapi.IN_FORM, description='Password', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('password2', openapi.IN_FORM, description='Confirm password', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('first_name', openapi.IN_FORM, description='First name', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('middle_name', openapi.IN_FORM, description='Middle name', type=openapi.TYPE_STRING, required=False),
+            openapi.Parameter('last_name', openapi.IN_FORM, description='Last name', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('gender', openapi.IN_FORM, description='Select gender', type=openapi.TYPE_STRING, enum=[choice[0] for choice in GenderChoices.choices], required=True),
+            openapi.Parameter('contact_number', openapi.IN_FORM, description='Contact number', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('division', openapi.IN_FORM, description='Division ID', type=openapi.TYPE_INTEGER, required=True),
+            openapi.Parameter('district', openapi.IN_FORM, description='District ID', type=openapi.TYPE_INTEGER, required=True),
+            openapi.Parameter('upozila', openapi.IN_FORM, description='Upozila ID', type=openapi.TYPE_INTEGER, required=True),
+            openapi.Parameter('union', openapi.IN_FORM, description='Union ID', type=openapi.TYPE_INTEGER, required=True),
+        ],
+        responses={200: 'OTP sent', 400: 'Validation error', 500: 'Server error'},
+    )
+    
+    @action(detail=False, methods=['post'], url_path='doctor/register')
+    def doctor_register(self, request):
+        return self._register(request, DoctorSignUPSerializer, 'doctor')
+
+
+
+
+
+
+   
+    #-------------------------------------------------
+    # Regular user registration
+    #----------------------------------------------------
+    @swagger_auto_schema(
+        tags=['Signup'], 
+        operation_summary='Step 1 — User: submit data & send OTP',
+        consumes=['multipart/form-data'],
+        manual_parameters=[
+            openapi.Parameter('email', openapi.IN_FORM, description='Email address', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('password', openapi.IN_FORM, description='Password', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('password2', openapi.IN_FORM, description='Confirm password', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('first_name', openapi.IN_FORM, description='First name', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('last_name', openapi.IN_FORM, description='Last name', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('gender', openapi.IN_FORM, description='Select gender', type=openapi.TYPE_STRING, enum=[choice[0] for choice in GenderChoices.choices], required=True),
+            openapi.Parameter('contact_number', openapi.IN_FORM, description='Contact number', type=openapi.TYPE_STRING, required=False),
+            openapi.Parameter('date_of_birth', openapi.IN_FORM, description='YYYY-MM-DD', type=openapi.TYPE_STRING, required=False),
+            openapi.Parameter('address', openapi.IN_FORM, description='Address', type=openapi.TYPE_STRING, required=False),
+            openapi.Parameter('division', openapi.IN_FORM, description='Division ID', type=openapi.TYPE_INTEGER, required=True),
+            openapi.Parameter('district', openapi.IN_FORM, description='District ID', type=openapi.TYPE_INTEGER, required=True),
+            openapi.Parameter('upozila', openapi.IN_FORM, description='Upozila ID', type=openapi.TYPE_INTEGER, required=True),
+        ],
+        responses={200: 'OTP sent', 400: 'Validation error', 500: 'Server error'},
+    )
+    @action(detail=False, methods=['post'], url_path='user/register')
+    def user_register(self, request):
+        return self._register(request, UserSignUpSerializer, 'user')
+
+
+
+
+   
+
+
+
+
+    #====================================== 
+    @swagger_auto_schema(
+        tags=['Signup'], operation_summary='Step 1 — Blood Donor: submit data & send OTP',
+        consumes=['multipart/form-data'],
+        manual_parameters=[
+            openapi.Parameter('email', openapi.IN_FORM, description='Email address', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('password', openapi.IN_FORM, description='Password', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('password2', openapi.IN_FORM, description='Confirm password', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('first_name', openapi.IN_FORM, description='First name', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('last_name', openapi.IN_FORM, description='Last name', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('gender', openapi.IN_FORM, description='Select gender', type=openapi.TYPE_STRING, enum=[choice[0] for choice in GenderChoices.choices], required=True),
+            openapi.Parameter('date_of_birth', openapi.IN_FORM, description='YYYY-MM-DD', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('contact_number', openapi.IN_FORM, description='Contact number', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('blood_group', openapi.IN_FORM, description='A+ / A- / B+ / B- / AB+ / AB- / O+ / O-', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('availability', openapi.IN_FORM, description='available / unavailable', type=openapi.TYPE_STRING, required=False),
+            openapi.Parameter('last_donated', openapi.IN_FORM, description='YYYY-MM-DD', type=openapi.TYPE_STRING, required=False),
+            openapi.Parameter('address', openapi.IN_FORM, description='Address', type=openapi.TYPE_STRING, required=False),
+            openapi.Parameter('division', openapi.IN_FORM, description='Division ID', type=openapi.TYPE_INTEGER, required=True),
+            openapi.Parameter('district', openapi.IN_FORM, description='District ID', type=openapi.TYPE_INTEGER, required=True),
+            openapi.Parameter('upozila', openapi.IN_FORM, description='Upozila ID', type=openapi.TYPE_INTEGER, required=True),
+        ],
+        responses={200: 'OTP sent', 400: 'Validation error', 500: 'Server error'},
+    )
+    @action(detail=False, methods=['post'], url_path='blood-donor/register')
+    def blood_donor_register(self, request):
+        return self._register(request, BloodDonorSignUpSerializer, 'blood_donor')
+
+
+
+
+
+
+
+
+
+
+    #======================================= Ambulance=====================
+    @swagger_auto_schema(
+        tags=['Signup'], operation_summary='Step 1 — Ambulance: submit data & send OTP',
+        consumes=['multipart/form-data'],
+        manual_parameters=[
+            openapi.Parameter('email', openapi.IN_FORM, description='Email address', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('password', openapi.IN_FORM, description='Password', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('password2', openapi.IN_FORM, description='Confirm password', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('owner_name', openapi.IN_FORM, description='Owner full name', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('contact_number', openapi.IN_FORM, description='Contact number', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('ambulance_type', openapi.IN_FORM, description='basic / advanced / icu', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('vehicle_number', openapi.IN_FORM, description='Vehicle registration number', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('address', openapi.IN_FORM, description='Address', type=openapi.TYPE_STRING, required=False),
+            openapi.Parameter('division', openapi.IN_FORM, description='Division ID', type=openapi.TYPE_INTEGER, required=True),
+            openapi.Parameter('district', openapi.IN_FORM, description='District ID', type=openapi.TYPE_INTEGER, required=True),
+            openapi.Parameter('upozila', openapi.IN_FORM, description='Upozila ID', type=openapi.TYPE_INTEGER, required=True),
+        ],
+        responses={200: 'OTP sent', 400: 'Validation error', 500: 'Server error'},
+    )
+    @action(detail=False, methods=['post'], url_path='ambulance/register')
+    def ambulance_register(self, request):
+        return self._register(request, AmbulanceSignUpSerializer, 'ambulance')
+
+
+
+
+
+    #-================================ Pharmacy========================
+    @swagger_auto_schema(
+        tags=['Signup'], operation_summary='Step 1 — Pharmacy: submit data & send OTP',
+        consumes=['multipart/form-data'],
+        manual_parameters=[
+            openapi.Parameter('email', openapi.IN_FORM, description='Email address', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('password', openapi.IN_FORM, description='Password', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('password2', openapi.IN_FORM, description='Confirm password', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('pharmacy_name', openapi.IN_FORM, description='Pharmacy name', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('owner_name', openapi.IN_FORM, description='Owner full name', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('contact_number', openapi.IN_FORM, description='Contact number', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('license_number', openapi.IN_FORM, description='License number', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('license_validity', openapi.IN_FORM, description='YYYY-MM-DD', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('address', openapi.IN_FORM, description='Address', type=openapi.TYPE_STRING, required=False),
+            openapi.Parameter('division', openapi.IN_FORM, description='Division ID', type=openapi.TYPE_INTEGER, required=True),
+            openapi.Parameter('district', openapi.IN_FORM, description='District ID', type=openapi.TYPE_INTEGER, required=True),
+            openapi.Parameter('upozila', openapi.IN_FORM, description='Upozila ID', type=openapi.TYPE_INTEGER, required=True),
+        ],
+        responses={200: 'OTP sent', 400: 'Validation error', 500: 'Server error'},
+    )
+    @action(detail=False, methods=['post'], url_path='pharmacy/register')
+    def pharmacy_register(self, request):
+        return self._register(request, PharmacySignUpSerializer, 'pharmacy')
+
+
+
+
+    
+    #========================== Diagnostic========================
+    @swagger_auto_schema(
+        tags=['Signup'], operation_summary='Step 1 — Diagnostic: submit data & send OTP',
+        consumes=['multipart/form-data'],
+        manual_parameters=[
+            openapi.Parameter('email', openapi.IN_FORM, description='Email address', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('password', openapi.IN_FORM, description='Password', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('password2', openapi.IN_FORM, description='Confirm password', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('diagnostic_name', openapi.IN_FORM, description='Diagnostic center name', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('owner_name', openapi.IN_FORM, description='Owner full name', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('contact_number', openapi.IN_FORM, description='Contact number', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('license_number', openapi.IN_FORM, description='License number', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('license_validity', openapi.IN_FORM, description='YYYY-MM-DD', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('address', openapi.IN_FORM, description='Address', type=openapi.TYPE_STRING, required=False),
+            openapi.Parameter('division', openapi.IN_FORM, description='Division ID', type=openapi.TYPE_INTEGER, required=True),
+            openapi.Parameter('district', openapi.IN_FORM, description='District ID', type=openapi.TYPE_INTEGER, required=True),
+            openapi.Parameter('upozila', openapi.IN_FORM, description='Upozila ID', type=openapi.TYPE_INTEGER, required=True),
+        ],
+        responses={200: 'OTP sent', 400: 'Validation error', 500: 'Server error'},
+    )
+    @action(detail=False, methods=['post'], url_path='diagnostic/register')
+    def diagnostic_register(self, request):
+        return self._register(request, DiagnosticSignUpSerializer, 'diagnostic')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # --------------------------------------------------
     # SINGLE VERIFY — detects user_type from cache
     # --------------------------------------------------
     @swagger_auto_schema(
-        tags=['Signup'],
+        tags=['Verify OTP'],
         operation_summary='Step 2 — Verify OTP & create profile (all user types)',
         operation_description=(
             'Send email + OTP. The user_type is stored in cache during registration '
             'and used here to create the correct profile atomically.'
         ),
-        manual_parameters=_verify_params,
+        manual_parameters=[
+            openapi.Parameter('email', openapi.IN_FORM, description='Registered email address', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('otp', openapi.IN_FORM, description='6-digit OTP sent to email', type=openapi.TYPE_STRING, required=True),
+        ],
         consumes=['multipart/form-data'],
         responses={201: 'Registered', 400: 'Invalid OTP / session expired', 500: 'Server error'},
     )
@@ -141,160 +342,16 @@ class SignupViewSet(GenericViewSet):
             logger.critical('verify_unexpected_error', extra={'email': email, 'user_type': user_type}, exc_info=True)
             return Response({'error': 'An unexpected error occurred.'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-    # --------------------------------------------------
-    # REGISTER ACTIONS — one per user type
-    # --------------------------------------------------
-    @swagger_auto_schema(
-        tags=['Doctor Signup'], operation_summary='Step 1 — Doctor: submit data & send OTP',
-        consumes=['multipart/form-data'],
-        manual_parameters=_form_params(
-            ('email',          openapi.TYPE_STRING, True,  'Email address'),
-            ('password',       openapi.TYPE_STRING, True,  'Password'),
-            ('password2',      openapi.TYPE_STRING, True,  'Confirm password'),
-            ('first_name',     openapi.TYPE_STRING, True,  'First name'),
-            ('middle_name',    openapi.TYPE_STRING, False, 'Middle name'),
-            ('last_name',      openapi.TYPE_STRING, True,  'Last name'),
-            ('gender',         openapi.TYPE_STRING, True,  'male / female / other'),
-            ('contact_number', openapi.TYPE_STRING, True,  'Contact number'),
-            ('division',       openapi.TYPE_INTEGER, True, 'Division ID'),
-            ('district',       openapi.TYPE_INTEGER, True, 'District ID'),
-            ('upozila',        openapi.TYPE_INTEGER, True, 'Upozila ID'),
-            ('union',          openapi.TYPE_INTEGER, True, 'Union ID'),
-        ),
-        responses={200: 'OTP sent', 400: 'Validation error', 500: 'Server error'},
-    )
-    @action(detail=False, methods=['post'], url_path='doctor/register')
-    def doctor_register(self, request):
-        return self._register(request, DoctorSignUPSerializer, 'doctor')
-
-    @swagger_auto_schema(
-        tags=['User Signup'], operation_summary='Step 1 — User: submit data & send OTP',
-        consumes=['multipart/form-data'],
-        manual_parameters=_form_params(
-            ('email',          openapi.TYPE_STRING,  True,  'Email address'),
-            ('password',       openapi.TYPE_STRING,  True,  'Password'),
-            ('password2',      openapi.TYPE_STRING,  True,  'Confirm password'),
-            ('first_name',     openapi.TYPE_STRING,  True,  'First name'),
-            ('last_name',      openapi.TYPE_STRING,  True,  'Last name'),
-            ('gender',         openapi.TYPE_STRING,  True,  'male / female / other'),
-            ('contact_number', openapi.TYPE_STRING,  False, 'Contact number'),
-            ('date_of_birth',  openapi.TYPE_STRING,  False, 'YYYY-MM-DD'),
-            ('address',        openapi.TYPE_STRING,  False, 'Address'),
-            ('division',       openapi.TYPE_INTEGER, True,  'Division ID'),
-            ('district',       openapi.TYPE_INTEGER, True,  'District ID'),
-            ('upozila',        openapi.TYPE_INTEGER, True,  'Upozila ID'),
-        ),
-        responses={200: 'OTP sent', 400: 'Validation error', 500: 'Server error'},
-    )
-    @action(detail=False, methods=['post'], url_path='user/register')
-    def user_register(self, request):
-        return self._register(request, UserSignUpSerializer, 'user')
-
-    @swagger_auto_schema(
-        tags=['Blood Donor Signup'], operation_summary='Step 1 — Blood Donor: submit data & send OTP',
-        consumes=['multipart/form-data'],
-        manual_parameters=_form_params(
-            ('email',          openapi.TYPE_STRING,  True,  'Email address'),
-            ('password',       openapi.TYPE_STRING,  True,  'Password'),
-            ('password2',      openapi.TYPE_STRING,  True,  'Confirm password'),
-            ('first_name',     openapi.TYPE_STRING,  True,  'First name'),
-            ('last_name',      openapi.TYPE_STRING,  True,  'Last name'),
-            ('gender',         openapi.TYPE_STRING,  True,  'male / female / other'),
-            ('date_of_birth',  openapi.TYPE_STRING,  True,  'YYYY-MM-DD'),
-            ('contact_number', openapi.TYPE_STRING,  True,  'Contact number'),
-            ('blood_group',    openapi.TYPE_STRING,  True,  'A+ / A- / B+ / B- / AB+ / AB- / O+ / O-'),
-            ('availability',   openapi.TYPE_STRING,  False, 'available / unavailable'),
-            ('last_donated',   openapi.TYPE_STRING,  False, 'YYYY-MM-DD'),
-            ('address',        openapi.TYPE_STRING,  False, 'Address'),
-            ('division',       openapi.TYPE_INTEGER, True,  'Division ID'),
-            ('district',       openapi.TYPE_INTEGER, True,  'District ID'),
-            ('upozila',        openapi.TYPE_INTEGER, True,  'Upozila ID'),
-        ),
-        responses={200: 'OTP sent', 400: 'Validation error', 500: 'Server error'},
-    )
-    @action(detail=False, methods=['post'], url_path='blood-donor/register')
-    def blood_donor_register(self, request):
-        return self._register(request, BloodDonorSignUpSerializer, 'blood_donor')
-
-    @swagger_auto_schema(
-        tags=['Ambulance Signup'], operation_summary='Step 1 — Ambulance: submit data & send OTP',
-        consumes=['multipart/form-data'],
-        manual_parameters=_form_params(
-            ('email',          openapi.TYPE_STRING,  True,  'Email address'),
-            ('password',       openapi.TYPE_STRING,  True,  'Password'),
-            ('password2',      openapi.TYPE_STRING,  True,  'Confirm password'),
-            ('owner_name',     openapi.TYPE_STRING,  True,  'Owner full name'),
-            ('contact_number', openapi.TYPE_STRING,  True,  'Contact number'),
-            ('ambulance_type', openapi.TYPE_STRING,  True,  'basic / advanced / icu'),
-            ('vehicle_number', openapi.TYPE_STRING,  True,  'Vehicle registration number'),
-            ('address',        openapi.TYPE_STRING,  False, 'Address'),
-            ('division',       openapi.TYPE_INTEGER, True,  'Division ID'),
-            ('district',       openapi.TYPE_INTEGER, True,  'District ID'),
-            ('upozila',        openapi.TYPE_INTEGER, True,  'Upozila ID'),
-        ),
-        responses={200: 'OTP sent', 400: 'Validation error', 500: 'Server error'},
-    )
-    @action(detail=False, methods=['post'], url_path='ambulance/register')
-    def ambulance_register(self, request):
-        return self._register(request, AmbulanceSignUpSerializer, 'ambulance')
-
-    @swagger_auto_schema(
-        tags=['Pharmacy Signup'], operation_summary='Step 1 — Pharmacy: submit data & send OTP',
-        consumes=['multipart/form-data'],
-        manual_parameters=_form_params(
-            ('email',            openapi.TYPE_STRING,  True,  'Email address'),
-            ('password',         openapi.TYPE_STRING,  True,  'Password'),
-            ('password2',        openapi.TYPE_STRING,  True,  'Confirm password'),
-            ('pharmacy_name',    openapi.TYPE_STRING,  True,  'Pharmacy name'),
-            ('owner_name',       openapi.TYPE_STRING,  True,  'Owner full name'),
-            ('contact_number',   openapi.TYPE_STRING,  True,  'Contact number'),
-            ('license_number',   openapi.TYPE_STRING,  True,  'License number'),
-            ('license_validity', openapi.TYPE_STRING,  True,  'YYYY-MM-DD'),
-            ('address',          openapi.TYPE_STRING,  False, 'Address'),
-            ('division',         openapi.TYPE_INTEGER, True,  'Division ID'),
-            ('district',         openapi.TYPE_INTEGER, True,  'District ID'),
-            ('upozila',          openapi.TYPE_INTEGER, True,  'Upozila ID'),
-        ),
-        responses={200: 'OTP sent', 400: 'Validation error', 500: 'Server error'},
-    )
-    @action(detail=False, methods=['post'], url_path='pharmacy/register')
-    def pharmacy_register(self, request):
-        return self._register(request, PharmacySignUpSerializer, 'pharmacy')
-
-    @swagger_auto_schema(
-        tags=['Diagnostic Signup'], operation_summary='Step 1 — Diagnostic: submit data & send OTP',
-        consumes=['multipart/form-data'],
-        manual_parameters=_form_params(
-            ('email',            openapi.TYPE_STRING,  True,  'Email address'),
-            ('password',         openapi.TYPE_STRING,  True,  'Password'),
-            ('password2',        openapi.TYPE_STRING,  True,  'Confirm password'),
-            ('diagnostic_name',  openapi.TYPE_STRING,  True,  'Diagnostic center name'),
-            ('owner_name',       openapi.TYPE_STRING,  True,  'Owner full name'),
-            ('contact_number',   openapi.TYPE_STRING,  True,  'Contact number'),
-            ('license_number',   openapi.TYPE_STRING,  True,  'License number'),
-            ('license_validity', openapi.TYPE_STRING,  True,  'YYYY-MM-DD'),
-            ('address',          openapi.TYPE_STRING,  False, 'Address'),
-            ('division',         openapi.TYPE_INTEGER, True,  'Division ID'),
-            ('district',         openapi.TYPE_INTEGER, True,  'District ID'),
-            ('upozila',          openapi.TYPE_INTEGER, True,  'Upozila ID'),
-        ),
-        responses={200: 'OTP sent', 400: 'Validation error', 500: 'Server error'},
-    )
-    @action(detail=False, methods=['post'], url_path='diagnostic/register')
-    def diagnostic_register(self, request):
-        return self._register(request, DiagnosticSignUpSerializer, 'diagnostic')
 
 
-_email_params = _form_params(
-    ('email', openapi.TYPE_STRING, True, 'Registered email address'),
-)
 
-_reset_verify_params = _form_params(
-    ('email',         openapi.TYPE_STRING, True,  'Registered email address'),
-    ('otp',           openapi.TYPE_STRING, True,  '6-digit OTP sent to email'),
-    ('new_password',  openapi.TYPE_STRING, True,  'New password (min 9 chars)'),
-    ('new_password2', openapi.TYPE_STRING, True,  'Confirm new password'),
-)
+
+
+
+
+
+
+
 
 
 @method_decorator(csrf_exempt, name='dispatch')
@@ -305,10 +362,10 @@ class LoginViewSet(GenericViewSet):
         tags=['Auth'],
         operation_summary='Login — returns JWT access + refresh tokens',
         consumes=['multipart/form-data'],
-        manual_parameters=_form_params(
-            ('email',    openapi.TYPE_STRING, True, 'Email address'),
-            ('password', openapi.TYPE_STRING, True, 'Password'),
-        ),
+        manual_parameters=[
+            openapi.Parameter('email', openapi.IN_FORM, description='Email address', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('password', openapi.IN_FORM, description='Password', type=openapi.TYPE_STRING, required=True),
+        ],
         responses={200: 'Tokens returned', 400: 'Validation error', 401: 'Invalid credentials'},
     )
     @action(detail=False, methods=['post'], url_path='login')
@@ -337,9 +394,9 @@ class LogoutViewSet(GenericViewSet):
         tags=['Auth'],
         operation_summary='Logout — blacklists the refresh token',
         consumes=['multipart/form-data'],
-        manual_parameters=_form_params(
-            ('refresh', openapi.TYPE_STRING, True, 'Refresh token to blacklist'),
-        ),
+        manual_parameters=[
+            openapi.Parameter('refresh', openapi.IN_FORM, description='Refresh token to blacklist', type=openapi.TYPE_STRING, required=True),
+        ],
         responses={200: 'Logged out', 400: 'Invalid token'},
     )
     @action(detail=False, methods=['post'], url_path='logout')
@@ -368,7 +425,9 @@ class PasswordResetViewSet(GenericViewSet):
         tags=['Password Reset'],
         operation_summary='Step 1 — Send password reset OTP',
         consumes=['multipart/form-data'],
-        manual_parameters=_email_params,
+        manual_parameters=[
+            openapi.Parameter('email', openapi.IN_FORM, description='Registered email address', type=openapi.TYPE_STRING, required=True),
+        ],
         responses={200: 'OTP sent', 400: 'Validation error'},
     )
     @action(detail=False, methods=['post'], url_path='send-otp')
@@ -388,7 +447,12 @@ class PasswordResetViewSet(GenericViewSet):
         tags=['Password Reset'],
         operation_summary='Step 2 — Verify OTP and set new password',
         consumes=['multipart/form-data'],
-        manual_parameters=_reset_verify_params,
+        manual_parameters=[
+            openapi.Parameter('email', openapi.IN_FORM, description='Registered email address', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('otp', openapi.IN_FORM, description='6-digit OTP sent to email', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('new_password', openapi.IN_FORM, description='New password (min 9 chars)', type=openapi.TYPE_STRING, required=True),
+            openapi.Parameter('new_password2', openapi.IN_FORM, description='Confirm new password', type=openapi.TYPE_STRING, required=True),
+        ],
         responses={200: 'Password reset', 400: 'Invalid OTP or validation error'},
     )
     @action(detail=False, methods=['post'], url_path='verify-otp')
