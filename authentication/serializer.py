@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from core.enum import GenderChoices, BloodGroupChoices, AvailabilityChoices, AmbulanceTypeChoices
+from core.enum import GenderChoices, BloodGroupChoices, AvailabilityChoices, AmbulanceTypeChoices, RoleChoices
 from authentication.models import User
 from location.models import Division, District, Upozila, Union
 
@@ -12,10 +12,11 @@ class _BaseSignUpSerializer(serializers.Serializer):
     email     = serializers.EmailField()
     password  = serializers.CharField(write_only=True)
     password2 = serializers.CharField(write_only=True)
+    user_type = serializers.ChoiceField(choices=RoleChoices)
 
-    division = serializers.PrimaryKeyRelatedField(queryset=Division.objects.all())
-    district = serializers.PrimaryKeyRelatedField(queryset=District.objects.none())
-    upozila  = serializers.PrimaryKeyRelatedField(queryset=Upozila.objects.none())
+    division = serializers.PrimaryKeyRelatedField(queryset=Division.objects.all(), required=False, allow_null=True)
+    district = serializers.PrimaryKeyRelatedField(queryset=District.objects.none(), required=False, allow_null=True)
+    upozila  = serializers.PrimaryKeyRelatedField(queryset=Upozila.objects.none(), required=False, allow_null=True)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -54,8 +55,10 @@ class DoctorSignUPSerializer(_BaseSignUpSerializer):
     middle_name    = serializers.CharField(max_length=100, required=False, allow_blank=True)
     last_name      = serializers.CharField(max_length=100)
     gender         = serializers.ChoiceField(choices=GenderChoices.choices)
-    contact_number = serializers.CharField(max_length=15)
-    union          = serializers.PrimaryKeyRelatedField(queryset=Union.objects.none())
+    contact_number   = serializers.CharField(max_length=15, required=False, allow_blank=True)
+    union            = serializers.PrimaryKeyRelatedField(queryset=Union.objects.none(), required=False, allow_null=True)
+    license_number   = serializers.CharField(max_length=100)
+    license_validity = serializers.DateField()
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -148,11 +151,19 @@ class PasswordResetRequestSerializer(serializers.Serializer):
 
 
 # --------------------------------------------------
-# PASSWORD RESET — step 2: verify OTP + new password
+# PASSWORD RESET — step 2: verify OTP
 # --------------------------------------------------
 class PasswordResetVerifySerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    otp   = serializers.CharField(max_length=6)
+
+
+# --------------------------------------------------
+# PASSWORD RESET — step 3: reset password with token
+# --------------------------------------------------
+class PasswordResetConfirmSerializer(serializers.Serializer):
     email        = serializers.EmailField()
-    otp          = serializers.CharField(max_length=6)
+    reset_token  = serializers.CharField()
     new_password = serializers.CharField(write_only=True, min_length=9)
     new_password2 = serializers.CharField(write_only=True)
 
@@ -163,7 +174,18 @@ class PasswordResetVerifySerializer(serializers.Serializer):
 
 
 # --------------------------------------------------
-# LOGOUT
+# PASSWORD CHANGE — authenticated user
 # --------------------------------------------------
+class PasswordChangeSerializer(serializers.Serializer):
+    current_password = serializers.CharField(write_only=True)
+    new_password     = serializers.CharField(write_only=True, min_length=9)
+    new_password2    = serializers.CharField(write_only=True)
+
+    def validate(self, data):
+        if data['new_password'] != data['new_password2']:
+            raise serializers.ValidationError({'new_password': 'Passwords do not match.'})
+        return data
+
+
 class LogoutSerializer(serializers.Serializer):
     refresh = serializers.CharField()
