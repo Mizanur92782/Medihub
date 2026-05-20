@@ -32,6 +32,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -128,6 +144,94 @@
         "documentation": {}
     },
     {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "DatabaseError",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "DatabaseError",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -312,11 +416,11 @@
         "documentation": {}
     },
     {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
         "isExtraImport": true,
-        "detail": "django.db",
+        "detail": "django.apps",
         "documentation": {}
     },
     {
@@ -392,251 +496,371 @@
         "documentation": {}
     },
     {
-        "label": "RoleChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
+        "label": "AbstractBaseUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
         "isExtraImport": true,
-        "detail": "utilities.enum",
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "BaseUserManager",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "PermissionsMixin",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
         "documentation": {}
     },
     {
         "label": "GenderChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
+        "importPath": "core.enum",
+        "description": "core.enum",
         "isExtraImport": true,
-        "detail": "utilities.enum",
+        "detail": "core.enum",
         "documentation": {}
     },
     {
         "label": "BloodGroupChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
+        "importPath": "core.enum",
+        "description": "core.enum",
         "isExtraImport": true,
-        "detail": "utilities.enum",
+        "detail": "core.enum",
         "documentation": {}
     },
     {
         "label": "AvailabilityChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
+        "importPath": "core.enum",
+        "description": "core.enum",
         "isExtraImport": true,
-        "detail": "utilities.enum",
+        "detail": "core.enum",
         "documentation": {}
     },
     {
         "label": "AmbulanceTypeChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
+        "importPath": "core.enum",
+        "description": "core.enum",
         "isExtraImport": true,
-        "detail": "utilities.enum",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "GenderChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
         "documentation": {}
     },
     {
         "label": "BlogMediaTypeChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
+        "importPath": "core.enum",
+        "description": "core.enum",
         "isExtraImport": true,
-        "detail": "utilities.enum",
+        "detail": "core.enum",
         "documentation": {}
     },
     {
         "label": "BlogStatusChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
+        "importPath": "core.enum",
+        "description": "core.enum",
         "isExtraImport": true,
-        "detail": "utilities.enum",
+        "detail": "core.enum",
         "documentation": {}
     },
     {
         "label": "BlogCategoryChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
+        "importPath": "core.enum",
+        "description": "core.enum",
         "isExtraImport": true,
-        "detail": "utilities.enum",
+        "detail": "core.enum",
         "documentation": {}
     },
     {
-        "label": "BloodGroupChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
+        "label": "RoleChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
         "isExtraImport": true,
-        "detail": "utilities.enum",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
         "documentation": {}
     },
     {
         "label": "GenderChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
+        "importPath": "core.enum",
+        "description": "core.enum",
         "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "PostStatusChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "UrgencyChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "PostStatusChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "UrgencyChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "EquipmentConditionChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "PostStatusChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "PostStatusChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "UrgencyChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "RoleChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "RoleChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "RoleChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "RoleChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "RoleChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "RoleChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "AmbulanceTypeChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "isExtraImport": true,
-        "detail": "utilities.enum",
+        "detail": "core.enum",
         "documentation": {}
     },
     {
         "label": "BloodGroupChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
+        "importPath": "core.enum",
+        "description": "core.enum",
         "isExtraImport": true,
-        "detail": "utilities.enum",
+        "detail": "core.enum",
         "documentation": {}
     },
     {
         "label": "AvailabilityChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
+        "importPath": "core.enum",
+        "description": "core.enum",
         "isExtraImport": true,
-        "detail": "utilities.enum",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "AmbulanceTypeChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "BloodGroupChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
         "documentation": {}
     },
     {
         "label": "GenderChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
+        "importPath": "core.enum",
+        "description": "core.enum",
         "isExtraImport": true,
-        "detail": "utilities.enum",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "PostStatusChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "UrgencyChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "PostStatusChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "UrgencyChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "EquipmentConditionChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "PostStatusChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "PostStatusChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "UrgencyChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "AmbulanceTypeChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "BloodGroupChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "AvailabilityChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
         "documentation": {}
     },
     {
         "label": "GenderChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
+        "importPath": "core.enum",
+        "description": "core.enum",
         "isExtraImport": true,
-        "detail": "utilities.enum",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "GenderChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
         "documentation": {}
     },
     {
         "label": "DayChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
+        "importPath": "core.enum",
+        "description": "core.enum",
         "isExtraImport": true,
-        "detail": "utilities.enum",
+        "detail": "core.enum",
         "documentation": {}
     },
     {
         "label": "GenderChoices",
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
+        "importPath": "core.enum",
+        "description": "core.enum",
         "isExtraImport": true,
-        "detail": "utilities.enum",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "isExtraImport": true,
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
         "documentation": {}
     },
     {
@@ -789,6 +1013,70 @@
         "description": "authentication.models",
         "isExtraImport": true,
         "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "isExtraImport": true,
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "isExtraImport": true,
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "isExtraImport": true,
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "authentication.models",
+        "description": "authentication.models",
+        "isExtraImport": true,
+        "detail": "authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "District",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Upozila",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "location.models",
+        "description": "location.models",
+        "isExtraImport": true,
+        "detail": "location.models",
         "documentation": {}
     },
     {
@@ -1363,11 +1651,19 @@
         "documentation": {}
     },
     {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
+        "label": "cache",
+        "importPath": "django.core.cache",
+        "description": "django.core.cache",
         "isExtraImport": true,
-        "detail": "django.conf",
+        "detail": "django.core.cache",
+        "documentation": {}
+    },
+    {
+        "label": "cache",
+        "importPath": "django.core.cache",
+        "description": "django.core.cache",
+        "isExtraImport": true,
+        "detail": "django.core.cache",
         "documentation": {}
     },
     {
@@ -1520,6 +1816,166 @@
         "description": "django.conf",
         "isExtraImport": true,
         "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "UserSignupCacheKeys",
+        "importPath": "authentication.cache_keys",
+        "description": "authentication.cache_keys",
+        "isExtraImport": true,
+        "detail": "authentication.cache_keys",
+        "documentation": {}
+    },
+    {
+        "label": "SignupCacheKeys",
+        "importPath": "authentication.cache_keys",
+        "description": "authentication.cache_keys",
+        "isExtraImport": true,
+        "detail": "authentication.cache_keys",
+        "documentation": {}
+    },
+    {
+        "label": "CacheManager",
+        "importPath": "cache.manager",
+        "description": "cache.manager",
+        "isExtraImport": true,
+        "detail": "cache.manager",
+        "documentation": {}
+    },
+    {
+        "label": "CacheManager",
+        "importPath": "cache.manager",
+        "description": "cache.manager",
+        "isExtraImport": true,
+        "detail": "cache.manager",
+        "documentation": {}
+    },
+    {
+        "label": "CacheManager",
+        "importPath": "cache.manager",
+        "description": "cache.manager",
+        "isExtraImport": true,
+        "detail": "cache.manager",
+        "documentation": {}
+    },
+    {
+        "label": "CacheManager",
+        "importPath": "cache.manager",
+        "description": "cache.manager",
+        "isExtraImport": true,
+        "detail": "cache.manager",
+        "documentation": {}
+    },
+    {
+        "label": "CacheTTL",
+        "importPath": "cache.ttl",
+        "description": "cache.ttl",
+        "isExtraImport": true,
+        "detail": "cache.ttl",
+        "documentation": {}
+    },
+    {
+        "label": "CacheTTL",
+        "importPath": "cache.ttl",
+        "description": "cache.ttl",
+        "isExtraImport": true,
+        "detail": "cache.ttl",
+        "documentation": {}
+    },
+    {
+        "label": "CacheTTL",
+        "importPath": "cache.ttl",
+        "description": "cache.ttl",
+        "isExtraImport": true,
+        "detail": "cache.ttl",
+        "documentation": {}
+    },
+    {
+        "label": "CacheTTL",
+        "importPath": "cache.ttl",
+        "description": "cache.ttl",
+        "isExtraImport": true,
+        "detail": "cache.ttl",
+        "documentation": {}
+    },
+    {
+        "label": "RefreshToken",
+        "importPath": "rest_framework_simplejwt.tokens",
+        "description": "rest_framework_simplejwt.tokens",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.tokens",
+        "documentation": {}
+    },
+    {
+        "label": "RefreshToken",
+        "importPath": "rest_framework_simplejwt.tokens",
+        "description": "rest_framework_simplejwt.tokens",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.tokens",
+        "documentation": {}
+    },
+    {
+        "label": "RefreshToken",
+        "importPath": "rest_framework_simplejwt.tokens",
+        "description": "rest_framework_simplejwt.tokens",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.tokens",
+        "documentation": {}
+    },
+    {
+        "label": "Doctor",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "Doctor",
+        "importPath": "profiles.models.doctor_prof_mod",
+        "description": "profiles.models.doctor_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.doctor_prof_mod",
         "documentation": {}
     },
     {
@@ -1755,6 +2211,22 @@
         "documentation": {}
     },
     {
+        "label": "RegularUserProfile",
+        "importPath": "profiles.models.user_prof_mod",
+        "description": "profiles.models.user_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.user_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "BloodDonor",
+        "importPath": "profiles.models.blood_donor_mod",
+        "description": "profiles.models.blood_donor_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.blood_donor_mod",
+        "documentation": {}
+    },
+    {
         "label": "BloodDonor",
         "importPath": "profiles.models.blood_donor_mod",
         "description": "profiles.models.blood_donor_mod",
@@ -1776,6 +2248,30 @@
         "description": "profiles.models.blood_donor_mod",
         "isExtraImport": true,
         "detail": "profiles.models.blood_donor_mod",
+        "documentation": {}
+    },
+    {
+        "label": "BloodDonor",
+        "importPath": "profiles.models.blood_donor_mod",
+        "description": "profiles.models.blood_donor_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.blood_donor_mod",
+        "documentation": {}
+    },
+    {
+        "label": "AmbulanceProfile",
+        "importPath": "profiles.models.ambulance_prof_mod",
+        "description": "profiles.models.ambulance_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.ambulance_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "AmbulanceProfile",
+        "importPath": "profiles.models.ambulance_prof_mod",
+        "description": "profiles.models.ambulance_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.ambulance_prof_mod",
         "documentation": {}
     },
     {
@@ -1827,6 +2323,38 @@
         "documentation": {}
     },
     {
+        "label": "PharmacyProfile",
+        "importPath": "profiles.models.pharmacy_prof_mod",
+        "description": "profiles.models.pharmacy_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.pharmacy_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "PharmacyProfile",
+        "importPath": "profiles.models.pharmacy_prof_mod",
+        "description": "profiles.models.pharmacy_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.pharmacy_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "DiagnosticProfile",
+        "importPath": "profiles.models.diagnostic_prof_mod",
+        "description": "profiles.models.diagnostic_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.diagnostic_prof_mod",
+        "documentation": {}
+    },
+    {
+        "label": "DiagnosticProfile",
+        "importPath": "profiles.models.diagnostic_prof_mod",
+        "description": "profiles.models.diagnostic_prof_mod",
+        "isExtraImport": true,
+        "detail": "profiles.models.diagnostic_prof_mod",
+        "documentation": {}
+    },
+    {
         "label": "DiagnosticProfile",
         "importPath": "profiles.models.diagnostic_prof_mod",
         "description": "profiles.models.diagnostic_prof_mod",
@@ -1851,20 +2379,11 @@
         "documentation": {}
     },
     {
-        "label": "time",
-        "kind": 6,
+        "label": "shared_task",
+        "importPath": "celery",
+        "description": "celery",
         "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
-        "documentation": {}
-    },
-    {
-        "label": "sleep",
-        "importPath": "time",
-        "description": "time",
-        "isExtraImport": true,
-        "detail": "time",
+        "detail": "celery",
         "documentation": {}
     },
     {
@@ -1908,12 +2427,19 @@
         "documentation": {}
     },
     {
-        "label": "subprocess",
-        "kind": 6,
+        "label": "send_mail",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
         "isExtraImport": true,
-        "importPath": "subprocess",
-        "description": "subprocess",
-        "detail": "subprocess",
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
         "documentation": {}
     },
     {
@@ -1957,7 +2483,79 @@
         "documentation": {}
     },
     {
+        "label": "DefaultRouter",
+        "importPath": "rest_framework.routers",
+        "description": "rest_framework.routers",
+        "isExtraImport": true,
+        "detail": "rest_framework.routers",
+        "documentation": {}
+    },
+    {
         "label": "SignupViewSet",
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "isExtraImport": true,
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "LoginViewSet",
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "isExtraImport": true,
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutViewSet",
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "isExtraImport": true,
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetViewSet",
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "isExtraImport": true,
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordChangeViewSet",
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "isExtraImport": true,
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "SignupViewSet",
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "isExtraImport": true,
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "LoginViewSet",
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "isExtraImport": true,
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutViewSet",
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "isExtraImport": true,
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetViewSet",
         "importPath": "authentication.views",
         "description": "authentication.views",
         "isExtraImport": true,
@@ -1970,6 +2568,22 @@
         "description": "rest_framework.viewsets",
         "isExtraImport": true,
         "detail": "rest_framework.viewsets",
+        "documentation": {}
+    },
+    {
+        "label": "GenericViewSet",
+        "importPath": "rest_framework.viewsets",
+        "description": "rest_framework.viewsets",
+        "isExtraImport": true,
+        "detail": "rest_framework.viewsets",
+        "documentation": {}
+    },
+    {
+        "label": "action",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
         "documentation": {}
     },
     {
@@ -2029,7 +2643,39 @@
         "documentation": {}
     },
     {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
         "label": "AllowAny",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "AllowAny",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthenticated",
         "importPath": "rest_framework.permissions",
         "description": "rest_framework.permissions",
         "isExtraImport": true,
@@ -2061,6 +2707,22 @@
         "documentation": {}
     },
     {
+        "label": "method_decorator",
+        "importPath": "django.utils.decorators",
+        "description": "django.utils.decorators",
+        "isExtraImport": true,
+        "detail": "django.utils.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "csrf_exempt",
+        "importPath": "django.views.decorators.csrf",
+        "description": "django.views.decorators.csrf",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.csrf",
+        "documentation": {}
+    },
+    {
         "label": "csrf_exempt",
         "importPath": "django.views.decorators.csrf",
         "description": "django.views.decorators.csrf",
@@ -2082,6 +2744,22 @@
         "description": "drf_yasg.utils",
         "isExtraImport": true,
         "detail": "drf_yasg.utils",
+        "documentation": {}
+    },
+    {
+        "label": "swagger_auto_schema",
+        "importPath": "drf_yasg.utils",
+        "description": "drf_yasg.utils",
+        "isExtraImport": true,
+        "detail": "drf_yasg.utils",
+        "documentation": {}
+    },
+    {
+        "label": "openapi",
+        "importPath": "drf_yasg",
+        "description": "drf_yasg",
+        "isExtraImport": true,
+        "detail": "drf_yasg",
         "documentation": {}
     },
     {
@@ -2149,6 +2827,134 @@
         "documentation": {}
     },
     {
+        "label": "LoginSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetRequestSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetVerifySerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetConfirmSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordChangeSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "DoctorSignUPSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "UserSignUpSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "BloodDonorSignUpSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "AmbulanceSignUpSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "PharmacySignUpSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "DiagnosticSignUpSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "LoginSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetRequestSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetVerifySerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutSerializer",
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "isExtraImport": true,
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
         "label": "AuthEmailService",
         "importPath": "authentication.services",
         "description": "authentication.services",
@@ -2158,6 +2964,86 @@
     },
     {
         "label": "ProfileCreationService",
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "isExtraImport": true,
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "LoginService",
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "isExtraImport": true,
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutService",
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "isExtraImport": true,
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetService",
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "isExtraImport": true,
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordChangeService",
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "isExtraImport": true,
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "isExtraImport": true,
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "AuthEmailService",
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "isExtraImport": true,
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "ProfileCreationService",
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "isExtraImport": true,
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "LoginService",
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "isExtraImport": true,
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutService",
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "isExtraImport": true,
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetService",
         "importPath": "authentication.services",
         "description": "authentication.services",
         "isExtraImport": true,
@@ -2567,35 +3453,54 @@
         "documentation": {}
     },
     {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "CacheKeys",
+        "importPath": "cache.keys",
+        "description": "cache.keys",
         "isExtraImport": true,
-        "detail": "typing",
+        "detail": "cache.keys",
         "documentation": {}
     },
     {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "httpx",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "typing",
+        "importPath": "httpx",
+        "description": "httpx",
+        "detail": "httpx",
         "documentation": {}
     },
     {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "delete",
+        "importPath": "httpx",
+        "description": "httpx",
         "isExtraImport": true,
-        "detail": "typing",
+        "detail": "httpx",
         "documentation": {}
     },
     {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "functools",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "typing",
+        "importPath": "functools",
+        "description": "functools",
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "traceback",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "traceback",
+        "description": "traceback",
+        "detail": "traceback",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
         "documentation": {}
     },
     {
@@ -2615,11 +3520,44 @@
         "documentation": {}
     },
     {
-        "label": "delete",
-        "importPath": "httpx",
-        "description": "httpx",
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
         "isExtraImport": true,
-        "detail": "httpx",
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
         "documentation": {}
     },
     {
@@ -2825,6 +3763,15 @@
         "documentation": {}
     },
     {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
         "label": "HealthCheck",
         "importPath": "medihub.health_check",
         "description": "medihub.health_check",
@@ -2906,18 +3853,18 @@
     },
     {
         "label": "api_exception_handler",
-        "importPath": "utilities.decorators",
-        "description": "utilities.decorators",
+        "importPath": "core.decorators",
+        "description": "core.decorators",
         "isExtraImport": true,
-        "detail": "utilities.decorators",
+        "detail": "core.decorators",
         "documentation": {}
     },
     {
         "label": "APIResponse",
-        "importPath": "utilities.api_response",
-        "description": "utilities.api_response",
+        "importPath": "core.api_response",
+        "description": "core.api_response",
         "isExtraImport": true,
-        "detail": "utilities.api_response",
+        "detail": "core.api_response",
         "documentation": {}
     },
     {
@@ -2930,10 +3877,10 @@
     },
     {
         "label": "Device",
-        "importPath": "notification.models.psuh_not_model",
-        "description": "notification.models.psuh_not_model",
+        "importPath": "notification.models.push_not_model",
+        "description": "notification.models.push_not_model",
         "isExtraImport": true,
-        "detail": "notification.models.psuh_not_model",
+        "detail": "notification.models.push_not_model",
         "documentation": {}
     },
     {
@@ -2946,10 +3893,10 @@
     },
     {
         "label": "ServiceResult",
-        "importPath": "utilities.resultl",
-        "description": "utilities.resultl",
+        "importPath": "core.result",
+        "description": "core.result",
         "isExtraImport": true,
-        "detail": "utilities.resultl",
+        "detail": "core.result",
         "documentation": {}
     },
     {
@@ -3041,28 +3988,67 @@
         "documentation": {}
     },
     {
+        "label": "UserProfileCacheServies",
+        "importPath": "cache.services.user_services",
+        "description": "cache.services.user_services",
+        "isExtraImport": true,
+        "detail": "cache.services.user_services",
+        "documentation": {}
+    },
+    {
+        "label": "RegularUserProfile",
+        "importPath": "profiles.models",
+        "description": "profiles.models",
+        "isExtraImport": true,
+        "detail": "profiles.models",
+        "documentation": {}
+    },
+    {
+        "label": "Doctor",
+        "importPath": "profiles.models",
+        "description": "profiles.models",
+        "isExtraImport": true,
+        "detail": "profiles.models",
+        "documentation": {}
+    },
+    {
+        "label": "AmbulanceProfile",
+        "importPath": "profiles.models",
+        "description": "profiles.models",
+        "isExtraImport": true,
+        "detail": "profiles.models",
+        "documentation": {}
+    },
+    {
+        "label": "PharmacyProfile",
+        "importPath": "profiles.models",
+        "description": "profiles.models",
+        "isExtraImport": true,
+        "detail": "profiles.models",
+        "documentation": {}
+    },
+    {
+        "label": "DiagnosticProfile",
+        "importPath": "profiles.models",
+        "description": "profiles.models",
+        "isExtraImport": true,
+        "detail": "profiles.models",
+        "documentation": {}
+    },
+    {
+        "label": "BloodDonor",
+        "importPath": "profiles.models",
+        "description": "profiles.models",
+        "isExtraImport": true,
+        "detail": "profiles.models",
+        "documentation": {}
+    },
+    {
         "label": "UserAdmin",
         "importPath": "django.contrib.auth.admin",
         "description": "django.contrib.auth.admin",
         "isExtraImport": true,
         "detail": "django.contrib.auth.admin",
-        "documentation": {}
-    },
-    {
-        "label": "traceback",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "traceback",
-        "description": "traceback",
-        "detail": "traceback",
-        "documentation": {}
-    },
-    {
-        "label": "dataclass",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
-        "isExtraImport": true,
-        "detail": "dataclasses",
         "documentation": {}
     },
     {
@@ -3127,12 +4113,30 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "authentication.migrations.0003_user_user_type",
+        "description": "authentication.migrations.0003_user_user_type",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('authentication', '0002_alter_user_groups_alter_user_is_superuser_and_more'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='user',\n            name='user_type',\n            field=models.CharField(choices=[('admin', 'Admin'), ('doctor', 'Doctor'), ('regular', 'Regular'), ('ambulance', 'Ambulance'), ('pharmacy', 'Pharmacy'), ('diagnostic', 'Diagnostic'), ('blood_donor', 'Blood Donor')], default='regular', max_length=20),\n        ),",
+        "detail": "authentication.migrations.0003_user_user_type",
+        "documentation": {}
+    },
+    {
         "label": "AuthenticationConfig",
         "kind": 6,
         "importPath": "authentication.apps",
         "description": "authentication.apps",
         "peekOfCode": "class AuthenticationConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'authentication'",
         "detail": "authentication.apps",
+        "documentation": {}
+    },
+    {
+        "label": "UserSignupCacheKeys",
+        "kind": 6,
+        "importPath": "authentication.cache_keys",
+        "description": "authentication.cache_keys",
+        "peekOfCode": "class UserSignupCacheKeys:\n    \"\"\"Cache keys for user signup process.\"\"\"\n    @staticmethod\n    def user_register_key(email: str) -> str:\n        \"\"\"Generate cache key for user registration.\"\"\"\n        return f\"user_signup:register:{email}\"",
+        "detail": "authentication.cache_keys",
         "documentation": {}
     },
     {
@@ -3149,7 +4153,7 @@
         "kind": 6,
         "importPath": "authentication.models",
         "description": "authentication.models",
-        "peekOfCode": "class User(AbstractBaseUser, PermissionsMixin):\n    email = models.EmailField(unique=True)\n    is_active = models.BooleanField(default=True)\n    is_staff = models.BooleanField(default=False)\n    is_blood_donor = models.BooleanField(default=False)\n    created = models.DateTimeField(auto_now_add=True)\n    updated = models.DateTimeField(auto_now=True)\n    objects = UserManager()\n    USERNAME_FIELD = 'email'\n    REQUIRED_FIELDS = []",
+        "peekOfCode": "class User(AbstractBaseUser, PermissionsMixin):\n    email = models.EmailField(unique=True)\n    user_type = models.CharField(max_length=20, choices=RoleChoices.choices, default=RoleChoices.REGULAR)\n    is_active = models.BooleanField(default=True)\n    is_staff = models.BooleanField(default=False)\n    is_blood_donor = models.BooleanField(default=False)\n    created = models.DateTimeField(auto_now_add=True)\n    updated = models.DateTimeField(auto_now=True)\n    objects = UserManager()\n    USERNAME_FIELD = 'email'",
         "detail": "authentication.models",
         "documentation": {}
     },
@@ -3158,7 +4162,7 @@
         "kind": 6,
         "importPath": "authentication.serializer",
         "description": "authentication.serializer",
-        "peekOfCode": "class _BaseSignUpSerializer(serializers.Serializer):\n    email     = serializers.EmailField()\n    password  = serializers.CharField(write_only=True)\n    password2 = serializers.CharField(write_only=True)\n    division = serializers.PrimaryKeyRelatedField(queryset=Division.objects.all())\n    district = serializers.PrimaryKeyRelatedField(queryset=District.objects.none())\n    upozila  = serializers.PrimaryKeyRelatedField(queryset=Upozila.objects.none())\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        data = kwargs.get('data', {})",
+        "peekOfCode": "class _BaseSignUpSerializer(serializers.Serializer):\n    email     = serializers.EmailField()\n    password  = serializers.CharField(write_only=True)\n    password2 = serializers.CharField(write_only=True)\n    user_type = serializers.ChoiceField(choices=RoleChoices)\n    division = serializers.PrimaryKeyRelatedField(queryset=Division.objects.all(), required=False, allow_null=True)\n    district = serializers.PrimaryKeyRelatedField(queryset=District.objects.none(), required=False, allow_null=True)\n    upozila  = serializers.PrimaryKeyRelatedField(queryset=Upozila.objects.none(), required=False, allow_null=True)\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)",
         "detail": "authentication.serializer",
         "documentation": {}
     },
@@ -3167,7 +4171,7 @@
         "kind": 6,
         "importPath": "authentication.serializer",
         "description": "authentication.serializer",
-        "peekOfCode": "class DoctorSignUPSerializer(_BaseSignUpSerializer):\n    first_name     = serializers.CharField(max_length=100)\n    middle_name    = serializers.CharField(max_length=100, required=False, allow_blank=True)\n    last_name      = serializers.CharField(max_length=100)\n    gender         = serializers.ChoiceField(choices=GenderChoices.choices)\n    contact_number = serializers.CharField(max_length=15)\n    union          = serializers.PrimaryKeyRelatedField(queryset=Union.objects.none())\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        data = kwargs.get('data', {})",
+        "peekOfCode": "class DoctorSignUPSerializer(_BaseSignUpSerializer):\n    first_name     = serializers.CharField(max_length=100)\n    middle_name    = serializers.CharField(max_length=100, required=False, allow_blank=True)\n    last_name      = serializers.CharField(max_length=100)\n    gender         = serializers.ChoiceField(choices=GenderChoices.choices)\n    contact_number   = serializers.CharField(max_length=15, required=False, allow_blank=True)\n    union            = serializers.PrimaryKeyRelatedField(queryset=Union.objects.none(), required=False, allow_null=True)\n    license_number   = serializers.CharField(max_length=100)\n    license_validity = serializers.DateField()\n    def __init__(self, *args, **kwargs):",
         "detail": "authentication.serializer",
         "documentation": {}
     },
@@ -3212,7 +4216,61 @@
         "kind": 6,
         "importPath": "authentication.serializer",
         "description": "authentication.serializer",
-        "peekOfCode": "class DiagnosticSignUpSerializer(_BaseSignUpSerializer):\n    diagnostic_name  = serializers.CharField(max_length=200)\n    owner_name       = serializers.CharField(max_length=200)\n    contact_number   = serializers.CharField(max_length=15)\n    license_number   = serializers.CharField(max_length=100)\n    license_validity = serializers.DateField()\n    address          = serializers.CharField(required=False, allow_blank=True)",
+        "peekOfCode": "class DiagnosticSignUpSerializer(_BaseSignUpSerializer):\n    diagnostic_name  = serializers.CharField(max_length=200)\n    owner_name       = serializers.CharField(max_length=200)\n    contact_number   = serializers.CharField(max_length=15)\n    license_number   = serializers.CharField(max_length=100)\n    license_validity = serializers.DateField()\n    address          = serializers.CharField(required=False, allow_blank=True)\n# --------------------------------------------------\n# LOGIN\n# --------------------------------------------------",
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "LoginSerializer",
+        "kind": 6,
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "peekOfCode": "class LoginSerializer(serializers.Serializer):\n    email    = serializers.EmailField()\n    password = serializers.CharField(write_only=True)\n# --------------------------------------------------\n# PASSWORD RESET — step 1: request OTP\n# --------------------------------------------------\nclass PasswordResetRequestSerializer(serializers.Serializer):\n    email = serializers.EmailField()\n# --------------------------------------------------\n# PASSWORD RESET — step 2: verify OTP",
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetRequestSerializer",
+        "kind": 6,
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "peekOfCode": "class PasswordResetRequestSerializer(serializers.Serializer):\n    email = serializers.EmailField()\n# --------------------------------------------------\n# PASSWORD RESET — step 2: verify OTP\n# --------------------------------------------------\nclass PasswordResetVerifySerializer(serializers.Serializer):\n    email = serializers.EmailField()\n    otp   = serializers.CharField(max_length=6)\n# --------------------------------------------------\n# PASSWORD RESET — step 3: reset password with token",
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetVerifySerializer",
+        "kind": 6,
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "peekOfCode": "class PasswordResetVerifySerializer(serializers.Serializer):\n    email = serializers.EmailField()\n    otp   = serializers.CharField(max_length=6)\n# --------------------------------------------------\n# PASSWORD RESET — step 3: reset password with token\n# --------------------------------------------------\nclass PasswordResetConfirmSerializer(serializers.Serializer):\n    email        = serializers.EmailField()\n    reset_token  = serializers.CharField()\n    new_password = serializers.CharField(write_only=True, min_length=9)",
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetConfirmSerializer",
+        "kind": 6,
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "peekOfCode": "class PasswordResetConfirmSerializer(serializers.Serializer):\n    email        = serializers.EmailField()\n    reset_token  = serializers.CharField()\n    new_password = serializers.CharField(write_only=True, min_length=9)\n    new_password2 = serializers.CharField(write_only=True)\n    def validate(self, data):\n        if data['new_password'] != data['new_password2']:\n            raise serializers.ValidationError({'new_password': 'Passwords do not match.'})\n        return data\n# --------------------------------------------------",
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordChangeSerializer",
+        "kind": 6,
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "peekOfCode": "class PasswordChangeSerializer(serializers.Serializer):\n    current_password = serializers.CharField(write_only=True)\n    new_password     = serializers.CharField(write_only=True, min_length=9)\n    new_password2    = serializers.CharField(write_only=True)\n    def validate(self, data):\n        if data['new_password'] != data['new_password2']:\n            raise serializers.ValidationError({'new_password': 'Passwords do not match.'})\n        return data\nclass LogoutSerializer(serializers.Serializer):\n    refresh = serializers.CharField()",
+        "detail": "authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutSerializer",
+        "kind": 6,
+        "importPath": "authentication.serializer",
+        "description": "authentication.serializer",
+        "peekOfCode": "class LogoutSerializer(serializers.Serializer):\n    refresh = serializers.CharField()",
         "detail": "authentication.serializer",
         "documentation": {}
     },
@@ -3221,7 +4279,7 @@
         "kind": 6,
         "importPath": "authentication.services",
         "description": "authentication.services",
-        "peekOfCode": "class AuthEmailService:\n    CACHE_PREFIX       = 'auth:otp'\n    SIGNUP_DATA_PREFIX = 'auth:signup_data'\n    # ---------------------------\n    # 1. KEY GENERATOR\n    # ---------------------------\n    @classmethod\n    def make_auth_cache_key(cls, *args):\n        raw = ':'.join(map(str, args))\n        return hashlib.sha256(raw.encode()).hexdigest()",
+        "peekOfCode": "class AuthEmailService:\n    # ---------------------------\n    # 2. OTP GENERATOR\n    # ---------------------------\n    @staticmethod\n    def generate_otp():\n        return str(random.randint(100000, 999999))\n    @classmethod\n    def hash_otp(cls, otp):\n        return hashlib.sha256(otp.encode()).hexdigest()",
         "detail": "authentication.services",
         "documentation": {}
     },
@@ -3230,7 +4288,43 @@
         "kind": 6,
         "importPath": "authentication.services",
         "description": "authentication.services",
-        "peekOfCode": "class ProfileCreationService:\n    @staticmethod\n    def _base_create(email, password, signup_data, profile_model, log_key):\n        try:\n            with transaction.atomic():\n                user    = User.objects.create_user(email=email, password=password)\n                profile = profile_model.objects.create(user=user, **signup_data)\n            logger.info(f'{log_key}_success', extra={'email': email, 'user_id': user.id, 'profile_id': profile.id})\n            return user\n        except DatabaseError:",
+        "peekOfCode": "class ProfileCreationService:\n    @staticmethod\n    def _base_create(email, password, user_type, signup_data, profile_model, log_key):\n        try:\n            with transaction.atomic():\n                user = User.objects.create_user(email=email, password=password)\n                user.user_type = user_type\n                user.save(update_fields=['user_type'])\n                profile = profile_model.objects.create(user=user, **signup_data)\n            logger.info(f'{log_key}_success', extra={'email': email, 'user_id': user.id, 'profile_id': profile.id})",
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "LoginService",
+        "kind": 6,
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "peekOfCode": "class LoginService:\n    # ---------------------------\n    # 1. LOGIN — returns JWT tokens\n    # ---------------------------\n    @staticmethod\n    def login(email, password):\n        user = authenticate(username=email, password=password)\n        if user is None:\n            logger.warning('login_failed_invalid_credentials', extra={'email': email})\n            return {'status': False, 'message': 'Invalid email or password.'}",
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutService",
+        "kind": 6,
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "peekOfCode": "class LogoutService:\n    # ---------------------------\n    # 1. LOGOUT — blacklists refresh token\n    # ---------------------------\n    @staticmethod\n    def logout(refresh_token: str):\n        try:\n            token = RefreshToken(refresh_token)\n            token.blacklist()\n            logger.info('logout_success')",
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordChangeService",
+        "kind": 6,
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "peekOfCode": "class PasswordChangeService:\n    @staticmethod\n    def change_password(user, current_password, new_password):\n        if not user.check_password(current_password):\n            logger.warning('password_change_wrong_current', extra={'user_id': user.id})\n            return {'status': False, 'message': 'Current password is incorrect.'}\n        user.set_password(new_password)\n        user.save(update_fields=['password'])\n        refresh = RefreshToken.for_user(user)\n        logger.info('password_change_success', extra={'user_id': user.id})",
+        "detail": "authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetService",
+        "kind": 6,
+        "importPath": "authentication.services",
+        "description": "authentication.services",
+        "peekOfCode": "class PasswordResetService:\n    RESET_OTP_PREFIX   = 'auth:reset_otp'\n    RESET_TOKEN_PREFIX = 'auth:reset_token'\n    # ---------------------------\n    # 1. SEND RESET OTP\n    # ---------------------------\n    @classmethod\n    def send_reset_otp(cls, email):\n        if not User.objects.filter(email=email).exists():\n            logger.warning('password_reset_email_not_found', extra={'email': email})",
         "detail": "authentication.services",
         "documentation": {}
     },
@@ -3239,7 +4333,7 @@
         "kind": 5,
         "importPath": "authentication.services",
         "description": "authentication.services",
-        "peekOfCode": "logger = logging.getLogger(__name__)\nclass AuthEmailService:\n    CACHE_PREFIX       = 'auth:otp'\n    SIGNUP_DATA_PREFIX = 'auth:signup_data'\n    # ---------------------------\n    # 1. KEY GENERATOR\n    # ---------------------------\n    @classmethod\n    def make_auth_cache_key(cls, *args):\n        raw = ':'.join(map(str, args))",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass AuthEmailService:\n    # ---------------------------\n    # 2. OTP GENERATOR\n    # ---------------------------\n    @staticmethod\n    def generate_otp():\n        return str(random.randint(100000, 999999))\n    @classmethod\n    def hash_otp(cls, otp):",
         "detail": "authentication.services",
         "documentation": {}
     },
@@ -3248,7 +4342,16 @@
         "kind": 2,
         "importPath": "authentication.tasks",
         "description": "authentication.tasks",
-        "peekOfCode": "def send_otp_email_task(email, otp):\n    subject = \"Your OTP Code\"\n    message = f\"Your OTP is: {otp}. It will expire in 5 minutes.\"\n    send_mail(\n        subject,\n        message,\n        settings.DEFAULT_FROM_EMAIL,\n        [email],\n        fail_silently=False,\n    )",
+        "peekOfCode": "def send_otp_email_task(email, otp):\n    subject = \"Your OTP Code\"\n    message = f\"Your OTP is: {otp}. It will expire in 5 minutes.\"\n    send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [email], fail_silently=False)\n    return f\"OTP sent to {email}\"\n@shared_task\ndef send_password_reset_otp_task(email, otp):\n    subject = \"Password Reset OTP\"\n    message = f\"Your password reset OTP is: {otp}. It will expire in 5 minutes.\"\n    send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [email], fail_silently=False)",
+        "detail": "authentication.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "send_password_reset_otp_task",
+        "kind": 2,
+        "importPath": "authentication.tasks",
+        "description": "authentication.tasks",
+        "peekOfCode": "def send_password_reset_otp_task(email, otp):\n    subject = \"Password Reset OTP\"\n    message = f\"Your password reset OTP is: {otp}. It will expire in 5 minutes.\"\n    send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [email], fail_silently=False)\n    return f\"Password reset OTP sent to {email}\"",
         "detail": "authentication.tasks",
         "documentation": {}
     },
@@ -3257,7 +4360,7 @@
         "kind": 5,
         "importPath": "authentication.urls",
         "description": "authentication.urls",
-        "peekOfCode": "router = DefaultRouter()\nrouter.register('signup', SignupViewSet, basename='signup')\nurlpatterns = router.urls",
+        "peekOfCode": "router = DefaultRouter()\nrouter.register('signup',          SignupViewSet,         basename='signup')\nrouter.register('auth',            LoginViewSet,          basename='auth')\nrouter.register('auth',            LogoutViewSet,         basename='auth-logout')\nrouter.register('password-reset',  PasswordResetViewSet,  basename='password-reset')\nrouter.register('auth',            PasswordChangeViewSet, basename='auth-change')\nurlpatterns = router.urls",
         "detail": "authentication.urls",
         "documentation": {}
     },
@@ -3280,20 +4383,47 @@
         "documentation": {}
     },
     {
-        "label": "logger",
-        "kind": 5,
+        "label": "LoginViewSet",
+        "kind": 6,
         "importPath": "authentication.views",
         "description": "authentication.views",
-        "peekOfCode": "logger = logging.getLogger(__name__)\n_verify_body = openapi.Schema(\n    type=openapi.TYPE_OBJECT,\n    required=['email', 'otp'],\n    properties={\n        'email': openapi.Schema(type=openapi.TYPE_STRING, format='email'),\n        'otp':   openapi.Schema(type=openapi.TYPE_STRING, description='6-digit OTP'),\n    },\n)\n@method_decorator(csrf_exempt, name='dispatch')",
+        "peekOfCode": "class LoginViewSet(GenericViewSet):\n    permission_classes = [AllowAny]\n    @swagger_auto_schema(\n        tags=['Login Access Management'],\n        operation_summary='Login — returns JWT access + refresh tokens',\n        request_body=None,\n        consumes=['multipart/form-data'],\n        manual_parameters=[\n            openapi.Parameter('email', openapi.IN_FORM, description='Email address', type=openapi.TYPE_STRING, required=True),\n            openapi.Parameter('password', openapi.IN_FORM, description='Password', type=openapi.TYPE_STRING, required=True),",
         "detail": "authentication.views",
         "documentation": {}
     },
     {
-        "label": "_verify_body",
+        "label": "LogoutViewSet",
+        "kind": 6,
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "peekOfCode": "class LogoutViewSet(GenericViewSet):\n    permission_classes = [IsAuthenticated]\n    @swagger_auto_schema(\n        tags=['Login Access Management'],\n        operation_summary='Logout — blacklists the refresh token',\n        request_body=None,\n        consumes=['multipart/form-data'],\n        manual_parameters=[\n            openapi.Parameter('refresh', openapi.IN_FORM, description='Refresh token to blacklist', type=openapi.TYPE_STRING, required=True),\n        ],",
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetViewSet",
+        "kind": 6,
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "peekOfCode": "class PasswordResetViewSet(GenericViewSet):\n    permission_classes = [AllowAny]\n    # STEP 1 — send OTP\n    @swagger_auto_schema(\n        tags=['Password Management'],\n        operation_summary='Step 1 — Send password reset OTP',\n        request_body=None,\n        consumes=['multipart/form-data'],\n        manual_parameters=[\n            openapi.Parameter('email', openapi.IN_FORM, description='Registered email address', type=openapi.TYPE_STRING, required=True),",
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordChangeViewSet",
+        "kind": 6,
+        "importPath": "authentication.views",
+        "description": "authentication.views",
+        "peekOfCode": "class PasswordChangeViewSet(GenericViewSet):\n    permission_classes = [IsAuthenticated]\n    @swagger_auto_schema(\n        tags=['Password Management'],\n        operation_summary='Change password — authenticated user',\n        request_body=None,\n        consumes=['multipart/form-data'],\n        manual_parameters=[\n            openapi.Parameter('current_password', openapi.IN_FORM, description='Current password', type=openapi.TYPE_STRING, required=True),\n            openapi.Parameter('new_password', openapi.IN_FORM, description='New password (min 9 chars)', type=openapi.TYPE_STRING, required=True),",
+        "detail": "authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
         "kind": 5,
         "importPath": "authentication.views",
         "description": "authentication.views",
-        "peekOfCode": "_verify_body = openapi.Schema(\n    type=openapi.TYPE_OBJECT,\n    required=['email', 'otp'],\n    properties={\n        'email': openapi.Schema(type=openapi.TYPE_STRING, format='email'),\n        'otp':   openapi.Schema(type=openapi.TYPE_STRING, description='6-digit OTP'),\n    },\n)\n@method_decorator(csrf_exempt, name='dispatch')\nclass SignupViewSet(GenericViewSet):",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n@method_decorator(csrf_exempt, name='dispatch')\nclass SignupViewSet(GenericViewSet):\n    permission_classes = [AllowAny]\n    _PROFILE_CREATORS = {\n        'doctor':      ProfileCreationService.create_doctor_profile,\n        'user':        ProfileCreationService.create_user_profile,\n        'blood_donor': ProfileCreationService.create_blood_donor_profile,\n        'ambulance':   ProfileCreationService.create_ambulance_profile,\n        'pharmacy':    ProfileCreationService.create_pharmacy_profile,",
         "detail": "authentication.views",
         "documentation": {}
     },
@@ -3439,6 +4569,537 @@
         "description": "blog.apps",
         "peekOfCode": "class BlogConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'blog'",
         "detail": "blog.apps",
+        "documentation": {}
+    },
+    {
+        "label": "UserProfileCacheServies",
+        "kind": 6,
+        "importPath": "cache.services.user_services",
+        "description": "cache.services.user_services",
+        "peekOfCode": "class UserProfileCacheServies:\n    @staticmethod\n    def GetProfile(user_id):\n        key = CacheKeys.UserProfile(user_id)\n        result = CacheManager.GetCache(key)\n        return result['data'] if result['success'] else None\n    @staticmethod\n    def SetProfile(user_id, data):\n        key = CacheKeys.UserProfile(user_id)\n        CacheManager.SetCache(key, data, CacheTTL.RandomTTL(CacheTTL.SMALL, 30))",
+        "detail": "cache.services.user_services",
+        "documentation": {}
+    },
+    {
+        "label": "CacheKeys",
+        "kind": 6,
+        "importPath": "cache.keys",
+        "description": "cache.keys",
+        "peekOfCode": "class CacheKeys:\n    VERSION='v1'\n    @staticmethod\n    def UserProfile(user_id):\n        return f\"user:{CacheKeys.VERSION}:{user_id}:profile\"\n    @staticmethod\n    def UserPost(user_id):\n        if user_id:\n            return f\"post:{CacheKeys.VERSION}:{user_id}\"\n        return f\"post:{CacheKeys.VERSION}\"",
+        "detail": "cache.keys",
+        "documentation": {}
+    },
+    {
+        "label": "CacheManager",
+        "kind": 6,
+        "importPath": "cache.manager",
+        "description": "cache.manager",
+        "peekOfCode": "class CacheManager:\n    @staticmethod\n    def GetCache(key):\n        # Get cache data using key\n        data = cache.get(key)\n        # Check if data does not exist in cache\n        if data is None:\n            logger.warning(f\"Cache Miss: {key}\")\n            return {\n                \"success\": False",
+        "detail": "cache.manager",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "cache.manager",
+        "description": "cache.manager",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass CacheManager:\n    @staticmethod\n    def GetCache(key):\n        # Get cache data using key\n        data = cache.get(key)\n        # Check if data does not exist in cache\n        if data is None:\n            logger.warning(f\"Cache Miss: {key}\")\n            return {",
+        "detail": "cache.manager",
+        "documentation": {}
+    },
+    {
+        "label": "CacheTTL",
+        "kind": 6,
+        "importPath": "cache.ttl",
+        "description": "cache.ttl",
+        "peekOfCode": "class CacheTTL:\n    SMALL = 60\n    MEDIUM = 300\n    LARGE = 1000\n    VERY_LARGE = 2000\n    @staticmethod\n    def RandomTTL(ttl,jitter=60):\n        return ttl+random.randint(0,jitter)",
+        "detail": "cache.ttl",
+        "documentation": {}
+    },
+    {
+        "label": "APIResponse",
+        "kind": 6,
+        "importPath": "core.api_response",
+        "description": "core.api_response",
+        "peekOfCode": "class APIResponse:\n    @staticmethod\n    def success(message=\"Data retrieved successfully\", title=\"data\", data=None):\n        return {\n            \"success\": True,\n            \"message\": message,\n            title: data if data is not None else \"Data not provided in response\"\n        }\n    @staticmethod\n    def error(message=\"Error occurred in API response\"):",
+        "detail": "core.api_response",
+        "documentation": {}
+    },
+    {
+        "label": "PROFILE_MAP",
+        "kind": 5,
+        "importPath": "core.constant",
+        "description": "core.constant",
+        "peekOfCode": "PROFILE_MAP = {\n    RoleChoices.REGULAR: RegularUserProfile, # pyright: ignore[reportUndefinedVariable]\n    RoleChoices.DOCTOR: Doctor,\n    RoleChoices.AMBULANCE: AmbulanceProfile,\n    RoleChoices.PHARMACY: PharmacyProfile,\n    RoleChoices.DIAGNOSTIC: DiagnosticProfile,\n    RoleChoices.BLOOD_DONOR: BloodDonor,\n}",
+        "detail": "core.constant",
+        "documentation": {}
+    },
+    {
+        "label": "api_exception_handler",
+        "kind": 2,
+        "importPath": "core.decorators",
+        "description": "core.decorators",
+        "peekOfCode": "def api_exception_handler(func):\n    @functools.wraps(func)\n    def wrapper(*args, **kwargs):\n        try:\n            return func(*args, **kwargs)\n        except Exception as e:\n            #collent logg and trace\n            logger.error(\n                \"Api Error occured\",\n                extra={",
+        "detail": "core.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "core.decorators",
+        "description": "core.decorators",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n'''Customize decorator for api exception handling'''\ndef api_exception_handler(func):\n    @functools.wraps(func)\n    def wrapper(*args, **kwargs):\n        try:\n            return func(*args, **kwargs)\n        except Exception as e:\n            #collent logg and trace\n            logger.error(",
+        "detail": "core.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "RoleChoices",
+        "kind": 6,
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "peekOfCode": "class RoleChoices(models.TextChoices):\n    ADMIN = 'admin', 'Admin'\n    DOCTOR = 'doctor', 'Doctor'\n    REGULAR = 'regular', 'Regular'\n    AMBULANCE = 'ambulance', 'Ambulance'\n    PHARMACY = 'pharmacy', 'Pharmacy'\n    DIAGNOSTIC = 'diagnostic', 'Diagnostic'\n    BLOOD_DONOR = 'blood_donor', 'Blood Donor'\nclass GenderChoices(models.TextChoices):\n    MALE = 'male', 'Male'",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "GenderChoices",
+        "kind": 6,
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "peekOfCode": "class GenderChoices(models.TextChoices):\n    MALE = 'male', 'Male'\n    FEMALE = 'female', 'Female'\n    OTHER = 'other', 'Other'\nclass DayChoices(models.TextChoices):\n    SATURDAY = 'saturday', 'Saturday'\n    SUNDAY = 'sunday', 'Sunday'\n    MONDAY = 'monday', 'Monday'\n    TUESDAY = 'tuesday', 'Tuesday'\n    WEDNESDAY = 'wednesday', 'Wednesday'",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "DayChoices",
+        "kind": 6,
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "peekOfCode": "class DayChoices(models.TextChoices):\n    SATURDAY = 'saturday', 'Saturday'\n    SUNDAY = 'sunday', 'Sunday'\n    MONDAY = 'monday', 'Monday'\n    TUESDAY = 'tuesday', 'Tuesday'\n    WEDNESDAY = 'wednesday', 'Wednesday'\n    THURSDAY = 'thursday', 'Thursday'\n    FRIDAY = 'friday', 'Friday'\nclass BloodGroupChoices(models.TextChoices):\n    A_POS = 'A+', 'A+'",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "BloodGroupChoices",
+        "kind": 6,
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "peekOfCode": "class BloodGroupChoices(models.TextChoices):\n    A_POS = 'A+', 'A+'\n    A_NEG = 'A-', 'A-'\n    B_POS = 'B+', 'B+'\n    B_NEG = 'B-', 'B-'\n    AB_POS = 'AB+', 'AB+'\n    AB_NEG = 'AB-', 'AB-'\n    O_POS = 'O+', 'O+'\n    O_NEG = 'O-', 'O-'\nclass AvailabilityChoices(models.TextChoices):",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "AvailabilityChoices",
+        "kind": 6,
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "peekOfCode": "class AvailabilityChoices(models.TextChoices):\n    AVAILABLE = 'available', 'Available'\n    UNAVAILABLE = 'unavailable', 'Unavailable'\nclass AmbulanceTypeChoices(models.TextChoices):\n    BASIC = 'basic', 'Basic'\n    ADVANCED = 'advanced', 'Advanced'\n    ICU = 'icu', 'ICU'\nclass BlogStatusChoices(models.TextChoices):\n    DRAFT = 'draft', 'Draft'\n    PUBLISHED = 'published', 'Published'",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "AmbulanceTypeChoices",
+        "kind": 6,
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "peekOfCode": "class AmbulanceTypeChoices(models.TextChoices):\n    BASIC = 'basic', 'Basic'\n    ADVANCED = 'advanced', 'Advanced'\n    ICU = 'icu', 'ICU'\nclass BlogStatusChoices(models.TextChoices):\n    DRAFT = 'draft', 'Draft'\n    PUBLISHED = 'published', 'Published'\nclass BlogCategoryChoices(models.TextChoices):\n    GENERAL = 'general', 'General'\n    CARDIOLOGY = 'cardiology', 'Cardiology'",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "BlogStatusChoices",
+        "kind": 6,
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "peekOfCode": "class BlogStatusChoices(models.TextChoices):\n    DRAFT = 'draft', 'Draft'\n    PUBLISHED = 'published', 'Published'\nclass BlogCategoryChoices(models.TextChoices):\n    GENERAL = 'general', 'General'\n    CARDIOLOGY = 'cardiology', 'Cardiology'\n    NEUROLOGY = 'neurology', 'Neurology'\n    PEDIATRICS = 'pediatrics', 'Pediatrics'\n    GYNECOLOGY = 'gynecology', 'Gynecology'\n    DERMATOLOGY = 'dermatology', 'Dermatology'",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "BlogCategoryChoices",
+        "kind": 6,
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "peekOfCode": "class BlogCategoryChoices(models.TextChoices):\n    GENERAL = 'general', 'General'\n    CARDIOLOGY = 'cardiology', 'Cardiology'\n    NEUROLOGY = 'neurology', 'Neurology'\n    PEDIATRICS = 'pediatrics', 'Pediatrics'\n    GYNECOLOGY = 'gynecology', 'Gynecology'\n    DERMATOLOGY = 'dermatology', 'Dermatology'\n    ORTHOPEDICS = 'orthopedics', 'Orthopedics'\n    NUTRITION = 'nutrition', 'Nutrition'\n    MENTAL_HEALTH = 'mental_health', 'Mental Health'",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "BlogMediaTypeChoices",
+        "kind": 6,
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "peekOfCode": "class BlogMediaTypeChoices(models.TextChoices):\n    IMAGE = 'image', 'Image'\n    VIDEO = 'video', 'Video'\nclass PostStatusChoices(models.TextChoices):\n    OPEN = 'open', 'Open'\n    FULFILLED = 'fulfilled', 'Fulfilled'\n    CLOSED = 'closed', 'Closed'\nclass PostTypeChoices(models.TextChoices):\n    BLOOD_NEED = 'blood_need', 'Blood Need'\n    MEDICINE_NEED = 'medicine_need', 'Medicine Need'",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "PostStatusChoices",
+        "kind": 6,
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "peekOfCode": "class PostStatusChoices(models.TextChoices):\n    OPEN = 'open', 'Open'\n    FULFILLED = 'fulfilled', 'Fulfilled'\n    CLOSED = 'closed', 'Closed'\nclass PostTypeChoices(models.TextChoices):\n    BLOOD_NEED = 'blood_need', 'Blood Need'\n    MEDICINE_NEED = 'medicine_need', 'Medicine Need'\n    EQUIPMENT_NEED = 'equipment_need', 'Equipment Need'\n    GENERAL = 'general', 'General'\nclass UrgencyChoices(models.TextChoices):",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "PostTypeChoices",
+        "kind": 6,
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "peekOfCode": "class PostTypeChoices(models.TextChoices):\n    BLOOD_NEED = 'blood_need', 'Blood Need'\n    MEDICINE_NEED = 'medicine_need', 'Medicine Need'\n    EQUIPMENT_NEED = 'equipment_need', 'Equipment Need'\n    GENERAL = 'general', 'General'\nclass UrgencyChoices(models.TextChoices):\n    LOW = 'low', 'Low'\n    MEDIUM = 'medium', 'Medium'\n    HIGH = 'high', 'High'\n    CRITICAL = 'critical', 'Critical'",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "UrgencyChoices",
+        "kind": 6,
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "peekOfCode": "class UrgencyChoices(models.TextChoices):\n    LOW = 'low', 'Low'\n    MEDIUM = 'medium', 'Medium'\n    HIGH = 'high', 'High'\n    CRITICAL = 'critical', 'Critical'\nclass EquipmentConditionChoices(models.TextChoices):\n    NEW = 'new', 'New'\n    GOOD = 'good', 'Good'\n    FAIR = 'fair', 'Fair'\n    POOR = 'poor', 'Poor'",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "EquipmentConditionChoices",
+        "kind": 6,
+        "importPath": "core.enum",
+        "description": "core.enum",
+        "peekOfCode": "class EquipmentConditionChoices(models.TextChoices):\n    NEW = 'new', 'New'\n    GOOD = 'good', 'Good'\n    FAIR = 'fair', 'Fair'\n    POOR = 'poor', 'Poor'",
+        "detail": "core.enum",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceResult",
+        "kind": 6,
+        "importPath": "core.result",
+        "description": "core.result",
+        "peekOfCode": "class ServiceResult:\n    success: bool\n    data: Optional[Any] = None\n    error: Optional[str] = None",
+        "detail": "core.result",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "location.authentication.migrations.0001_initial",
+        "description": "location.authentication.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='User',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "location.authentication.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "location.authentication.migrations.0002_alter_user_groups_alter_user_is_superuser_and_more",
+        "description": "location.authentication.migrations.0002_alter_user_groups_alter_user_is_superuser_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n        ('authentication', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='user',\n            name='groups',\n            field=models.ManyToManyField(blank=True, help_text='The groups this user belongs to. A user will get all permissions granted to each of their groups.', related_name='user_set', related_query_name='user', to='auth.group', verbose_name='groups'),",
+        "detail": "location.authentication.migrations.0002_alter_user_groups_alter_user_is_superuser_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "location.authentication.migrations.0003_user_user_type",
+        "description": "location.authentication.migrations.0003_user_user_type",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('authentication', '0002_alter_user_groups_alter_user_is_superuser_and_more'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='user',\n            name='user_type',\n            field=models.CharField(choices=[('admin', 'Admin'), ('doctor', 'Doctor'), ('regular', 'Regular'), ('ambulance', 'Ambulance'), ('pharmacy', 'Pharmacy'), ('diagnostic', 'Diagnostic'), ('blood_donor', 'Blood Donor')], default='regular', max_length=20),\n        ),",
+        "detail": "location.authentication.migrations.0003_user_user_type",
+        "documentation": {}
+    },
+    {
+        "label": "AuthenticationConfig",
+        "kind": 6,
+        "importPath": "location.authentication.apps",
+        "description": "location.authentication.apps",
+        "peekOfCode": "class AuthenticationConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'authentication'",
+        "detail": "location.authentication.apps",
+        "documentation": {}
+    },
+    {
+        "label": "SignupCacheKeys",
+        "kind": 6,
+        "importPath": "location.authentication.cache_keys",
+        "description": "location.authentication.cache_keys",
+        "peekOfCode": "class SignupCacheKeys:\n    \"\"\"Cache keys for signup process.\"\"\"\n    @staticmethod\n    def SignupEmailVerification(email):\n        return f\"signup:email_verification:{email}\"",
+        "detail": "location.authentication.cache_keys",
+        "documentation": {}
+    },
+    {
+        "label": "UserManager",
+        "kind": 6,
+        "importPath": "location.authentication.models",
+        "description": "location.authentication.models",
+        "peekOfCode": "class UserManager(BaseUserManager):\n    def create_user(self, email, password):\n        if not email:\n            raise ValueError('Email is required')\n        user = self.model(email=self.normalize_email(email))\n        if password is None:\n          raise ValueError(\"Password required\")\n        user.set_password(password)\n        user.save(using=self._db)\n        return user",
+        "detail": "location.authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "location.authentication.models",
+        "description": "location.authentication.models",
+        "peekOfCode": "class User(AbstractBaseUser, PermissionsMixin):\n    email = models.EmailField(unique=True)\n    user_type = models.CharField(max_length=20, choices=RoleChoices.choices, default=RoleChoices.REGULAR)\n    is_active = models.BooleanField(default=True)\n    is_staff = models.BooleanField(default=False)\n    is_blood_donor = models.BooleanField(default=False)\n    created = models.DateTimeField(auto_now_add=True)\n    updated = models.DateTimeField(auto_now=True)\n    objects = UserManager()\n    USERNAME_FIELD = 'email'",
+        "detail": "location.authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "_BaseSignUpSerializer",
+        "kind": 6,
+        "importPath": "location.authentication.serializer",
+        "description": "location.authentication.serializer",
+        "peekOfCode": "class _BaseSignUpSerializer(serializers.Serializer):\n    email     = serializers.EmailField()\n    password  = serializers.CharField(write_only=True)\n    password2 = serializers.CharField(write_only=True)\n    user_type = serializers.ChoiceField(choices=User.UserTypeChoices.choices)\n    division = serializers.PrimaryKeyRelatedField(queryset=Division.objects.all())\n    district = serializers.PrimaryKeyRelatedField(queryset=District.objects.none())\n    upozila  = serializers.PrimaryKeyRelatedField(queryset=Upozila.objects.none())\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)",
+        "detail": "location.authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "DoctorSignUPSerializer",
+        "kind": 6,
+        "importPath": "location.authentication.serializer",
+        "description": "location.authentication.serializer",
+        "peekOfCode": "class DoctorSignUPSerializer(_BaseSignUpSerializer):\n    first_name     = serializers.CharField(max_length=100)\n    middle_name    = serializers.CharField(max_length=100, required=False, allow_blank=True)\n    last_name      = serializers.CharField(max_length=100)\n    gender         = serializers.ChoiceField(choices=GenderChoices.choices)\n    contact_number = serializers.CharField(max_length=15)\n    union          = serializers.PrimaryKeyRelatedField(queryset=Union.objects.none())\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        data = kwargs.get('data', {})",
+        "detail": "location.authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "UserSignUpSerializer",
+        "kind": 6,
+        "importPath": "location.authentication.serializer",
+        "description": "location.authentication.serializer",
+        "peekOfCode": "class UserSignUpSerializer(_BaseSignUpSerializer):\n    first_name     = serializers.CharField(max_length=100)\n    last_name      = serializers.CharField(max_length=100)\n    gender         = serializers.ChoiceField(choices=GenderChoices.choices)\n    contact_number = serializers.CharField(max_length=15, required=False, allow_blank=True)\n    date_of_birth  = serializers.DateField(required=False)\n    address        = serializers.CharField(required=False, allow_blank=True)\n# --------------------------------------------------\n# BLOOD DONOR\n# --------------------------------------------------",
+        "detail": "location.authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "BloodDonorSignUpSerializer",
+        "kind": 6,
+        "importPath": "location.authentication.serializer",
+        "description": "location.authentication.serializer",
+        "peekOfCode": "class BloodDonorSignUpSerializer(_BaseSignUpSerializer):\n    first_name     = serializers.CharField(max_length=100)\n    last_name      = serializers.CharField(max_length=100)\n    gender         = serializers.ChoiceField(choices=GenderChoices.choices)\n    date_of_birth  = serializers.DateField()\n    contact_number = serializers.CharField(max_length=15)\n    blood_group    = serializers.ChoiceField(choices=BloodGroupChoices.choices)\n    availability   = serializers.ChoiceField(choices=AvailabilityChoices.choices, required=False)\n    last_donated   = serializers.DateField(required=False)\n    address        = serializers.CharField(required=False, allow_blank=True)",
+        "detail": "location.authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "AmbulanceSignUpSerializer",
+        "kind": 6,
+        "importPath": "location.authentication.serializer",
+        "description": "location.authentication.serializer",
+        "peekOfCode": "class AmbulanceSignUpSerializer(_BaseSignUpSerializer):\n    owner_name      = serializers.CharField(max_length=200)\n    contact_number  = serializers.CharField(max_length=15)\n    ambulance_type  = serializers.ChoiceField(choices=AmbulanceTypeChoices.choices)\n    vehicle_number  = serializers.CharField(max_length=50)\n    address         = serializers.CharField(required=False, allow_blank=True)\n# --------------------------------------------------\n# PHARMACY\n# --------------------------------------------------\nclass PharmacySignUpSerializer(_BaseSignUpSerializer):",
+        "detail": "location.authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "PharmacySignUpSerializer",
+        "kind": 6,
+        "importPath": "location.authentication.serializer",
+        "description": "location.authentication.serializer",
+        "peekOfCode": "class PharmacySignUpSerializer(_BaseSignUpSerializer):\n    pharmacy_name    = serializers.CharField(max_length=200)\n    owner_name       = serializers.CharField(max_length=200)\n    contact_number   = serializers.CharField(max_length=15)\n    license_number   = serializers.CharField(max_length=100)\n    license_validity = serializers.DateField()\n    address          = serializers.CharField(required=False, allow_blank=True)\n# --------------------------------------------------\n# DIAGNOSTIC\n# --------------------------------------------------",
+        "detail": "location.authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "DiagnosticSignUpSerializer",
+        "kind": 6,
+        "importPath": "location.authentication.serializer",
+        "description": "location.authentication.serializer",
+        "peekOfCode": "class DiagnosticSignUpSerializer(_BaseSignUpSerializer):\n    diagnostic_name  = serializers.CharField(max_length=200)\n    owner_name       = serializers.CharField(max_length=200)\n    contact_number   = serializers.CharField(max_length=15)\n    license_number   = serializers.CharField(max_length=100)\n    license_validity = serializers.DateField()\n    address          = serializers.CharField(required=False, allow_blank=True)\n# --------------------------------------------------\n# LOGIN\n# --------------------------------------------------",
+        "detail": "location.authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "LoginSerializer",
+        "kind": 6,
+        "importPath": "location.authentication.serializer",
+        "description": "location.authentication.serializer",
+        "peekOfCode": "class LoginSerializer(serializers.Serializer):\n    email    = serializers.EmailField()\n    password = serializers.CharField(write_only=True)\n# --------------------------------------------------\n# PASSWORD RESET — step 1: request OTP\n# --------------------------------------------------\nclass PasswordResetRequestSerializer(serializers.Serializer):\n    email = serializers.EmailField()\n# --------------------------------------------------\n# PASSWORD RESET — step 2: verify OTP + new password",
+        "detail": "location.authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetRequestSerializer",
+        "kind": 6,
+        "importPath": "location.authentication.serializer",
+        "description": "location.authentication.serializer",
+        "peekOfCode": "class PasswordResetRequestSerializer(serializers.Serializer):\n    email = serializers.EmailField()\n# --------------------------------------------------\n# PASSWORD RESET — step 2: verify OTP + new password\n# --------------------------------------------------\nclass PasswordResetVerifySerializer(serializers.Serializer):\n    email        = serializers.EmailField()\n    otp          = serializers.CharField(max_length=6)\n    new_password = serializers.CharField(write_only=True, min_length=9)\n    new_password2 = serializers.CharField(write_only=True)",
+        "detail": "location.authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetVerifySerializer",
+        "kind": 6,
+        "importPath": "location.authentication.serializer",
+        "description": "location.authentication.serializer",
+        "peekOfCode": "class PasswordResetVerifySerializer(serializers.Serializer):\n    email        = serializers.EmailField()\n    otp          = serializers.CharField(max_length=6)\n    new_password = serializers.CharField(write_only=True, min_length=9)\n    new_password2 = serializers.CharField(write_only=True)\n    def validate(self, data):\n        if data['new_password'] != data['new_password2']:\n            raise serializers.ValidationError({'new_password': 'Passwords do not match.'})\n        return data\n# --------------------------------------------------",
+        "detail": "location.authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutSerializer",
+        "kind": 6,
+        "importPath": "location.authentication.serializer",
+        "description": "location.authentication.serializer",
+        "peekOfCode": "class LogoutSerializer(serializers.Serializer):\n    refresh = serializers.CharField()",
+        "detail": "location.authentication.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "AuthEmailService",
+        "kind": 6,
+        "importPath": "location.authentication.services",
+        "description": "location.authentication.services",
+        "peekOfCode": "class AuthEmailService:\n    CACHE_PREFIX = 'signup:email_verification'\n    SIGNUP_DATA_PREFIX = 'signup:data'\n    @staticmethod\n    def generate_otp():\n        return str(random.randint(100000, 999999))\n    @staticmethod\n    def hash_otp(value):\n        return hashlib.sha256(value.encode()).hexdigest()\n    @classmethod",
+        "detail": "location.authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "ProfileCreationService",
+        "kind": 6,
+        "importPath": "location.authentication.services",
+        "description": "location.authentication.services",
+        "peekOfCode": "class ProfileCreationService:\n    @staticmethod\n    def _base_create(email, password, signup_data, profile_model, log_key):\n        try:\n            with transaction.atomic():\n                user    = User.objects.create_user(email=email, password=password)\n                profile = profile_model.objects.create(user=user, **signup_data)\n            logger.info(f'{log_key}_success', extra={'email': email, 'user_id': user.id, 'profile_id': profile.id})\n            return user\n        except DatabaseError:",
+        "detail": "location.authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "LoginService",
+        "kind": 6,
+        "importPath": "location.authentication.services",
+        "description": "location.authentication.services",
+        "peekOfCode": "class LoginService:\n    # ---------------------------\n    # 1. LOGIN — returns JWT tokens\n    # ---------------------------\n    @staticmethod\n    def login(email, password):\n        user = authenticate(username=email, password=password)\n        if user is None:\n            logger.warning('login_failed_invalid_credentials', extra={'email': email})\n            return {'status': False, 'message': 'Invalid email or password.'}",
+        "detail": "location.authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutService",
+        "kind": 6,
+        "importPath": "location.authentication.services",
+        "description": "location.authentication.services",
+        "peekOfCode": "class LogoutService:\n    # ---------------------------\n    # 1. LOGOUT — blacklists refresh token\n    # ---------------------------\n    @staticmethod\n    def logout(refresh_token: str):\n        try:\n            token = RefreshToken(refresh_token)\n            token.blacklist()\n            logger.info('logout_success')",
+        "detail": "location.authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetService",
+        "kind": 6,
+        "importPath": "location.authentication.services",
+        "description": "location.authentication.services",
+        "peekOfCode": "class PasswordResetService:\n    RESET_OTP_PREFIX  = 'auth:reset_otp'\n    RESET_EMAIL_PREFIX = 'auth:reset_email'\n    # ---------------------------\n    # 1. SEND RESET OTP\n    # ---------------------------\n    @classmethod\n    def send_reset_otp(cls, email):\n        if not User.objects.filter(email=email).exists():\n            # Return success to avoid email enumeration",
+        "detail": "location.authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "location.authentication.services",
+        "description": "location.authentication.services",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass AuthEmailService:\n    CACHE_PREFIX = 'signup:email_verification'\n    SIGNUP_DATA_PREFIX = 'signup:data'\n    @staticmethod\n    def generate_otp():\n        return str(random.randint(100000, 999999))\n    @staticmethod\n    def hash_otp(value):\n        return hashlib.sha256(value.encode()).hexdigest()",
+        "detail": "location.authentication.services",
+        "documentation": {}
+    },
+    {
+        "label": "send_otp_email_task",
+        "kind": 2,
+        "importPath": "location.authentication.tasks",
+        "description": "location.authentication.tasks",
+        "peekOfCode": "def send_otp_email_task(email, otp):\n    subject = \"Your OTP Code\"\n    message = f\"Your OTP is: {otp}. It will expire in 5 minutes.\"\n    send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [email], fail_silently=False)\n    return f\"OTP sent to {email}\"\n@shared_task\ndef send_password_reset_otp_task(email, otp):\n    subject = \"Password Reset OTP\"\n    message = f\"Your password reset OTP is: {otp}. It will expire in 5 minutes.\"\n    send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [email], fail_silently=False)",
+        "detail": "location.authentication.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "send_password_reset_otp_task",
+        "kind": 2,
+        "importPath": "location.authentication.tasks",
+        "description": "location.authentication.tasks",
+        "peekOfCode": "def send_password_reset_otp_task(email, otp):\n    subject = \"Password Reset OTP\"\n    message = f\"Your password reset OTP is: {otp}. It will expire in 5 minutes.\"\n    send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [email], fail_silently=False)\n    return f\"Password reset OTP sent to {email}\"",
+        "detail": "location.authentication.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "location.authentication.urls",
+        "description": "location.authentication.urls",
+        "peekOfCode": "router = DefaultRouter()\nrouter.register('signup',          SignupViewSet,        basename='signup')\nrouter.register('auth',            LoginViewSet,         basename='auth')\nrouter.register('auth',            LogoutViewSet,        basename='auth-logout')\nrouter.register('password-reset',  PasswordResetViewSet, basename='password-reset')\nurlpatterns = router.urls",
+        "detail": "location.authentication.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "location.authentication.urls",
+        "description": "location.authentication.urls",
+        "peekOfCode": "urlpatterns = router.urls",
+        "detail": "location.authentication.urls",
+        "documentation": {}
+    },
+    {
+        "label": "SignupViewSet",
+        "kind": 6,
+        "importPath": "location.authentication.views",
+        "description": "location.authentication.views",
+        "peekOfCode": "class SignupViewSet(GenericViewSet):\n    permission_classes = [AllowAny]\n    _PROFILE_CREATORS = {\n        'doctor':      ProfileCreationService.create_doctor_profile,\n        'user':        ProfileCreationService.create_user_profile,\n        'blood_donor': ProfileCreationService.create_blood_donor_profile,\n        'ambulance':   ProfileCreationService.create_ambulance_profile,\n        'pharmacy':    ProfileCreationService.create_pharmacy_profile,\n        'diagnostic':  ProfileCreationService.create_diagnostic_profile,\n    }",
+        "detail": "location.authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "LoginViewSet",
+        "kind": 6,
+        "importPath": "location.authentication.views",
+        "description": "location.authentication.views",
+        "peekOfCode": "class LoginViewSet(GenericViewSet):\n    permission_classes = [AllowAny]\n    @swagger_auto_schema(\n        tags=['Auth'],\n        operation_summary='Login — returns JWT access + refresh tokens',\n        consumes=['multipart/form-data'],\n        manual_parameters=_form_params(\n            ('email',    openapi.TYPE_STRING, True, 'Email address'),\n            ('password', openapi.TYPE_STRING, True, 'Password'),\n        ),",
+        "detail": "location.authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutViewSet",
+        "kind": 6,
+        "importPath": "location.authentication.views",
+        "description": "location.authentication.views",
+        "peekOfCode": "class LogoutViewSet(GenericViewSet):\n    permission_classes = [IsAuthenticated]\n    @swagger_auto_schema(\n        tags=['Auth'],\n        operation_summary='Logout — blacklists the refresh token',\n        consumes=['multipart/form-data'],\n        manual_parameters=_form_params(\n            ('refresh', openapi.TYPE_STRING, True, 'Refresh token to blacklist'),\n        ),\n        responses={200: 'Logged out', 400: 'Invalid token'},",
+        "detail": "location.authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetViewSet",
+        "kind": 6,
+        "importPath": "location.authentication.views",
+        "description": "location.authentication.views",
+        "peekOfCode": "class PasswordResetViewSet(GenericViewSet):\n    permission_classes = [AllowAny]\n    # --------------------------------------------------\n    # STEP 1 — send OTP to email\n    # --------------------------------------------------\n    @swagger_auto_schema(\n        tags=['Password Reset'],\n        operation_summary='Step 1 — Send password reset OTP',\n        consumes=['multipart/form-data'],\n        manual_parameters=_email_params,",
+        "detail": "location.authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "location.authentication.views",
+        "description": "location.authentication.views",
+        "peekOfCode": "logger = logging.getLogger(__name__)\ndef _form_params(*fields):\n    \"\"\"Build openapi form parameters from (name, type, required, description) tuples.\"\"\"\n    return [\n        openapi.Parameter(\n            name, openapi.IN_FORM,\n            type=t,\n            required=req,\n            description=desc,\n        )",
+        "detail": "location.authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "_verify_params",
+        "kind": 5,
+        "importPath": "location.authentication.views",
+        "description": "location.authentication.views",
+        "peekOfCode": "_verify_params = _form_params(\n    ('email', openapi.TYPE_STRING, True,  'Registered email address'),\n    ('otp',   openapi.TYPE_STRING, True,  '6-digit OTP sent to email'),\n)\n@method_decorator(csrf_exempt, name='dispatch')\nclass SignupViewSet(GenericViewSet):\n    permission_classes = [AllowAny]\n    _PROFILE_CREATORS = {\n        'doctor':      ProfileCreationService.create_doctor_profile,\n        'user':        ProfileCreationService.create_user_profile,",
+        "detail": "location.authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "_email_params",
+        "kind": 5,
+        "importPath": "location.authentication.views",
+        "description": "location.authentication.views",
+        "peekOfCode": "_email_params = _form_params(\n    ('email', openapi.TYPE_STRING, True, 'Registered email address'),\n)\n_reset_verify_params = _form_params(\n    ('email',         openapi.TYPE_STRING, True,  'Registered email address'),\n    ('otp',           openapi.TYPE_STRING, True,  '6-digit OTP sent to email'),\n    ('new_password',  openapi.TYPE_STRING, True,  'New password (min 9 chars)'),\n    ('new_password2', openapi.TYPE_STRING, True,  'Confirm new password'),\n)\n@method_decorator(csrf_exempt, name='dispatch')",
+        "detail": "location.authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "_reset_verify_params",
+        "kind": 5,
+        "importPath": "location.authentication.views",
+        "description": "location.authentication.views",
+        "peekOfCode": "_reset_verify_params = _form_params(\n    ('email',         openapi.TYPE_STRING, True,  'Registered email address'),\n    ('otp',           openapi.TYPE_STRING, True,  '6-digit OTP sent to email'),\n    ('new_password',  openapi.TYPE_STRING, True,  'New password (min 9 chars)'),\n    ('new_password2', openapi.TYPE_STRING, True,  'Confirm new password'),\n)\n@method_decorator(csrf_exempt, name='dispatch')\nclass LoginViewSet(GenericViewSet):\n    permission_classes = [AllowAny]\n    @swagger_auto_schema(",
+        "detail": "location.authentication.views",
         "documentation": {}
     },
     {
@@ -3653,7 +5314,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# =============================================\n# CORE SETTINGS\n# =============================================\n\"\"\"\nCORE SETTINGS: Fundamental Django configurations.\n- SECRET_KEY: Used for cryptographic signing (CSRF, sessions). Must stay secret in production.\n- DEBUG: Shows detailed error pages when True. Must be False in production.\n- ALLOWED_HOSTS: Domain names/IPs Django will serve. Prevents Host header attacks.\n- PRODUCTION: Master switch — forces DEBUG=False and DJANGO_DEV=False.",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# =============================================\n# CORE SETTINGS\n# =============================================\n\"\"\"\nCORE SETTINGS: Fundamental Django configurations.\n- SECRET_KEY: Used for cryptographic signing (CSRF, sessions). Must stay secret in production.\n- DEBUG: Shows detailed error pages when True. Must be False in production.\n- ALLOWED_HOSTS: Domain names/IPs Django will serve. Prevents Host header attacks.\n- PRODUCTION: Master switch — forces DEBUG=False.",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3662,7 +5323,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "SECRET_KEY = config(\"SECRET_KEY\")\nPRODUCTION = config(\"PRODUCTION\", default=False, cast=bool)\nDJANGO_DEV = config(\"DJANGO_DEV\", default=False, cast=bool)\nDEBUG = config(\"DEBUG\", default=True, cast=bool)\nif PRODUCTION:\n    DEBUG = False\n    DJANGO_DEV = False\nALLOWED_HOSTS = config(\n    \"ALLOWED_HOSTS\",\n    default=\"127.0.0.1,localhost\",",
+        "peekOfCode": "SECRET_KEY = config(\"SECRET_KEY\")\nPRODUCTION = config(\"PRODUCTION\", default=False, cast=bool)\nDEBUG = config(\"DEBUG\", default=True, cast=bool)\nif PRODUCTION:\n    DEBUG = False\nALLOWED_HOSTS = config(\n    \"ALLOWED_HOSTS\",\n    default=\"127.0.0.1,localhost\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],\n)",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3671,16 +5332,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "PRODUCTION = config(\"PRODUCTION\", default=False, cast=bool)\nDJANGO_DEV = config(\"DJANGO_DEV\", default=False, cast=bool)\nDEBUG = config(\"DEBUG\", default=True, cast=bool)\nif PRODUCTION:\n    DEBUG = False\n    DJANGO_DEV = False\nALLOWED_HOSTS = config(\n    \"ALLOWED_HOSTS\",\n    default=\"127.0.0.1,localhost\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],",
-        "detail": "medihub.settings",
-        "documentation": {}
-    },
-    {
-        "label": "DJANGO_DEV",
-        "kind": 5,
-        "importPath": "medihub.settings",
-        "description": "medihub.settings",
-        "peekOfCode": "DJANGO_DEV = config(\"DJANGO_DEV\", default=False, cast=bool)\nDEBUG = config(\"DEBUG\", default=True, cast=bool)\nif PRODUCTION:\n    DEBUG = False\n    DJANGO_DEV = False\nALLOWED_HOSTS = config(\n    \"ALLOWED_HOSTS\",\n    default=\"127.0.0.1,localhost\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],\n)",
+        "peekOfCode": "PRODUCTION = config(\"PRODUCTION\", default=False, cast=bool)\nDEBUG = config(\"DEBUG\", default=True, cast=bool)\nif PRODUCTION:\n    DEBUG = False\nALLOWED_HOSTS = config(\n    \"ALLOWED_HOSTS\",\n    default=\"127.0.0.1,localhost\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],\n)\nprint(f\"🔧 CORE SETTINGS: PRODUCTION={PRODUCTION}, DEBUG={DEBUG}\")",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3689,7 +5341,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "DEBUG = config(\"DEBUG\", default=True, cast=bool)\nif PRODUCTION:\n    DEBUG = False\n    DJANGO_DEV = False\nALLOWED_HOSTS = config(\n    \"ALLOWED_HOSTS\",\n    default=\"127.0.0.1,localhost\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],\n)\nprint(f\"🔧 CORE SETTINGS: PRODUCTION={PRODUCTION}, DEBUG={DEBUG}, DJANGO_DEV={DJANGO_DEV}\")",
+        "peekOfCode": "DEBUG = config(\"DEBUG\", default=True, cast=bool)\nif PRODUCTION:\n    DEBUG = False\nALLOWED_HOSTS = config(\n    \"ALLOWED_HOSTS\",\n    default=\"127.0.0.1,localhost\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],\n)\nprint(f\"🔧 CORE SETTINGS: PRODUCTION={PRODUCTION}, DEBUG={DEBUG}\")\nprint(f\"🔧 ALLOWED_HOSTS: {ALLOWED_HOSTS}\")",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3698,7 +5350,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "ALLOWED_HOSTS = config(\n    \"ALLOWED_HOSTS\",\n    default=\"127.0.0.1,localhost\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],\n)\nprint(f\"🔧 CORE SETTINGS: PRODUCTION={PRODUCTION}, DEBUG={DEBUG}, DJANGO_DEV={DJANGO_DEV}\")\nprint(f\"🔧 ALLOWED_HOSTS: {ALLOWED_HOSTS}\")\n# =============================================\n# INSTALLED APPS\n# =============================================",
+        "peekOfCode": "ALLOWED_HOSTS = config(\n    \"ALLOWED_HOSTS\",\n    default=\"127.0.0.1,localhost\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],\n)\nprint(f\"🔧 CORE SETTINGS: PRODUCTION={PRODUCTION}, DEBUG={DEBUG}\")\nprint(f\"🔧 ALLOWED_HOSTS: {ALLOWED_HOSTS}\")\n# =============================================\n# INSTALLED APPS\n# =============================================",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3761,7 +5413,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "SECURE_PROXY_SSL_HEADER = (\"HTTP_X_FORWARDED_PROTO\", \"https\")\nUSE_X_FORWARDED_HOST = True\nUSE_X_FORWARDED_PORT = True\nCSRF_COOKIE_SAMESITE = \"Lax\"\nSESSION_COOKIE_SAMESITE = \"Lax\"\nif DJANGO_DEV:\n    SESSION_COOKIE_SECURE = False\n    CSRF_COOKIE_SECURE = False\n    SECURE_SSL_REDIRECT = False\nelse:",
+        "peekOfCode": "SECURE_PROXY_SSL_HEADER = (\"HTTP_X_FORWARDED_PROTO\", \"https\")\nUSE_X_FORWARDED_HOST = False\nUSE_X_FORWARDED_PORT = False\nCSRF_COOKIE_SAMESITE = \"Lax\"\nSESSION_COOKIE_SAMESITE = \"Lax\"\nSESSION_COOKIE_SECURE = config(\"SESSION_COOKIE_SECURE\", default=False, cast=bool)\nCSRF_COOKIE_SECURE = config(\"CSRF_COOKIE_SECURE\", default=False, cast=bool)\nSECURE_SSL_REDIRECT = False  # Nginx handles SSL\nprint(\"🔒 PROXY & SECURITY: SSL handled by Nginx, cookie security configured\")\n# =============================================",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3770,7 +5422,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "USE_X_FORWARDED_HOST = True\nUSE_X_FORWARDED_PORT = True\nCSRF_COOKIE_SAMESITE = \"Lax\"\nSESSION_COOKIE_SAMESITE = \"Lax\"\nif DJANGO_DEV:\n    SESSION_COOKIE_SECURE = False\n    CSRF_COOKIE_SECURE = False\n    SECURE_SSL_REDIRECT = False\nelse:\n    SESSION_COOKIE_SECURE = True",
+        "peekOfCode": "USE_X_FORWARDED_HOST = False\nUSE_X_FORWARDED_PORT = False\nCSRF_COOKIE_SAMESITE = \"Lax\"\nSESSION_COOKIE_SAMESITE = \"Lax\"\nSESSION_COOKIE_SECURE = config(\"SESSION_COOKIE_SECURE\", default=False, cast=bool)\nCSRF_COOKIE_SECURE = config(\"CSRF_COOKIE_SECURE\", default=False, cast=bool)\nSECURE_SSL_REDIRECT = False  # Nginx handles SSL\nprint(\"🔒 PROXY & SECURITY: SSL handled by Nginx, cookie security configured\")\n# =============================================\n# PASSWORD VALIDATION",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3779,7 +5431,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "USE_X_FORWARDED_PORT = True\nCSRF_COOKIE_SAMESITE = \"Lax\"\nSESSION_COOKIE_SAMESITE = \"Lax\"\nif DJANGO_DEV:\n    SESSION_COOKIE_SECURE = False\n    CSRF_COOKIE_SECURE = False\n    SECURE_SSL_REDIRECT = False\nelse:\n    SESSION_COOKIE_SECURE = True\n    CSRF_COOKIE_SECURE = True",
+        "peekOfCode": "USE_X_FORWARDED_PORT = False\nCSRF_COOKIE_SAMESITE = \"Lax\"\nSESSION_COOKIE_SAMESITE = \"Lax\"\nSESSION_COOKIE_SECURE = config(\"SESSION_COOKIE_SECURE\", default=False, cast=bool)\nCSRF_COOKIE_SECURE = config(\"CSRF_COOKIE_SECURE\", default=False, cast=bool)\nSECURE_SSL_REDIRECT = False  # Nginx handles SSL\nprint(\"🔒 PROXY & SECURITY: SSL handled by Nginx, cookie security configured\")\n# =============================================\n# PASSWORD VALIDATION\n# =============================================",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3788,7 +5440,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "CSRF_COOKIE_SAMESITE = \"Lax\"\nSESSION_COOKIE_SAMESITE = \"Lax\"\nif DJANGO_DEV:\n    SESSION_COOKIE_SECURE = False\n    CSRF_COOKIE_SECURE = False\n    SECURE_SSL_REDIRECT = False\nelse:\n    SESSION_COOKIE_SECURE = True\n    CSRF_COOKIE_SECURE = True\n    SECURE_SSL_REDIRECT = False  # Nginx handles SSL, not Django",
+        "peekOfCode": "CSRF_COOKIE_SAMESITE = \"Lax\"\nSESSION_COOKIE_SAMESITE = \"Lax\"\nSESSION_COOKIE_SECURE = config(\"SESSION_COOKIE_SECURE\", default=False, cast=bool)\nCSRF_COOKIE_SECURE = config(\"CSRF_COOKIE_SECURE\", default=False, cast=bool)\nSECURE_SSL_REDIRECT = False  # Nginx handles SSL\nprint(\"🔒 PROXY & SECURITY: SSL handled by Nginx, cookie security configured\")\n# =============================================\n# PASSWORD VALIDATION\n# =============================================\n\"\"\"",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3797,7 +5449,34 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "SESSION_COOKIE_SAMESITE = \"Lax\"\nif DJANGO_DEV:\n    SESSION_COOKIE_SECURE = False\n    CSRF_COOKIE_SECURE = False\n    SECURE_SSL_REDIRECT = False\nelse:\n    SESSION_COOKIE_SECURE = True\n    CSRF_COOKIE_SECURE = True\n    SECURE_SSL_REDIRECT = False  # Nginx handles SSL, not Django\nprint(\"🔒 PROXY & SECURITY: SSL handled by Nginx, cookie security configured\")",
+        "peekOfCode": "SESSION_COOKIE_SAMESITE = \"Lax\"\nSESSION_COOKIE_SECURE = config(\"SESSION_COOKIE_SECURE\", default=False, cast=bool)\nCSRF_COOKIE_SECURE = config(\"CSRF_COOKIE_SECURE\", default=False, cast=bool)\nSECURE_SSL_REDIRECT = False  # Nginx handles SSL\nprint(\"🔒 PROXY & SECURITY: SSL handled by Nginx, cookie security configured\")\n# =============================================\n# PASSWORD VALIDATION\n# =============================================\n\"\"\"\nPASSWORD VALIDATION: Enforces strong passwords on registration and password change.",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SESSION_COOKIE_SECURE",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "SESSION_COOKIE_SECURE = config(\"SESSION_COOKIE_SECURE\", default=False, cast=bool)\nCSRF_COOKIE_SECURE = config(\"CSRF_COOKIE_SECURE\", default=False, cast=bool)\nSECURE_SSL_REDIRECT = False  # Nginx handles SSL\nprint(\"🔒 PROXY & SECURITY: SSL handled by Nginx, cookie security configured\")\n# =============================================\n# PASSWORD VALIDATION\n# =============================================\n\"\"\"\nPASSWORD VALIDATION: Enforces strong passwords on registration and password change.\n- UserAttributeSimilarityValidator: Blocks passwords similar to username/email.",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CSRF_COOKIE_SECURE",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "CSRF_COOKIE_SECURE = config(\"CSRF_COOKIE_SECURE\", default=False, cast=bool)\nSECURE_SSL_REDIRECT = False  # Nginx handles SSL\nprint(\"🔒 PROXY & SECURITY: SSL handled by Nginx, cookie security configured\")\n# =============================================\n# PASSWORD VALIDATION\n# =============================================\n\"\"\"\nPASSWORD VALIDATION: Enforces strong passwords on registration and password change.\n- UserAttributeSimilarityValidator: Blocks passwords similar to username/email.\n- MinimumLengthValidator: Requires at least 9 characters.",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECURE_SSL_REDIRECT",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "SECURE_SSL_REDIRECT = False  # Nginx handles SSL\nprint(\"🔒 PROXY & SECURITY: SSL handled by Nginx, cookie security configured\")\n# =============================================\n# PASSWORD VALIDATION\n# =============================================\n\"\"\"\nPASSWORD VALIDATION: Enforces strong passwords on registration and password change.\n- UserAttributeSimilarityValidator: Blocks passwords similar to username/email.\n- MinimumLengthValidator: Requires at least 9 characters.\n- CommonPasswordValidator: Blocks common passwords like \"password123\".",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3816,6 +5495,42 @@
         "importPath": "medihub.settings",
         "description": "medihub.settings",
         "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.postgresql\",\n        \"NAME\": config(\"POSTGRES_DB\", default=\"medihub\"),\n        \"USER\": config(\"POSTGRES_USER\", default=\"medihub_user\"),\n        \"PASSWORD\": config(\"POSTGRES_PASSWORD\", default=\"medihub_pass\"),\n        \"HOST\": config(\"DB_HOST\", default=\"db\"),\n        \"PORT\": config(\"DB_PORT\", default=\"5432\"),\n    }\n}",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REDIS_HOST",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "REDIS_HOST = config(\"REDIS_HOST\", default=\"redis\")\nREDIS_PORT = config(\"REDIS_PORT\", default=6379, cast=int)\nREDIS_DB = config(\"REDIS_DB\", default=0, cast=int)\nREDIS_PASSWORD = config(\"REDIS_PASSWORD\", default=\"\")\nprint(f\"🔴 REDIS: Connecting to {REDIS_HOST}:{REDIS_PORT}\")\ndef _build_redis_url():\n    if REDIS_PASSWORD:\n        return f\"redis://:{REDIS_PASSWORD}@{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB}\"\n    return f\"redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB}\"\nREDIS_URL = _build_redis_url()",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REDIS_PORT",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "REDIS_PORT = config(\"REDIS_PORT\", default=6379, cast=int)\nREDIS_DB = config(\"REDIS_DB\", default=0, cast=int)\nREDIS_PASSWORD = config(\"REDIS_PASSWORD\", default=\"\")\nprint(f\"🔴 REDIS: Connecting to {REDIS_HOST}:{REDIS_PORT}\")\ndef _build_redis_url():\n    if REDIS_PASSWORD:\n        return f\"redis://:{REDIS_PASSWORD}@{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB}\"\n    return f\"redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB}\"\nREDIS_URL = _build_redis_url()\nUSE_REDIS_CACHE = False",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REDIS_DB",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "REDIS_DB = config(\"REDIS_DB\", default=0, cast=int)\nREDIS_PASSWORD = config(\"REDIS_PASSWORD\", default=\"\")\nprint(f\"🔴 REDIS: Connecting to {REDIS_HOST}:{REDIS_PORT}\")\ndef _build_redis_url():\n    if REDIS_PASSWORD:\n        return f\"redis://:{REDIS_PASSWORD}@{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB}\"\n    return f\"redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB}\"\nREDIS_URL = _build_redis_url()\nUSE_REDIS_CACHE = False\nif redis:",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REDIS_PASSWORD",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "REDIS_PASSWORD = config(\"REDIS_PASSWORD\", default=\"\")\nprint(f\"🔴 REDIS: Connecting to {REDIS_HOST}:{REDIS_PORT}\")\ndef _build_redis_url():\n    if REDIS_PASSWORD:\n        return f\"redis://:{REDIS_PASSWORD}@{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB}\"\n    return f\"redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB}\"\nREDIS_URL = _build_redis_url()\nUSE_REDIS_CACHE = False\nif redis:\n    try:",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3860,7 +5575,7 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "CORS_ALLOW_CREDENTIALS = True\nCORS_ALLOW_HEADERS = [\n    \"accept\", \"accept-encoding\", \"authorization\", \"content-type\",\n    \"dnt\", \"origin\", \"user-agent\", \"x-csrftoken\", \"x-requested-with\",\n]\nif DJANGO_DEV:\n    CORS_ALLOW_ALL_ORIGINS = True\n    CSRF_TRUSTED_ORIGINS = [\n        \"http://127.0.0.1:8000\", \"http://localhost:3000\",\n        \"http://localhost:5173\", \"http://127.0.0.1:3000\",",
+        "peekOfCode": "CORS_ALLOW_CREDENTIALS = True\nCORS_ALLOW_HEADERS = [\n    \"accept\", \"accept-encoding\", \"authorization\", \"content-type\",\n    \"dnt\", \"origin\", \"user-agent\", \"x-csrftoken\", \"x-requested-with\",\n]\nCORS_ALLOW_ALL_ORIGINS = config(\"CORS_ALLOW_ALL_ORIGINS\", default=False, cast=bool)\nCORS_ALLOWED_ORIGINS = config(\n    \"CORS_ALLOWED_ORIGINS\",\n    default=\"http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173,http://localhost:8080\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -3869,7 +5584,34 @@
         "kind": 5,
         "importPath": "medihub.settings",
         "description": "medihub.settings",
-        "peekOfCode": "CORS_ALLOW_HEADERS = [\n    \"accept\", \"accept-encoding\", \"authorization\", \"content-type\",\n    \"dnt\", \"origin\", \"user-agent\", \"x-csrftoken\", \"x-requested-with\",\n]\nif DJANGO_DEV:\n    CORS_ALLOW_ALL_ORIGINS = True\n    CSRF_TRUSTED_ORIGINS = [\n        \"http://127.0.0.1:8000\", \"http://localhost:3000\",\n        \"http://localhost:5173\", \"http://127.0.0.1:3000\",\n    ]",
+        "peekOfCode": "CORS_ALLOW_HEADERS = [\n    \"accept\", \"accept-encoding\", \"authorization\", \"content-type\",\n    \"dnt\", \"origin\", \"user-agent\", \"x-csrftoken\", \"x-requested-with\",\n]\nCORS_ALLOW_ALL_ORIGINS = config(\"CORS_ALLOW_ALL_ORIGINS\", default=False, cast=bool)\nCORS_ALLOWED_ORIGINS = config(\n    \"CORS_ALLOWED_ORIGINS\",\n    default=\"http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173,http://localhost:8080\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],\n)",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOW_ALL_ORIGINS",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "CORS_ALLOW_ALL_ORIGINS = config(\"CORS_ALLOW_ALL_ORIGINS\", default=False, cast=bool)\nCORS_ALLOWED_ORIGINS = config(\n    \"CORS_ALLOWED_ORIGINS\",\n    default=\"http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173,http://localhost:8080\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],\n)\nCSRF_TRUSTED_ORIGINS = config(\n    \"CSRF_TRUSTED_ORIGINS\",\n    default=\"http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173,http://localhost:8080\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOWED_ORIGINS",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = config(\n    \"CORS_ALLOWED_ORIGINS\",\n    default=\"http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173,http://localhost:8080\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],\n)\nCSRF_TRUSTED_ORIGINS = config(\n    \"CSRF_TRUSTED_ORIGINS\",\n    default=\"http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173,http://localhost:8080\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],\n)",
+        "detail": "medihub.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CSRF_TRUSTED_ORIGINS",
+        "kind": 5,
+        "importPath": "medihub.settings",
+        "description": "medihub.settings",
+        "peekOfCode": "CSRF_TRUSTED_ORIGINS = config(\n    \"CSRF_TRUSTED_ORIGINS\",\n    default=\"http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173,http://localhost:8080\",\n    cast=lambda v: [s.strip() for s in v.split(\",\") if s.strip()],\n)\nprint(f\"🌐 CORS: {len(CORS_ALLOWED_ORIGINS)} allowed origins\")\n# =============================================\n# JWT CONFIGURATION\n# =============================================\n\"\"\"",
         "detail": "medihub.settings",
         "documentation": {}
     },
@@ -4308,10 +6050,10 @@
     {
         "label": "Device",
         "kind": 6,
-        "importPath": "notification.models.psuh_not_model",
-        "description": "notification.models.psuh_not_model",
+        "importPath": "notification.models.push_not_model",
+        "description": "notification.models.push_not_model",
         "peekOfCode": "class Device(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='devices', null=True, blank=True)\n    token = models.CharField(max_length=500, unique=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"{self.user} - {self.token[:30]}\"",
-        "detail": "notification.models.psuh_not_model",
+        "detail": "notification.models.push_not_model",
         "documentation": {}
     },
     {
@@ -4373,7 +6115,7 @@
         "kind": 6,
         "importPath": "notification.servcies",
         "description": "notification.servcies",
-        "peekOfCode": "class PushNotification:\n    '''send notification use all devices'''    \n    @staticmethod\n    def send_to_user(user, title, body):\n        from notification.models.psuh_not_model import Device\n        tokens = Device.objects.filter(user=user).values_list('token', flat=True)\n        results = []\n        for token in tokens:\n            try:\n                response = messaging.send(messaging.Message(",
+        "peekOfCode": "class PushNotification:\n    '''send notification use all devices'''    \n    @staticmethod\n    def send_to_user(user, title, body):\n        from notification.models.push_not_model import Device\n        '''getting all devices of  user'''\n        tokens = Device.objects.filter(user=user).values_list('token', flat=True)\n        results = []\n        for token in tokens:\n            try:",
         "detail": "notification.servcies",
         "documentation": {}
     },
@@ -4711,6 +6453,24 @@
         "documentation": {}
     },
     {
+        "label": "UserProfileSelectors",
+        "kind": 6,
+        "importPath": "profiles.selectors.profile_slc",
+        "description": "profiles.selectors.profile_slc",
+        "peekOfCode": "class UserProfileSelectors:\n    @staticmethod\n    def GetProfile(user_id):\n        cache = UserProfileCacheServies.GetProfile(user_id)\n        if cache:\n            return cache\n        # if profile doesnt exist in cache ,retrieve from database\n        user = User.objects.get(id=user_id)\n        model = PROFILE_MAP.get(user.user_type)\n        if model is None:",
+        "detail": "profiles.selectors.profile_slc",
+        "documentation": {}
+    },
+    {
+        "label": "PROFILE_MAP",
+        "kind": 5,
+        "importPath": "profiles.selectors.profile_slc",
+        "description": "profiles.selectors.profile_slc",
+        "peekOfCode": "PROFILE_MAP = {\n    RoleChoices.REGULAR: RegularUserProfile,\n    RoleChoices.DOCTOR: Doctor,\n    RoleChoices.AMBULANCE: AmbulanceProfile,\n    RoleChoices.PHARMACY: PharmacyProfile,\n    RoleChoices.DIAGNOSTIC: DiagnosticProfile,\n    RoleChoices.BLOOD_DONOR: BloodDonor,\n}\nclass UserProfileSelectors:\n    @staticmethod",
+        "detail": "profiles.selectors.profile_slc",
+        "documentation": {}
+    },
+    {
         "label": "UserAdmin",
         "kind": 6,
         "importPath": "profiles.admin",
@@ -4861,159 +6621,6 @@
         "description": "profiles.apps",
         "peekOfCode": "class ProfilesConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'profiles'",
         "detail": "profiles.apps",
-        "documentation": {}
-    },
-    {
-        "label": "APIResponse",
-        "kind": 6,
-        "importPath": "utilities.api_response",
-        "description": "utilities.api_response",
-        "peekOfCode": "class APIResponse:\n    @staticmethod\n    def success(message=\"Data retrieved successfully\", title=\"data\", data=None):\n        return {\n            \"success\": True,\n            \"message\": message,\n            title: data if data is not None else \"Data not provided in response\"\n        }\n    @staticmethod\n    def error(message=\"Error occurred in API response\"):",
-        "detail": "utilities.api_response",
-        "documentation": {}
-    },
-    {
-        "label": "api_exception_handler",
-        "kind": 2,
-        "importPath": "utilities.decorators",
-        "description": "utilities.decorators",
-        "peekOfCode": "def api_exception_handler(func):\n    def wrapper(*args, **kwargs):\n        try:\n            return func(*args, **kwargs)\n        except Exception as e:\n            #collent logg and trace\n            logger.error(\n                \"Api Error occured\",\n                extra={\n                    'error' : str(e),",
-        "detail": "utilities.decorators",
-        "documentation": {}
-    },
-    {
-        "label": "logger",
-        "kind": 5,
-        "importPath": "utilities.decorators",
-        "description": "utilities.decorators",
-        "peekOfCode": "logger = logging.getLogger(__name__)\n'''Customize decorator for api exception handling'''\ndef api_exception_handler(func):\n    def wrapper(*args, **kwargs):\n        try:\n            return func(*args, **kwargs)\n        except Exception as e:\n            #collent logg and trace\n            logger.error(\n                \"Api Error occured\",",
-        "detail": "utilities.decorators",
-        "documentation": {}
-    },
-    {
-        "label": "RoleChoices",
-        "kind": 6,
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "peekOfCode": "class RoleChoices(models.TextChoices):\n    ADMIN = 'admin', 'Admin'\n    DOCTOR = 'doctor', 'Doctor'\n    USER = 'user', 'User'\n    AMBULANCE = 'ambulance', 'Ambulance'\n    PHARMACY = 'pharmacy', 'Pharmacy'\n    DIAGNOSTIC = 'diagnostic', 'Diagnostic'\n    BLOOD_DONOR = 'blood_donor', 'Blood Donor'\nclass GenderChoices(models.TextChoices):\n    MALE = 'male', 'Male'",
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "GenderChoices",
-        "kind": 6,
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "peekOfCode": "class GenderChoices(models.TextChoices):\n    MALE = 'male', 'Male'\n    FEMALE = 'female', 'Female'\n    OTHER = 'other', 'Other'\nclass DayChoices(models.TextChoices):\n    SATURDAY = 'saturday', 'Saturday'\n    SUNDAY = 'sunday', 'Sunday'\n    MONDAY = 'monday', 'Monday'\n    TUESDAY = 'tuesday', 'Tuesday'\n    WEDNESDAY = 'wednesday', 'Wednesday'",
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "DayChoices",
-        "kind": 6,
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "peekOfCode": "class DayChoices(models.TextChoices):\n    SATURDAY = 'saturday', 'Saturday'\n    SUNDAY = 'sunday', 'Sunday'\n    MONDAY = 'monday', 'Monday'\n    TUESDAY = 'tuesday', 'Tuesday'\n    WEDNESDAY = 'wednesday', 'Wednesday'\n    THURSDAY = 'thursday', 'Thursday'\n    FRIDAY = 'friday', 'Friday'\nclass BloodGroupChoices(models.TextChoices):\n    A_POS = 'A+', 'A+'",
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "BloodGroupChoices",
-        "kind": 6,
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "peekOfCode": "class BloodGroupChoices(models.TextChoices):\n    A_POS = 'A+', 'A+'\n    A_NEG = 'A-', 'A-'\n    B_POS = 'B+', 'B+'\n    B_NEG = 'B-', 'B-'\n    AB_POS = 'AB+', 'AB+'\n    AB_NEG = 'AB-', 'AB-'\n    O_POS = 'O+', 'O+'\n    O_NEG = 'O-', 'O-'\nclass AvailabilityChoices(models.TextChoices):",
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "AvailabilityChoices",
-        "kind": 6,
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "peekOfCode": "class AvailabilityChoices(models.TextChoices):\n    AVAILABLE = 'available', 'Available'\n    UNAVAILABLE = 'unavailable', 'Unavailable'\nclass AmbulanceTypeChoices(models.TextChoices):\n    BASIC = 'basic', 'Basic'\n    ADVANCED = 'advanced', 'Advanced'\n    ICU = 'icu', 'ICU'\nclass BlogStatusChoices(models.TextChoices):\n    DRAFT = 'draft', 'Draft'\n    PUBLISHED = 'published', 'Published'",
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "AmbulanceTypeChoices",
-        "kind": 6,
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "peekOfCode": "class AmbulanceTypeChoices(models.TextChoices):\n    BASIC = 'basic', 'Basic'\n    ADVANCED = 'advanced', 'Advanced'\n    ICU = 'icu', 'ICU'\nclass BlogStatusChoices(models.TextChoices):\n    DRAFT = 'draft', 'Draft'\n    PUBLISHED = 'published', 'Published'\nclass BlogCategoryChoices(models.TextChoices):\n    GENERAL = 'general', 'General'\n    CARDIOLOGY = 'cardiology', 'Cardiology'",
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "BlogStatusChoices",
-        "kind": 6,
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "peekOfCode": "class BlogStatusChoices(models.TextChoices):\n    DRAFT = 'draft', 'Draft'\n    PUBLISHED = 'published', 'Published'\nclass BlogCategoryChoices(models.TextChoices):\n    GENERAL = 'general', 'General'\n    CARDIOLOGY = 'cardiology', 'Cardiology'\n    NEUROLOGY = 'neurology', 'Neurology'\n    PEDIATRICS = 'pediatrics', 'Pediatrics'\n    GYNECOLOGY = 'gynecology', 'Gynecology'\n    DERMATOLOGY = 'dermatology', 'Dermatology'",
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "BlogCategoryChoices",
-        "kind": 6,
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "peekOfCode": "class BlogCategoryChoices(models.TextChoices):\n    GENERAL = 'general', 'General'\n    CARDIOLOGY = 'cardiology', 'Cardiology'\n    NEUROLOGY = 'neurology', 'Neurology'\n    PEDIATRICS = 'pediatrics', 'Pediatrics'\n    GYNECOLOGY = 'gynecology', 'Gynecology'\n    DERMATOLOGY = 'dermatology', 'Dermatology'\n    ORTHOPEDICS = 'orthopedics', 'Orthopedics'\n    NUTRITION = 'nutrition', 'Nutrition'\n    MENTAL_HEALTH = 'mental_health', 'Mental Health'",
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "BlogMediaTypeChoices",
-        "kind": 6,
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "peekOfCode": "class BlogMediaTypeChoices(models.TextChoices):\n    IMAGE = 'image', 'Image'\n    VIDEO = 'video', 'Video'\nclass PostStatusChoices(models.TextChoices):\n    OPEN = 'open', 'Open'\n    FULFILLED = 'fulfilled', 'Fulfilled'\n    CLOSED = 'closed', 'Closed'\nclass PostTypeChoices(models.TextChoices):\n    BLOOD_NEED = 'blood_need', 'Blood Need'\n    MEDICINE_NEED = 'medicine_need', 'Medicine Need'",
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "PostStatusChoices",
-        "kind": 6,
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "peekOfCode": "class PostStatusChoices(models.TextChoices):\n    OPEN = 'open', 'Open'\n    FULFILLED = 'fulfilled', 'Fulfilled'\n    CLOSED = 'closed', 'Closed'\nclass PostTypeChoices(models.TextChoices):\n    BLOOD_NEED = 'blood_need', 'Blood Need'\n    MEDICINE_NEED = 'medicine_need', 'Medicine Need'\n    EQUIPMENT_NEED = 'equipment_need', 'Equipment Need'\n    GENERAL = 'general', 'General'\nclass UrgencyChoices(models.TextChoices):",
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "PostTypeChoices",
-        "kind": 6,
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "peekOfCode": "class PostTypeChoices(models.TextChoices):\n    BLOOD_NEED = 'blood_need', 'Blood Need'\n    MEDICINE_NEED = 'medicine_need', 'Medicine Need'\n    EQUIPMENT_NEED = 'equipment_need', 'Equipment Need'\n    GENERAL = 'general', 'General'\nclass UrgencyChoices(models.TextChoices):\n    LOW = 'low', 'Low'\n    MEDIUM = 'medium', 'Medium'\n    HIGH = 'high', 'High'\n    CRITICAL = 'critical', 'Critical'",
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "UrgencyChoices",
-        "kind": 6,
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "peekOfCode": "class UrgencyChoices(models.TextChoices):\n    LOW = 'low', 'Low'\n    MEDIUM = 'medium', 'Medium'\n    HIGH = 'high', 'High'\n    CRITICAL = 'critical', 'Critical'\nclass EquipmentConditionChoices(models.TextChoices):\n    NEW = 'new', 'New'\n    GOOD = 'good', 'Good'\n    FAIR = 'fair', 'Fair'\n    POOR = 'poor', 'Poor'",
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "EquipmentConditionChoices",
-        "kind": 6,
-        "importPath": "utilities.enum",
-        "description": "utilities.enum",
-        "peekOfCode": "class EquipmentConditionChoices(models.TextChoices):\n    NEW = 'new', 'New'\n    GOOD = 'good', 'Good'\n    FAIR = 'fair', 'Fair'\n    POOR = 'poor', 'Poor'",
-        "detail": "utilities.enum",
-        "documentation": {}
-    },
-    {
-        "label": "ServiceResult",
-        "kind": 6,
-        "importPath": "utilities.resultl",
-        "description": "utilities.resultl",
-        "peekOfCode": "class ServiceResult:\n    success: bool\n    data: Optional[Any] = None\n    error: Optional[str] = None",
-        "detail": "utilities.resultl",
         "documentation": {}
     },
     {
