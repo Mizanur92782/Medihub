@@ -48,7 +48,7 @@ scrape_configs:
       - targets: [localhost]
         labels:
           job: medihub_files
-          __path__: /app/logs/web*/*.log   # mounted from web1_logs web2_logs web3_logs
+          __path__: /app/logs/*.log   # mounted from web1_logs web2_logs web3_logs
 
     pipeline_stages:
       - json:

@@ -69,7 +69,7 @@ services:
       - ..:/app
       - static_volume:/app/staticfiles
       - media_volume:/app/media
-      - web1_logs:/app/logs
+      - web_logs:/app/logs
     depends_on:
       db:
         condition: service_healthy
@@ -106,7 +106,7 @@ services:
       - ..:/app
       - static_volume:/app/staticfiles
       - media_volume:/app/media
-      - web2_logs:/app/logs
+      - web_logs:/app/logs
     depends_on:
       db:
         condition: service_healthy
@@ -143,7 +143,7 @@ services:
       - ..:/app
       - static_volume:/app/staticfiles
       - media_volume:/app/media
-      - web3_logs:/app/logs
+      - web_logs:/app/logs
     depends_on:
       db:
         condition: service_healthy
@@ -358,7 +358,7 @@ services:
       - app_network
 
   loki:
-    image: grafana/loki:2.9.0
+    image: grafana/loki:2.8.0
     container_name: medihub_loki
     ports:
       - "3100:3100"
@@ -368,14 +368,13 @@ services:
       - app_network
 
   promtail:
-    image: grafana/promtail:2.9.0
+    image: grafana/promtail:2.8.0
     container_name: medihub_promtail
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ../monitoring/promtail.yml:/etc/promtail/config.yml
-      - web1_logs:/app/logs/web1
-      - web2_logs:/app/logs/web2
-      - web3_logs:/app/logs/web3
+      - web_logs:/app/logs
+     
     command: -config.file=/etc/promtail/config.yml
     depends_on:
       - loki
@@ -408,10 +407,8 @@ volumes:
   prometheus_data:
   rabbitmq_data:
   pgadmin_data:
-  web1_logs:
-  web2_logs:
-  web3_logs:
-
+  web_logs:
+  
 networks:
   app_network:
     driver: bridge
