@@ -76,6 +76,8 @@ INSTALLED_APPS = [
     "blog",
     "post",
     "notification",
+    "interactions",
+    "feed",
 ]
 
 AUTH_USER_MODEL = "authentication.User"
@@ -612,21 +614,46 @@ LOGGING = {
     "formatters": {
         "json": {
             "()": "pythonjsonlogger.jsonlogger.JsonFormatter",
-            "format": "%(asctime)s %(levelname)s %(name)s %(message)s",
+            "format": "%(asctime)s %(levelname)s %(name)s %(message)s %(request_id)s",
+        },
+    },
+    "filters": {
+        "request_id": {
+            "()": "request_id.logging.RequestIdFilter",
         },
     },
     "handlers": {
         "console": {
             "class": "logging.StreamHandler",
             "formatter": "json",
+            "filters": ["request_id"],
+        },
+        "file": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "formatter": "json",
+            "filters": ["request_id"],
+            "filename": BASE_DIR / "logs" / "medihub.log",
+            "maxBytes": 1024 * 1024 * 10,  # 10 MB per file
+            "backupCount": 10,              # keep last 10 files = 100 MB max
+            "encoding": "utf-8",
+        },
+        "error_file": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "formatter": "json",
+            "filters": ["request_id"],
+            "filename": BASE_DIR / "logs" / "medihub_error.log",
+            "maxBytes": 1024 * 1024 * 10,
+            "backupCount": 10,
+            "encoding": "utf-8",
+            "level": "ERROR",
         },
     },
     "root": {
-        "handlers": ["console"],
+        "handlers": ["console", "file", "error_file"],
         "level": "INFO",
     },
 }
-print("📋 LOGGING: Structured JSON logging to console at INFO level")
+print("📋 LOGGING: JSON logging → console + logs/medihub.log + logs/medihub_error.log")
 
 
 # =============================================

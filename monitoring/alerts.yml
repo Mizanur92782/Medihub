@@ -1,19 +1,143 @@
 groups:
-  - name: medihub_alerts
+  - name: medihub_service_alerts
     rules:
+
+      # --- any scrape target goes down ---
       - alert: ServiceDown
         expr: up == 0
         for: 1m
         labels:
           severity: critical
         annotations:
-          summary: "Service {{ $labels.job }} is down"
+          summary: "🔴 Service DOWN: {{ $labels.job }}"
+          description: "{{ $labels.job }} has been unreachable for more than 1 minute."
 
+      # --- web container down specifically ---
+      - alert: WebContainerDown
+        expr: up{job=~"medihub_web.*"} == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "🔴 Web container DOWN: {{ $labels.job }}"
+          description: "Django web container {{ $labels.job }} is not responding."
+
+  - name: medihub_performance_alerts
+    rules:
+
+      # --- slow response time ---
       - alert: HighResponseTime
-        expr: django_http_requests_latency_seconds_by_view_method_sum > 2
+        expr: |
+          rate(django_http_requests_latency_seconds_by_view_method_sum[5m])
+          /
+          rate(django_http_requests_latency_seconds_by_view_method_count[5m]) > 2
         for: 2m
         labels:
           severity: warning
         annotations:
-          summary: "High response time on {{ $labels.view }}"
-          
+          summary: "⚠️ Slow response on {{ $labels.view }} ({{ $labels.job }})"
+          description: "Average response time exceeded 2s for 2 minutes."
+
+      # --- high HTTP error rate (5xx) ---
+      - alert: HighErrorRate
+        expr: |
+          rate(django_http_responses_total_by_status_view_method_total{status=~"5.."}[5m])
+          /
+          rate(django_http_responses_total_by_status_view_method_total[5m]) > 0.05
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "🔴 High 5xx error rate on {{ $labels.job }}"
+          description: "More than 5% of requests are returning 5xx errors."
+
+      # --- high request rate (traffic spike) ---
+      - alert: HighRequestRate
+        expr: rate(django_http_requests_total_by_view_transport_method_total[5m]) > 100
+        for: 3m
+        labels:
+          severity: warning
+        annotations:
+          summary: "⚠️ High traffic on {{ $labels.job }}"
+          description: "Request rate exceeded 100 req/s for 3 minutes."
+
+  - name: medihub_resource_alerts
+    rules:
+
+      # --- container high CPU ---
+      - alert: ContainerHighCPU
+        expr: |
+          rate(container_cpu_usage_seconds_total{name=~"medihub_.*"}[5m]) * 100 > 80
+        for: 3m
+        labels:
+          severity: warning
+        annotations:
+          summary: "⚠️ High CPU: {{ $labels.name }}"
+          description: "Container {{ $labels.name }} CPU usage above 80% for 3 minutes."
+
+      # --- container high memory ---
+      - alert: ContainerHighMemory
+        expr: |
+          container_memory_usage_bytes{name=~"medihub_.*"}
+          /
+          container_spec_memory_limit_bytes{name=~"medihub_.*"} * 100 > 85
+        for: 3m
+        labels:
+          severity: warning
+        annotations:
+          summary: "⚠️ High Memory: {{ $labels.name }}"
+          description: "Container {{ $labels.name }} memory usage above 85% of its limit."
+
+      # --- host disk running low ---
+      - alert: HostDiskLow
+        expr: |
+          (node_filesystem_avail_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"}) * 100 < 15
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "⚠️ Low disk space on host"
+          description: "Host disk space below 15%."
+
+  - name: medihub_database_alerts
+    rules:
+
+      # --- postgres down ---
+      - alert: PostgresDown
+        expr: up{job="medihub_web1"} == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "🔴 PostgreSQL may be down"
+          description: "Web containers are unreachable — database may be the cause."
+
+      # --- redis down ---
+      - alert: RedisDown
+        expr: up{job=~"medihub_web.*"} == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "🔴 Redis may be down"
+          description: "Web containers unreachable — Redis cache may be unavailable."
+
+      # --- rabbitmq down ---
+      - alert: RabbitMQDown
+        expr: up{job="rabbitmq"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "🔴 RabbitMQ is DOWN"
+          description: "RabbitMQ has been unreachable for more than 1 minute. Celery tasks will fail."
+
+      # --- rabbitmq queue growing (celery not consuming) ---
+      - alert: RabbitMQQueueBacklog
+        expr: rabbitmq_queue_messages_ready > 500
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "⚠️ RabbitMQ queue backlog: {{ $labels.queue }}"
+          description: "Queue {{ $labels.queue }} has more than 500 unprocessed messages for 5 minutes. Celery worker may be stuck."

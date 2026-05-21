@@ -80,7 +80,7 @@ class AuthEmailService:
     @classmethod
     def resend_otp(cls, email):
         key  = UserSignupCacheKeys.user_register_key(email)
-        data = cache.get(key)
+        data = CacheManager.GetCache(key)
         if not data:
             return {'status': False, 'message': 'No signup session found. Please register again.'}
         otp = cls.generate_otp()

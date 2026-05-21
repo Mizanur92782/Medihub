@@ -30,14 +30,12 @@ loading() {
 # ===== STEP 1 =====
 echo -e "${YELLOW}Step 1: Stop Docker containers${NC}"
 
-# ===== GENERATE ALERTMANAGER CONFIG =====
-if [ -f ".env" ]; then
-    source .env
-    envsubst < monitoring/alertmanager.yml.template > monitoring/alertmanager.yml
-    echo -e "${GREEN}✔ alertmanager.yml generated from template${NC}"
-else
-    echo -e "${RED}✘ .env file not found! alertmanager.yml not generated${NC}"
+# ===== CHECK REQUIRED FILES =====
+if [ ! -f ".env" ]; then
+    echo -e "${RED}✘ .env file not found! Aborting.${NC}"
+    exit 1
 fi
+echo -e "${GREEN}✔ .env found${NC}"
 
 echo ""
 
@@ -191,8 +189,11 @@ read -p "Do you want to run root seed management commands? (yes/no/exit/ignore):
 if [[ "$answer" == "yes" ]]; then
     echo -e "${YELLOW}Running root seed...${NC}"
     sleep 1
-    docker exec medihub_web1 python manage.py root_seed
-    echo -e "${GREEN}✔ Root seed completed${NC}"
+    if docker exec medihub_web1 python manage.py root_seed; then
+        echo -e "${GREEN}✔ Root seed completed${NC}"
+    else
+        echo -e "${RED}✘ Root seed failed — is medihub_web1 running?${NC}"
+    fi
 elif [[ "$answer" == "exit" ]]; then
     echo -e "${YELLOW}Exit from Shell${NC}"
     exit
@@ -257,13 +258,34 @@ echo ""
 echo -e "${BLUE}====================================="
 echo -e "       SERVICE URLs 🌐"
 echo -e "=====================================${NC}"
+
+# read credentials from .env
+PG_USER=$(grep  '^POSTGRES_USER='         .env | cut -d= -f2)
+PG_PASS=$(grep  '^POSTGRES_PASSWORD='     .env | cut -d= -f2)
+PG_DB=$(grep    '^POSTGRES_DB='           .env | cut -d= -f2)
+RMQ_USER=$(grep '^RABBITMQ_DEFAULT_USER=' .env | cut -d= -f2)
+RMQ_PASS=$(grep '^RABBITMQ_DEFAULT_PASS=' .env | cut -d= -f2)
+GF_PASS="medihub_grafana"
+PGA_EMAIL="admin@medihub.com"
+PGA_PASS="medihub_pgadmin"
+
 echo -e "${GREEN}App (Nginx):${NC}        http://localhost:8080"
 echo -e "${GREEN}Web1:${NC}               http://localhost:8011"
 echo -e "${GREEN}Web2:${NC}               http://localhost:8012"
 echo -e "${GREEN}Web3:${NC}               http://localhost:8013"
+echo -e "${GREEN}Swagger:${NC}            http://localhost:8080/swagger/"
+echo ""
+echo -e "${BLUE}--- Credentials ---${NC}"
 echo -e "${GREEN}RabbitMQ UI:${NC}        http://localhost:15672"
+echo -e "         user: ${YELLOW}${RMQ_USER}${NC}  pass: ${YELLOW}${RMQ_PASS}${NC}"
+echo ""
 echo -e "${GREEN}pgAdmin:${NC}            http://localhost:5050"
+echo -e "         email: ${YELLOW}${PGA_EMAIL}${NC}  pass: ${YELLOW}${PGA_PASS}${NC}"
+echo -e "         DB host: ${YELLOW}db${NC}  user: ${YELLOW}${PG_USER}${NC}  pass: ${YELLOW}${PG_PASS}${NC}  db: ${YELLOW}${PG_DB}${NC}"
+echo ""
 echo -e "${GREEN}Grafana:${NC}            http://localhost:3000"
+echo -e "         user: ${YELLOW}admin${NC}  pass: ${YELLOW}${GF_PASS}${NC}"
+echo ""
 echo -e "${GREEN}Prometheus:${NC}         http://localhost:9090"
 echo -e "${GREEN}Alertmanager:${NC}       http://localhost:9093"
 echo -e "${GREEN}Jaeger UI:${NC}          http://localhost:16686"

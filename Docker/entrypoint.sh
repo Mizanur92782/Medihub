@@ -6,6 +6,9 @@ fi
 
 PORT=${PORT:-8011}
 
+# ensure log directory exists with correct permissions
+mkdir -p /app/logs
+
 if [ "$(echo $DJANGO_DEV | tr '[:upper:]' '[:lower:]')" = "true" ]; then
   exec python manage.py runserver 0.0.0.0:$PORT
 else
@@ -14,6 +17,8 @@ else
     --workers 4 \
     --threads 2 \
     --timeout 60 \
-    --access-logfile - \
-    --error-logfile -
+    --access-logfile /app/logs/gunicorn_access.log \
+    --error-logfile  /app/logs/gunicorn_error.log \
+    --capture-output \
+    --log-level info
 fi

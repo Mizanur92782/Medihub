@@ -124,4 +124,53 @@ class DoctorRating(models.Model):
 
     def __str__(self):
         return f'{self.doctor} - {self.rating}'
+    
+
+
+
+
+
+
+
+
+#============================== DOCTOR FEED MODEL ============================
+class DoctorStats(models.Model):
+
+    # existing fields ...
+
+    doctor = models.OneToOneField(Doctor, on_delete=models.CASCADE, related_name='evaluation')
+
+    avg_rating = models.FloatField(default=0)
+
+    total_rating = models.IntegerField(default=0)
+
+    total_profile_views = models.IntegerField(default=0)
+
+    total_followers = models.IntegerField(default=0)
+
+    total_questions = models.IntegerField(default=0)
+
+    total_feed_impression = models.IntegerField(default=0)
+
+    total_feed_click = models.IntegerField(default=0)
+
+    total_booking = models.IntegerField(default=0)
+
+    feed_score = models.FloatField(default=0)
+
+    is_online = models.BooleanField(default=False)
+
+    is_verified = models.BooleanField(default=False)
+
+    last_active = models.DateTimeField(null=True, blank=True)
+
+    profile_completed = models.BooleanField(default=False)
+
+    search_score = models.FloatField(default=0)
+
+    recommendation_score = models.FloatField(default=0)
+
+
+    def __self__(self):
+        return f'{self.doctor} - Evaluation'
         
