@@ -44,7 +44,10 @@ jobs:
           pip install -r requirements.txt
 
       - name: Wait for services
-        run: docker compose -f Docker/docker-compose.cicd.yml wait db redis rabbitmq || sleep 20
+        run: |
+          until docker exec medihub_ci_db pg_isready -U medihub; do sleep 2; done
+          until docker exec medihub_ci_redis redis-cli ping | grep PONG; do sleep 2; done
+          until docker exec medihub_ci_rabbitmq rabbitmq-diagnostics ping; do sleep 2; done
 
       - name: Create logs directory
         run: mkdir -p logs
