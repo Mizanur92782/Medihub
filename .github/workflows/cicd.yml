@@ -116,15 +116,10 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
 
-            echo  "✅Successfully logged in to EC2 instance"
-            sleep 5
-
-            
-
+            echo "✅ Successfully logged in to EC2 instance"
             echo "🔐 Login to Docker Hub..."
             docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
-      
             echo "⬇️ Pull latest image..."
             docker pull ${{ secrets.DOCKER_USERNAME }}/medihub:latest
 
