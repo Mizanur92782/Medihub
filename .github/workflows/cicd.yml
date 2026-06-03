@@ -116,7 +116,7 @@ jobs:
           echo "${{ secrets.EC2_SSH_KEY }}" > /tmp/ec2_key.pem
           chmod 600 /tmp/ec2_key.pem
           scp -i /tmp/ec2_key.pem -o StrictHostKeyChecking=no \
-            Docker/docker-compose.yml \
+            Docker/docker-compose.prod.yml \
             ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:~/medihub/docker-compose.yml
 
       - name: SSH and deploy to EC2
