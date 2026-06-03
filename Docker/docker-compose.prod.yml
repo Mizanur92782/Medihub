@@ -3,26 +3,16 @@ services:
     image: nginx:alpine
     container_name: medihub_nginx
     ports:
-      - "8080:80"
+      - "80:80"
     volumes:
-      - ../nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - static_volume:/app/staticfiles
       - media_volume:/app/media
     depends_on:
-      web1:
-        condition: service_healthy
-      web2:
-        condition: service_healthy
-      web3:
+      web:
         condition: service_healthy
     restart: always
     networks:
       - app_network
-    deploy:
-      resources:
-        limits:
-          cpus: "0.5"
-          memory: 256M
 
   migrate:
     image: ${DOCKER_IMAGE}
@@ -32,14 +22,13 @@ services:
     env_file:
       - .env
     volumes:
-      - ..:/app
       - static_volume:/app/staticfiles
       - media_volume:/app/media
     command:
       [
         "sh",
         "-c",
-        "chown -R app:app /app/staticfiles && python manage.py makemigrations --noinput && python manage.py migrate --noinput && python manage.py collectstatic --noinput",
+        "chown -R app:app /app/staticfiles && python manage.py migrate --noinput && python manage.py collectstatic --noinput",
       ]
     depends_on:
       db:
@@ -48,21 +37,18 @@ services:
       - app_network
     restart: "no"
 
-  web1:
+  web:
     image: ${DOCKER_IMAGE}
-    container_name: medihub_web1
-    hostname: web1
+    container_name: medihub_web
     env_file:
       - .env
     environment:
-      - PORT=8011
+      - PORT=8000
     ports:
-      - "8011:8011"
+      - "8000:8000"
     volumes:
-      - ..:/app
       - static_volume:/app/staticfiles
       - media_volume:/app/media
-      - web_logs:/app/logs
     depends_on:
       db:
         condition: service_healthy
@@ -74,90 +60,11 @@ services:
     networks:
       - app_network
     healthcheck:
-      test: ["CMD", "curl", "-f", "-H", "Host: localhost", "http://localhost:8011/health/"]
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health/"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 40s
-    deploy:
-      resources:
-        limits:
-          cpus: "1"
-          memory: 512M
-
-  web2:
-    image: ${DOCKER_IMAGE}
-    container_name: medihub_web2
-    hostname: web2
-    env_file:
-      - .env
-    environment:
-      - PORT=8012
-    ports:
-      - "8012:8012"
-    volumes:
-      - ..:/app
-      - static_volume:/app/staticfiles
-      - media_volume:/app/media
-      - web_logs:/app/logs
-    depends_on:
-      db:
-        condition: service_healthy
-      redis:
-        condition: service_healthy
-      migrate:
-        condition: service_completed_successfully
-    restart: always
-    networks:
-      - app_network
-    healthcheck:
-      test: ["CMD", "curl", "-f", "-H", "Host: localhost", "http://localhost:8012/health/"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
-    deploy:
-      resources:
-        limits:
-          cpus: "1"
-          memory: 512M
-
-  web3:
-    image: ${DOCKER_IMAGE}
-    container_name: medihub_web3
-    hostname: web3
-    env_file:
-      - .env
-    environment:
-      - PORT=8013
-    ports:
-      - "8013:8013"
-    volumes:
-      - ..:/app
-      - static_volume:/app/staticfiles
-      - media_volume:/app/media
-      - web_logs:/app/logs
-    depends_on:
-      db:
-        condition: service_healthy
-      redis:
-        condition: service_healthy
-      migrate:
-        condition: service_completed_successfully
-    restart: always
-    networks:
-      - app_network
-    healthcheck:
-      test: ["CMD", "curl", "-f", "-H", "Host: localhost", "http://localhost:8013/health/"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
-    deploy:
-      resources:
-        limits:
-          cpus: "1"
-          memory: 512M
 
   db:
     image: postgres:16-alpine
@@ -174,11 +81,6 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-    deploy:
-      resources:
-        limits:
-          cpus: "1"
-          memory: 512M
 
   redis:
     image: redis:7-alpine
@@ -194,23 +96,12 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-    deploy:
-      resources:
-        limits:
-          cpus: "0.5"
-          memory: 256M
 
   rabbitmq:
     image: rabbitmq:3-management-alpine
     container_name: medihub_rabbitmq
-    ports:
-      - "15672:15672"
-      - "15692:15692"
     env_file:
       - .env
-    # enable prometheus metrics plugin on startup
-    command: >
-      sh -c "rabbitmq-plugins enable rabbitmq_prometheus && rabbitmq-server"
     volumes:
       - rabbitmq_data:/var/lib/rabbitmq
     restart: always
@@ -228,8 +119,6 @@ services:
     command: celery -A medihub worker --loglevel=info
     env_file:
       - .env
-    volumes:
-      - ..:/app
     depends_on:
       rabbitmq:
         condition: service_healthy
@@ -240,11 +129,6 @@ services:
     restart: always
     networks:
       - app_network
-    deploy:
-      resources:
-        limits:
-          cpus: "1"
-          memory: 512M
 
   celery_beat:
     image: ${DOCKER_IMAGE}
@@ -252,8 +136,6 @@ services:
     command: celery -A medihub beat --loglevel=info --schedule=/tmp/celerybeat-schedule
     env_file:
       - .env
-    volumes:
-      - ..:/app
     depends_on:
       rabbitmq:
         condition: service_healthy
@@ -263,147 +145,12 @@ services:
     networks:
       - app_network
 
-  cadvisor:
-    image: gcr.io/cadvisor/cadvisor:latest
-    container_name: medihub_cadvisor
-    ports:
-      - "8081:8080"
-    volumes:
-      - /:/rootfs:ro
-      - /var/run:/var/run:ro
-      - /sys:/sys:ro
-      - /var/lib/docker/:/var/lib/docker:ro
-    restart: always
-    networks:
-      - app_network
-
-  node_exporter:
-    image: prom/node-exporter:latest
-    container_name: medihub_node_exporter
-    ports:
-      - "9100:9100"
-    command:
-      - --path.procfs=/host/proc
-      - --path.sysfs=/host/sys
-      - --path.rootfs=/rootfs
-    volumes:
-      - /proc:/host/proc:ro
-      - /sys:/host/sys:ro
-      - /:/rootfs:ro
-    restart: always
-    networks:
-      - app_network
-
-  pgadmin:
-    image: dpage/pgadmin4:latest
-    container_name: medihub_pgadmin
-    ports:
-      - "5050:80"
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=admin@medihub.com
-      - PGADMIN_DEFAULT_PASSWORD=medihub_pgadmin
-    volumes:
-      - pgadmin_data:/var/lib/pgadmin
-    depends_on:
-      - db
-    restart: always
-    networks:
-      - app_network
-
-  jaeger:
-    image: jaegertracing/all-in-one:latest
-    container_name: medihub_jaeger
-    ports:
-      - "16686:16686"
-      - "6831:6831/udp"
-    environment:
-      - COLLECTOR_ZIPKIN_HOST_PORT=9411
-    restart: always
-    networks:
-      - app_network
-
-  alertmanager:
-    image: prom/alertmanager:latest
-    container_name: medihub_alertmanager
-    ports:
-      - "9093:9093"
-    volumes:
-      - ../monitoring/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
-    command: --config.file=/etc/alertmanager/alertmanager.yml --log.level=info
-    restart: always
-    networks:
-      - app_network
-
-  prometheus:
-    image: prom/prometheus:latest
-    container_name: medihub_prometheus
-    ports:
-      - "9090:9090"
-    volumes:
-      - ../monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
-      - ../monitoring/alerts.yml:/etc/prometheus/alerts.yml:ro
-      - prometheus_data:/prometheus
-    command: --config.file=/etc/prometheus/prometheus.yml
-    depends_on:
-      - alertmanager
-    restart: always
-    networks:
-      - app_network
-
-  loki:
-    image: grafana/loki:2.8.0
-    container_name: medihub_loki
-    ports:
-      - "3100:3100"
-    command: -config.file=/etc/loki/local-config.yaml
-    restart: always
-    networks:
-      - app_network
-
-  promtail:
-    image: grafana/promtail:2.8.0
-    container_name: medihub_promtail
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ../monitoring/promtail.yml:/etc/promtail/config.yml
-      - web_logs:/app/logs
-     
-    command: -config.file=/etc/promtail/config.yml
-    depends_on:
-      - loki
-    restart: always
-    networks:
-      - app_network
-
-  grafana:
-    image: grafana/grafana:latest
-    container_name: medihub_grafana
-    ports:
-      - "3000:3000"
-    environment:
-      - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=medihub_grafana
-    volumes:
-      - grafana_data:/var/lib/grafana
-    depends_on:
-      - loki
-      - prometheus
-    restart: always
-    networks:
-      - app_network
-
 volumes:
   db_data:
   static_volume:
   media_volume:
-  grafana_data:
-  prometheus_data:
   rabbitmq_data:
-  pgadmin_data:
-  web_logs:
   
 networks:
   app_network:
     driver: bridge
-    driver_opts:
-      com.docker.network.enable_ipv6: "false"
