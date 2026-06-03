@@ -108,6 +108,18 @@ jobs:
     needs: Build
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Copy docker-compose.yml to EC2
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: Docker/docker-compose.yml
+          target: ~/medihub
+
       - name: SSH and deploy to EC2
         uses: appleboy/ssh-action@v0.1.7
         with:
@@ -115,8 +127,8 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-
             echo "✅ Successfully logged in to EC2 instance"
+
             echo "🔐 Login to Docker Hub..."
             docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
