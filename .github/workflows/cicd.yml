@@ -116,7 +116,7 @@ jobs:
           echo "${{ secrets.EC2_SSH_KEY }}" > /tmp/ec2_key.pem
           chmod 600 /tmp/ec2_key.pem
           scp -i /tmp/ec2_key.pem -o StrictHostKeyChecking=no \
-            Docker/docker-compose.yml \
+            Docker/docker-compose.prod.yml \
             ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:~/medihub/docker-compose.yml
 
       - name: SSH and deploy to EC2
@@ -135,6 +135,11 @@ jobs:
             echo "🔄 Restart containers..."
             cd ~/medihub
             if [ ! -f .env ]; then echo "❌ .env file missing on EC2!"; exit 1; fi
+
+            if ! docker compose version &> /dev/null; then
+              sudo apt install -y docker-compose-plugin
+            fi
+
             DOCKER_IMAGE=${{ secrets.DOCKER_USERNAME }}/medihub:latest docker compose -f docker-compose.yml up -d --no-build --force-recreate
 
             echo "✅ Deployment successful!"
