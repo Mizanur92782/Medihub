@@ -100,3 +100,36 @@ jobs:
           file: Docker/Dockerfile
           push: true
           tags:  ${{ secrets.DOCKER_USERNAME }}/medihub:latest,  ${{ secrets.DOCKER_USERNAME }}/medihub:${{ github.sha }}
+
+
+  Deploy:
+    name: Deploy to AWS EC2
+    runs-on: ubuntu-latest
+    needs: Build
+
+    steps:
+      - name: SSH and deploy to EC2
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+
+            echo  "✅Successfully logged in to EC2 instance"
+            sleep 5
+
+            
+
+            echo "🔐 Login to Docker Hub..."
+            docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+
+      
+            echo "⬇️ Pull latest image..."
+            docker pull ${{ secrets.DOCKER_USERNAME }}/medihub:latest
+
+            echo "🔄 Restart containers..."
+            cd ~/medihub
+            DOCKER_IMAGE=${{ secrets.DOCKER_USERNAME }}/medihub:latest docker compose -f Docker/docker-compose.yml up -d --no-build
+
+            echo "✅ Deployment successful!"
