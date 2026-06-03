@@ -118,6 +118,9 @@ jobs:
           scp -i /tmp/ec2_key.pem -o StrictHostKeyChecking=no \
             Docker/docker-compose.prod.yml \
             ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:~/medihub/docker-compose.yml
+          scp -i /tmp/ec2_key.pem -o StrictHostKeyChecking=no \
+            nginx/nginx.conf \
+            ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:~/medihub/nginx.conf
 
       - name: SSH and deploy to EC2
         uses: appleboy/ssh-action@v0.1.7
