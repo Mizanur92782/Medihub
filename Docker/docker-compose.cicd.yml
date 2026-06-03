@@ -1,0 +1,25 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: medihub_ci_db
+    environment:
+      POSTGRES_DB: medihub
+      POSTGRES_USER: medihub
+      POSTGRES_PASSWORD: medihub
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7-alpine
+    container_name: medihub_ci_redis
+    ports:
+      - "6379:6379"
+
+  rabbitmq:
+    image: rabbitmq:3-alpine
+    container_name: medihub_ci_rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: medihub
+      RABBITMQ_DEFAULT_PASS: medihub
+    ports:
+      - "5672:5672"

@@ -50,6 +50,7 @@ urlpatterns = [
     path('authentication/', include('authentication.urls')),
     path('location/', include('location.urls')),
     path('notification/', include('notification.urls')),
+    path('', include('feed.urls')),
 
     # Swagger
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-ui'),

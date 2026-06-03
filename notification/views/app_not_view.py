@@ -4,8 +4,8 @@ from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from notification.models.app_notification_mod import AppNotification
 from notification.serializers import AppNotificationSerializer
-from utilities.decorators import api_exception_handler
-from utilities.api_response import APIResponse
+from core.decorators import api_exception_handler
+from core.api_response import APIResponse
 
 
 class NotificationViewSet(viewsets.ReadOnlyModelViewSet):

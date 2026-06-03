@@ -4,6 +4,11 @@ import random
 from django.core.cache import cache
 from django.conf import settings
 from django.db import transaction, DatabaseError
+from django.contrib.auth import authenticate
+from authentication.cache_keys import UserSignupCacheKeys
+from cache.manager import CacheManager
+from cache.ttl import CacheTTL
+from rest_framework_simplejwt.tokens import RefreshToken
 from authentication.models import User
 from profiles.models.doctor_prof_mod import Doctor
 from profiles.models.user_prof_mod import RegularUserProfile
@@ -11,24 +16,14 @@ from profiles.models.blood_donor_mod import BloodDonor
 from profiles.models.ambulance_prof_mod import AmbulanceProfile
 from profiles.models.pharmacy_prof_mod import PharmacyProfile
 from profiles.models.diagnostic_prof_mod import DiagnosticProfile
-from .tasks import send_otp_email_task
+from .tasks import send_otp_email_task, send_password_reset_otp_task
 
 logger = logging.getLogger(__name__)
 
 
 class AuthEmailService:
 
-    CACHE_PREFIX       = 'auth:otp'
-    SIGNUP_DATA_PREFIX = 'auth:signup_data'
-
-    # ---------------------------
-    # 1. KEY GENERATOR
-    # ---------------------------
-    @classmethod
-    def make_auth_cache_key(cls, *args):
-        raw = ':'.join(map(str, args))
-        return hashlib.sha256(raw.encode()).hexdigest()
-
+    
     # ---------------------------
     # 2. OTP GENERATOR
     # ---------------------------
@@ -44,20 +39,14 @@ class AuthEmailService:
     # 3. SET OTP + CACHE SIGNUP DATA + CELERY EMAIL
     # ---------------------------
     @classmethod
-    def set_otp(cls, email, signup_data: dict):
+    def set_register_otp_in_cache(cls, email, signup_data: dict):
         otp     = cls.generate_otp()
-        timeout = getattr(settings, 'OTP_TIMEOUT', 300)
-
-        # cache hashed OTP
-        otp_key = cls.make_auth_cache_key(cls.CACHE_PREFIX, email)
-        cache.set(otp_key, cls.hash_otp(otp), timeout=timeout)
-
-        # cache full signup data (FK ids stored as integers)
-        data_key = cls.make_auth_cache_key(cls.SIGNUP_DATA_PREFIX, email)
-        cache.set(data_key, signup_data, timeout=timeout)
-
+        timeout = CacheTTL.MEDIUM
+        key     = UserSignupCacheKeys.user_register_key(email)
+        payload = signup_data.copy()
+        payload['_otp'] = cls.hash_otp(otp)
+        CacheManager.SetCache(key, payload, timeout)
         send_otp_email_task.delay(email, otp)
-
         logger.info('otp_set', extra={'email': email, 'expires_in': timeout})
         return {'email': email, 'expires_in': timeout, 'message': 'OTP sent to email'}
 
@@ -66,27 +55,40 @@ class AuthEmailService:
     # ---------------------------
     @classmethod
     def get_otp(cls, email):
-        key = cls.make_auth_cache_key(cls.CACHE_PREFIX, email)
-        return cache.get(key)
+        key  = UserSignupCacheKeys.user_register_key(email)
+        data = cache.get(key)
+        return data.get('_otp') if data else None
 
     @classmethod
     def invalidate_otp(cls, email):
-        otp_key  = cls.make_auth_cache_key(cls.CACHE_PREFIX, email)
-        data_key = cls.make_auth_cache_key(cls.SIGNUP_DATA_PREFIX, email)
-        cache.delete(otp_key)
-        cache.delete(data_key)
+        cache.delete(UserSignupCacheKeys.user_register_key(email))
 
     # ---------------------------
     # 5. GET SIGNUP DATA
     # ---------------------------
     @classmethod
     def get_signup_data(cls, email):
-        key = cls.make_auth_cache_key(cls.SIGNUP_DATA_PREFIX, email)
-        return cache.get(key)
+        key  = UserSignupCacheKeys.user_register_key(email)
+        data = cache.get(key)
+        if not data:
+            return None
+        return {k: v for k, v in data.items() if k != '_otp'}
 
     # ---------------------------
-    # 6. VERIFY OTP
+    # 7. RESEND OTP
     # ---------------------------
+    @classmethod
+    def resend_otp(cls, email):
+        key  = UserSignupCacheKeys.user_register_key(email)
+        data = CacheManager.GetCache(key)
+        if not data:
+            return {'status': False, 'message': 'No signup session found. Please register again.'}
+        otp = cls.generate_otp()
+        data['_otp'] = cls.hash_otp(otp)
+        CacheManager.SetCache(key, data, CacheTTL.MEDIUM)
+        send_otp_email_task.delay(email, otp)
+        logger.info('otp_resent', extra={'email': email})
+        return {'status': True, 'message': 'OTP resent to email.'}
     @classmethod
     def verify_otp(cls, email, input_otp):
         cached_otp = cls.get_otp(email)
@@ -100,13 +102,19 @@ class AuthEmailService:
         return {'status': False, 'message': 'Invalid OTP'}
 
 
+
+
+
+
 class ProfileCreationService:
 
     @staticmethod
-    def _base_create(email, password, signup_data, profile_model, log_key):
+    def _base_create(email, password, user_type, signup_data, profile_model, log_key):
         try:
             with transaction.atomic():
-                user    = User.objects.create_user(email=email, password=password)
+                user = User.objects.create_user(email=email, password=password)
+                user.user_type = user_type
+                user.save(update_fields=['user_type'])
                 profile = profile_model.objects.create(user=user, **signup_data)
             logger.info(f'{log_key}_success', extra={'email': email, 'user_id': user.id, 'profile_id': profile.id})
             return user
@@ -122,29 +130,31 @@ class ProfileCreationService:
         email    = signup_data.pop('email')
         password = signup_data.pop('password')
         signup_data.pop('password2', None)
-        return email, password
+        user_type = signup_data.pop('user_type', 'regular')
+        return email, password, user_type
 
     @classmethod
     def create_doctor_profile(cls, signup_data: dict) -> User:
-        email, password = cls._extract_credentials(signup_data)
+        email, password, user_type = cls._extract_credentials(signup_data)
         logger.info('profile_creation_started', extra={'email': email, 'type': 'doctor'})
-        return cls._base_create(email, password, signup_data, Doctor, 'doctor_profile_creation')
+        return cls._base_create(email, password, user_type, signup_data, Doctor, 'doctor_profile_creation')
 
     @classmethod
     def create_user_profile(cls, signup_data: dict) -> User:
-        email, password = cls._extract_credentials(signup_data)
+        email, password, user_type = cls._extract_credentials(signup_data)
         logger.info('profile_creation_started', extra={'email': email, 'type': 'user'})
-        return cls._base_create(email, password, signup_data, RegularUserProfile, 'user_profile_creation')
+        return cls._base_create(email, password, user_type, signup_data, RegularUserProfile, 'user_profile_creation')
 
     @classmethod
     def create_blood_donor_profile(cls, signup_data: dict) -> User:
-        email, password = cls._extract_credentials(signup_data)
+        email, password, user_type = cls._extract_credentials(signup_data)
         logger.info('profile_creation_started', extra={'email': email, 'type': 'blood_donor'})
         with transaction.atomic():
             try:
-                user   = User.objects.create_user(email=email, password=password)
+                user = User.objects.create_user(email=email, password=password)
+                user.user_type = user_type
                 user.is_blood_donor = True
-                user.save(update_fields=['is_blood_donor'])
+                user.save(update_fields=['user_type', 'is_blood_donor'])
                 profile = BloodDonor.objects.create(user=user, **signup_data)
                 logger.info('blood_donor_profile_creation_success', extra={'email': email, 'user_id': user.id, 'profile_id': profile.id})
                 return user
@@ -157,18 +167,162 @@ class ProfileCreationService:
 
     @classmethod
     def create_ambulance_profile(cls, signup_data: dict) -> User:
-        email, password = cls._extract_credentials(signup_data)
+        email, password, user_type = cls._extract_credentials(signup_data)
         logger.info('profile_creation_started', extra={'email': email, 'type': 'ambulance'})
-        return cls._base_create(email, password, signup_data, AmbulanceProfile, 'ambulance_profile_creation')
+        return cls._base_create(email, password, user_type, signup_data, AmbulanceProfile, 'ambulance_profile_creation')
 
     @classmethod
     def create_pharmacy_profile(cls, signup_data: dict) -> User:
-        email, password = cls._extract_credentials(signup_data)
+        email, password, user_type = cls._extract_credentials(signup_data)
         logger.info('profile_creation_started', extra={'email': email, 'type': 'pharmacy'})
-        return cls._base_create(email, password, signup_data, PharmacyProfile, 'pharmacy_profile_creation')
+        return cls._base_create(email, password, user_type, signup_data, PharmacyProfile, 'pharmacy_profile_creation')
 
     @classmethod
     def create_diagnostic_profile(cls, signup_data: dict) -> User:
-        email, password = cls._extract_credentials(signup_data)
+        email, password, user_type = cls._extract_credentials(signup_data)
         logger.info('profile_creation_started', extra={'email': email, 'type': 'diagnostic'})
-        return cls._base_create(email, password, signup_data, DiagnosticProfile, 'diagnostic_profile_creation')
+        return cls._base_create(email, password, user_type, signup_data, DiagnosticProfile, 'diagnostic_profile_creation')
+        
+
+class LoginService:
+
+    # ---------------------------
+    # 1. LOGIN — returns JWT tokens
+    # ---------------------------
+    @staticmethod
+    def login(email, password):
+        user = authenticate(username=email, password=password)
+
+        if user is None:
+            logger.warning('login_failed_invalid_credentials', extra={'email': email})
+            return {'status': False, 'message': 'Invalid email or password.'}
+
+        if not user.is_active:
+            logger.warning('login_failed_inactive_user', extra={'email': email})
+            return {'status': False, 'message': 'Account is inactive.'}
+
+        refresh = RefreshToken.for_user(user)
+        logger.info('login_success', extra={'email': email, 'user_id': user.id, 'user_type': user.user_type})
+
+        return {
+            'status':        True,
+            'access':        str(refresh.access_token),
+            'refresh':       str(refresh),
+            'user_type':     user.user_type,
+            'user_id':       user.id,
+        }
+
+
+class LogoutService:
+
+    # ---------------------------
+    # 1. LOGOUT — blacklists refresh token
+    # ---------------------------
+    @staticmethod
+    def logout(refresh_token: str):
+        try:
+            token = RefreshToken(refresh_token)
+            token.blacklist()
+            logger.info('logout_success')
+            return {'status': True, 'message': 'Logged out successfully.'}
+        except Exception:
+            logger.warning('logout_invalid_token', exc_info=True)
+            return {'status': False, 'message': 'Invalid or expired token.'}
+
+
+class PasswordChangeService:
+
+    @staticmethod
+    def change_password(user, current_password, new_password):
+        if not user.check_password(current_password):
+            logger.warning('password_change_wrong_current', extra={'user_id': user.id})
+            return {'status': False, 'message': 'Current password is incorrect.'}
+        user.set_password(new_password)
+        user.save(update_fields=['password'])
+        refresh = RefreshToken.for_user(user)
+        logger.info('password_change_success', extra={'user_id': user.id})
+        return {
+            'status':  True,
+            'message': 'Password changed successfully.',
+            'access':  str(refresh.access_token),
+            'refresh': str(refresh),
+        }
+
+
+class PasswordResetService:
+
+    RESET_OTP_PREFIX   = 'auth:reset_otp'
+    RESET_TOKEN_PREFIX = 'auth:reset_token'
+
+    # ---------------------------
+    # 1. SEND RESET OTP
+    # ---------------------------
+    @classmethod
+    def send_reset_otp(cls, email):
+        if not User.objects.filter(email=email).exists():
+            logger.warning('password_reset_email_not_found', extra={'email': email})
+            return {'status': True, 'message': 'If this email exists, an OTP has been sent.'}
+
+        otp     = str(random.randint(100000, 999999))
+        timeout = getattr(settings, 'OTP_EXPIRE_TIME', 300)
+        otp_key = hashlib.sha256(f'{cls.RESET_OTP_PREFIX}:{email}'.encode()).hexdigest()
+        cache.set(otp_key, hashlib.sha256(otp.encode()).hexdigest(), timeout=timeout)
+
+        send_password_reset_otp_task.delay(email, otp)
+        logger.info('password_reset_otp_sent', extra={'email': email})
+        return {'status': True, 'message': 'If this email exists, an OTP has been sent.'}
+
+    # ---------------------------
+    # 2. VERIFY OTP → return reset token
+    # ---------------------------
+    @classmethod
+    def verify_otp(cls, email, otp_input):
+        otp_key    = hashlib.sha256(f'{cls.RESET_OTP_PREFIX}:{email}'.encode()).hexdigest()
+        cached_otp = cache.get(otp_key)
+
+        if not cached_otp:
+            logger.warning('password_reset_otp_expired', extra={'email': email})
+            return {'status': False, 'message': 'OTP expired or not found.'}
+
+        if cached_otp != hashlib.sha256(otp_input.encode()).hexdigest():
+            logger.warning('password_reset_otp_invalid', extra={'email': email})
+            return {'status': False, 'message': 'Invalid OTP.'}
+
+        # OTP valid — generate a short-lived reset token
+        reset_token = hashlib.sha256(f'{email}:{random.randint(0, 999999)}'.encode()).hexdigest()
+        token_key   = hashlib.sha256(f'{cls.RESET_TOKEN_PREFIX}:{email}'.encode()).hexdigest()
+        cache.set(token_key, reset_token, timeout=300)  # 5 min to use token
+        cache.delete(otp_key)  # invalidate OTP
+
+        logger.info('password_reset_otp_verified', extra={'email': email})
+        return {'status': True, 'reset_token': reset_token}
+
+    # ---------------------------
+    # 3. RESET PASSWORD using token
+    # ---------------------------
+    @classmethod
+    def reset_password(cls, email, reset_token, new_password):
+        token_key    = hashlib.sha256(f'{cls.RESET_TOKEN_PREFIX}:{email}'.encode()).hexdigest()
+        cached_token = cache.get(token_key)
+
+        if not cached_token:
+            logger.warning('password_reset_token_expired', extra={'email': email})
+            return {'status': False, 'message': 'Reset token expired or not found.'}
+
+        if cached_token != reset_token:
+            logger.warning('password_reset_token_invalid', extra={'email': email})
+            return {'status': False, 'message': 'Invalid reset token.'}
+
+        try:
+            user = User.objects.get(email=email)
+            user.set_password(new_password)
+            user.save(update_fields=['password'])
+            cache.delete(token_key)
+            logger.info('password_reset_success', extra={'email': email, 'user_id': user.id})
+            return {'status': True, 'message': 'Password reset successfully.'}
+        except User.DoesNotExist:
+            logger.error('password_reset_user_not_found', extra={'email': email})
+            return {'status': False, 'message': 'User not found.'}
+        except Exception:
+            logger.critical('password_reset_unexpected_error', extra={'email': email}, exc_info=True)
+            return {'status': False, 'message': 'An unexpected error occurred.'}

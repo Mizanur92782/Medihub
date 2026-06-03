@@ -1,29 +1,45 @@
 global:
   smtp_smarthost: "smtp.gmail.com:587"
-  smtp_from: ""
-  smtp_auth_username: ""
-  smtp_auth_password: ""
+  smtp_from: "mizanmd92782@gmail.com"
+  smtp_auth_username: "mizanmd92782@gmail.com"
+  smtp_auth_password: "mpjl ogoq pczx ywps"
   smtp_require_tls: true
 
 route:
-  receiver: email_alert
-  group_by: ['alertname']
+  receiver: medihub_alert
+  group_by: ['alertname', 'severity']
   group_wait: 30s
   group_interval: 5m
   repeat_interval: 1h
 
+  routes:
+    - match:
+        severity: critical
+      receiver: medihub_alert
+      repeat_interval: 15m
+
+    - match:
+        severity: warning
+      receiver: medihub_alert
+      repeat_interval: 1h
+
 receivers:
-  - name: email_alert
+  - name: medihub_alert
     email_configs:
-      - to: ""
+      - to: "mizanmd92782@gmail.com"
         send_resolved: true
+        headers:
+          Subject: '[Medihub] {{ .Status | toUpper }} - {{ range .Alerts }}{{ .Labels.alertname }}{{ end }}'
     telegram_configs:
-      - bot_token: ""
-        chat_id: 
+      - bot_token: "8210066963:AAFc1nqYlqoAm13YDKyIX7ML4TtdMPhLY4U"
+        chat_id: 7412860162
         send_resolved: true
         parse_mode: HTML
         message: |
-          <b>{{ .Status | toUpper }}</b>
-          <b>Alert:</b> {{ range .Alerts }}{{ .Labels.alertname }}{{ end }}
-          <b>Severity:</b> {{ range .Alerts }}{{ .Labels.severity }}{{ end }}
-          <b>Summary:</b> {{ range .Alerts }}{{ .Annotations.summary }}{{ end }}
+          <b>{{ .Status | toUpper }} — Medihub Alert</b>
+          {{ range .Alerts }}
+          🔔 <b>{{ .Labels.alertname }}</b>
+          📌 Severity: <b>{{ .Labels.severity }}</b>
+          📝 {{ .Annotations.summary }}
+          {{ if .Annotations.description }}ℹ️ {{ .Annotations.description }}{{ end }}
+          {{ end }}

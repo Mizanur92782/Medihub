@@ -7,7 +7,7 @@ from profiles.models.doctor_prof_mod import (
     Specialization, SubSpecialization, Qualification, Hospital,
 )
 from location.models import Division, District
-from utilities.enum import RoleChoices
+from core.enum import RoleChoices
 from medihub import settings
 
 

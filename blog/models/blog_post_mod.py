@@ -1,6 +1,6 @@
 from django.db import models
 from profiles.models.doctor_prof_mod import Doctor
-from utilities.enum import BlogStatusChoices, BlogCategoryChoices
+from core.enum import BlogStatusChoices, BlogCategoryChoices
 
 
 class BlogPost(models.Model):

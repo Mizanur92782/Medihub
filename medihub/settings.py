@@ -19,18 +19,15 @@ CORE SETTINGS: Fundamental Django configurations.
 - SECRET_KEY: Used for cryptographic signing (CSRF, sessions). Must stay secret in production.
 - DEBUG: Shows detailed error pages when True. Must be False in production.
 - ALLOWED_HOSTS: Domain names/IPs Django will serve. Prevents Host header attacks.
-- PRODUCTION: Master switch — forces DEBUG=False and DJANGO_DEV=False.
-- DJANGO_DEV: Enables dev-only behaviors (insecure cookies, all CORS origins, local Redis).
+- PRODUCTION: Master switch — forces DEBUG=False.
 """
 SECRET_KEY = config("SECRET_KEY")
 
 PRODUCTION = config("PRODUCTION", default=False, cast=bool)
-DJANGO_DEV = config("DJANGO_DEV", default=False, cast=bool)
 DEBUG = config("DEBUG", default=True, cast=bool)
 
 if PRODUCTION:
     DEBUG = False
-    DJANGO_DEV = False
 
 ALLOWED_HOSTS = config(
     "ALLOWED_HOSTS",
@@ -38,7 +35,7 @@ ALLOWED_HOSTS = config(
     cast=lambda v: [s.strip() for s in v.split(",") if s.strip()],
 )
 
-print(f"🔧 CORE SETTINGS: PRODUCTION={PRODUCTION}, DEBUG={DEBUG}, DJANGO_DEV={DJANGO_DEV}")
+print(f"🔧 CORE SETTINGS: PRODUCTION={PRODUCTION}, DEBUG={DEBUG}")
 print(f"🔧 ALLOWED_HOSTS: {ALLOWED_HOSTS}")
 
 
@@ -79,6 +76,8 @@ INSTALLED_APPS = [
     "blog",
     "post",
     "notification",
+    "interactions",
+    "feed",
 ]
 
 AUTH_USER_MODEL = "authentication.User"
@@ -172,25 +171,23 @@ Cookie Security:
 - CSRF_COOKIE_SAMESITE / SESSION_COOKIE_SAMESITE = "Lax": Prevents CSRF while
   allowing normal browser navigation.
 - SESSION_COOKIE_SECURE / CSRF_COOKIE_SECURE: Cookies only sent over HTTPS.
-  Disabled in DJANGO_DEV so local HTTP dev server works without SSL.
 - SECURE_SSL_REDIRECT = False: Nginx handles SSL termination, not Django.
 """
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-USE_X_FORWARDED_HOST = True
-USE_X_FORWARDED_PORT = True
+USE_X_FORWARDED_HOST = False
+USE_X_FORWARDED_PORT = False
+
+
+
+
+
 
 CSRF_COOKIE_SAMESITE = "Lax"
 SESSION_COOKIE_SAMESITE = "Lax"
 
-if DJANGO_DEV:
-    SESSION_COOKIE_SECURE = False
-    CSRF_COOKIE_SECURE = False
-    SECURE_SSL_REDIRECT = False
-else:
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
-    SECURE_SSL_REDIRECT = False  # Nginx handles SSL, not Django
-
+SESSION_COOKIE_SECURE = config("SESSION_COOKIE_SECURE", default=False, cast=bool)
+CSRF_COOKIE_SECURE = config("CSRF_COOKIE_SECURE", default=False, cast=bool)
+SECURE_SSL_REDIRECT = False  # Nginx handles SSL
 print("🔒 PROXY & SECURITY: SSL handled by Nginx, cookie security configured")
 
 
@@ -242,32 +239,19 @@ print(f"📊 DATABASE: PostgreSQL → {config('POSTGRES_DB', default='medihub')}
 # REDIS CONFIGURATION
 # =============================================
 """
-REDIS: In-memory data store used for caching and channel layers.
-
-DJANGO_DEV=True (Local Development):
-  - Connects to localhost:6380 (local Redis instance).
-  - No password required.
-
-DJANGO_DEV=False (Production):
-  - Connects to "redis" Docker container on port 6379.
-  - Supports password auth via REDIS_PASSWORD env var.
+REDIS: In-memory data store used for caching and Celery result backend.
+- Connects to the "redis" Docker container (configurable via env vars).
+- Supports password auth via REDIS_PASSWORD env var.
 
 _build_redis_url(): Builds the Redis connection URL with optional password.
 USE_REDIS_CACHE: Auto-detects Redis availability with a 2-second timeout.
   Falls back to in-memory cache if Redis is unreachable.
 """
-if DJANGO_DEV:
-    REDIS_HOST = "127.0.0.1"
-    REDIS_PORT = config("REDIS_LOCAL_PORT", default=6380, cast=int)
-    REDIS_DB = 0
-    REDIS_PASSWORD = ""
-    print(f"🔴 REDIS: Connecting to localhost:{REDIS_PORT} (dev)")
-else:
-    REDIS_HOST = config("REDIS_HOST", default="redis")
-    REDIS_PORT = config("REDIS_PORT", default=6379, cast=int)
-    REDIS_DB = config("REDIS_DB", default=0, cast=int)
-    REDIS_PASSWORD = config("REDIS_PASSWORD", default="")
-    print(f"🔴 REDIS: Connecting to {REDIS_HOST}:{REDIS_PORT} (production)")
+REDIS_HOST = config("REDIS_HOST", default="redis")
+REDIS_PORT = config("REDIS_PORT", default=6379, cast=int)
+REDIS_DB = config("REDIS_DB", default=0, cast=int)
+REDIS_PASSWORD = config("REDIS_PASSWORD", default="")
+print(f"🔴 REDIS: Connecting to {REDIS_HOST}:{REDIS_PORT}")
 
 
 def _build_redis_url():
@@ -416,18 +400,12 @@ print("📚 SWAGGER: API docs configured with JWT Bearer authentication")
 # =============================================
 """
 CORS: Cross-Origin Resource Sharing — allows the frontend to call this API
-from a different domain/port (e.g., React on localhost:5173 → Django on localhost:8000).
+from a different domain/port.
 
 - CORS_ALLOW_CREDENTIALS: Allows cookies and auth headers in cross-origin requests.
 - CORS_ALLOW_HEADERS: Explicitly whitelisted request headers.
-
-DJANGO_DEV=True:
-  - CORS_ALLOW_ALL_ORIGINS=True — accepts requests from any origin (dev convenience).
-
-DJANGO_DEV=False (Production):
-  - CORS_ALLOWED_ORIGINS: Restricted list loaded from env var.
-  - CSRF_TRUSTED_ORIGINS: Origins trusted for CSRF-protected POST requests.
-  In production, set these to your actual frontend domain(s).
+- CORS_ALLOWED_ORIGINS: Restricted list loaded from env var.
+- CSRF_TRUSTED_ORIGINS: Origins trusted for CSRF-protected POST requests.
 """
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = [
@@ -435,26 +413,18 @@ CORS_ALLOW_HEADERS = [
     "dnt", "origin", "user-agent", "x-csrftoken", "x-requested-with",
 ]
 
-if DJANGO_DEV:
-    CORS_ALLOW_ALL_ORIGINS = True
-    CSRF_TRUSTED_ORIGINS = [
-        "http://127.0.0.1:8000", "http://localhost:3000",
-        "http://localhost:5173", "http://127.0.0.1:3000",
-    ]
-    print("🌐 CORS: Allow All Origins (DJANGO_DEV mode)")
-else:
-    CORS_ALLOWED_ORIGINS = config(
-        "CORS_ALLOWED_ORIGINS",
-        default="http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173,http://localhost:8000",
-        cast=lambda v: [s.strip() for s in v.split(",") if s.strip()],
-    )
-    CSRF_TRUSTED_ORIGINS = config(
-        "CSRF_TRUSTED_ORIGINS",
-        default="http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173,http://localhost:8000",
-        cast=lambda v: [s.strip() for s in v.split(",") if s.strip()],
-    )
-    print(f"🌐 CORS: {len(CORS_ALLOWED_ORIGINS)} allowed origins")
-    print(f"🌐 CSRF: {len(CSRF_TRUSTED_ORIGINS)} trusted origins")
+CORS_ALLOW_ALL_ORIGINS = config("CORS_ALLOW_ALL_ORIGINS", default=False, cast=bool)
+CORS_ALLOWED_ORIGINS = config(
+    "CORS_ALLOWED_ORIGINS",
+    default="http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173,http://localhost:8080",
+    cast=lambda v: [s.strip() for s in v.split(",") if s.strip()],
+)
+CSRF_TRUSTED_ORIGINS = config(
+    "CSRF_TRUSTED_ORIGINS",
+    default="http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173,http://localhost:8080",
+    cast=lambda v: [s.strip() for s in v.split(",") if s.strip()],
+)
+print(f"🌐 CORS: {len(CORS_ALLOWED_ORIGINS)} allowed origins")
 
 
 # =============================================
@@ -649,21 +619,46 @@ LOGGING = {
     "formatters": {
         "json": {
             "()": "pythonjsonlogger.jsonlogger.JsonFormatter",
-            "format": "%(asctime)s %(levelname)s %(name)s %(message)s",
+            "format": "%(asctime)s %(levelname)s %(name)s %(message)s %(request_id)s",
+        },
+    },
+    "filters": {
+        "request_id": {
+            "()": "request_id.logging.RequestIdFilter",
         },
     },
     "handlers": {
         "console": {
             "class": "logging.StreamHandler",
             "formatter": "json",
+            "filters": ["request_id"],
+        },
+        "file": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "formatter": "json",
+            "filters": ["request_id"],
+            "filename": BASE_DIR / "logs" / "medihub.log",
+            "maxBytes": 1024 * 1024 * 10,  # 10 MB per file
+            "backupCount": 10,              # keep last 10 files = 100 MB max
+            "encoding": "utf-8",
+        },
+        "error_file": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "formatter": "json",
+            "filters": ["request_id"],
+            "filename": BASE_DIR / "logs" / "medihub_error.log",
+            "maxBytes": 1024 * 1024 * 10,
+            "backupCount": 10,
+            "encoding": "utf-8",
+            "level": "ERROR",
         },
     },
     "root": {
-        "handlers": ["console"],
+        "handlers": ["console", "file", "error_file"],
         "level": "INFO",
     },
 }
-print("📋 LOGGING: Structured JSON logging to console at INFO level")
+print("📋 LOGGING: JSON logging → console + logs/medihub.log + logs/medihub_error.log")
 
 
 # =============================================

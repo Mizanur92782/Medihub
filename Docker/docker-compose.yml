@@ -41,6 +41,7 @@ services:
     volumes:
       - ..:/app
       - static_volume:/app/staticfiles
+      - media_volume:/app/media
     command:
       [
         "sh",
@@ -52,7 +53,7 @@ services:
         condition: service_healthy
     networks:
       - app_network
-    restart: no
+    restart: "no"
 
   web1:
     image: medihub_web
@@ -68,6 +69,7 @@ services:
       - ..:/app
       - static_volume:/app/staticfiles
       - media_volume:/app/media
+      - web_logs:/app/logs
     depends_on:
       db:
         condition: service_healthy
@@ -79,15 +81,7 @@ services:
     networks:
       - app_network
     healthcheck:
-      test:
-        [
-          "CMD",
-          "curl",
-          "-f",
-          "-H",
-          "Host: localhost",
-          "http://localhost:8011/health/",
-        ]
+      test: ["CMD", "curl", "-f", "-H", "Host: localhost", "http://localhost:8011/health/"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -112,6 +106,7 @@ services:
       - ..:/app
       - static_volume:/app/staticfiles
       - media_volume:/app/media
+      - web_logs:/app/logs
     depends_on:
       db:
         condition: service_healthy
@@ -123,15 +118,7 @@ services:
     networks:
       - app_network
     healthcheck:
-      test:
-        [
-          "CMD",
-          "curl",
-          "-f",
-          "-H",
-          "Host: localhost",
-          "http://localhost:8012/health/",
-        ]
+      test: ["CMD", "curl", "-f", "-H", "Host: localhost", "http://localhost:8012/health/"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -156,6 +143,7 @@ services:
       - ..:/app
       - static_volume:/app/staticfiles
       - media_volume:/app/media
+      - web_logs:/app/logs
     depends_on:
       db:
         condition: service_healthy
@@ -167,15 +155,7 @@ services:
     networks:
       - app_network
     healthcheck:
-      test:
-        [
-          "CMD",
-          "curl",
-          "-f",
-          "-H",
-          "Host: localhost",
-          "http://localhost:8013/health/",
-        ]
+      test: ["CMD", "curl", "-f", "-H", "Host: localhost", "http://localhost:8013/health/"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -226,16 +206,18 @@ services:
         limits:
           cpus: "0.5"
           memory: 256M
-          
+
   rabbitmq:
     image: rabbitmq:3-management-alpine
     container_name: medihub_rabbitmq
     ports:
-      - "5672:5672"
       - "15672:15672"
-    environment:
-      - RABBITMQ_DEFAULT_USER=medihub
-      - RABBITMQ_DEFAULT_PASS=medihub
+      - "15692:15692"
+    env_file:
+      - ../.env
+    # enable prometheus metrics plugin on startup
+    command: >
+      sh -c "rabbitmq-plugins enable rabbitmq_prometheus && rabbitmq-server"
     volumes:
       - rabbitmq_data:/var/lib/rabbitmq
     restart: always
@@ -354,9 +336,7 @@ services:
       - "9093:9093"
     volumes:
       - ../monitoring/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
-    env_file:
-      - ../.env
-    command: --config.file=/etc/alertmanager/alertmanager.yml --log.level=debug
+    command: --config.file=/etc/alertmanager/alertmanager.yml --log.level=info
     restart: always
     networks:
       - app_network
@@ -371,12 +351,14 @@ services:
       - ../monitoring/alerts.yml:/etc/prometheus/alerts.yml:ro
       - prometheus_data:/prometheus
     command: --config.file=/etc/prometheus/prometheus.yml
+    depends_on:
+      - alertmanager
     restart: always
     networks:
       - app_network
 
   loki:
-    image: grafana/loki:2.9.0
+    image: grafana/loki:2.8.0
     container_name: medihub_loki
     ports:
       - "3100:3100"
@@ -386,12 +368,13 @@ services:
       - app_network
 
   promtail:
-    image: grafana/promtail:2.9.0
+    image: grafana/promtail:2.8.0
     container_name: medihub_promtail
     volumes:
-      - /var/lib/docker/containers:/var/lib/docker/containers:ro
       - /var/run/docker.sock:/var/run/docker.sock
       - ../monitoring/promtail.yml:/etc/promtail/config.yml
+      - web_logs:/app/logs
+     
     command: -config.file=/etc/promtail/config.yml
     depends_on:
       - loki
@@ -411,6 +394,7 @@ services:
       - grafana_data:/var/lib/grafana
     depends_on:
       - loki
+      - prometheus
     restart: always
     networks:
       - app_network
@@ -423,10 +407,10 @@ volumes:
   prometheus_data:
   rabbitmq_data:
   pgadmin_data:
-
+  web_logs:
+  
 networks:
   app_network:
     driver: bridge
     driver_opts:
       com.docker.network.enable_ipv6: "false"
-      

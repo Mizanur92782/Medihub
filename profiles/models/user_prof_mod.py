@@ -1,7 +1,7 @@
 from django.db import models
 from django.conf import settings
 from location.models import District, Division, Upozila
-from utilities.enum import GenderChoices
+from core.enum import GenderChoices
 
 
 class RegularUserProfile(models.Model):
